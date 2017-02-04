@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Asegurado
+Partial Class frm_Asegurado
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -337,13 +337,14 @@ Partial Class Asegurado
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Primer nombre"
         '
-        'Asegurado
+        'frm_Asegurado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.ClientSize = New System.Drawing.Size(805, 475)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Asegurado"
+        Me.Name = "frm_Asegurado"
         Me.Text = "Form4"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

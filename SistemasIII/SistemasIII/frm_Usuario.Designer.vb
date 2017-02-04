@@ -271,12 +271,7 @@ Partial Class frm_Usuario
         '
         'ptb_ListoUsuario
         '
-        Me.ptb_ListoUsuario.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.ic_done_black_48dp
-        Me.ptb_ListoUsuario.Location = New System.Drawing.Point(147, 182)
-        Me.ptb_ListoUsuario.Name = "ptb_ListoUsuario"
-        Me.ptb_ListoUsuario.Size = New System.Drawing.Size(51, 45)
-        Me.ptb_ListoUsuario.TabIndex = 4
-        Me.ptb_ListoUsuario.TabStop = False
+
         '
         'txt_Contraseña
         '
