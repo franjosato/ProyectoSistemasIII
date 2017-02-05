@@ -46,12 +46,12 @@ Partial Class Form3
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_FNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.lbl_FNacimiento = New System.Windows.Forms.Label()
         Me.cmb_Nacionalidad = New System.Windows.Forms.ComboBox()
         Me.txt_Cedula = New System.Windows.Forms.TextBox()
         Me.lbl_Cedula = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbl_Ciudad = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -66,22 +66,22 @@ Partial Class Form3
         Me.lbl_SNombre = New System.Windows.Forms.Label()
         Me.lbl_PNombre = New System.Windows.Forms.Label()
         Me.grb_Personales = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.grb_Edocivil = New System.Windows.Forms.GroupBox()
+        Me.rdb_Otro = New System.Windows.Forms.RadioButton()
+        Me.rdb_Divorciado = New System.Windows.Forms.RadioButton()
+        Me.rdb_Casado = New System.Windows.Forms.RadioButton()
+        Me.rdb_soltero = New System.Windows.Forms.RadioButton()
+        Me.grb_Sexo = New System.Windows.Forms.GroupBox()
+        Me.rdb_Femenino = New System.Windows.Forms.RadioButton()
+        Me.rdb_Masculino = New System.Windows.Forms.RadioButton()
+        Me.grb_DireccYContacto = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.grb_Edocivil.SuspendLayout()
+        Me.grb_Sexo.SuspendLayout()
+        Me.grb_DireccYContacto.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -165,7 +165,7 @@ Partial Class Form3
         'ComboBox4
         '
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(457, 4)
+        Me.ComboBox4.Location = New System.Drawing.Point(457, 11)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(139, 21)
         Me.ComboBox4.TabIndex = 89
@@ -229,7 +229,7 @@ Partial Class Form3
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(136, 99)
+        Me.TextBox12.Location = New System.Drawing.Point(136, 106)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(165, 20)
         Me.TextBox12.TabIndex = 81
@@ -237,7 +237,7 @@ Partial Class Form3
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(11, 102)
+        Me.Label20.Location = New System.Drawing.Point(11, 109)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(38, 13)
         Me.Label20.TabIndex = 80
@@ -245,14 +245,14 @@ Partial Class Form3
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(136, 34)
+        Me.TextBox11.Location = New System.Drawing.Point(136, 41)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(460, 20)
         Me.TextBox11.TabIndex = 79
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(136, 7)
+        Me.TextBox9.Location = New System.Drawing.Point(136, 14)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(165, 20)
         Me.TextBox9.TabIndex = 78
@@ -260,7 +260,7 @@ Partial Class Form3
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(341, 10)
+        Me.Label19.Location = New System.Drawing.Point(341, 17)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(40, 13)
         Me.Label19.TabIndex = 77
@@ -269,17 +269,17 @@ Partial Class Form3
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(247, 7)
+        Me.LinkLabel1.Location = New System.Drawing.Point(247, 14)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(0, 13)
         Me.LinkLabel1.TabIndex = 76
         '
-        'DateTimePicker1
+        'dtp_FNacimiento
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(127, 120)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(139, 20)
-        Me.DateTimePicker1.TabIndex = 75
+        Me.dtp_FNacimiento.Location = New System.Drawing.Point(127, 120)
+        Me.dtp_FNacimiento.Name = "dtp_FNacimiento"
+        Me.dtp_FNacimiento.Size = New System.Drawing.Size(139, 20)
+        Me.dtp_FNacimiento.TabIndex = 75
         '
         'lbl_FNacimiento
         '
@@ -314,18 +314,18 @@ Partial Class Form3
         Me.lbl_Cedula.TabIndex = 68
         Me.lbl_Cedula.Text = "Cédula"
         '
-        'Label14
+        'lbl_Ciudad
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(11, 10)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(40, 13)
-        Me.Label14.TabIndex = 67
-        Me.Label14.Text = "Ciudad"
+        Me.lbl_Ciudad.AutoSize = True
+        Me.lbl_Ciudad.Location = New System.Drawing.Point(11, 17)
+        Me.lbl_Ciudad.Name = "lbl_Ciudad"
+        Me.lbl_Ciudad.Size = New System.Drawing.Size(40, 13)
+        Me.lbl_Ciudad.TabIndex = 67
+        Me.lbl_Ciudad.Text = "Ciudad"
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(136, 66)
+        Me.TextBox7.Location = New System.Drawing.Point(136, 73)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(165, 20)
         Me.TextBox7.TabIndex = 65
@@ -333,7 +333,7 @@ Partial Class Form3
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(11, 37)
+        Me.Label12.Location = New System.Drawing.Point(11, 44)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(52, 13)
         Me.Label12.TabIndex = 64
@@ -341,7 +341,7 @@ Partial Class Form3
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(457, 69)
+        Me.TextBox6.Location = New System.Drawing.Point(457, 76)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(139, 20)
         Me.TextBox6.TabIndex = 63
@@ -349,7 +349,7 @@ Partial Class Form3
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(341, 73)
+        Me.Label11.Location = New System.Drawing.Point(341, 80)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 13)
         Me.Label11.TabIndex = 62
@@ -358,7 +358,7 @@ Partial Class Form3
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(11, 66)
+        Me.Label10.Location = New System.Drawing.Point(11, 73)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(76, 13)
         Me.Label10.TabIndex = 61
@@ -430,9 +430,9 @@ Partial Class Form3
         '
         'grb_Personales
         '
-        Me.grb_Personales.Controls.Add(Me.GroupBox4)
-        Me.grb_Personales.Controls.Add(Me.GroupBox1)
-        Me.grb_Personales.Controls.Add(Me.DateTimePicker1)
+        Me.grb_Personales.Controls.Add(Me.grb_Edocivil)
+        Me.grb_Personales.Controls.Add(Me.grb_Sexo)
+        Me.grb_Personales.Controls.Add(Me.dtp_FNacimiento)
         Me.grb_Personales.Controls.Add(Me.lbl_FNacimiento)
         Me.grb_Personales.Controls.Add(Me.cmb_Nacionalidad)
         Me.grb_Personales.Controls.Add(Me.txt_Cedula)
@@ -452,27 +452,117 @@ Partial Class Form3
         Me.grb_Personales.TabStop = False
         Me.grb_Personales.Text = "Datos personales"
         '
-        'GroupBox2
+        'grb_Edocivil
         '
-        Me.GroupBox2.Controls.Add(Me.ComboBox4)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.LinkLabel1)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Location = New System.Drawing.Point(30, 375)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(627, 141)
-        Me.GroupBox2.TabIndex = 92
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.grb_Edocivil.Controls.Add(Me.rdb_Otro)
+        Me.grb_Edocivil.Controls.Add(Me.rdb_Divorciado)
+        Me.grb_Edocivil.Controls.Add(Me.rdb_Casado)
+        Me.grb_Edocivil.Controls.Add(Me.rdb_soltero)
+        Me.grb_Edocivil.Location = New System.Drawing.Point(564, 50)
+        Me.grb_Edocivil.Name = "grb_Edocivil"
+        Me.grb_Edocivil.Size = New System.Drawing.Size(83, 59)
+        Me.grb_Edocivil.TabIndex = 77
+        Me.grb_Edocivil.TabStop = False
+        Me.grb_Edocivil.Text = "Estado civil"
+        '
+        'rdb_Otro
+        '
+        Me.rdb_Otro.AutoSize = True
+        Me.rdb_Otro.Location = New System.Drawing.Point(44, 33)
+        Me.rdb_Otro.Name = "rdb_Otro"
+        Me.rdb_Otro.Size = New System.Drawing.Size(33, 17)
+        Me.rdb_Otro.TabIndex = 3
+        Me.rdb_Otro.TabStop = True
+        Me.rdb_Otro.Text = "O"
+        Me.rdb_Otro.UseVisualStyleBackColor = True
+        '
+        'rdb_Divorciado
+        '
+        Me.rdb_Divorciado.AutoSize = True
+        Me.rdb_Divorciado.Location = New System.Drawing.Point(44, 13)
+        Me.rdb_Divorciado.Name = "rdb_Divorciado"
+        Me.rdb_Divorciado.Size = New System.Drawing.Size(33, 17)
+        Me.rdb_Divorciado.TabIndex = 2
+        Me.rdb_Divorciado.TabStop = True
+        Me.rdb_Divorciado.Text = "D"
+        Me.rdb_Divorciado.UseVisualStyleBackColor = True
+        '
+        'rdb_Casado
+        '
+        Me.rdb_Casado.AutoSize = True
+        Me.rdb_Casado.Location = New System.Drawing.Point(6, 33)
+        Me.rdb_Casado.Name = "rdb_Casado"
+        Me.rdb_Casado.Size = New System.Drawing.Size(32, 17)
+        Me.rdb_Casado.TabIndex = 1
+        Me.rdb_Casado.TabStop = True
+        Me.rdb_Casado.Text = "C"
+        Me.rdb_Casado.UseVisualStyleBackColor = True
+        '
+        'rdb_soltero
+        '
+        Me.rdb_soltero.AutoSize = True
+        Me.rdb_soltero.Location = New System.Drawing.Point(6, 13)
+        Me.rdb_soltero.Name = "rdb_soltero"
+        Me.rdb_soltero.Size = New System.Drawing.Size(32, 17)
+        Me.rdb_soltero.TabIndex = 0
+        Me.rdb_soltero.TabStop = True
+        Me.rdb_soltero.Text = "S"
+        Me.rdb_soltero.UseVisualStyleBackColor = True
+        '
+        'grb_Sexo
+        '
+        Me.grb_Sexo.Controls.Add(Me.rdb_Femenino)
+        Me.grb_Sexo.Controls.Add(Me.rdb_Masculino)
+        Me.grb_Sexo.Location = New System.Drawing.Point(512, 50)
+        Me.grb_Sexo.Name = "grb_Sexo"
+        Me.grb_Sexo.Size = New System.Drawing.Size(46, 59)
+        Me.grb_Sexo.TabIndex = 76
+        Me.grb_Sexo.TabStop = False
+        Me.grb_Sexo.Text = "Sexo"
+        '
+        'rdb_Femenino
+        '
+        Me.rdb_Femenino.AutoSize = True
+        Me.rdb_Femenino.Location = New System.Drawing.Point(5, 33)
+        Me.rdb_Femenino.Name = "rdb_Femenino"
+        Me.rdb_Femenino.Size = New System.Drawing.Size(31, 17)
+        Me.rdb_Femenino.TabIndex = 1
+        Me.rdb_Femenino.TabStop = True
+        Me.rdb_Femenino.Text = "F"
+        Me.rdb_Femenino.UseVisualStyleBackColor = True
+        '
+        'rdb_Masculino
+        '
+        Me.rdb_Masculino.AutoSize = True
+        Me.rdb_Masculino.Location = New System.Drawing.Point(5, 13)
+        Me.rdb_Masculino.Name = "rdb_Masculino"
+        Me.rdb_Masculino.Size = New System.Drawing.Size(34, 17)
+        Me.rdb_Masculino.TabIndex = 0
+        Me.rdb_Masculino.TabStop = True
+        Me.rdb_Masculino.Text = "M"
+        Me.rdb_Masculino.UseVisualStyleBackColor = True
+        '
+        'grb_DireccYContacto
+        '
+        Me.grb_DireccYContacto.Controls.Add(Me.ComboBox4)
+        Me.grb_DireccYContacto.Controls.Add(Me.TextBox12)
+        Me.grb_DireccYContacto.Controls.Add(Me.Label20)
+        Me.grb_DireccYContacto.Controls.Add(Me.TextBox11)
+        Me.grb_DireccYContacto.Controls.Add(Me.TextBox9)
+        Me.grb_DireccYContacto.Controls.Add(Me.Label19)
+        Me.grb_DireccYContacto.Controls.Add(Me.LinkLabel1)
+        Me.grb_DireccYContacto.Controls.Add(Me.lbl_Ciudad)
+        Me.grb_DireccYContacto.Controls.Add(Me.TextBox7)
+        Me.grb_DireccYContacto.Controls.Add(Me.Label12)
+        Me.grb_DireccYContacto.Controls.Add(Me.TextBox6)
+        Me.grb_DireccYContacto.Controls.Add(Me.Label11)
+        Me.grb_DireccYContacto.Controls.Add(Me.Label10)
+        Me.grb_DireccYContacto.Location = New System.Drawing.Point(32, 357)
+        Me.grb_DireccYContacto.Name = "grb_DireccYContacto"
+        Me.grb_DireccYContacto.Size = New System.Drawing.Size(662, 141)
+        Me.grb_DireccYContacto.TabIndex = 92
+        Me.grb_DireccYContacto.TabStop = False
+        Me.grb_DireccYContacto.Text = "Datos de dirección y contacto"
         '
         'GroupBox3
         '
@@ -491,96 +581,6 @@ Partial Class Form3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "GroupBox3"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Location = New System.Drawing.Point(512, 50)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(46, 59)
-        Me.GroupBox1.TabIndex = 76
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Sexo"
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(5, 13)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(34, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "M"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(5, 33)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(31, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "F"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.RadioButton6)
-        Me.GroupBox4.Controls.Add(Me.RadioButton5)
-        Me.GroupBox4.Controls.Add(Me.RadioButton4)
-        Me.GroupBox4.Controls.Add(Me.RadioButton3)
-        Me.GroupBox4.Location = New System.Drawing.Point(564, 50)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(83, 59)
-        Me.GroupBox4.TabIndex = 77
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Estado civil"
-        '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(6, 13)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(32, 17)
-        Me.RadioButton3.TabIndex = 0
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "S"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(6, 33)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(32, 17)
-        Me.RadioButton4.TabIndex = 1
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "C"
-        Me.RadioButton4.UseVisualStyleBackColor = True
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(44, 13)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(33, 17)
-        Me.RadioButton5.TabIndex = 2
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "D"
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(44, 33)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(33, 17)
-        Me.RadioButton6.TabIndex = 3
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "O"
-        Me.RadioButton6.UseVisualStyleBackColor = True
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -588,7 +588,7 @@ Partial Class Form3
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(698, 650)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.grb_DireccYContacto)
         Me.Controls.Add(Me.grb_Personales)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TextBox1)
@@ -603,14 +603,14 @@ Partial Class Form3
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Personales.ResumeLayout(False)
         Me.grb_Personales.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.grb_Edocivil.ResumeLayout(False)
+        Me.grb_Edocivil.PerformLayout()
+        Me.grb_Sexo.ResumeLayout(False)
+        Me.grb_Sexo.PerformLayout()
+        Me.grb_DireccYContacto.ResumeLayout(False)
+        Me.grb_DireccYContacto.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -638,12 +638,12 @@ Partial Class Form3
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtp_FNacimiento As DateTimePicker
     Friend WithEvents lbl_FNacimiento As Label
     Friend WithEvents cmb_Nacionalidad As ComboBox
     Friend WithEvents txt_Cedula As TextBox
     Friend WithEvents lbl_Cedula As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lbl_Ciudad As Label
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox6 As TextBox
@@ -658,14 +658,14 @@ Partial Class Form3
     Friend WithEvents lbl_SNombre As Label
     Friend WithEvents lbl_PNombre As Label
     Friend WithEvents grb_Personales As GroupBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents RadioButton6 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grb_Edocivil As GroupBox
+    Friend WithEvents rdb_Otro As RadioButton
+    Friend WithEvents rdb_Divorciado As RadioButton
+    Friend WithEvents rdb_Casado As RadioButton
+    Friend WithEvents rdb_soltero As RadioButton
+    Friend WithEvents grb_Sexo As GroupBox
+    Friend WithEvents rdb_Femenino As RadioButton
+    Friend WithEvents rdb_Masculino As RadioButton
+    Friend WithEvents grb_DireccYContacto As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
 End Class
