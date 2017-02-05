@@ -23,15 +23,10 @@ Partial Class frm_Siniestro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.lbl_GestionSiniestro = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_LugarSiniestro = New System.Windows.Forms.Label()
-        Me.grb_DatosSiniestro = New System.Windows.Forms.GroupBox()
+        Me.grb_Siniestro = New System.Windows.Forms.GroupBox()
         Me.dtp_HoraSin = New System.Windows.Forms.DateTimePicker()
-        Me.dtp_CitaPerito = New System.Windows.Forms.DateTimePicker()
-        Me.lbl_CitaPerito = New System.Windows.Forms.Label()
-        Me.lbl_RutaImagen = New System.Windows.Forms.Label()
         Me.btn_CargarArch = New System.Windows.Forms.Button()
         Me.txt_DocumentoTran = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -41,50 +36,41 @@ Partial Class frm_Siniestro
         Me.dtp_FechaSin = New System.Windows.Forms.DateTimePicker()
         Me.lbl_HoraSin = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txt_LugarSiniestro = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lbl_DescSiniestro = New System.Windows.Forms.Label()
-        Me.txt_DescripcionSin = New System.Windows.Forms.TextBox()
-        Me.grb_DatosOtros = New System.Windows.Forms.GroupBox()
-        Me.btn_BuscarCedTom = New System.Windows.Forms.Button()
+        Me.lbl_Direccion = New System.Windows.Forms.Label()
+        Me.lbl_Descripcion = New System.Windows.Forms.Label()
+        Me.grb_Poliza = New System.Windows.Forms.GroupBox()
         Me.cmb_PlacaVeh = New System.Windows.Forms.ComboBox()
         Me.txt_CodPoliza = New System.Windows.Forms.TextBox()
         Me.lbl_PlacaVehiculo = New System.Windows.Forms.Label()
         Me.lbl_CodPoliza = New System.Windows.Forms.Label()
-        Me.txt_CedulaTom = New System.Windows.Forms.TextBox()
-        Me.cmb_RazonSocial = New System.Windows.Forms.ComboBox()
-        Me.lbl_CedulaTomador = New System.Windows.Forms.Label()
-        Me.lbl_CargoActual = New System.Windows.Forms.Label()
-        Me.lbl_UsuarioActual = New System.Windows.Forms.Label()
-        Me.lbl_HorafSiniestro = New System.Windows.Forms.Label()
         Me.tmr_HoraSiniestro = New System.Windows.Forms.Timer(Me.components)
         Me.ofd_transito = New System.Windows.Forms.OpenFileDialog()
-        Me.btn_GuardarSin = New System.Windows.Forms.Button()
+        Me.grb_Lugar = New System.Windows.Forms.GroupBox()
+        Me.lbl_Estado = New System.Windows.Forms.Label()
+        Me.lbl_Ciudad = New System.Windows.Forms.Label()
+        Me.cmb_Estado = New System.Windows.Forms.ComboBox()
+        Me.cmb_Ciudad = New System.Windows.Forms.ComboBox()
+        Me.btn_BuscarT = New System.Windows.Forms.Button()
+        Me.cmb_NacionalidadT = New System.Windows.Forms.ComboBox()
+        Me.txt_CedulaT = New System.Windows.Forms.TextBox()
+        Me.lbl_CedulaT = New System.Windows.Forms.Label()
+        Me.rtb_Direccion = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_Volver = New System.Windows.Forms.Button()
+        Me.btn_Cancelar = New System.Windows.Forms.Button()
+        Me.btn_Agregar = New System.Windows.Forms.Button()
+        Me.btn_Consultar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grb_DatosSiniestro.SuspendLayout()
+        Me.grb_Siniestro.SuspendLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grb_DatosOtros.SuspendLayout()
+        Me.grb_Poliza.SuspendLayout()
+        Me.grb_Lugar.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'lbl_GestionSiniestro
-        '
-        Me.lbl_GestionSiniestro.AutoSize = True
-        Me.lbl_GestionSiniestro.Font = New System.Drawing.Font("Century", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_GestionSiniestro.Location = New System.Drawing.Point(244, 69)
-        Me.lbl_GestionSiniestro.Name = "lbl_GestionSiniestro"
-        Me.lbl_GestionSiniestro.Size = New System.Drawing.Size(252, 23)
-        Me.lbl_GestionSiniestro.TabIndex = 9
-        Me.lbl_GestionSiniestro.Text = "GESTIÓN DE SINIESTRO"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Century", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(228, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(285, 25)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "SEGUROS MALDONADO"
         '
         'PictureBox1
         '
@@ -98,84 +84,49 @@ Partial Class frm_Siniestro
         '
         Me.lbl_LugarSiniestro.AutoSize = True
         Me.lbl_LugarSiniestro.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbl_LugarSiniestro.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_LugarSiniestro.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_LugarSiniestro.Location = New System.Drawing.Point(581, 343)
         Me.lbl_LugarSiniestro.Name = "lbl_LugarSiniestro"
         Me.lbl_LugarSiniestro.Size = New System.Drawing.Size(0, 16)
         Me.lbl_LugarSiniestro.TabIndex = 13
         '
-        'grb_DatosSiniestro
+        'grb_Siniestro
         '
-        Me.grb_DatosSiniestro.Controls.Add(Me.btn_GuardarSin)
-        Me.grb_DatosSiniestro.Controls.Add(Me.dtp_HoraSin)
-        Me.grb_DatosSiniestro.Controls.Add(Me.dtp_CitaPerito)
-        Me.grb_DatosSiniestro.Controls.Add(Me.lbl_CitaPerito)
-        Me.grb_DatosSiniestro.Controls.Add(Me.lbl_RutaImagen)
-        Me.grb_DatosSiniestro.Controls.Add(Me.btn_CargarArch)
-        Me.grb_DatosSiniestro.Controls.Add(Me.txt_DocumentoTran)
-        Me.grb_DatosSiniestro.Controls.Add(Me.Label7)
-        Me.grb_DatosSiniestro.Controls.Add(Me.btn_CargarImagen)
-        Me.grb_DatosSiniestro.Controls.Add(Me.ptb_ImagenCarro)
-        Me.grb_DatosSiniestro.Controls.Add(Me.Label6)
-        Me.grb_DatosSiniestro.Controls.Add(Me.dtp_FechaSin)
-        Me.grb_DatosSiniestro.Controls.Add(Me.lbl_HoraSin)
-        Me.grb_DatosSiniestro.Controls.Add(Me.Label3)
-        Me.grb_DatosSiniestro.Controls.Add(Me.txt_LugarSiniestro)
-        Me.grb_DatosSiniestro.Controls.Add(Me.Label2)
-        Me.grb_DatosSiniestro.Controls.Add(Me.lbl_DescSiniestro)
-        Me.grb_DatosSiniestro.Controls.Add(Me.txt_DescripcionSin)
-        Me.grb_DatosSiniestro.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_DatosSiniestro.Location = New System.Drawing.Point(13, 258)
-        Me.grb_DatosSiniestro.Name = "grb_DatosSiniestro"
-        Me.grb_DatosSiniestro.Size = New System.Drawing.Size(704, 306)
-        Me.grb_DatosSiniestro.TabIndex = 19
-        Me.grb_DatosSiniestro.TabStop = False
-        Me.grb_DatosSiniestro.Text = "DATOS DEL SINIESTRO"
+        Me.grb_Siniestro.Controls.Add(Me.RichTextBox1)
+        Me.grb_Siniestro.Controls.Add(Me.grb_Lugar)
+        Me.grb_Siniestro.Controls.Add(Me.dtp_HoraSin)
+        Me.grb_Siniestro.Controls.Add(Me.btn_CargarArch)
+        Me.grb_Siniestro.Controls.Add(Me.txt_DocumentoTran)
+        Me.grb_Siniestro.Controls.Add(Me.Label7)
+        Me.grb_Siniestro.Controls.Add(Me.btn_CargarImagen)
+        Me.grb_Siniestro.Controls.Add(Me.ptb_ImagenCarro)
+        Me.grb_Siniestro.Controls.Add(Me.Label6)
+        Me.grb_Siniestro.Controls.Add(Me.dtp_FechaSin)
+        Me.grb_Siniestro.Controls.Add(Me.lbl_HoraSin)
+        Me.grb_Siniestro.Controls.Add(Me.Label3)
+        Me.grb_Siniestro.Controls.Add(Me.lbl_Descripcion)
+        Me.grb_Siniestro.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grb_Siniestro.Location = New System.Drawing.Point(6, 227)
+        Me.grb_Siniestro.Name = "grb_Siniestro"
+        Me.grb_Siniestro.Size = New System.Drawing.Size(628, 306)
+        Me.grb_Siniestro.TabIndex = 19
+        Me.grb_Siniestro.TabStop = False
+        Me.grb_Siniestro.Text = "DATOS DEL SINIESTRO"
         '
         'dtp_HoraSin
         '
         Me.dtp_HoraSin.Enabled = False
-        Me.dtp_HoraSin.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtp_HoraSin.Location = New System.Drawing.Point(346, 80)
+        Me.dtp_HoraSin.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtp_HoraSin.Location = New System.Drawing.Point(318, 123)
         Me.dtp_HoraSin.Name = "dtp_HoraSin"
-        Me.dtp_HoraSin.Size = New System.Drawing.Size(120, 23)
+        Me.dtp_HoraSin.Size = New System.Drawing.Size(82, 21)
         Me.dtp_HoraSin.TabIndex = 30
-        '
-        'dtp_CitaPerito
-        '
-        Me.dtp_CitaPerito.Enabled = False
-        Me.dtp_CitaPerito.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtp_CitaPerito.Location = New System.Drawing.Point(88, 169)
-        Me.dtp_CitaPerito.Name = "dtp_CitaPerito"
-        Me.dtp_CitaPerito.Size = New System.Drawing.Size(375, 23)
-        Me.dtp_CitaPerito.TabIndex = 29
-        '
-        'lbl_CitaPerito
-        '
-        Me.lbl_CitaPerito.AutoSize = True
-        Me.lbl_CitaPerito.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_CitaPerito.Location = New System.Drawing.Point(6, 169)
-        Me.lbl_CitaPerito.Name = "lbl_CitaPerito"
-        Me.lbl_CitaPerito.Size = New System.Drawing.Size(73, 16)
-        Me.lbl_CitaPerito.TabIndex = 28
-        Me.lbl_CitaPerito.Text = "Cita Perito"
-        '
-        'lbl_RutaImagen
-        '
-        Me.lbl_RutaImagen.AutoSize = True
-        Me.lbl_RutaImagen.Font = New System.Drawing.Font("Century", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_RutaImagen.ForeColor = System.Drawing.SystemColors.Control
-        Me.lbl_RutaImagen.Location = New System.Drawing.Point(501, 277)
-        Me.lbl_RutaImagen.Name = "lbl_RutaImagen"
-        Me.lbl_RutaImagen.Size = New System.Drawing.Size(187, 15)
-        Me.lbl_RutaImagen.TabIndex = 27
-        Me.lbl_RutaImagen.Text = "                                                            "
         '
         'btn_CargarArch
         '
         Me.btn_CargarArch.Enabled = False
-        Me.btn_CargarArch.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_CargarArch.Location = New System.Drawing.Point(137, 241)
+        Me.btn_CargarArch.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_CargarArch.Location = New System.Drawing.Point(138, 271)
         Me.btn_CargarArch.Name = "btn_CargarArch"
         Me.btn_CargarArch.Size = New System.Drawing.Size(149, 24)
         Me.btn_CargarArch.TabIndex = 26
@@ -185,27 +136,27 @@ Partial Class frm_Siniestro
         'txt_DocumentoTran
         '
         Me.txt_DocumentoTran.Enabled = False
-        Me.txt_DocumentoTran.Font = New System.Drawing.Font("Century", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_DocumentoTran.Location = New System.Drawing.Point(137, 214)
+        Me.txt_DocumentoTran.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_DocumentoTran.Location = New System.Drawing.Point(11, 244)
         Me.txt_DocumentoTran.Name = "txt_DocumentoTran"
-        Me.txt_DocumentoTran.Size = New System.Drawing.Size(326, 21)
+        Me.txt_DocumentoTran.Size = New System.Drawing.Size(386, 21)
         Me.txt_DocumentoTran.TabIndex = 25
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(6, 219)
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(8, 225)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(127, 16)
+        Me.Label7.Size = New System.Drawing.Size(112, 16)
         Me.Label7.TabIndex = 24
-        Me.Label7.Text = "Informe de Transito"
+        Me.Label7.Text = "Informe de Transito:"
         '
         'btn_CargarImagen
         '
         Me.btn_CargarImagen.Enabled = False
-        Me.btn_CargarImagen.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_CargarImagen.Location = New System.Drawing.Point(533, 223)
+        Me.btn_CargarImagen.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_CargarImagen.Location = New System.Drawing.Point(443, 218)
         Me.btn_CargarImagen.Name = "btn_CargarImagen"
         Me.btn_CargarImagen.Size = New System.Drawing.Size(144, 24)
         Me.btn_CargarImagen.TabIndex = 23
@@ -215,7 +166,7 @@ Partial Class frm_Siniestro
         'ptb_ImagenCarro
         '
         Me.ptb_ImagenCarro.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ptb_ImagenCarro.Location = New System.Drawing.Point(500, 54)
+        Me.ptb_ImagenCarro.Location = New System.Drawing.Point(415, 49)
         Me.ptb_ImagenCarro.Name = "ptb_ImagenCarro"
         Me.ptb_ImagenCarro.Size = New System.Drawing.Size(198, 163)
         Me.ptb_ImagenCarro.TabIndex = 22
@@ -224,110 +175,87 @@ Partial Class frm_Siniestro
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(530, 29)
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(445, 24)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(133, 16)
+        Me.Label6.Size = New System.Drawing.Size(122, 16)
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Imagen del Vehiculo:"
         '
         'dtp_FechaSin
         '
         Me.dtp_FechaSin.Enabled = False
-        Me.dtp_FechaSin.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtp_FechaSin.Location = New System.Drawing.Point(65, 78)
+        Me.dtp_FechaSin.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtp_FechaSin.Location = New System.Drawing.Point(56, 123)
         Me.dtp_FechaSin.Name = "dtp_FechaSin"
-        Me.dtp_FechaSin.Size = New System.Drawing.Size(221, 22)
+        Me.dtp_FechaSin.Size = New System.Drawing.Size(218, 21)
         Me.dtp_FechaSin.TabIndex = 20
         '
         'lbl_HoraSin
         '
         Me.lbl_HoraSin.AutoSize = True
-        Me.lbl_HoraSin.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_HoraSin.Location = New System.Drawing.Point(302, 81)
+        Me.lbl_HoraSin.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_HoraSin.Location = New System.Drawing.Point(278, 127)
         Me.lbl_HoraSin.Name = "lbl_HoraSin"
-        Me.lbl_HoraSin.Size = New System.Drawing.Size(38, 16)
+        Me.lbl_HoraSin.Size = New System.Drawing.Size(34, 16)
         Me.lbl_HoraSin.TabIndex = 6
         Me.lbl_HoraSin.Text = "Hora"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(5, 83)
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(8, 127)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 16)
+        Me.Label3.Size = New System.Drawing.Size(45, 16)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Fecha"
+        Me.Label3.Text = "Fecha:"
         '
-        'txt_LugarSiniestro
+        'lbl_Direccion
         '
-        Me.txt_LugarSiniestro.Enabled = False
-        Me.txt_LugarSiniestro.Location = New System.Drawing.Point(65, 30)
-        Me.txt_LugarSiniestro.Name = "txt_LugarSiniestro"
-        Me.txt_LugarSiniestro.Size = New System.Drawing.Size(401, 23)
-        Me.txt_LugarSiniestro.TabIndex = 3
+        Me.lbl_Direccion.AutoSize = True
+        Me.lbl_Direccion.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Direccion.Location = New System.Drawing.Point(6, 46)
+        Me.lbl_Direccion.Name = "lbl_Direccion"
+        Me.lbl_Direccion.Size = New System.Drawing.Size(61, 16)
+        Me.lbl_Direccion.TabIndex = 2
+        Me.lbl_Direccion.Text = "Dirección:"
         '
-        'Label2
+        'lbl_Descripcion
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 34)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Lugar"
+        Me.lbl_Descripcion.AutoSize = True
+        Me.lbl_Descripcion.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Descripcion.Location = New System.Drawing.Point(6, 157)
+        Me.lbl_Descripcion.Name = "lbl_Descripcion"
+        Me.lbl_Descripcion.Size = New System.Drawing.Size(73, 16)
+        Me.lbl_Descripcion.TabIndex = 1
+        Me.lbl_Descripcion.Text = "Descripción:"
         '
-        'lbl_DescSiniestro
+        'grb_Poliza
         '
-        Me.lbl_DescSiniestro.AutoSize = True
-        Me.lbl_DescSiniestro.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_DescSiniestro.Location = New System.Drawing.Point(5, 123)
-        Me.lbl_DescSiniestro.Name = "lbl_DescSiniestro"
-        Me.lbl_DescSiniestro.Size = New System.Drawing.Size(77, 16)
-        Me.lbl_DescSiniestro.TabIndex = 1
-        Me.lbl_DescSiniestro.Text = "Descripción"
-        '
-        'txt_DescripcionSin
-        '
-        Me.txt_DescripcionSin.Enabled = False
-        Me.txt_DescripcionSin.Location = New System.Drawing.Point(88, 123)
-        Me.txt_DescripcionSin.Name = "txt_DescripcionSin"
-        Me.txt_DescripcionSin.Size = New System.Drawing.Size(378, 23)
-        Me.txt_DescripcionSin.TabIndex = 0
-        '
-        'grb_DatosOtros
-        '
-        Me.grb_DatosOtros.Controls.Add(Me.btn_BuscarCedTom)
-        Me.grb_DatosOtros.Controls.Add(Me.cmb_PlacaVeh)
-        Me.grb_DatosOtros.Controls.Add(Me.txt_CodPoliza)
-        Me.grb_DatosOtros.Controls.Add(Me.lbl_PlacaVehiculo)
-        Me.grb_DatosOtros.Controls.Add(Me.lbl_CodPoliza)
-        Me.grb_DatosOtros.Controls.Add(Me.txt_CedulaTom)
-        Me.grb_DatosOtros.Controls.Add(Me.cmb_RazonSocial)
-        Me.grb_DatosOtros.Controls.Add(Me.lbl_CedulaTomador)
-        Me.grb_DatosOtros.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_DatosOtros.Location = New System.Drawing.Point(12, 154)
-        Me.grb_DatosOtros.Name = "grb_DatosOtros"
-        Me.grb_DatosOtros.Size = New System.Drawing.Size(704, 98)
-        Me.grb_DatosOtros.TabIndex = 20
-        Me.grb_DatosOtros.TabStop = False
-        Me.grb_DatosOtros.Text = "DATOS DE LA PÓLIZA"
-        '
-        'btn_BuscarCedTom
-        '
-        Me.btn_BuscarCedTom.Location = New System.Drawing.Point(270, 29)
-        Me.btn_BuscarCedTom.Name = "btn_BuscarCedTom"
-        Me.btn_BuscarCedTom.Size = New System.Drawing.Size(80, 25)
-        Me.btn_BuscarCedTom.TabIndex = 9
-        Me.btn_BuscarCedTom.Text = "Buscar"
-        Me.btn_BuscarCedTom.UseVisualStyleBackColor = True
+        Me.grb_Poliza.Controls.Add(Me.btn_Consultar)
+        Me.grb_Poliza.Controls.Add(Me.btn_BuscarT)
+        Me.grb_Poliza.Controls.Add(Me.cmb_NacionalidadT)
+        Me.grb_Poliza.Controls.Add(Me.txt_CedulaT)
+        Me.grb_Poliza.Controls.Add(Me.lbl_CedulaT)
+        Me.grb_Poliza.Controls.Add(Me.cmb_PlacaVeh)
+        Me.grb_Poliza.Controls.Add(Me.txt_CodPoliza)
+        Me.grb_Poliza.Controls.Add(Me.lbl_PlacaVehiculo)
+        Me.grb_Poliza.Controls.Add(Me.lbl_CodPoliza)
+        Me.grb_Poliza.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grb_Poliza.Location = New System.Drawing.Point(6, 151)
+        Me.grb_Poliza.Name = "grb_Poliza"
+        Me.grb_Poliza.Size = New System.Drawing.Size(628, 76)
+        Me.grb_Poliza.TabIndex = 20
+        Me.grb_Poliza.TabStop = False
+        Me.grb_Poliza.Text = "Datos de la póliza"
         '
         'cmb_PlacaVeh
         '
         Me.cmb_PlacaVeh.Enabled = False
+        Me.cmb_PlacaVeh.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_PlacaVeh.FormattingEnabled = True
-        Me.cmb_PlacaVeh.Location = New System.Drawing.Point(112, 68)
+        Me.cmb_PlacaVeh.Location = New System.Drawing.Point(136, 46)
         Me.cmb_PlacaVeh.Name = "cmb_PlacaVeh"
         Me.cmb_PlacaVeh.Size = New System.Drawing.Size(92, 24)
         Me.cmb_PlacaVeh.TabIndex = 8
@@ -335,89 +263,32 @@ Partial Class frm_Siniestro
         'txt_CodPoliza
         '
         Me.txt_CodPoliza.Enabled = False
-        Me.txt_CodPoliza.Location = New System.Drawing.Point(462, 48)
+        Me.txt_CodPoliza.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_CodPoliza.Location = New System.Drawing.Point(376, 38)
         Me.txt_CodPoliza.Name = "txt_CodPoliza"
-        Me.txt_CodPoliza.Size = New System.Drawing.Size(219, 23)
+        Me.txt_CodPoliza.Size = New System.Drawing.Size(136, 21)
         Me.txt_CodPoliza.TabIndex = 7
         Me.txt_CodPoliza.Text = "Aparezca luego de la placa"
         '
         'lbl_PlacaVehiculo
         '
         Me.lbl_PlacaVehiculo.AutoSize = True
-        Me.lbl_PlacaVehiculo.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_PlacaVehiculo.Location = New System.Drawing.Point(7, 71)
+        Me.lbl_PlacaVehiculo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_PlacaVehiculo.Location = New System.Drawing.Point(17, 49)
         Me.lbl_PlacaVehiculo.Name = "lbl_PlacaVehiculo"
-        Me.lbl_PlacaVehiculo.Size = New System.Drawing.Size(96, 16)
+        Me.lbl_PlacaVehiculo.Size = New System.Drawing.Size(113, 16)
         Me.lbl_PlacaVehiculo.TabIndex = 6
-        Me.lbl_PlacaVehiculo.Text = "Placa Vehiculo"
+        Me.lbl_PlacaVehiculo.Text = "Placa del vehículo:"
         '
         'lbl_CodPoliza
         '
         Me.lbl_CodPoliza.AutoSize = True
-        Me.lbl_CodPoliza.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_CodPoliza.Location = New System.Drawing.Point(498, 29)
+        Me.lbl_CodPoliza.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_CodPoliza.Location = New System.Drawing.Point(373, 19)
         Me.lbl_CodPoliza.Name = "lbl_CodPoliza"
         Me.lbl_CodPoliza.Size = New System.Drawing.Size(114, 16)
         Me.lbl_CodPoliza.TabIndex = 4
-        Me.lbl_CodPoliza.Text = "Número de Póliza"
-        '
-        'txt_CedulaTom
-        '
-        Me.txt_CedulaTom.Location = New System.Drawing.Point(138, 30)
-        Me.txt_CedulaTom.Name = "txt_CedulaTom"
-        Me.txt_CedulaTom.Size = New System.Drawing.Size(125, 23)
-        Me.txt_CedulaTom.TabIndex = 2
-        '
-        'cmb_RazonSocial
-        '
-        Me.cmb_RazonSocial.FormattingEnabled = True
-        Me.cmb_RazonSocial.Location = New System.Drawing.Point(112, 30)
-        Me.cmb_RazonSocial.Name = "cmb_RazonSocial"
-        Me.cmb_RazonSocial.Size = New System.Drawing.Size(20, 24)
-        Me.cmb_RazonSocial.TabIndex = 1
-        '
-        'lbl_CedulaTomador
-        '
-        Me.lbl_CedulaTomador.AutoSize = True
-        Me.lbl_CedulaTomador.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_CedulaTomador.Location = New System.Drawing.Point(6, 33)
-        Me.lbl_CedulaTomador.Name = "lbl_CedulaTomador"
-        Me.lbl_CedulaTomador.Size = New System.Drawing.Size(106, 16)
-        Me.lbl_CedulaTomador.TabIndex = 0
-        Me.lbl_CedulaTomador.Text = "Cedula Tomador"
-        '
-        'lbl_CargoActual
-        '
-        Me.lbl_CargoActual.AutoSize = True
-        Me.lbl_CargoActual.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_CargoActual.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_CargoActual.Location = New System.Drawing.Point(581, 87)
-        Me.lbl_CargoActual.Name = "lbl_CargoActual"
-        Me.lbl_CargoActual.Size = New System.Drawing.Size(95, 16)
-        Me.lbl_CargoActual.TabIndex = 23
-        Me.lbl_CargoActual.Text = "                             "
-        '
-        'lbl_UsuarioActual
-        '
-        Me.lbl_UsuarioActual.AutoSize = True
-        Me.lbl_UsuarioActual.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_UsuarioActual.Font = New System.Drawing.Font("Century", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_UsuarioActual.Location = New System.Drawing.Point(584, 55)
-        Me.lbl_UsuarioActual.Name = "lbl_UsuarioActual"
-        Me.lbl_UsuarioActual.Size = New System.Drawing.Size(92, 16)
-        Me.lbl_UsuarioActual.TabIndex = 22
-        Me.lbl_UsuarioActual.Text = "                            "
-        '
-        'lbl_HorafSiniestro
-        '
-        Me.lbl_HorafSiniestro.AutoSize = True
-        Me.lbl_HorafSiniestro.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_HorafSiniestro.Font = New System.Drawing.Font("Century", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_HorafSiniestro.Location = New System.Drawing.Point(642, 25)
-        Me.lbl_HorafSiniestro.Name = "lbl_HorafSiniestro"
-        Me.lbl_HorafSiniestro.Size = New System.Drawing.Size(52, 15)
-        Me.lbl_HorafSiniestro.TabIndex = 24
-        Me.lbl_HorafSiniestro.Text = "               "
+        Me.lbl_CodPoliza.Text = "Código de la póliza"
         '
         'tmr_HoraSiniestro
         '
@@ -426,60 +297,225 @@ Partial Class frm_Siniestro
         '
         Me.ofd_transito.FileName = "OpenFileDialog1"
         '
-        'btn_GuardarSin
+        'grb_Lugar
         '
-        Me.btn_GuardarSin.Location = New System.Drawing.Point(278, 275)
-        Me.btn_GuardarSin.Name = "btn_GuardarSin"
-        Me.btn_GuardarSin.Size = New System.Drawing.Size(115, 25)
-        Me.btn_GuardarSin.TabIndex = 31
-        Me.btn_GuardarSin.Text = "Guardar"
-        Me.btn_GuardarSin.UseVisualStyleBackColor = True
+        Me.grb_Lugar.Controls.Add(Me.rtb_Direccion)
+        Me.grb_Lugar.Controls.Add(Me.cmb_Ciudad)
+        Me.grb_Lugar.Controls.Add(Me.cmb_Estado)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Ciudad)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Estado)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Direccion)
+        Me.grb_Lugar.Location = New System.Drawing.Point(10, 20)
+        Me.grb_Lugar.Name = "grb_Lugar"
+        Me.grb_Lugar.Size = New System.Drawing.Size(390, 98)
+        Me.grb_Lugar.TabIndex = 31
+        Me.grb_Lugar.TabStop = False
+        Me.grb_Lugar.Text = "Lugar"
+        '
+        'lbl_Estado
+        '
+        Me.lbl_Estado.AutoSize = True
+        Me.lbl_Estado.Location = New System.Drawing.Point(19, 19)
+        Me.lbl_Estado.Name = "lbl_Estado"
+        Me.lbl_Estado.Size = New System.Drawing.Size(48, 16)
+        Me.lbl_Estado.TabIndex = 4
+        Me.lbl_Estado.Text = "Estado:"
+        '
+        'lbl_Ciudad
+        '
+        Me.lbl_Ciudad.AutoSize = True
+        Me.lbl_Ciudad.Location = New System.Drawing.Point(196, 19)
+        Me.lbl_Ciudad.Name = "lbl_Ciudad"
+        Me.lbl_Ciudad.Size = New System.Drawing.Size(53, 16)
+        Me.lbl_Ciudad.TabIndex = 5
+        Me.lbl_Ciudad.Text = "Ciudad:"
+        '
+        'cmb_Estado
+        '
+        Me.cmb_Estado.FormattingEnabled = True
+        Me.cmb_Estado.Location = New System.Drawing.Point(69, 16)
+        Me.cmb_Estado.Name = "cmb_Estado"
+        Me.cmb_Estado.Size = New System.Drawing.Size(121, 24)
+        Me.cmb_Estado.TabIndex = 6
+        '
+        'cmb_Ciudad
+        '
+        Me.cmb_Ciudad.FormattingEnabled = True
+        Me.cmb_Ciudad.Location = New System.Drawing.Point(254, 16)
+        Me.cmb_Ciudad.Name = "cmb_Ciudad"
+        Me.cmb_Ciudad.Size = New System.Drawing.Size(121, 24)
+        Me.cmb_Ciudad.TabIndex = 7
+        '
+        'btn_BuscarT
+        '
+        Me.btn_BuscarT.Location = New System.Drawing.Point(281, 16)
+        Me.btn_BuscarT.Name = "btn_BuscarT"
+        Me.btn_BuscarT.Size = New System.Drawing.Size(75, 23)
+        Me.btn_BuscarT.TabIndex = 109
+        Me.btn_BuscarT.Text = "Buscar"
+        Me.btn_BuscarT.UseVisualStyleBackColor = True
+        '
+        'cmb_NacionalidadT
+        '
+        Me.cmb_NacionalidadT.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
+        Me.cmb_NacionalidadT.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_NacionalidadT.FormattingEnabled = True
+        Me.cmb_NacionalidadT.Location = New System.Drawing.Point(136, 16)
+        Me.cmb_NacionalidadT.Name = "cmb_NacionalidadT"
+        Me.cmb_NacionalidadT.Size = New System.Drawing.Size(47, 24)
+        Me.cmb_NacionalidadT.TabIndex = 108
+        '
+        'txt_CedulaT
+        '
+        Me.txt_CedulaT.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_CedulaT.Location = New System.Drawing.Point(189, 16)
+        Me.txt_CedulaT.MaxLength = 8
+        Me.txt_CedulaT.Name = "txt_CedulaT"
+        Me.txt_CedulaT.Size = New System.Drawing.Size(85, 21)
+        Me.txt_CedulaT.TabIndex = 107
+        '
+        'lbl_CedulaT
+        '
+        Me.lbl_CedulaT.AutoSize = True
+        Me.lbl_CedulaT.Location = New System.Drawing.Point(8, 19)
+        Me.lbl_CedulaT.Name = "lbl_CedulaT"
+        Me.lbl_CedulaT.Size = New System.Drawing.Size(122, 16)
+        Me.lbl_CedulaT.TabIndex = 106
+        Me.lbl_CedulaT.Text = "Cédula del tomador:"
+        '
+        'rtb_Direccion
+        '
+        Me.rtb_Direccion.Location = New System.Drawing.Point(69, 46)
+        Me.rtb_Direccion.Name = "rtb_Direccion"
+        Me.rtb_Direccion.Size = New System.Drawing.Size(306, 46)
+        Me.rtb_Direccion.TabIndex = 8
+        Me.rtb_Direccion.Text = ""
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(85, 154)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(312, 58)
+        Me.RichTextBox1.TabIndex = 32
+        Me.RichTextBox1.Text = ""
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(122, -123)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 117
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
+        Me.ComboBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(-23, -123)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(47, 21)
+        Me.ComboBox1.TabIndex = 116
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.TextBox1.Location = New System.Drawing.Point(30, -123)
+        Me.TextBox1.MaxLength = 8
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(85, 20)
+        Me.TextBox1.TabIndex = 115
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(-81, -120)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.TabIndex = 114
+        Me.Label1.Text = "Cédula:"
+        '
+        'btn_Volver
+        '
+        Me.btn_Volver.Location = New System.Drawing.Point(400, 552)
+        Me.btn_Volver.Name = "btn_Volver"
+        Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Volver.TabIndex = 119
+        Me.btn_Volver.Text = "Volver"
+        Me.btn_Volver.UseVisualStyleBackColor = True
+        '
+        'btn_Cancelar
+        '
+        Me.btn_Cancelar.Location = New System.Drawing.Point(287, 552)
+        Me.btn_Cancelar.Name = "btn_Cancelar"
+        Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Cancelar.TabIndex = 118
+        Me.btn_Cancelar.Text = "Cancelar"
+        Me.btn_Cancelar.UseVisualStyleBackColor = True
+        '
+        'btn_Agregar
+        '
+        Me.btn_Agregar.Location = New System.Drawing.Point(175, 552)
+        Me.btn_Agregar.Name = "btn_Agregar"
+        Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Agregar.TabIndex = 120
+        Me.btn_Agregar.Text = "Agregar"
+        Me.btn_Agregar.UseVisualStyleBackColor = True
+        '
+        'btn_Consultar
+        '
+        Me.btn_Consultar.Location = New System.Drawing.Point(527, 38)
+        Me.btn_Consultar.Name = "btn_Consultar"
+        Me.btn_Consultar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Consultar.TabIndex = 121
+        Me.btn_Consultar.Text = "Consultar"
+        Me.btn_Consultar.UseVisualStyleBackColor = True
         '
         'frm_Siniestro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-
-        Me.ClientSize = New System.Drawing.Size(734, 576)
-        Me.Controls.Add(Me.lbl_HorafSiniestro)
-        Me.Controls.Add(Me.lbl_CargoActual)
-        Me.Controls.Add(Me.lbl_UsuarioActual)
-        Me.Controls.Add(Me.grb_DatosOtros)
-        Me.Controls.Add(Me.grb_DatosSiniestro)
-        Me.Controls.Add(Me.lbl_LugarSiniestro)
-        Me.Controls.Add(Me.lbl_GestionSiniestro)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.ClientSize = New System.Drawing.Size(646, 587)
+        Me.Controls.Add(Me.btn_Agregar)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btn_Volver)
+        Me.Controls.Add(Me.btn_Cancelar)
+        Me.Controls.Add(Me.grb_Poliza)
+        Me.Controls.Add(Me.grb_Siniestro)
+        Me.Controls.Add(Me.lbl_LugarSiniestro)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frm_Siniestro"
         Me.Text = "frm_Siniestro"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grb_DatosSiniestro.ResumeLayout(False)
-        Me.grb_DatosSiniestro.PerformLayout()
+        Me.grb_Siniestro.ResumeLayout(False)
+        Me.grb_Siniestro.PerformLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grb_DatosOtros.ResumeLayout(False)
-        Me.grb_DatosOtros.PerformLayout()
+        Me.grb_Poliza.ResumeLayout(False)
+        Me.grb_Poliza.PerformLayout()
+        Me.grb_Lugar.ResumeLayout(False)
+        Me.grb_Lugar.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents lbl_GestionSiniestro As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lbl_LugarSiniestro As System.Windows.Forms.Label
-    Friend WithEvents grb_DatosSiniestro As System.Windows.Forms.GroupBox
+    Friend WithEvents grb_Siniestro As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents txt_LugarSiniestro As System.Windows.Forms.TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents lbl_DescSiniestro As System.Windows.Forms.Label
-    Friend WithEvents txt_DescripcionSin As System.Windows.Forms.TextBox
+    Friend WithEvents lbl_Direccion As System.Windows.Forms.Label
+    Friend WithEvents lbl_Descripcion As System.Windows.Forms.Label
     Friend WithEvents lbl_HoraSin As System.Windows.Forms.Label
     Friend WithEvents dtp_FechaSin As System.Windows.Forms.DateTimePicker
-    Friend WithEvents grb_DatosOtros As System.Windows.Forms.GroupBox
-    Friend WithEvents lbl_CedulaTomador As System.Windows.Forms.Label
+    Friend WithEvents grb_Poliza As System.Windows.Forms.GroupBox
     Friend WithEvents lbl_PlacaVehiculo As System.Windows.Forms.Label
     Friend WithEvents lbl_CodPoliza As System.Windows.Forms.Label
-    Friend WithEvents txt_CedulaTom As System.Windows.Forms.TextBox
-    Friend WithEvents cmb_RazonSocial As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents btn_CargarImagen As System.Windows.Forms.Button
     Friend WithEvents ptb_ImagenCarro As System.Windows.Forms.PictureBox
@@ -488,15 +524,27 @@ Partial Class frm_Siniestro
     Friend WithEvents txt_DocumentoTran As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btn_CargarArch As System.Windows.Forms.Button
-    Friend WithEvents lbl_CargoActual As System.Windows.Forms.Label
-    Friend WithEvents lbl_UsuarioActual As System.Windows.Forms.Label
-    Friend WithEvents lbl_HorafSiniestro As System.Windows.Forms.Label
     Friend WithEvents tmr_HoraSiniestro As System.Windows.Forms.Timer
     Friend WithEvents ofd_transito As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents lbl_RutaImagen As System.Windows.Forms.Label
-    Friend WithEvents lbl_CitaPerito As System.Windows.Forms.Label
-    Friend WithEvents dtp_CitaPerito As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtp_HoraSin As System.Windows.Forms.DateTimePicker
-    Friend WithEvents btn_BuscarCedTom As System.Windows.Forms.Button
-    Friend WithEvents btn_GuardarSin As System.Windows.Forms.Button
+    Friend WithEvents grb_Lugar As GroupBox
+    Friend WithEvents cmb_Ciudad As ComboBox
+    Friend WithEvents cmb_Estado As ComboBox
+    Friend WithEvents lbl_Ciudad As Label
+    Friend WithEvents lbl_Estado As Label
+    Friend WithEvents btn_BuscarT As Button
+    Friend WithEvents cmb_NacionalidadT As ComboBox
+    Friend WithEvents txt_CedulaT As TextBox
+    Friend WithEvents lbl_CedulaT As Label
+    Friend WithEvents rtb_Direccion As RichTextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btn_Volver As Button
+    Friend WithEvents btn_Cancelar As Button
+    Friend WithEvents btn_Agregar As Button
+    Friend WithEvents btn_Consultar As Button
 End Class

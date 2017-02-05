@@ -53,6 +53,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Transactions" />
@@ -78,16 +79,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexionmysql.vb" />
-    <Compile Include="frm_Asegurado.Designer.vb">
-      <DependentUpon>frm_Asegurado.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Asegurado.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frm_Contrato_Poliza.Designer.vb">
       <DependentUpon>frm_Contrato_Poliza.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_Contrato_Poliza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Asegurado.Designer.vb">
+      <DependentUpon>frm_Asegurado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Asegurado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Cuotas.Designer.vb">

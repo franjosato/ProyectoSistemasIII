@@ -113,7 +113,7 @@ Partial Class frm_Tomador
         Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ptb_logo.Image = Global.SistemasIII.My.Resources.Resources.fondot
-        Me.ptb_logo.Location = New System.Drawing.Point(1, 0)
+        Me.ptb_logo.Location = New System.Drawing.Point(1, -21)
         Me.ptb_logo.Name = "ptb_logo"
         Me.ptb_logo.Size = New System.Drawing.Size(162, 162)
         Me.ptb_logo.TabIndex = 7
@@ -755,7 +755,7 @@ Partial Class frm_Tomador
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(256, 111)
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(256, 103)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
         Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(194, 25)
         Me.lbl_EncabezadoFormuladio.TabIndex = 101
@@ -766,7 +766,7 @@ Partial Class frm_Tomador
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(260, 66)
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(260, 58)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
         Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
         Me.lbl_EncabezadoModulo.TabIndex = 100
@@ -778,7 +778,7 @@ Partial Class frm_Tomador
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(218, 21)
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(218, 13)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
         Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
         Me.lbl_EncabezadoEmpresa.TabIndex = 99
@@ -819,8 +819,9 @@ Partial Class frm_Tomador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(706, 741)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
