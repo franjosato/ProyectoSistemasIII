@@ -85,4 +85,7 @@
 
     End Sub
 
+    Private Sub txt_ZonaP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_ZonaP.KeyPress
+        ValidarNumero(e)
+    End Sub
 End Class

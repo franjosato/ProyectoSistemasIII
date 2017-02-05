@@ -77,6 +77,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexionmysql.vb" />
     <Compile Include="frm_Asegurado.Designer.vb">
       <DependentUpon>frm_Asegurado.vb</DependentUpon>
     </Compile>

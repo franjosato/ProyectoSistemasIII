@@ -61,15 +61,17 @@ Partial Class frm_Tomador
         Me.rdb_Casado = New System.Windows.Forms.RadioButton()
         Me.rdb_soltero = New System.Windows.Forms.RadioButton()
         Me.grb_DireccYContacto = New System.Windows.Forms.GroupBox()
+        Me.txt_ZonaP = New System.Windows.Forms.TextBox()
+        Me.lbl_ZonaP = New System.Windows.Forms.Label()
         Me.cmb_Estado = New System.Windows.Forms.ComboBox()
-        Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Sistemas3DataSet = New SistemasIII.sistemas3DataSet()
         Me.lbl_Estado = New System.Windows.Forms.Label()
         Me.rtb_DireccionH = New System.Windows.Forms.RichTextBox()
         Me.cmb_Ciudad = New System.Windows.Forms.ComboBox()
         Me.grb_Sexo = New System.Windows.Forms.GroupBox()
         Me.rdb_Femenino = New System.Windows.Forms.RadioButton()
         Me.rdb_Masculino = New System.Windows.Forms.RadioButton()
+        Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Sistemas3DataSet = New SistemasIII.sistemas3DataSet()
         Me.grb_DrieccYContactoLaboral = New System.Windows.Forms.GroupBox()
         Me.txt_CorreoT = New System.Windows.Forms.TextBox()
         Me.lbl_CorreoT = New System.Windows.Forms.Label()
@@ -92,15 +94,17 @@ Partial Class frm_Tomador
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
         Me.EstadosTableAdapter = New SistemasIII.sistemas3DataSetTableAdapters.estadosTableAdapter()
+        Me.EventLog1 = New System.Diagnostics.EventLog()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
         Me.grb_DireccYContacto.SuspendLayout()
+        Me.grb_Sexo.SuspendLayout()
         CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Sistemas3DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grb_Sexo.SuspendLayout()
         Me.grb_DrieccYContactoLaboral.SuspendLayout()
         Me.grb_Laboral.SuspendLayout()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ptb_logo
@@ -262,7 +266,7 @@ Partial Class frm_Tomador
         'txt_TlfMovil
         '
         Me.txt_TlfMovil.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_TlfMovil.Location = New System.Drawing.Point(101, 85)
+        Me.txt_TlfMovil.Location = New System.Drawing.Point(379, 111)
         Me.txt_TlfMovil.MaxLength = 11
         Me.txt_TlfMovil.Name = "txt_TlfMovil"
         Me.txt_TlfMovil.Size = New System.Drawing.Size(165, 21)
@@ -280,7 +284,7 @@ Partial Class frm_Tomador
         'txt_TlfFijo
         '
         Me.txt_TlfFijo.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_TlfFijo.Location = New System.Drawing.Point(379, 85)
+        Me.txt_TlfFijo.Location = New System.Drawing.Point(379, 83)
         Me.txt_TlfFijo.MaxLength = 11
         Me.txt_TlfFijo.Name = "txt_TlfFijo"
         Me.txt_TlfFijo.Size = New System.Drawing.Size(164, 21)
@@ -289,7 +293,7 @@ Partial Class frm_Tomador
         'lbl_TlfFijo
         '
         Me.lbl_TlfFijo.AutoSize = True
-        Me.lbl_TlfFijo.Location = New System.Drawing.Point(305, 88)
+        Me.lbl_TlfFijo.Location = New System.Drawing.Point(305, 86)
         Me.lbl_TlfFijo.Name = "lbl_TlfFijo"
         Me.lbl_TlfFijo.Size = New System.Drawing.Size(73, 16)
         Me.lbl_TlfFijo.TabIndex = 62
@@ -298,7 +302,7 @@ Partial Class frm_Tomador
         'lbl_TlfMovil
         '
         Me.lbl_TlfMovil.AutoSize = True
-        Me.lbl_TlfMovil.Location = New System.Drawing.Point(16, 88)
+        Me.lbl_TlfMovil.Location = New System.Drawing.Point(286, 114)
         Me.lbl_TlfMovil.Name = "lbl_TlfMovil"
         Me.lbl_TlfMovil.Size = New System.Drawing.Size(88, 16)
         Me.lbl_TlfMovil.TabIndex = 61
@@ -307,7 +311,7 @@ Partial Class frm_Tomador
         'txt_SApellido
         '
         Me.txt_SApellido.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_SApellido.Location = New System.Drawing.Point(383, 88)
+        Me.txt_SApellido.Location = New System.Drawing.Point(368, 89)
         Me.txt_SApellido.MaxLength = 15
         Me.txt_SApellido.Name = "txt_SApellido"
         Me.txt_SApellido.Size = New System.Drawing.Size(139, 21)
@@ -316,7 +320,7 @@ Partial Class frm_Tomador
         'txt_SNombre
         '
         Me.txt_SNombre.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_SNombre.Location = New System.Drawing.Point(383, 56)
+        Me.txt_SNombre.Location = New System.Drawing.Point(368, 56)
         Me.txt_SNombre.MaxLength = 15
         Me.txt_SNombre.Name = "txt_SNombre"
         Me.txt_SNombre.Size = New System.Drawing.Size(139, 21)
@@ -325,25 +329,25 @@ Partial Class frm_Tomador
         'txt_PApellido
         '
         Me.txt_PApellido.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_PApellido.Location = New System.Drawing.Point(101, 89)
+        Me.txt_PApellido.Location = New System.Drawing.Point(105, 89)
         Me.txt_PApellido.MaxLength = 15
         Me.txt_PApellido.Name = "txt_PApellido"
-        Me.txt_PApellido.Size = New System.Drawing.Size(165, 21)
+        Me.txt_PApellido.Size = New System.Drawing.Size(140, 21)
         Me.txt_PApellido.TabIndex = 58
         '
         'txt_PNombre
         '
         Me.txt_PNombre.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_PNombre.Location = New System.Drawing.Point(101, 56)
+        Me.txt_PNombre.Location = New System.Drawing.Point(106, 56)
         Me.txt_PNombre.MaxLength = 15
         Me.txt_PNombre.Name = "txt_PNombre"
-        Me.txt_PNombre.Size = New System.Drawing.Size(165, 21)
+        Me.txt_PNombre.Size = New System.Drawing.Size(139, 21)
         Me.txt_PNombre.TabIndex = 57
         '
         'lbl_SApellido
         '
         Me.lbl_SApellido.AutoSize = True
-        Me.lbl_SApellido.Location = New System.Drawing.Point(272, 96)
+        Me.lbl_SApellido.Location = New System.Drawing.Point(257, 91)
         Me.lbl_SApellido.Name = "lbl_SApellido"
         Me.lbl_SApellido.Size = New System.Drawing.Size(107, 16)
         Me.lbl_SApellido.TabIndex = 56
@@ -352,7 +356,7 @@ Partial Class frm_Tomador
         'lbl_PApellido
         '
         Me.lbl_PApellido.AutoSize = True
-        Me.lbl_PApellido.Location = New System.Drawing.Point(10, 96)
+        Me.lbl_PApellido.Location = New System.Drawing.Point(9, 91)
         Me.lbl_PApellido.Name = "lbl_PApellido"
         Me.lbl_PApellido.Size = New System.Drawing.Size(90, 16)
         Me.lbl_PApellido.TabIndex = 55
@@ -361,7 +365,7 @@ Partial Class frm_Tomador
         'lbl_SNombre
         '
         Me.lbl_SNombre.AutoSize = True
-        Me.lbl_SNombre.Location = New System.Drawing.Point(272, 56)
+        Me.lbl_SNombre.Location = New System.Drawing.Point(257, 56)
         Me.lbl_SNombre.Name = "lbl_SNombre"
         Me.lbl_SNombre.Size = New System.Drawing.Size(105, 16)
         Me.lbl_SNombre.TabIndex = 54
@@ -419,7 +423,7 @@ Partial Class frm_Tomador
         Me.grb_Edocivil.Controls.Add(Me.rdb_Divorciado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_Casado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_soltero)
-        Me.grb_Edocivil.Location = New System.Drawing.Point(588, 50)
+        Me.grb_Edocivil.Location = New System.Drawing.Point(587, 50)
         Me.grb_Edocivil.Name = "grb_Edocivil"
         Me.grb_Edocivil.Size = New System.Drawing.Size(83, 59)
         Me.grb_Edocivil.TabIndex = 77
@@ -472,6 +476,8 @@ Partial Class frm_Tomador
         '
         'grb_DireccYContacto
         '
+        Me.grb_DireccYContacto.Controls.Add(Me.txt_ZonaP)
+        Me.grb_DireccYContacto.Controls.Add(Me.lbl_ZonaP)
         Me.grb_DireccYContacto.Controls.Add(Me.cmb_Estado)
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Estado)
         Me.grb_DireccYContacto.Controls.Add(Me.rtb_DireccionH)
@@ -492,25 +498,31 @@ Partial Class frm_Tomador
         Me.grb_DireccYContacto.TabStop = False
         Me.grb_DireccYContacto.Text = "Datos de dirección y contacto"
         '
+        'txt_ZonaP
+        '
+        Me.txt_ZonaP.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_ZonaP.Location = New System.Drawing.Point(101, 83)
+        Me.txt_ZonaP.Name = "txt_ZonaP"
+        Me.txt_ZonaP.Size = New System.Drawing.Size(85, 21)
+        Me.txt_ZonaP.TabIndex = 97
+        '
+        'lbl_ZonaP
+        '
+        Me.lbl_ZonaP.AutoSize = True
+        Me.lbl_ZonaP.Location = New System.Drawing.Point(21, 86)
+        Me.lbl_ZonaP.Name = "lbl_ZonaP"
+        Me.lbl_ZonaP.Size = New System.Drawing.Size(77, 16)
+        Me.lbl_ZonaP.TabIndex = 96
+        Me.lbl_ZonaP.Text = "Zona Postal: "
+        '
         'cmb_Estado
         '
         Me.cmb_Estado.BackColor = System.Drawing.Color.GhostWhite
-        Me.cmb_Estado.DataSource = Me.EstadosBindingSource
         Me.cmb_Estado.FormattingEnabled = True
         Me.cmb_Estado.Location = New System.Drawing.Point(101, 18)
         Me.cmb_Estado.Name = "cmb_Estado"
         Me.cmb_Estado.Size = New System.Drawing.Size(139, 24)
         Me.cmb_Estado.TabIndex = 93
-        '
-        'EstadosBindingSource
-        '
-        Me.EstadosBindingSource.DataMember = "estados"
-        Me.EstadosBindingSource.DataSource = Me.Sistemas3DataSet
-        '
-        'Sistemas3DataSet
-        '
-        Me.Sistemas3DataSet.DataSetName = "sistemas3DataSet"
-        Me.Sistemas3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lbl_Estado
         '
@@ -544,7 +556,7 @@ Partial Class frm_Tomador
         '
         Me.grb_Sexo.Controls.Add(Me.rdb_Femenino)
         Me.grb_Sexo.Controls.Add(Me.rdb_Masculino)
-        Me.grb_Sexo.Location = New System.Drawing.Point(531, 50)
+        Me.grb_Sexo.Location = New System.Drawing.Point(527, 50)
         Me.grb_Sexo.Name = "grb_Sexo"
         Me.grb_Sexo.Size = New System.Drawing.Size(51, 59)
         Me.grb_Sexo.TabIndex = 76
@@ -572,6 +584,16 @@ Partial Class frm_Tomador
         Me.rdb_Masculino.TabStop = True
         Me.rdb_Masculino.Text = "M"
         Me.rdb_Masculino.UseVisualStyleBackColor = True
+        '
+        'EstadosBindingSource
+        '
+        Me.EstadosBindingSource.DataMember = "estados"
+        Me.EstadosBindingSource.DataSource = Me.Sistemas3DataSet
+        '
+        'Sistemas3DataSet
+        '
+        Me.Sistemas3DataSet.DataSetName = "sistemas3DataSet"
+        Me.Sistemas3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'grb_DrieccYContactoLaboral
         '
@@ -735,9 +757,9 @@ Partial Class frm_Tomador
         Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(256, 111)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(207, 25)
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(194, 25)
         Me.lbl_EncabezadoFormuladio.TabIndex = 101
-        Me.lbl_EncabezadoFormuladio.Text = "Gestión de Tomador"
+        Me.lbl_EncabezadoFormuladio.Text = "Datos del Tomador"
         '
         'lbl_EncabezadoModulo
         '
@@ -789,6 +811,10 @@ Partial Class frm_Tomador
         '
         Me.EstadosTableAdapter.ClearBeforeFill = True
         '
+        'EventLog1
+        '
+        Me.EventLog1.SynchronizingObject = Me
+        '
         'frm_Tomador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -819,14 +845,15 @@ Partial Class frm_Tomador
         Me.grb_Edocivil.PerformLayout()
         Me.grb_DireccYContacto.ResumeLayout(False)
         Me.grb_DireccYContacto.PerformLayout()
-        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Sistemas3DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Sexo.ResumeLayout(False)
         Me.grb_Sexo.PerformLayout()
+        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Sistemas3DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_DrieccYContactoLaboral.ResumeLayout(False)
         Me.grb_DrieccYContactoLaboral.PerformLayout()
         Me.grb_Laboral.ResumeLayout(False)
         Me.grb_Laboral.PerformLayout()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -900,4 +927,7 @@ Partial Class frm_Tomador
     Friend WithEvents Sistemas3DataSet As sistemas3DataSet
     Friend WithEvents EstadosBindingSource As BindingSource
     Friend WithEvents EstadosTableAdapter As sistemas3DataSetTableAdapters.estadosTableAdapter
+    Friend WithEvents EventLog1 As EventLog
+    Friend WithEvents txt_ZonaP As TextBox
+    Friend WithEvents lbl_ZonaP As Label
 End Class
