@@ -26,6 +26,14 @@ Partial Class frm_Siniestro
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_LugarSiniestro = New System.Windows.Forms.Label()
         Me.grb_Siniestro = New System.Windows.Forms.GroupBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.grb_Lugar = New System.Windows.Forms.GroupBox()
+        Me.rtb_Direccion = New System.Windows.Forms.RichTextBox()
+        Me.cmb_Ciudad = New System.Windows.Forms.ComboBox()
+        Me.cmb_Estado = New System.Windows.Forms.ComboBox()
+        Me.lbl_Ciudad = New System.Windows.Forms.Label()
+        Me.lbl_Estado = New System.Windows.Forms.Label()
+        Me.lbl_Direccion = New System.Windows.Forms.Label()
         Me.dtp_HoraSin = New System.Windows.Forms.DateTimePicker()
         Me.btn_CargarArch = New System.Windows.Forms.Button()
         Me.txt_DocumentoTran = New System.Windows.Forms.TextBox()
@@ -36,26 +44,19 @@ Partial Class frm_Siniestro
         Me.dtp_FechaSin = New System.Windows.Forms.DateTimePicker()
         Me.lbl_HoraSin = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.lbl_Direccion = New System.Windows.Forms.Label()
         Me.lbl_Descripcion = New System.Windows.Forms.Label()
         Me.grb_Poliza = New System.Windows.Forms.GroupBox()
+        Me.btn_Consultar = New System.Windows.Forms.Button()
+        Me.btn_BuscarT = New System.Windows.Forms.Button()
+        Me.cmb_NacionalidadT = New System.Windows.Forms.ComboBox()
+        Me.txt_CedulaT = New System.Windows.Forms.TextBox()
+        Me.lbl_CedulaT = New System.Windows.Forms.Label()
         Me.cmb_PlacaVeh = New System.Windows.Forms.ComboBox()
         Me.txt_CodPoliza = New System.Windows.Forms.TextBox()
         Me.lbl_PlacaVehiculo = New System.Windows.Forms.Label()
         Me.lbl_CodPoliza = New System.Windows.Forms.Label()
         Me.tmr_HoraSiniestro = New System.Windows.Forms.Timer(Me.components)
         Me.ofd_transito = New System.Windows.Forms.OpenFileDialog()
-        Me.grb_Lugar = New System.Windows.Forms.GroupBox()
-        Me.lbl_Estado = New System.Windows.Forms.Label()
-        Me.lbl_Ciudad = New System.Windows.Forms.Label()
-        Me.cmb_Estado = New System.Windows.Forms.ComboBox()
-        Me.cmb_Ciudad = New System.Windows.Forms.ComboBox()
-        Me.btn_BuscarT = New System.Windows.Forms.Button()
-        Me.cmb_NacionalidadT = New System.Windows.Forms.ComboBox()
-        Me.txt_CedulaT = New System.Windows.Forms.TextBox()
-        Me.lbl_CedulaT = New System.Windows.Forms.Label()
-        Me.rtb_Direccion = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -64,12 +65,12 @@ Partial Class frm_Siniestro
         Me.btn_Volver = New System.Windows.Forms.Button()
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
-        Me.btn_Consultar = New System.Windows.Forms.Button()
+        Me.btn_Modificar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Siniestro.SuspendLayout()
+        Me.grb_Lugar.SuspendLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Poliza.SuspendLayout()
-        Me.grb_Lugar.SuspendLayout()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -112,6 +113,81 @@ Partial Class frm_Siniestro
         Me.grb_Siniestro.TabIndex = 19
         Me.grb_Siniestro.TabStop = False
         Me.grb_Siniestro.Text = "DATOS DEL SINIESTRO"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(85, 154)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(312, 58)
+        Me.RichTextBox1.TabIndex = 32
+        Me.RichTextBox1.Text = ""
+        '
+        'grb_Lugar
+        '
+        Me.grb_Lugar.Controls.Add(Me.rtb_Direccion)
+        Me.grb_Lugar.Controls.Add(Me.cmb_Ciudad)
+        Me.grb_Lugar.Controls.Add(Me.cmb_Estado)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Ciudad)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Estado)
+        Me.grb_Lugar.Controls.Add(Me.lbl_Direccion)
+        Me.grb_Lugar.Location = New System.Drawing.Point(10, 20)
+        Me.grb_Lugar.Name = "grb_Lugar"
+        Me.grb_Lugar.Size = New System.Drawing.Size(390, 98)
+        Me.grb_Lugar.TabIndex = 31
+        Me.grb_Lugar.TabStop = False
+        Me.grb_Lugar.Text = "Lugar"
+        '
+        'rtb_Direccion
+        '
+        Me.rtb_Direccion.Location = New System.Drawing.Point(69, 46)
+        Me.rtb_Direccion.Name = "rtb_Direccion"
+        Me.rtb_Direccion.Size = New System.Drawing.Size(306, 46)
+        Me.rtb_Direccion.TabIndex = 8
+        Me.rtb_Direccion.Text = ""
+        '
+        'cmb_Ciudad
+        '
+        Me.cmb_Ciudad.FormattingEnabled = True
+        Me.cmb_Ciudad.Location = New System.Drawing.Point(254, 16)
+        Me.cmb_Ciudad.Name = "cmb_Ciudad"
+        Me.cmb_Ciudad.Size = New System.Drawing.Size(121, 24)
+        Me.cmb_Ciudad.TabIndex = 7
+        '
+        'cmb_Estado
+        '
+        Me.cmb_Estado.FormattingEnabled = True
+        Me.cmb_Estado.Location = New System.Drawing.Point(69, 16)
+        Me.cmb_Estado.Name = "cmb_Estado"
+        Me.cmb_Estado.Size = New System.Drawing.Size(121, 24)
+        Me.cmb_Estado.TabIndex = 6
+        '
+        'lbl_Ciudad
+        '
+        Me.lbl_Ciudad.AutoSize = True
+        Me.lbl_Ciudad.Location = New System.Drawing.Point(196, 19)
+        Me.lbl_Ciudad.Name = "lbl_Ciudad"
+        Me.lbl_Ciudad.Size = New System.Drawing.Size(53, 16)
+        Me.lbl_Ciudad.TabIndex = 5
+        Me.lbl_Ciudad.Text = "Ciudad:"
+        '
+        'lbl_Estado
+        '
+        Me.lbl_Estado.AutoSize = True
+        Me.lbl_Estado.Location = New System.Drawing.Point(19, 19)
+        Me.lbl_Estado.Name = "lbl_Estado"
+        Me.lbl_Estado.Size = New System.Drawing.Size(48, 16)
+        Me.lbl_Estado.TabIndex = 4
+        Me.lbl_Estado.Text = "Estado:"
+        '
+        'lbl_Direccion
+        '
+        Me.lbl_Direccion.AutoSize = True
+        Me.lbl_Direccion.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Direccion.Location = New System.Drawing.Point(6, 46)
+        Me.lbl_Direccion.Name = "lbl_Direccion"
+        Me.lbl_Direccion.Size = New System.Drawing.Size(61, 16)
+        Me.lbl_Direccion.TabIndex = 2
+        Me.lbl_Direccion.Text = "Dirección:"
         '
         'dtp_HoraSin
         '
@@ -211,16 +287,6 @@ Partial Class frm_Siniestro
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Fecha:"
         '
-        'lbl_Direccion
-        '
-        Me.lbl_Direccion.AutoSize = True
-        Me.lbl_Direccion.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Direccion.Location = New System.Drawing.Point(6, 46)
-        Me.lbl_Direccion.Name = "lbl_Direccion"
-        Me.lbl_Direccion.Size = New System.Drawing.Size(61, 16)
-        Me.lbl_Direccion.TabIndex = 2
-        Me.lbl_Direccion.Text = "Dirección:"
-        '
         'lbl_Descripcion
         '
         Me.lbl_Descripcion.AutoSize = True
@@ -249,6 +315,52 @@ Partial Class frm_Siniestro
         Me.grb_Poliza.TabIndex = 20
         Me.grb_Poliza.TabStop = False
         Me.grb_Poliza.Text = "Datos de la póliza"
+        '
+        'btn_Consultar
+        '
+        Me.btn_Consultar.Location = New System.Drawing.Point(527, 38)
+        Me.btn_Consultar.Name = "btn_Consultar"
+        Me.btn_Consultar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Consultar.TabIndex = 121
+        Me.btn_Consultar.Text = "Consultar"
+        Me.btn_Consultar.UseVisualStyleBackColor = True
+        '
+        'btn_BuscarT
+        '
+        Me.btn_BuscarT.Location = New System.Drawing.Point(281, 16)
+        Me.btn_BuscarT.Name = "btn_BuscarT"
+        Me.btn_BuscarT.Size = New System.Drawing.Size(75, 23)
+        Me.btn_BuscarT.TabIndex = 109
+        Me.btn_BuscarT.Text = "Buscar"
+        Me.btn_BuscarT.UseVisualStyleBackColor = True
+        '
+        'cmb_NacionalidadT
+        '
+        Me.cmb_NacionalidadT.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
+        Me.cmb_NacionalidadT.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_NacionalidadT.FormattingEnabled = True
+        Me.cmb_NacionalidadT.Location = New System.Drawing.Point(136, 16)
+        Me.cmb_NacionalidadT.Name = "cmb_NacionalidadT"
+        Me.cmb_NacionalidadT.Size = New System.Drawing.Size(47, 24)
+        Me.cmb_NacionalidadT.TabIndex = 108
+        '
+        'txt_CedulaT
+        '
+        Me.txt_CedulaT.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_CedulaT.Location = New System.Drawing.Point(189, 16)
+        Me.txt_CedulaT.MaxLength = 8
+        Me.txt_CedulaT.Name = "txt_CedulaT"
+        Me.txt_CedulaT.Size = New System.Drawing.Size(85, 21)
+        Me.txt_CedulaT.TabIndex = 107
+        '
+        'lbl_CedulaT
+        '
+        Me.lbl_CedulaT.AutoSize = True
+        Me.lbl_CedulaT.Location = New System.Drawing.Point(8, 19)
+        Me.lbl_CedulaT.Name = "lbl_CedulaT"
+        Me.lbl_CedulaT.Size = New System.Drawing.Size(122, 16)
+        Me.lbl_CedulaT.TabIndex = 106
+        Me.lbl_CedulaT.Text = "Cédula del tomador:"
         '
         'cmb_PlacaVeh
         '
@@ -296,108 +408,6 @@ Partial Class frm_Siniestro
         'ofd_transito
         '
         Me.ofd_transito.FileName = "OpenFileDialog1"
-        '
-        'grb_Lugar
-        '
-        Me.grb_Lugar.Controls.Add(Me.rtb_Direccion)
-        Me.grb_Lugar.Controls.Add(Me.cmb_Ciudad)
-        Me.grb_Lugar.Controls.Add(Me.cmb_Estado)
-        Me.grb_Lugar.Controls.Add(Me.lbl_Ciudad)
-        Me.grb_Lugar.Controls.Add(Me.lbl_Estado)
-        Me.grb_Lugar.Controls.Add(Me.lbl_Direccion)
-        Me.grb_Lugar.Location = New System.Drawing.Point(10, 20)
-        Me.grb_Lugar.Name = "grb_Lugar"
-        Me.grb_Lugar.Size = New System.Drawing.Size(390, 98)
-        Me.grb_Lugar.TabIndex = 31
-        Me.grb_Lugar.TabStop = False
-        Me.grb_Lugar.Text = "Lugar"
-        '
-        'lbl_Estado
-        '
-        Me.lbl_Estado.AutoSize = True
-        Me.lbl_Estado.Location = New System.Drawing.Point(19, 19)
-        Me.lbl_Estado.Name = "lbl_Estado"
-        Me.lbl_Estado.Size = New System.Drawing.Size(48, 16)
-        Me.lbl_Estado.TabIndex = 4
-        Me.lbl_Estado.Text = "Estado:"
-        '
-        'lbl_Ciudad
-        '
-        Me.lbl_Ciudad.AutoSize = True
-        Me.lbl_Ciudad.Location = New System.Drawing.Point(196, 19)
-        Me.lbl_Ciudad.Name = "lbl_Ciudad"
-        Me.lbl_Ciudad.Size = New System.Drawing.Size(53, 16)
-        Me.lbl_Ciudad.TabIndex = 5
-        Me.lbl_Ciudad.Text = "Ciudad:"
-        '
-        'cmb_Estado
-        '
-        Me.cmb_Estado.FormattingEnabled = True
-        Me.cmb_Estado.Location = New System.Drawing.Point(69, 16)
-        Me.cmb_Estado.Name = "cmb_Estado"
-        Me.cmb_Estado.Size = New System.Drawing.Size(121, 24)
-        Me.cmb_Estado.TabIndex = 6
-        '
-        'cmb_Ciudad
-        '
-        Me.cmb_Ciudad.FormattingEnabled = True
-        Me.cmb_Ciudad.Location = New System.Drawing.Point(254, 16)
-        Me.cmb_Ciudad.Name = "cmb_Ciudad"
-        Me.cmb_Ciudad.Size = New System.Drawing.Size(121, 24)
-        Me.cmb_Ciudad.TabIndex = 7
-        '
-        'btn_BuscarT
-        '
-        Me.btn_BuscarT.Location = New System.Drawing.Point(281, 16)
-        Me.btn_BuscarT.Name = "btn_BuscarT"
-        Me.btn_BuscarT.Size = New System.Drawing.Size(75, 23)
-        Me.btn_BuscarT.TabIndex = 109
-        Me.btn_BuscarT.Text = "Buscar"
-        Me.btn_BuscarT.UseVisualStyleBackColor = True
-        '
-        'cmb_NacionalidadT
-        '
-        Me.cmb_NacionalidadT.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
-        Me.cmb_NacionalidadT.BackColor = System.Drawing.Color.GhostWhite
-        Me.cmb_NacionalidadT.FormattingEnabled = True
-        Me.cmb_NacionalidadT.Location = New System.Drawing.Point(136, 16)
-        Me.cmb_NacionalidadT.Name = "cmb_NacionalidadT"
-        Me.cmb_NacionalidadT.Size = New System.Drawing.Size(47, 24)
-        Me.cmb_NacionalidadT.TabIndex = 108
-        '
-        'txt_CedulaT
-        '
-        Me.txt_CedulaT.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_CedulaT.Location = New System.Drawing.Point(189, 16)
-        Me.txt_CedulaT.MaxLength = 8
-        Me.txt_CedulaT.Name = "txt_CedulaT"
-        Me.txt_CedulaT.Size = New System.Drawing.Size(85, 21)
-        Me.txt_CedulaT.TabIndex = 107
-        '
-        'lbl_CedulaT
-        '
-        Me.lbl_CedulaT.AutoSize = True
-        Me.lbl_CedulaT.Location = New System.Drawing.Point(8, 19)
-        Me.lbl_CedulaT.Name = "lbl_CedulaT"
-        Me.lbl_CedulaT.Size = New System.Drawing.Size(122, 16)
-        Me.lbl_CedulaT.TabIndex = 106
-        Me.lbl_CedulaT.Text = "Cédula del tomador:"
-        '
-        'rtb_Direccion
-        '
-        Me.rtb_Direccion.Location = New System.Drawing.Point(69, 46)
-        Me.rtb_Direccion.Name = "rtb_Direccion"
-        Me.rtb_Direccion.Size = New System.Drawing.Size(306, 46)
-        Me.rtb_Direccion.TabIndex = 8
-        Me.rtb_Direccion.Text = ""
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(85, 154)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(312, 58)
-        Me.RichTextBox1.TabIndex = 32
-        Me.RichTextBox1.Text = ""
         '
         'Button1
         '
@@ -456,21 +466,21 @@ Partial Class frm_Siniestro
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(175, 552)
+        Me.btn_Agregar.Location = New System.Drawing.Point(61, 552)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 120
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
-        'btn_Consultar
+        'btn_Modificar
         '
-        Me.btn_Consultar.Location = New System.Drawing.Point(527, 38)
-        Me.btn_Consultar.Name = "btn_Consultar"
-        Me.btn_Consultar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Consultar.TabIndex = 121
-        Me.btn_Consultar.Text = "Consultar"
-        Me.btn_Consultar.UseVisualStyleBackColor = True
+        Me.btn_Modificar.Location = New System.Drawing.Point(174, 552)
+        Me.btn_Modificar.Name = "btn_Modificar"
+        Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Modificar.TabIndex = 121
+        Me.btn_Modificar.Text = "Modificar"
+        Me.btn_Modificar.UseVisualStyleBackColor = True
         '
         'frm_Siniestro
         '
@@ -480,6 +490,7 @@ Partial Class frm_Siniestro
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(646, 587)
+        Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.btn_Agregar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
@@ -496,11 +507,11 @@ Partial Class frm_Siniestro
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Siniestro.ResumeLayout(False)
         Me.grb_Siniestro.PerformLayout()
+        Me.grb_Lugar.ResumeLayout(False)
+        Me.grb_Lugar.PerformLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Poliza.ResumeLayout(False)
         Me.grb_Poliza.PerformLayout()
-        Me.grb_Lugar.ResumeLayout(False)
-        Me.grb_Lugar.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -547,4 +558,5 @@ Partial Class frm_Siniestro
     Friend WithEvents btn_Cancelar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Consultar As Button
+    Friend WithEvents btn_Modificar As Button
 End Class
