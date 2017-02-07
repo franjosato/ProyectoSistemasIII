@@ -1,5 +1,3 @@
-﻿Public Class frmPago
-    Private Sub frm_Formapago_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class frm_Pago
 
-    End Sub
 End Class

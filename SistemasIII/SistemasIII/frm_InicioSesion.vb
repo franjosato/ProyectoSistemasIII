@@ -1,6 +1,6 @@
 ﻿Public Class frm_InicioSesion
 
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ptb_Logo.Click
 
     End Sub
 

@@ -8,11 +8,11 @@
 
     End Sub
 
-    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_CedulaEmp.Click
+    Private Sub Label6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_BuscarCed.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If txt_CedulaEmp.Text = "" Then
             btn_BuscarCed.Enabled = False
         End If
@@ -29,16 +29,16 @@
 
     End Sub
 
-    Private Sub btn_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Guardar.Click
+    Private Sub btn_Guardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         txt_Usuario.Text = "XXXXXXX"
         txt_Contraseña.Text = "XXXXXX"
     End Sub
 
-    Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Eliminar.Click
+    Private Sub btn_Eliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub btn_Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Cancelar.Click
+    Private Sub btn_Cancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         txt_CedulaEmp.Text = ""
         txt_NombreEmp.Text = ""
         txt_ApellidoEmp.Text = ""
@@ -54,7 +54,7 @@
         frm_InicioSesion.Show()
     End Sub
 
-    Private Sub lbl_CargoActual_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lbl_CargoActual.Click
+    Private Sub lbl_CargoActual_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -62,11 +62,11 @@
         lbl_HoraUsuario.Text = DateTime.Now.ToShortTimeString()
     End Sub
 
-    Private Sub txt_CedulaEmp_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_CedulaEmp.TextChanged
+    Private Sub txt_CedulaEmp_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub ptb_ListoUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ptb_ListoUsuario.Click
+    Private Sub ptb_ListoUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         txt_CedulaEmp.Text = ""
         txt_NombreEmp.Text = ""
         txt_ApellidoEmp.Text = ""
@@ -80,7 +80,7 @@
 
     End Sub
 
-    Private Sub txt_Usuario_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txt_Usuario.TextChanged
+    Private Sub txt_Usuario_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class

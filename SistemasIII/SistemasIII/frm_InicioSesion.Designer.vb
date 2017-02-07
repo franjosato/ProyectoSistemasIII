@@ -29,74 +29,80 @@ Partial Class frm_InicioSesion
         Me.btn_Ingresar = New System.Windows.Forms.Button()
         Me.txt_Usuario = New System.Windows.Forms.TextBox()
         Me.txt_Contraseña = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ptb_Logo = New System.Windows.Forms.PictureBox()
         Me.tmr_HoraInicioSesion = New System.Windows.Forms.Timer(Me.components)
         Me.lbl_HoraInicioSesion = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptb_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl_Usuario
         '
         Me.lbl_Usuario.AutoSize = True
-        Me.lbl_Usuario.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Usuario.Location = New System.Drawing.Point(278, 51)
+        Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Usuario.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Usuario.Location = New System.Drawing.Point(265, 36)
         Me.lbl_Usuario.Name = "lbl_Usuario"
-        Me.lbl_Usuario.Size = New System.Drawing.Size(71, 16)
+        Me.lbl_Usuario.Size = New System.Drawing.Size(50, 16)
         Me.lbl_Usuario.TabIndex = 1
-        Me.lbl_Usuario.Text = "USUARIO"
+        Me.lbl_Usuario.Text = "Usuario:"
         '
         'lbl_Contraseña
         '
         Me.lbl_Contraseña.AutoSize = True
-        Me.lbl_Contraseña.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Contraseña.Location = New System.Drawing.Point(255, 98)
+        Me.lbl_Contraseña.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Contraseña.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Contraseña.Location = New System.Drawing.Point(242, 83)
         Me.lbl_Contraseña.Name = "lbl_Contraseña"
-        Me.lbl_Contraseña.Size = New System.Drawing.Size(102, 16)
+        Me.lbl_Contraseña.Size = New System.Drawing.Size(75, 16)
         Me.lbl_Contraseña.TabIndex = 2
-        Me.lbl_Contraseña.Text = "CONTRASEÑA"
+        Me.lbl_Contraseña.Text = "Contraseña:"
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_Cancelar.Location = New System.Drawing.Point(397, 155)
+        Me.btn_Cancelar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Cancelar.Location = New System.Drawing.Point(366, 116)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(93, 23)
         Me.btn_Cancelar.TabIndex = 4
-        Me.btn_Cancelar.Text = "CANCELAR"
+        Me.btn_Cancelar.Text = "Cancelar"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
         'btn_Ingresar
         '
         Me.btn_Ingresar.Enabled = False
-        Me.btn_Ingresar.Font = New System.Drawing.Font("Century", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_Ingresar.Location = New System.Drawing.Point(291, 155)
+        Me.btn_Ingresar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Ingresar.Location = New System.Drawing.Point(260, 116)
         Me.btn_Ingresar.Name = "btn_Ingresar"
         Me.btn_Ingresar.Size = New System.Drawing.Size(89, 23)
         Me.btn_Ingresar.TabIndex = 5
-        Me.btn_Ingresar.Text = "INGRESAR"
+        Me.btn_Ingresar.Text = "Ingresar"
         Me.btn_Ingresar.UseVisualStyleBackColor = True
         '
         'txt_Usuario
         '
-        Me.txt_Usuario.Location = New System.Drawing.Point(373, 51)
+        Me.txt_Usuario.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Usuario.Location = New System.Drawing.Point(323, 33)
         Me.txt_Usuario.Name = "txt_Usuario"
-        Me.txt_Usuario.Size = New System.Drawing.Size(117, 20)
+        Me.txt_Usuario.Size = New System.Drawing.Size(117, 21)
         Me.txt_Usuario.TabIndex = 6
         '
         'txt_Contraseña
         '
-        Me.txt_Contraseña.Location = New System.Drawing.Point(373, 98)
+        Me.txt_Contraseña.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_Contraseña.Location = New System.Drawing.Point(323, 80)
         Me.txt_Contraseña.Name = "txt_Contraseña"
-        Me.txt_Contraseña.Size = New System.Drawing.Size(117, 20)
+        Me.txt_Contraseña.Size = New System.Drawing.Size(117, 21)
         Me.txt_Contraseña.TabIndex = 7
         '
-        'PictureBox1
+        'ptb_Logo
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(185, 178)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.ptb_Logo.BackColor = System.Drawing.Color.White
+        Me.ptb_Logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_Logo.Location = New System.Drawing.Point(0, 0)
+        Me.ptb_Logo.Name = "ptb_Logo"
+        Me.ptb_Logo.Size = New System.Drawing.Size(162, 162)
+        Me.ptb_Logo.TabIndex = 0
+        Me.ptb_Logo.TabStop = False
         '
         'tmr_HoraInicioSesion
         '
@@ -104,18 +110,20 @@ Partial Class frm_InicioSesion
         'lbl_HoraInicioSesion
         '
         Me.lbl_HoraInicioSesion.AutoSize = True
-        Me.lbl_HoraInicioSesion.Font = New System.Drawing.Font("Century", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_HoraInicioSesion.Location = New System.Drawing.Point(438, 19)
+        Me.lbl_HoraInicioSesion.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_HoraInicioSesion.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_HoraInicioSesion.Location = New System.Drawing.Point(429, 14)
         Me.lbl_HoraInicioSesion.Name = "lbl_HoraInicioSesion"
-        Me.lbl_HoraInicioSesion.Size = New System.Drawing.Size(52, 15)
+        Me.lbl_HoraInicioSesion.Size = New System.Drawing.Size(78, 16)
         Me.lbl_HoraInicioSesion.TabIndex = 9
-        Me.lbl_HoraInicioSesion.Text = "               "
+        Me.lbl_HoraInicioSesion.Text = "               hora"
         '
         'frm_InicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(527, 243)
+        Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm2
+        Me.ClientSize = New System.Drawing.Size(527, 160)
         Me.Controls.Add(Me.lbl_HoraInicioSesion)
         Me.Controls.Add(Me.txt_Contraseña)
         Me.Controls.Add(Me.txt_Usuario)
@@ -123,15 +131,15 @@ Partial Class frm_InicioSesion
         Me.Controls.Add(Me.btn_Cancelar)
         Me.Controls.Add(Me.lbl_Contraseña)
         Me.Controls.Add(Me.lbl_Usuario)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.ptb_Logo)
         Me.Name = "frm_InicioSesion"
         Me.Text = "frm_InicioSesion"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptb_Logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ptb_Logo As System.Windows.Forms.PictureBox
     Friend WithEvents lbl_Usuario As System.Windows.Forms.Label
     Friend WithEvents lbl_Contraseña As System.Windows.Forms.Label
     Friend WithEvents btn_Cancelar As System.Windows.Forms.Button
