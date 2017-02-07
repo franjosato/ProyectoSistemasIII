@@ -96,11 +96,13 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_EncabezadoFormuladio = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
+        Me.ptb_logo = New System.Windows.Forms.PictureBox()
         Me.grb_Vehiculo.SuspendLayout()
         Me.grb_Poliza.SuspendLayout()
         Me.grb_Pagos.SuspendLayout()
         Me.grb_Asegurado.SuspendLayout()
         Me.grb_Tomador.SuspendLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_Anular
@@ -752,40 +754,40 @@ Partial Class frm_Contrato_Poliza
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Fecha.Location = New System.Drawing.Point(595, 17)
+        Me.lbl_Fecha.Location = New System.Drawing.Point(557, 14)
         Me.lbl_Fecha.Name = "lbl_Fecha"
         Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
-        Me.lbl_Fecha.TabIndex = 124
+        Me.lbl_Fecha.TabIndex = 131
         Me.lbl_Fecha.Text = "dd/MM/YY"
         '
         'lbl_Usuario
         '
         Me.lbl_Usuario.AutoSize = True
         Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Usuario.Location = New System.Drawing.Point(655, 68)
+        Me.lbl_Usuario.Location = New System.Drawing.Point(628, 64)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
-        Me.lbl_Usuario.TabIndex = 123
+        Me.lbl_Usuario.TabIndex = 130
         Me.lbl_Usuario.Text = "Usuario"
         '
         'lbl_EncabezadoSaludo
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(614, 68)
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(587, 64)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
         Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
-        Me.lbl_EncabezadoSaludo.TabIndex = 122
+        Me.lbl_EncabezadoSaludo.TabIndex = 129
         Me.lbl_EncabezadoSaludo.Text = "Hola, "
         '
         'lbl_Hora
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Hora.Location = New System.Drawing.Point(659, 17)
+        Me.lbl_Hora.Location = New System.Drawing.Point(621, 14)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
-        Me.lbl_Hora.TabIndex = 121
+        Me.lbl_Hora.TabIndex = 128
         Me.lbl_Hora.Text = "00:00:00"
         '
         'lbl_EncabezadoFormuladio
@@ -793,21 +795,21 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(275, 99)
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(242, 100)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(194, 25)
-        Me.lbl_EncabezadoFormuladio.TabIndex = 120
-        Me.lbl_EncabezadoFormuladio.Text = "Datos del Tomador"
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_EncabezadoFormuladio.TabIndex = 127
+        Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
         '
         'lbl_EncabezadoModulo
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(279, 54)
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(250, 56)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
         Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
-        Me.lbl_EncabezadoModulo.TabIndex = 119
+        Me.lbl_EncabezadoModulo.TabIndex = 126
         Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
         '
         'lbl_EncabezadoEmpresa
@@ -816,11 +818,24 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(237, 9)
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(208, 11)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
         Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
-        Me.lbl_EncabezadoEmpresa.TabIndex = 118
+        Me.lbl_EncabezadoEmpresa.TabIndex = 125
         Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
+        '
+        'ptb_logo
+        '
+        Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
+        Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptb_logo.Location = New System.Drawing.Point(3, 1)
+        Me.ptb_logo.Name = "ptb_logo"
+        Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
+        Me.ptb_logo.TabIndex = 124
+        Me.ptb_logo.TabStop = False
+        Me.ptb_logo.UseWaitCursor = True
         '
         'frm_Contrato_Poliza
         '
@@ -831,18 +846,19 @@ Partial Class frm_Contrato_Poliza
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(767, 733)
         Me.Controls.Add(Me.lbl_Fecha)
-        Me.Controls.Add(Me.btn_Anular)
         Me.Controls.Add(Me.lbl_Usuario)
-        Me.Controls.Add(Me.btn_Renobar)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)
-        Me.Controls.Add(Me.btn_Volver)
         Me.Controls.Add(Me.lbl_Hora)
-        Me.Controls.Add(Me.btn_Cancelar)
         Me.Controls.Add(Me.lbl_EncabezadoFormuladio)
-        Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.lbl_EncabezadoModulo)
-        Me.Controls.Add(Me.btn_Agregar)
         Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
+        Me.Controls.Add(Me.ptb_logo)
+        Me.Controls.Add(Me.btn_Anular)
+        Me.Controls.Add(Me.btn_Renobar)
+        Me.Controls.Add(Me.btn_Volver)
+        Me.Controls.Add(Me.btn_Cancelar)
+        Me.Controls.Add(Me.btn_Modificar)
+        Me.Controls.Add(Me.btn_Agregar)
         Me.Controls.Add(Me.grb_Vehiculo)
         Me.Controls.Add(Me.grb_Poliza)
         Me.Controls.Add(Me.grb_Asegurado)
@@ -859,6 +875,7 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Asegurado.PerformLayout()
         Me.grb_Tomador.ResumeLayout(False)
         Me.grb_Tomador.PerformLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -938,4 +955,5 @@ Partial Class frm_Contrato_Poliza
     Friend WithEvents lbl_EncabezadoFormuladio As Label
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
+    Friend WithEvents ptb_logo As PictureBox
 End Class

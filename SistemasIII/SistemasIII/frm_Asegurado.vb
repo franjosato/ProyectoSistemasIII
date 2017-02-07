@@ -55,4 +55,8 @@
     Private Sub txt_NumeroL_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_NumeroL.KeyPress
         Validarletras(e)
     End Sub
+
+    Private Sub btn_Volver_Click(sender As Object, e As EventArgs) Handles btn_Volver.Click
+
+    End Sub
 End Class

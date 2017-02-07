@@ -23,7 +23,6 @@ Partial Class frm_Siniestro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lbl_LugarSiniestro = New System.Windows.Forms.Label()
         Me.grb_Siniestro = New System.Windows.Forms.GroupBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -66,20 +65,20 @@ Partial Class frm_Siniestro
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lbl_Fecha = New System.Windows.Forms.Label()
+        Me.lbl_Usuario = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoSaludo = New System.Windows.Forms.Label()
+        Me.lbl_Hora = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoFormuladio = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
+        Me.ptb_logo = New System.Windows.Forms.PictureBox()
         Me.grb_Siniestro.SuspendLayout()
         Me.grb_Lugar.SuspendLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Poliza.SuspendLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(132, 115)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
         '
         'lbl_LugarSiniestro
         '
@@ -482,6 +481,93 @@ Partial Class frm_Siniestro
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
+        'lbl_Fecha
+        '
+        Me.lbl_Fecha.AutoSize = True
+        Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Fecha.Location = New System.Drawing.Point(516, 19)
+        Me.lbl_Fecha.Name = "lbl_Fecha"
+        Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_Fecha.TabIndex = 131
+        Me.lbl_Fecha.Text = "dd/MM/YY"
+        '
+        'lbl_Usuario
+        '
+        Me.lbl_Usuario.AutoSize = True
+        Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Usuario.Location = New System.Drawing.Point(587, 69)
+        Me.lbl_Usuario.Name = "lbl_Usuario"
+        Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
+        Me.lbl_Usuario.TabIndex = 130
+        Me.lbl_Usuario.Text = "Usuario"
+        '
+        'lbl_EncabezadoSaludo
+        '
+        Me.lbl_EncabezadoSaludo.AutoSize = True
+        Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(546, 69)
+        Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
+        Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
+        Me.lbl_EncabezadoSaludo.TabIndex = 129
+        Me.lbl_EncabezadoSaludo.Text = "Hola, "
+        '
+        'lbl_Hora
+        '
+        Me.lbl_Hora.AutoSize = True
+        Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Hora.Location = New System.Drawing.Point(580, 19)
+        Me.lbl_Hora.Name = "lbl_Hora"
+        Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
+        Me.lbl_Hora.TabIndex = 128
+        Me.lbl_Hora.Text = "00:00:00"
+        '
+        'lbl_EncabezadoFormuladio
+        '
+        Me.lbl_EncabezadoFormuladio.AutoSize = True
+        Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(218, 104)
+        Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_EncabezadoFormuladio.TabIndex = 127
+        Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
+        '
+        'lbl_EncabezadoModulo
+        '
+        Me.lbl_EncabezadoModulo.AutoSize = True
+        Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(226, 60)
+        Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
+        Me.lbl_EncabezadoModulo.TabIndex = 126
+        Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
+        '
+        'lbl_EncabezadoEmpresa
+        '
+        Me.lbl_EncabezadoEmpresa.AutoSize = True
+        Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(184, 15)
+        Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
+        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
+        Me.lbl_EncabezadoEmpresa.TabIndex = 125
+        Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
+        '
+        'ptb_logo
+        '
+        Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
+        Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptb_logo.Location = New System.Drawing.Point(2, 2)
+        Me.ptb_logo.Name = "ptb_logo"
+        Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
+        Me.ptb_logo.TabIndex = 124
+        Me.ptb_logo.TabStop = False
+        Me.ptb_logo.UseWaitCursor = True
+        '
         'frm_Siniestro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -490,6 +576,14 @@ Partial Class frm_Siniestro
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(646, 587)
+        Me.Controls.Add(Me.lbl_Fecha)
+        Me.Controls.Add(Me.lbl_Usuario)
+        Me.Controls.Add(Me.lbl_EncabezadoSaludo)
+        Me.Controls.Add(Me.lbl_Hora)
+        Me.Controls.Add(Me.lbl_EncabezadoFormuladio)
+        Me.Controls.Add(Me.lbl_EncabezadoModulo)
+        Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
+        Me.Controls.Add(Me.ptb_logo)
         Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.btn_Agregar)
         Me.Controls.Add(Me.Button1)
@@ -501,10 +595,8 @@ Partial Class frm_Siniestro
         Me.Controls.Add(Me.grb_Poliza)
         Me.Controls.Add(Me.grb_Siniestro)
         Me.Controls.Add(Me.lbl_LugarSiniestro)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frm_Siniestro"
         Me.Text = "frm_Siniestro"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Siniestro.ResumeLayout(False)
         Me.grb_Siniestro.PerformLayout()
         Me.grb_Lugar.ResumeLayout(False)
@@ -512,11 +604,11 @@ Partial Class frm_Siniestro
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Poliza.ResumeLayout(False)
         Me.grb_Poliza.PerformLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents lbl_LugarSiniestro As System.Windows.Forms.Label
     Friend WithEvents grb_Siniestro As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -559,4 +651,12 @@ Partial Class frm_Siniestro
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Consultar As Button
     Friend WithEvents btn_Modificar As Button
+    Friend WithEvents lbl_Fecha As Label
+    Friend WithEvents lbl_Usuario As Label
+    Friend WithEvents lbl_EncabezadoSaludo As Label
+    Friend WithEvents lbl_Hora As Label
+    Friend WithEvents lbl_EncabezadoFormuladio As Label
+    Friend WithEvents lbl_EncabezadoModulo As Label
+    Friend WithEvents lbl_EncabezadoEmpresa As Label
+    Friend WithEvents ptb_logo As PictureBox
 End Class

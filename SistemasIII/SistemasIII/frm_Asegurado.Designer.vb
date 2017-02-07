@@ -30,6 +30,12 @@ Partial Class frm_Asegurado
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.grb_Licencia = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.lbl_GradoL = New System.Windows.Forms.Label()
+        Me.lbl_NumeroL = New System.Windows.Forms.Label()
+        Me.txt_GradoL = New System.Windows.Forms.TextBox()
+        Me.txt_NumeroL = New System.Windows.Forms.TextBox()
+        Me.lbl_ActEconomica = New System.Windows.Forms.Label()
         Me.grb_Personales = New System.Windows.Forms.GroupBox()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.grb_Edocivil = New System.Windows.Forms.GroupBox()
@@ -74,12 +80,6 @@ Partial Class frm_Asegurado
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
-        Me.lbl_ActEconomica = New System.Windows.Forms.Label()
-        Me.txt_NumeroL = New System.Windows.Forms.TextBox()
-        Me.txt_GradoL = New System.Windows.Forms.TextBox()
-        Me.lbl_NumeroL = New System.Windows.Forms.Label()
-        Me.lbl_GradoL = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.grb_Licencia.SuspendLayout()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -178,6 +178,59 @@ Partial Class frm_Asegurado
         Me.grb_Licencia.TabIndex = 108
         Me.grb_Licencia.TabStop = False
         Me.grb_Licencia.Text = "Datos de la Licencia"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.GhostWhite
+        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 57)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(233, 21)
+        Me.DateTimePicker1.TabIndex = 94
+        '
+        'lbl_GradoL
+        '
+        Me.lbl_GradoL.AutoSize = True
+        Me.lbl_GradoL.Location = New System.Drawing.Point(365, 22)
+        Me.lbl_GradoL.Name = "lbl_GradoL"
+        Me.lbl_GradoL.Size = New System.Drawing.Size(47, 16)
+        Me.lbl_GradoL.TabIndex = 97
+        Me.lbl_GradoL.Text = "Grado:"
+        '
+        'lbl_NumeroL
+        '
+        Me.lbl_NumeroL.AutoSize = True
+        Me.lbl_NumeroL.Location = New System.Drawing.Point(82, 22)
+        Me.lbl_NumeroL.Name = "lbl_NumeroL"
+        Me.lbl_NumeroL.Size = New System.Drawing.Size(53, 16)
+        Me.lbl_NumeroL.TabIndex = 96
+        Me.lbl_NumeroL.Text = "Número:"
+        '
+        'txt_GradoL
+        '
+        Me.txt_GradoL.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_GradoL.Location = New System.Drawing.Point(416, 19)
+        Me.txt_GradoL.MaxLength = 10
+        Me.txt_GradoL.Name = "txt_GradoL"
+        Me.txt_GradoL.Size = New System.Drawing.Size(165, 21)
+        Me.txt_GradoL.TabIndex = 95
+        '
+        'txt_NumeroL
+        '
+        Me.txt_NumeroL.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_NumeroL.Location = New System.Drawing.Point(144, 19)
+        Me.txt_NumeroL.MaxLength = 15
+        Me.txt_NumeroL.Name = "txt_NumeroL"
+        Me.txt_NumeroL.Size = New System.Drawing.Size(165, 21)
+        Me.txt_NumeroL.TabIndex = 94
+        '
+        'lbl_ActEconomica
+        '
+        Me.lbl_ActEconomica.AutoSize = True
+        Me.lbl_ActEconomica.Location = New System.Drawing.Point(12, 60)
+        Me.lbl_ActEconomica.Name = "lbl_ActEconomica"
+        Me.lbl_ActEconomica.Size = New System.Drawing.Size(123, 16)
+        Me.lbl_ActEconomica.TabIndex = 86
+        Me.lbl_ActEconomica.Text = "Fecha de expiración:"
         '
         'grb_Personales
         '
@@ -629,59 +682,6 @@ Partial Class frm_Asegurado
         Me.btn_Agregar.TabIndex = 116
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
-        '
-        'lbl_ActEconomica
-        '
-        Me.lbl_ActEconomica.AutoSize = True
-        Me.lbl_ActEconomica.Location = New System.Drawing.Point(12, 60)
-        Me.lbl_ActEconomica.Name = "lbl_ActEconomica"
-        Me.lbl_ActEconomica.Size = New System.Drawing.Size(123, 16)
-        Me.lbl_ActEconomica.TabIndex = 86
-        Me.lbl_ActEconomica.Text = "Fecha de expiración:"
-        '
-        'txt_NumeroL
-        '
-        Me.txt_NumeroL.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_NumeroL.Location = New System.Drawing.Point(144, 19)
-        Me.txt_NumeroL.MaxLength = 15
-        Me.txt_NumeroL.Name = "txt_NumeroL"
-        Me.txt_NumeroL.Size = New System.Drawing.Size(165, 21)
-        Me.txt_NumeroL.TabIndex = 94
-        '
-        'txt_GradoL
-        '
-        Me.txt_GradoL.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_GradoL.Location = New System.Drawing.Point(416, 19)
-        Me.txt_GradoL.MaxLength = 10
-        Me.txt_GradoL.Name = "txt_GradoL"
-        Me.txt_GradoL.Size = New System.Drawing.Size(165, 21)
-        Me.txt_GradoL.TabIndex = 95
-        '
-        'lbl_NumeroL
-        '
-        Me.lbl_NumeroL.AutoSize = True
-        Me.lbl_NumeroL.Location = New System.Drawing.Point(82, 22)
-        Me.lbl_NumeroL.Name = "lbl_NumeroL"
-        Me.lbl_NumeroL.Size = New System.Drawing.Size(53, 16)
-        Me.lbl_NumeroL.TabIndex = 96
-        Me.lbl_NumeroL.Text = "Número:"
-        '
-        'lbl_GradoL
-        '
-        Me.lbl_GradoL.AutoSize = True
-        Me.lbl_GradoL.Location = New System.Drawing.Point(365, 22)
-        Me.lbl_GradoL.Name = "lbl_GradoL"
-        Me.lbl_GradoL.Size = New System.Drawing.Size(47, 16)
-        Me.lbl_GradoL.TabIndex = 97
-        Me.lbl_GradoL.Text = "Grado:"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.GhostWhite
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 57)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(233, 21)
-        Me.DateTimePicker1.TabIndex = 94
         '
         'frm_Asegurado
         '
