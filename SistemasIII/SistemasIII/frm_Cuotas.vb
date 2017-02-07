@@ -3,7 +3,7 @@
 
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lbl_Nombre.Click
+    Private Sub Label7_Click(sender As Object, e As EventArgs) 
 
     End Sub
 
@@ -11,7 +11,7 @@
 
     End Sub
 
-    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles grb_DDeuda.Enter
+    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) 
 
     End Sub
 End Class

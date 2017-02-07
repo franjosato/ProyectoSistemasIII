@@ -24,19 +24,20 @@ Partial Class frm_TipoPoliza
     Private Sub InitializeComponent()
         Me.lbl_Codigo = New System.Windows.Forms.Label()
         Me.grb_Tipo_Poliza = New System.Windows.Forms.GroupBox()
-        Me.txt_Codigo = New System.Windows.Forms.TextBox()
-        Me.btn_Buscar = New System.Windows.Forms.Button()
-        Me.grb_Cobertura = New System.Windows.Forms.GroupBox()
-        Me.ltb_Cobertura = New System.Windows.Forms.ListBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.txt_Nombre = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_Nombre = New System.Windows.Forms.TextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.grb_Cobertura = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ltb_Cobertura = New System.Windows.Forms.ListBox()
+        Me.btn_Buscar = New System.Windows.Forms.Button()
+        Me.txt_Codigo = New System.Windows.Forms.TextBox()
+        Me.btn_Eliminar = New System.Windows.Forms.Button()
+        Me.btn_Volver = New System.Windows.Forms.Button()
+        Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
-        Me.btn_Cancelar = New System.Windows.Forms.Button()
-        Me.btn_Volver = New System.Windows.Forms.Button()
         Me.grb_Tipo_Poliza.SuspendLayout()
         Me.grb_Cobertura.SuspendLayout()
         Me.SuspendLayout()
@@ -67,22 +68,38 @@ Partial Class frm_TipoPoliza
         Me.grb_Tipo_Poliza.TabStop = False
         Me.grb_Tipo_Poliza.Text = "Datos del tipo de póliza"
         '
-        'txt_Codigo
+        'Label3
         '
-        Me.txt_Codigo.Enabled = False
-        Me.txt_Codigo.Location = New System.Drawing.Point(86, 32)
-        Me.txt_Codigo.Name = "txt_Codigo"
-        Me.txt_Codigo.Size = New System.Drawing.Size(100, 20)
-        Me.txt_Codigo.TabIndex = 1
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(14, 114)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Descripción:"
         '
-        'btn_Buscar
+        'txt_Nombre
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(192, 30)
-        Me.btn_Buscar.Name = "btn_Buscar"
-        Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Buscar.TabIndex = 2
-        Me.btn_Buscar.Text = "Buscar"
-        Me.btn_Buscar.UseVisualStyleBackColor = True
+        Me.txt_Nombre.Location = New System.Drawing.Point(86, 69)
+        Me.txt_Nombre.Name = "txt_Nombre"
+        Me.txt_Nombre.Size = New System.Drawing.Size(181, 20)
+        Me.txt_Nombre.TabIndex = 6
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(86, 105)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(181, 96)
+        Me.RichTextBox1.TabIndex = 5
+        Me.RichTextBox1.Text = ""
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(33, 72)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Nombre:"
         '
         'grb_Cobertura
         '
@@ -95,15 +112,6 @@ Partial Class frm_TipoPoliza
         Me.grb_Cobertura.TabStop = False
         Me.grb_Cobertura.Text = "Datos Cobertura"
         '
-        'ltb_Cobertura
-        '
-        Me.ltb_Cobertura.FormattingEnabled = True
-        Me.ltb_Cobertura.Location = New System.Drawing.Point(23, 41)
-        Me.ltb_Cobertura.Name = "ltb_Cobertura"
-        Me.ltb_Cobertura.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.ltb_Cobertura.Size = New System.Drawing.Size(242, 147)
-        Me.ltb_Cobertura.TabIndex = 0
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -113,76 +121,78 @@ Partial Class frm_TipoPoliza
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Seleccione las coberturas asociadas:"
         '
-        'Label2
+        'ltb_Cobertura
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Nombre:"
+        Me.ltb_Cobertura.FormattingEnabled = True
+        Me.ltb_Cobertura.Location = New System.Drawing.Point(23, 41)
+        Me.ltb_Cobertura.Name = "ltb_Cobertura"
+        Me.ltb_Cobertura.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.ltb_Cobertura.Size = New System.Drawing.Size(242, 147)
+        Me.ltb_Cobertura.TabIndex = 0
         '
-        'RichTextBox1
+        'btn_Buscar
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(86, 105)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(181, 96)
-        Me.RichTextBox1.TabIndex = 5
-        Me.RichTextBox1.Text = ""
+        Me.btn_Buscar.Location = New System.Drawing.Point(192, 30)
+        Me.btn_Buscar.Name = "btn_Buscar"
+        Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Buscar.TabIndex = 2
+        Me.btn_Buscar.Text = "Buscar"
+        Me.btn_Buscar.UseVisualStyleBackColor = True
         '
-        'txt_Nombre
+        'txt_Codigo
         '
-        Me.txt_Nombre.Location = New System.Drawing.Point(86, 69)
-        Me.txt_Nombre.Name = "txt_Nombre"
-        Me.txt_Nombre.Size = New System.Drawing.Size(181, 20)
-        Me.txt_Nombre.TabIndex = 6
+        Me.txt_Codigo.Enabled = False
+        Me.txt_Codigo.Location = New System.Drawing.Point(86, 32)
+        Me.txt_Codigo.Name = "txt_Codigo"
+        Me.txt_Codigo.Size = New System.Drawing.Size(100, 20)
+        Me.txt_Codigo.TabIndex = 1
         '
-        'Label3
+        'btn_Eliminar
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 114)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Descripción:"
+        Me.btn_Eliminar.Location = New System.Drawing.Point(280, 394)
+        Me.btn_Eliminar.Name = "btn_Eliminar"
+        Me.btn_Eliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Eliminar.TabIndex = 21
+        Me.btn_Eliminar.Text = "Eliminar"
+        Me.btn_Eliminar.UseVisualStyleBackColor = True
+        '
+        'btn_Volver
+        '
+        Me.btn_Volver.Location = New System.Drawing.Point(469, 394)
+        Me.btn_Volver.Name = "btn_Volver"
+        Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Volver.TabIndex = 20
+        Me.btn_Volver.Text = "Vovler"
+        Me.btn_Volver.UseVisualStyleBackColor = True
+        '
+        'btn_Cancelar
+        '
+        Me.btn_Cancelar.Location = New System.Drawing.Point(377, 394)
+        Me.btn_Cancelar.Name = "btn_Cancelar"
+        Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Cancelar.TabIndex = 19
+        Me.btn_Cancelar.Text = "Cancelar"
+        Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(132, 395)
+        Me.btn_Agregar.Location = New System.Drawing.Point(89, 394)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Agregar.TabIndex = 2
+        Me.btn_Agregar.TabIndex = 17
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(225, 395)
+        Me.btn_Modificar.Location = New System.Drawing.Point(182, 394)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Modificar.TabIndex = 3
+        Me.btn_Modificar.TabIndex = 18
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
-        'btn_Cancelar
-        '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(317, 395)
-        Me.btn_Cancelar.Name = "btn_Cancelar"
-        Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Cancelar.TabIndex = 4
-        Me.btn_Cancelar.Text = "Cancelar"
-        Me.btn_Cancelar.UseVisualStyleBackColor = True
-        '
-        'btn_Volver
-        '
-        Me.btn_Volver.Location = New System.Drawing.Point(409, 395)
-        Me.btn_Volver.Name = "btn_Volver"
-        Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Volver.TabIndex = 5
-        Me.btn_Volver.Text = "Vovler"
-        Me.btn_Volver.UseVisualStyleBackColor = True
-        '
-        'Form2
+        'frm_TipoPoliza
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -190,12 +200,13 @@ Partial Class frm_TipoPoliza
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(633, 428)
+        Me.Controls.Add(Me.btn_Eliminar)
         Me.Controls.Add(Me.btn_Volver)
+        Me.Controls.Add(Me.grb_Tipo_Poliza)
         Me.Controls.Add(Me.btn_Cancelar)
         Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.btn_Agregar)
-        Me.Controls.Add(Me.grb_Tipo_Poliza)
-        Me.Name = "Form2"
+        Me.Name = "frm_TipoPoliza"
         Me.Text = "Form2"
         Me.grb_Tipo_Poliza.ResumeLayout(False)
         Me.grb_Tipo_Poliza.PerformLayout()
@@ -216,8 +227,9 @@ Partial Class frm_TipoPoliza
     Friend WithEvents ltb_Cobertura As ListBox
     Friend WithEvents btn_Buscar As Button
     Friend WithEvents txt_Codigo As TextBox
+    Friend WithEvents btn_Eliminar As Button
+    Friend WithEvents btn_Volver As Button
+    Friend WithEvents btn_Cancelar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Modificar As Button
-    Friend WithEvents btn_Cancelar As Button
-    Friend WithEvents btn_Volver As Button
 End Class

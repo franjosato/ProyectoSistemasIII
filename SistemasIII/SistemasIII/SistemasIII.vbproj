@@ -86,6 +86,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexionmysql.vb" />
+    <Compile Include="frm_Cobertura.Designer.vb">
+      <DependentUpon>frm_Cobertura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Cobertura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Empleado.Designer.vb">
+      <DependentUpon>frm_Empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Marca.Designer.vb">
+      <DependentUpon>frm_Marca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Marca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Partevehiculo.Designer.vb">
+      <DependentUpon>frm_Partevehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Partevehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_TipoInspeccion.Designer.vb">
       <DependentUpon>frm_TipoInspeccion.vb</DependentUpon>
     </Compile>
@@ -122,10 +146,10 @@
     <Compile Include="frm_Cuotas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Formapago.Designer.vb">
-      <DependentUpon>frm_Formapago.vb</DependentUpon>
+    <Compile Include="frm_Pago.Designer.vb">
+      <DependentUpon>frm_Pago.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Formapago.vb">
+    <Compile Include="frm_Pago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_InicioSesion.Designer.vb">
@@ -176,6 +200,7 @@
     <Compile Include="Inspeccion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="Mod_Principal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -208,8 +233,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_Cobertura.resx">
+      <DependentUpon>frm_Cobertura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Empleado.resx">
+      <DependentUpon>frm_Empleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Listas.resx">
       <DependentUpon>frm_Listas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Marca.resx">
+      <DependentUpon>frm_Marca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Partevehiculo.resx">
+      <DependentUpon>frm_Partevehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TipoInspeccion.resx">
       <DependentUpon>frm_TipoInspeccion.vb</DependentUpon>
@@ -226,8 +263,8 @@
     <EmbeddedResource Include="frm_Cuotas.resx">
       <DependentUpon>frm_Cuotas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Formapago.resx">
-      <DependentUpon>frm_Formapago.vb</DependentUpon>
+    <EmbeddedResource Include="frm_Pago.resx">
+      <DependentUpon>frm_Pago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_InicioSesion.resx">
       <DependentUpon>frm_InicioSesion.vb</DependentUpon>

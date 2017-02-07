@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frm_Marca
+Partial Class frm_Partevehiculo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -28,101 +28,88 @@ Partial Class frm_Marca
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.grb_Marca = New System.Windows.Forms.GroupBox()
-        Me.lbl_Modelo = New System.Windows.Forms.Label()
-        Me.txt_Marca = New System.Windows.Forms.TextBox()
-        Me.lbl_Marca = New System.Windows.Forms.Label()
+        Me.txt_Nombre = New System.Windows.Forms.TextBox()
+        Me.lbl_Nombre = New System.Windows.Forms.Label()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.txt_Codigo = New System.Windows.Forms.TextBox()
         Me.lbl_Codigo = New System.Windows.Forms.Label()
-        Me.txt_Modelo = New System.Windows.Forms.TextBox()
         Me.grb_Marca.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_Eliminar
         '
-        Me.btn_Eliminar.Location = New System.Drawing.Point(317, 382)
+        Me.btn_Eliminar.Location = New System.Drawing.Point(302, 294)
         Me.btn_Eliminar.Name = "btn_Eliminar"
         Me.btn_Eliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Eliminar.TabIndex = 17
+        Me.btn_Eliminar.TabIndex = 23
         Me.btn_Eliminar.Text = "Eliminar"
         Me.btn_Eliminar.UseVisualStyleBackColor = True
         '
         'btn_Volver
         '
-        Me.btn_Volver.Location = New System.Drawing.Point(506, 382)
+        Me.btn_Volver.Location = New System.Drawing.Point(491, 294)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Volver.TabIndex = 16
+        Me.btn_Volver.TabIndex = 22
         Me.btn_Volver.Text = "Vovler"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(414, 382)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(399, 294)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Cancelar.TabIndex = 15
+        Me.btn_Cancelar.TabIndex = 21
         Me.btn_Cancelar.Text = "Cancelar"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(219, 382)
+        Me.btn_Modificar.Location = New System.Drawing.Point(204, 294)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Modificar.TabIndex = 14
+        Me.btn_Modificar.TabIndex = 20
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(126, 382)
+        Me.btn_Agregar.Location = New System.Drawing.Point(111, 294)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Agregar.TabIndex = 13
+        Me.btn_Agregar.TabIndex = 19
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
         'grb_Marca
         '
-        Me.grb_Marca.Controls.Add(Me.txt_Modelo)
-        Me.grb_Marca.Controls.Add(Me.lbl_Modelo)
-        Me.grb_Marca.Controls.Add(Me.txt_Marca)
-        Me.grb_Marca.Controls.Add(Me.lbl_Marca)
+        Me.grb_Marca.Controls.Add(Me.txt_Nombre)
+        Me.grb_Marca.Controls.Add(Me.lbl_Nombre)
         Me.grb_Marca.Controls.Add(Me.btn_Buscar)
         Me.grb_Marca.Controls.Add(Me.txt_Codigo)
         Me.grb_Marca.Controls.Add(Me.lbl_Codigo)
-        Me.grb_Marca.Location = New System.Drawing.Point(196, 154)
+        Me.grb_Marca.Location = New System.Drawing.Point(189, 147)
         Me.grb_Marca.Name = "grb_Marca"
-        Me.grb_Marca.Size = New System.Drawing.Size(286, 219)
-        Me.grb_Marca.TabIndex = 12
+        Me.grb_Marca.Size = New System.Drawing.Size(286, 136)
+        Me.grb_Marca.TabIndex = 18
         Me.grb_Marca.TabStop = False
-        Me.grb_Marca.Text = "Datos de la marca de carro"
+        Me.grb_Marca.Text = "Datos de la parte del vehículo"
         '
-        'lbl_Modelo
+        'txt_Nombre
         '
-        Me.lbl_Modelo.AutoSize = True
-        Me.lbl_Modelo.Location = New System.Drawing.Point(21, 140)
-        Me.lbl_Modelo.Name = "lbl_Modelo"
-        Me.lbl_Modelo.Size = New System.Drawing.Size(45, 13)
-        Me.lbl_Modelo.TabIndex = 7
-        Me.lbl_Modelo.Text = "Modelo:"
+        Me.txt_Nombre.Location = New System.Drawing.Point(79, 95)
+        Me.txt_Nombre.Name = "txt_Nombre"
+        Me.txt_Nombre.Size = New System.Drawing.Size(181, 20)
+        Me.txt_Nombre.TabIndex = 6
         '
-        'txt_Marca
+        'lbl_Nombre
         '
-        Me.txt_Marca.Location = New System.Drawing.Point(79, 95)
-        Me.txt_Marca.Name = "txt_Marca"
-        Me.txt_Marca.Size = New System.Drawing.Size(181, 20)
-        Me.txt_Marca.TabIndex = 6
-        '
-        'lbl_Marca
-        '
-        Me.lbl_Marca.AutoSize = True
-        Me.lbl_Marca.Location = New System.Drawing.Point(26, 98)
-        Me.lbl_Marca.Name = "lbl_Marca"
-        Me.lbl_Marca.Size = New System.Drawing.Size(40, 13)
-        Me.lbl_Marca.TabIndex = 4
-        Me.lbl_Marca.Text = "Marca:"
+        Me.lbl_Nombre.AutoSize = True
+        Me.lbl_Nombre.Location = New System.Drawing.Point(26, 98)
+        Me.lbl_Nombre.Name = "lbl_Nombre"
+        Me.lbl_Nombre.Size = New System.Drawing.Size(47, 13)
+        Me.lbl_Nombre.TabIndex = 4
+        Me.lbl_Nombre.Text = "Nombre:"
         '
         'btn_Buscar
         '
@@ -150,29 +137,22 @@ Partial Class frm_Marca
         Me.lbl_Codigo.TabIndex = 0
         Me.lbl_Codigo.Text = "Código:"
         '
-        'txt_Modelo
-        '
-        Me.txt_Modelo.Location = New System.Drawing.Point(79, 137)
-        Me.txt_Modelo.Name = "txt_Modelo"
-        Me.txt_Modelo.Size = New System.Drawing.Size(181, 20)
-        Me.txt_Modelo.TabIndex = 8
-        '
-        'frm_Marca
+        'frm_Partevehiculo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(706, 418)
+        Me.ClientSize = New System.Drawing.Size(681, 338)
         Me.Controls.Add(Me.btn_Eliminar)
         Me.Controls.Add(Me.btn_Volver)
         Me.Controls.Add(Me.btn_Cancelar)
         Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.btn_Agregar)
         Me.Controls.Add(Me.grb_Marca)
-        Me.Name = "frm_Marca"
-        Me.Text = "frm_Marca"
+        Me.Name = "frm_Partevehiculo"
+        Me.Text = "frm_Partevehiculo"
         Me.grb_Marca.ResumeLayout(False)
         Me.grb_Marca.PerformLayout()
         Me.ResumeLayout(False)
@@ -185,10 +165,8 @@ Partial Class frm_Marca
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents grb_Marca As GroupBox
-    Friend WithEvents txt_Modelo As TextBox
-    Friend WithEvents lbl_Modelo As Label
-    Friend WithEvents txt_Marca As TextBox
-    Friend WithEvents lbl_Marca As Label
+    Friend WithEvents txt_Nombre As TextBox
+    Friend WithEvents lbl_Nombre As Label
     Friend WithEvents btn_Buscar As Button
     Friend WithEvents txt_Codigo As TextBox
     Friend WithEvents lbl_Codigo As Label

@@ -829,7 +829,7 @@ Partial Class frm_Contrato_Poliza
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(767, 741)
+        Me.ClientSize = New System.Drawing.Size(767, 733)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.btn_Anular)
         Me.Controls.Add(Me.lbl_Usuario)

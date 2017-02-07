@@ -5,6 +5,7 @@ Imports MySql.Data.MySqlClient
 Module Conexionmysql
     Public _cadena As String ' se usa únicamente para obtener los datos de conexión
     Public _conexion As MySqlConnection 'esta variable se encargara de conectar la BD
+    Public _sentencia As String
 
 
     Public Function conexion_global() As Boolean 'se crea una funcion publica boleana como estamos en un modulo esto evitara colocar el mismo método en diferentes forms 
@@ -29,5 +30,8 @@ Module Conexionmysql
         _conexion.Close()
 
 
+    End Sub
+    Public Sub Sentencia()
+        MySqlCommand.
     End Sub
 End Module
