@@ -34,7 +34,7 @@ Partial Class frm_Empleado
         Me.lbl_PNombre = New System.Windows.Forms.Label()
         Me.lbl_SApellido = New System.Windows.Forms.Label()
         Me.lbl_PApellido = New System.Windows.Forms.Label()
-        Me.txt_Correro = New System.Windows.Forms.TextBox()
+        Me.txt_Correo = New System.Windows.Forms.TextBox()
         Me.lbl_Correo = New System.Windows.Forms.Label()
         Me.txt_TlfFijo = New System.Windows.Forms.TextBox()
         Me.lbl_TlfFijo = New System.Windows.Forms.Label()
@@ -76,13 +76,13 @@ Partial Class frm_Empleado
         Me.cmb_Nacionalidad.FormattingEnabled = True
         Me.cmb_Nacionalidad.Location = New System.Drawing.Point(106, 24)
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
-        Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 21)
+        Me.cmb_Nacionalidad.Size = New System.Drawing.Size(36, 21)
         Me.cmb_Nacionalidad.TabIndex = 102
         '
         'txt_Cedula
         '
         Me.txt_Cedula.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Cedula.Location = New System.Drawing.Point(159, 26)
+        Me.txt_Cedula.Location = New System.Drawing.Point(148, 24)
         Me.txt_Cedula.MaxLength = 8
         Me.txt_Cedula.Name = "txt_Cedula"
         Me.txt_Cedula.Size = New System.Drawing.Size(112, 20)
@@ -169,19 +169,19 @@ Partial Class frm_Empleado
         Me.lbl_PApellido.TabIndex = 106
         Me.lbl_PApellido.Text = "Primer apellido:"
         '
-        'txt_Correro
+        'txt_Correo
         '
-        Me.txt_Correro.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Correro.Location = New System.Drawing.Point(362, 125)
-        Me.txt_Correro.MaxLength = 20
-        Me.txt_Correro.Name = "txt_Correro"
-        Me.txt_Correro.Size = New System.Drawing.Size(165, 20)
-        Me.txt_Correro.TabIndex = 113
+        Me.txt_Correo.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_Correo.Location = New System.Drawing.Point(581, 94)
+        Me.txt_Correo.MaxLength = 20
+        Me.txt_Correo.Name = "txt_Correo"
+        Me.txt_Correo.Size = New System.Drawing.Size(165, 20)
+        Me.txt_Correo.TabIndex = 113
         '
         'lbl_Correo
         '
         Me.lbl_Correo.AutoSize = True
-        Me.lbl_Correo.Location = New System.Drawing.Point(314, 128)
+        Me.lbl_Correo.Location = New System.Drawing.Point(533, 97)
         Me.lbl_Correo.Name = "lbl_Correo"
         Me.lbl_Correo.Size = New System.Drawing.Size(41, 13)
         Me.lbl_Correo.TabIndex = 112
@@ -208,7 +208,7 @@ Partial Class frm_Empleado
         'grb_personales
         '
         Me.grb_personales.Controls.Add(Me.grb_Laboral)
-        Me.grb_personales.Controls.Add(Me.txt_Correro)
+        Me.grb_personales.Controls.Add(Me.txt_Correo)
         Me.grb_personales.Controls.Add(Me.lbl_Correo)
         Me.grb_personales.Controls.Add(Me.txt_TlfFijo)
         Me.grb_personales.Controls.Add(Me.lbl_TlfFijo)
@@ -226,7 +226,7 @@ Partial Class frm_Empleado
         Me.grb_personales.Controls.Add(Me.lbl_PNombre)
         Me.grb_personales.Location = New System.Drawing.Point(8, 150)
         Me.grb_personales.Name = "grb_personales"
-        Me.grb_personales.Size = New System.Drawing.Size(663, 218)
+        Me.grb_personales.Size = New System.Drawing.Size(755, 218)
         Me.grb_personales.TabIndex = 114
         Me.grb_personales.TabStop = False
         Me.grb_personales.Text = "Datos personales"
@@ -237,7 +237,7 @@ Partial Class frm_Empleado
         Me.grb_Laboral.Controls.Add(Me.lbl_Tipoempleado)
         Me.grb_Laboral.Location = New System.Drawing.Point(18, 155)
         Me.grb_Laboral.Name = "grb_Laboral"
-        Me.grb_Laboral.Size = New System.Drawing.Size(634, 57)
+        Me.grb_Laboral.Size = New System.Drawing.Size(687, 57)
         Me.grb_Laboral.TabIndex = 115
         Me.grb_Laboral.TabStop = False
         Me.grb_Laboral.Text = "Datos laborales"
@@ -274,7 +274,7 @@ Partial Class frm_Empleado
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 118
-        Me.btn_Volver.Text = "Vovler"
+        Me.btn_Volver.Text = "Volver"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
         'btn_Cancelar
@@ -308,40 +308,40 @@ Partial Class frm_Empleado
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Fecha.Location = New System.Drawing.Point(557, 13)
+        Me.lbl_Fecha.Location = New System.Drawing.Point(562, 34)
         Me.lbl_Fecha.Name = "lbl_Fecha"
         Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
-        Me.lbl_Fecha.TabIndex = 131
+        Me.lbl_Fecha.TabIndex = 127
         Me.lbl_Fecha.Text = "dd/MM/YY"
         '
         'lbl_Usuario
         '
         Me.lbl_Usuario.AutoSize = True
         Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Usuario.Location = New System.Drawing.Point(628, 63)
+        Me.lbl_Usuario.Location = New System.Drawing.Point(633, 84)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
-        Me.lbl_Usuario.TabIndex = 130
+        Me.lbl_Usuario.TabIndex = 126
         Me.lbl_Usuario.Text = "Usuario"
         '
         'lbl_EncabezadoSaludo
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(587, 63)
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(592, 84)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
         Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
-        Me.lbl_EncabezadoSaludo.TabIndex = 129
+        Me.lbl_EncabezadoSaludo.TabIndex = 125
         Me.lbl_EncabezadoSaludo.Text = "Hola, "
         '
         'lbl_Hora
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Hora.Location = New System.Drawing.Point(621, 13)
+        Me.lbl_Hora.Location = New System.Drawing.Point(626, 34)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
-        Me.lbl_Hora.TabIndex = 128
+        Me.lbl_Hora.TabIndex = 124
         Me.lbl_Hora.Text = "00:00:00"
         '
         'lbl_EncabezadoFormuladio
@@ -349,22 +349,22 @@ Partial Class frm_Empleado
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(242, 99)
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(247, 84)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
-        Me.lbl_EncabezadoFormuladio.TabIndex = 127
-        Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(209, 25)
+        Me.lbl_EncabezadoFormuladio.TabIndex = 123
+        Me.lbl_EncabezadoFormuladio.Text = " Datos del empleado"
         '
         'lbl_EncabezadoModulo
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(250, 55)
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(247, 47)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
-        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
-        Me.lbl_EncabezadoModulo.TabIndex = 126
-        Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(222, 25)
+        Me.lbl_EncabezadoModulo.TabIndex = 122
+        Me.lbl_EncabezadoModulo.Text = "Modulo administrativo"
         '
         'lbl_EncabezadoEmpresa
         '
@@ -372,22 +372,22 @@ Partial Class frm_Empleado
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(208, 10)
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(205, 9)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
         Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
-        Me.lbl_EncabezadoEmpresa.TabIndex = 125
+        Me.lbl_EncabezadoEmpresa.TabIndex = 121
         Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
         '
         'ptb_logo
         '
         Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
-        Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
         Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptb_logo.Location = New System.Drawing.Point(3, 0)
+        Me.ptb_logo.Image = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_logo.Location = New System.Drawing.Point(8, -24)
         Me.ptb_logo.Name = "ptb_logo"
-        Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
-        Me.ptb_logo.TabIndex = 124
+        Me.ptb_logo.Size = New System.Drawing.Size(153, 155)
+        Me.ptb_logo.TabIndex = 120
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
@@ -398,15 +398,15 @@ Partial Class frm_Empleado
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(679, 410)
+        Me.ClientSize = New System.Drawing.Size(769, 410)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
+        Me.Controls.Add(Me.ptb_logo)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)
         Me.Controls.Add(Me.lbl_Hora)
         Me.Controls.Add(Me.lbl_EncabezadoFormuladio)
         Me.Controls.Add(Me.lbl_EncabezadoModulo)
         Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
-        Me.Controls.Add(Me.ptb_logo)
         Me.Controls.Add(Me.btn_Eliminar)
         Me.Controls.Add(Me.btn_Volver)
         Me.Controls.Add(Me.btn_Cancelar)
@@ -437,7 +437,7 @@ Partial Class frm_Empleado
     Friend WithEvents lbl_PNombre As Label
     Friend WithEvents lbl_SApellido As Label
     Friend WithEvents lbl_PApellido As Label
-    Friend WithEvents txt_Correro As TextBox
+    Friend WithEvents txt_Correo As TextBox
     Friend WithEvents lbl_Correo As Label
     Friend WithEvents txt_TlfFijo As TextBox
     Friend WithEvents lbl_TlfFijo As Label

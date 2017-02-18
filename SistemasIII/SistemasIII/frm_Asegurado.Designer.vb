@@ -388,7 +388,7 @@ Partial Class frm_Asegurado
         'rtb_DireccionH
         '
         Me.rtb_DireccionH.BackColor = System.Drawing.Color.GhostWhite
-        Me.rtb_DireccionH.Location = New System.Drawing.Point(394, 19)
+        Me.rtb_DireccionH.Location = New System.Drawing.Point(438, 278)
         Me.rtb_DireccionH.MaxLength = 40
         Me.rtb_DireccionH.Name = "rtb_DireccionH"
         Me.rtb_DireccionH.Size = New System.Drawing.Size(273, 53)
@@ -547,6 +547,7 @@ Partial Class frm_Asegurado
         'txt_Cedula
         '
         Me.txt_Cedula.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_Cedula.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txt_Cedula.Location = New System.Drawing.Point(154, 21)
         Me.txt_Cedula.MaxLength = 8
         Me.txt_Cedula.Name = "txt_Cedula"

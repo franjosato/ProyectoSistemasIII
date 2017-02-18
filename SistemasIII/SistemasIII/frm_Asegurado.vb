@@ -56,7 +56,11 @@
         Validarletras(e)
     End Sub
 
-    Private Sub btn_Volver_Click(sender As Object, e As EventArgs) Handles btn_Volver.Click
+    Private Sub cmb_Estado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_Estado.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub grb_DireccYContacto_Enter(sender As Object, e As EventArgs) Handles grb_DireccYContacto.Enter
 
     End Sub
 End Class

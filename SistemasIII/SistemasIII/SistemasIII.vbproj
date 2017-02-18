@@ -92,12 +92,6 @@
     <Compile Include="frm_Cobertura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Cuotas.Designer.vb">
-      <DependentUpon>frm_Cuotas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Cuotas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frm_Empleado.Designer.vb">
       <DependentUpon>frm_Empleado.vb</DependentUpon>
     </Compile>
@@ -110,28 +104,10 @@
     <Compile Include="frm_Marca.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Menu_Corredor.Designer.vb">
-      <DependentUpon>frm_Menu_Corredor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Menu_Corredor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Pago.Designer.vb">
-      <DependentUpon>frm_Pago.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Pago.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frm_Partevehiculo.Designer.vb">
       <DependentUpon>frm_Partevehiculo.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_Partevehiculo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Plan_Pago.Designer.vb">
-      <DependentUpon>frm_Plan_Pago.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Plan_Pago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_TipoInspeccion.Designer.vb">
@@ -162,6 +138,18 @@
       <DependentUpon>frm_Asegurado.vb</DependentUpon>
     </Compile>
     <Compile Include="frm_Asegurado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Cuotas.Designer.vb">
+      <DependentUpon>frm_Cuotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Cuotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Pago.Designer.vb">
+      <DependentUpon>frm_Pago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Pago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_InicioSesion.Designer.vb">
@@ -212,30 +200,6 @@
     <Compile Include="Inspeccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mdi_Administrador.Designer.vb">
-      <DependentUpon>mdi_Administrador.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mdi_Administrador.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mdi_Corredor.Designer.vb">
-      <DependentUpon>mdi_Corredor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mdi_Corredor.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mdi_Gerente.Designer.vb">
-      <DependentUpon>mdi_Gerente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mdi_Gerente.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mdi_Perito.Designer.vb">
-      <DependentUpon>mdi_Perito.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mdi_Perito.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="Mod_Principal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -272,9 +236,6 @@
     <EmbeddedResource Include="frm_Cobertura.resx">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Cuotas.resx">
-      <DependentUpon>frm_Cuotas.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Empleado.resx">
       <DependentUpon>frm_Empleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -284,17 +245,8 @@
     <EmbeddedResource Include="frm_Marca.resx">
       <DependentUpon>frm_Marca.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Menu_Corredor.resx">
-      <DependentUpon>frm_Menu_Corredor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Pago.resx">
-      <DependentUpon>frm_Pago.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Partevehiculo.resx">
       <DependentUpon>frm_Partevehiculo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Plan_Pago.resx">
-      <DependentUpon>frm_Plan_Pago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TipoInspeccion.resx">
       <DependentUpon>frm_TipoInspeccion.vb</DependentUpon>
@@ -307,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Contrato_Poliza.resx">
       <DependentUpon>frm_Contrato_Poliza.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Cuotas.resx">
+      <DependentUpon>frm_Cuotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Pago.resx">
+      <DependentUpon>frm_Pago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_InicioSesion.resx">
       <DependentUpon>frm_InicioSesion.vb</DependentUpon>
@@ -331,18 +289,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inspeccion.resx">
       <DependentUpon>Inspeccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mdi_Administrador.resx">
-      <DependentUpon>mdi_Administrador.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mdi_Corredor.resx">
-      <DependentUpon>mdi_Corredor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mdi_Gerente.resx">
-      <DependentUpon>mdi_Gerente.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mdi_Perito.resx">
-      <DependentUpon>mdi_Perito.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
