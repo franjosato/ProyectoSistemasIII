@@ -117,48 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Volver.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAABgSURBVEhLYxgFQw40QDFNAMjg
-        /0D8G4i1QALUBMiGh4AEqAmQDQ8FCVAT0M3wMJAANQHM8D9ATDPDycUEAc0tAAHkIAoHCdACjFpCEqC7
-        JVQv7GAAZEkdhDkKhgZgYAAAbMJCUTxxgIgAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_Cancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACfSURBVEhL7ZRRCoMwEAVzifYQ
-        tr3/lx7CtuexbwILa5C4wfRLBx4aMPOikaSL8/JSRuWWR3XuyqQ88igIExblrdRKkH8VnmVBYZAir5V4
-        +axE3nYFEz4KAq5ecFhulCWIu8kNhL6kq9zwq+4uh78WlN987+9qYmtDSZeSLbnBvd/45pKa3ChLmBPG
-        joq9zURqJcwJ81RaD7shjy7ORko/+F1C6tbMcdcAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btn_Procesarpago.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAACgSURBVEhL7ZVBCoNADEXnBO0V
-        6oGkesx6Cnf2GF22XsL+XwgUMcnMBHHjg7dQYx4IajoppYcfuFQ6wztUiSwXuUNFhmpx7z800MAR3n5H
-        24QCD8hrL6hF3IDFBU7QioQChJEn1CJuQAZyXUfkvMr/zTkWBzyuMPSILLzlxA1YAwO0lpNQgEt3fdFy
-        OD7A77kM1fqGKh2M/BO4vIUnuaT0BRIMnK0e5m72AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="FormadePagoGrid.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="tmr_HoraSiniestro.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="MontoCanceladoGrid.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="ofd_transito.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>166, 17</value>
   </metadata>
-  <metadata name="MontoFaltanteGrid.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btn_Añadir.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAACxMAAAsTAQCanBgAAABsSURBVEhL7ZQxDoAwDMT6QwT/
-        fwDwCUiGTj6WXoQ61JKnWtctbTEVR3iFj+kd7iGoGO/mFuiPLp87v31QJVCRI1CRI1CRI1CRI1CRI1CR
-        I1CRI1CRI1CRI8grqMIRzxDkia24qDm+hYspaO0FNHIbh8fmsKwAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

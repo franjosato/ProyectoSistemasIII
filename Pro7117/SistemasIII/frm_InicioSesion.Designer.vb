@@ -29,9 +29,11 @@ Partial Class frm_InicioSesion
         Me.btn_Ingresar = New System.Windows.Forms.Button()
         Me.txt_Usuario = New System.Windows.Forms.TextBox()
         Me.txt_Contraseña = New System.Windows.Forms.TextBox()
+        Me.ptb_ImgInicio = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tmr_HoraInicioSesion = New System.Windows.Forms.Timer(Me.components)
         Me.lbl_HoraInicioSesion = New System.Windows.Forms.Label()
+        CType(Me.ptb_ImgInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -90,6 +92,15 @@ Partial Class frm_InicioSesion
         Me.txt_Contraseña.Size = New System.Drawing.Size(117, 20)
         Me.txt_Contraseña.TabIndex = 7
         '
+        'ptb_ImgInicio
+        '
+        Me.ptb_ImgInicio.Image = Global.WindowsApplication1.My.Resources.Resources.Imagen1
+        Me.ptb_ImgInicio.Location = New System.Drawing.Point(-22, 0)
+        Me.ptb_ImgInicio.Name = "ptb_ImgInicio"
+        Me.ptb_ImgInicio.Size = New System.Drawing.Size(258, 251)
+        Me.ptb_ImgInicio.TabIndex = 8
+        Me.ptb_ImgInicio.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Location = New System.Drawing.Point(3, 0)
@@ -117,6 +128,7 @@ Partial Class frm_InicioSesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(527, 243)
         Me.Controls.Add(Me.lbl_HoraInicioSesion)
+        Me.Controls.Add(Me.ptb_ImgInicio)
         Me.Controls.Add(Me.txt_Contraseña)
         Me.Controls.Add(Me.txt_Usuario)
         Me.Controls.Add(Me.btn_Ingresar)
@@ -126,6 +138,7 @@ Partial Class frm_InicioSesion
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "frm_InicioSesion"
         Me.Text = "frm_InicioSesion"
+        CType(Me.ptb_ImgInicio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -138,6 +151,7 @@ Partial Class frm_InicioSesion
     Friend WithEvents btn_Ingresar As System.Windows.Forms.Button
     Friend WithEvents txt_Usuario As System.Windows.Forms.TextBox
     Friend WithEvents txt_Contraseña As System.Windows.Forms.TextBox
+    Friend WithEvents ptb_ImgInicio As System.Windows.Forms.PictureBox
     Friend WithEvents tmr_HoraInicioSesion As System.Windows.Forms.Timer
     Friend WithEvents lbl_HoraInicioSesion As System.Windows.Forms.Label
 End Class
