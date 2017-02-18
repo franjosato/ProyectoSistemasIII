@@ -28,7 +28,6 @@ Partial Class frm_Cuotas
         Me.lbl_Asegurado = New System.Windows.Forms.Label()
         Me.cmb_CedulaA = New System.Windows.Forms.ComboBox()
         Me.txt_CedulaA = New System.Windows.Forms.TextBox()
-        Me.txt_Placa = New System.Windows.Forms.TextBox()
         Me.lbl_Placa = New System.Windows.Forms.Label()
         Me.btn_BuscarT = New System.Windows.Forms.Button()
         Me.txt_Codigo = New System.Windows.Forms.TextBox()
@@ -49,6 +48,7 @@ Partial Class frm_Cuotas
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.grb_cuota.SuspendLayout()
         Me.grb_busqueda.SuspendLayout()
         CType(Me.dgv_cuotas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,10 +77,10 @@ Partial Class frm_Cuotas
         '
         'grb_busqueda
         '
+        Me.grb_busqueda.Controls.Add(Me.ComboBox1)
         Me.grb_busqueda.Controls.Add(Me.lbl_Asegurado)
         Me.grb_busqueda.Controls.Add(Me.cmb_CedulaA)
         Me.grb_busqueda.Controls.Add(Me.txt_CedulaA)
-        Me.grb_busqueda.Controls.Add(Me.txt_Placa)
         Me.grb_busqueda.Controls.Add(Me.lbl_Placa)
         Me.grb_busqueda.Controls.Add(Me.btn_BuscarT)
         Me.grb_busqueda.Controls.Add(Me.txt_Codigo)
@@ -123,13 +123,6 @@ Partial Class frm_Cuotas
         Me.txt_CedulaA.Size = New System.Drawing.Size(85, 20)
         Me.txt_CedulaA.TabIndex = 118
         '
-        'txt_Placa
-        '
-        Me.txt_Placa.Location = New System.Drawing.Point(325, 46)
-        Me.txt_Placa.Name = "txt_Placa"
-        Me.txt_Placa.Size = New System.Drawing.Size(138, 20)
-        Me.txt_Placa.TabIndex = 115
-        '
         'lbl_Placa
         '
         Me.lbl_Placa.AutoSize = True
@@ -152,7 +145,7 @@ Partial Class frm_Cuotas
         '
         Me.txt_Codigo.Location = New System.Drawing.Point(377, 16)
         Me.txt_Codigo.Name = "txt_Codigo"
-        Me.txt_Codigo.Size = New System.Drawing.Size(86, 20)
+        Me.txt_Codigo.Size = New System.Drawing.Size(120, 20)
         Me.txt_Codigo.TabIndex = 111
         '
         'lbl_Codigo
@@ -314,6 +307,14 @@ Partial Class frm_Cuotas
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(377, 46)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(120, 21)
+        Me.ComboBox1.TabIndex = 122
+        '
         'frm_Cuotas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -351,7 +352,6 @@ Partial Class frm_Cuotas
     Friend WithEvents lbl_Asegurado As Label
     Friend WithEvents cmb_CedulaA As ComboBox
     Friend WithEvents txt_CedulaA As TextBox
-    Friend WithEvents txt_Placa As TextBox
     Friend WithEvents lbl_Placa As Label
     Friend WithEvents btn_BuscarT As Button
     Friend WithEvents txt_Codigo As TextBox
@@ -372,4 +372,5 @@ Partial Class frm_Cuotas
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

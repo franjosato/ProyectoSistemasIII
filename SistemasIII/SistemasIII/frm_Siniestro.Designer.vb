@@ -45,7 +45,6 @@ Partial Class frm_Siniestro
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lbl_Descripcion = New System.Windows.Forms.Label()
         Me.grb_Poliza = New System.Windows.Forms.GroupBox()
-        Me.btn_Consultar = New System.Windows.Forms.Button()
         Me.btn_BuscarT = New System.Windows.Forms.Button()
         Me.cmb_NacionalidadT = New System.Windows.Forms.ComboBox()
         Me.txt_CedulaT = New System.Windows.Forms.TextBox()
@@ -73,6 +72,7 @@ Partial Class frm_Siniestro
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.btn_Consultar = New System.Windows.Forms.Button()
         Me.grb_Siniestro.SuspendLayout()
         Me.grb_Lugar.SuspendLayout()
         CType(Me.ptb_ImagenCarro, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -255,7 +255,7 @@ Partial Class frm_Siniestro
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(122, 16)
         Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Imagen del Vehiculo:"
+        Me.Label6.Text = "Imagen del Vehículo:"
         '
         'dtp_FechaSin
         '
@@ -315,15 +315,6 @@ Partial Class frm_Siniestro
         Me.grb_Poliza.TabStop = False
         Me.grb_Poliza.Text = "Datos de la póliza"
         '
-        'btn_Consultar
-        '
-        Me.btn_Consultar.Location = New System.Drawing.Point(527, 38)
-        Me.btn_Consultar.Name = "btn_Consultar"
-        Me.btn_Consultar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Consultar.TabIndex = 121
-        Me.btn_Consultar.Text = "Consultar"
-        Me.btn_Consultar.UseVisualStyleBackColor = True
-        '
         'btn_BuscarT
         '
         Me.btn_BuscarT.Location = New System.Drawing.Point(281, 16)
@@ -366,7 +357,7 @@ Partial Class frm_Siniestro
         Me.cmb_PlacaVeh.Enabled = False
         Me.cmb_PlacaVeh.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_PlacaVeh.FormattingEnabled = True
-        Me.cmb_PlacaVeh.Location = New System.Drawing.Point(136, 46)
+        Me.cmb_PlacaVeh.Location = New System.Drawing.Point(123, 46)
         Me.cmb_PlacaVeh.Name = "cmb_PlacaVeh"
         Me.cmb_PlacaVeh.Size = New System.Drawing.Size(92, 24)
         Me.cmb_PlacaVeh.TabIndex = 8
@@ -568,6 +559,15 @@ Partial Class frm_Siniestro
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'btn_Consultar
+        '
+        Me.btn_Consultar.Location = New System.Drawing.Point(527, 38)
+        Me.btn_Consultar.Name = "btn_Consultar"
+        Me.btn_Consultar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Consultar.TabIndex = 121
+        Me.btn_Consultar.Text = "Consultar"
+        Me.btn_Consultar.UseVisualStyleBackColor = True
+        '
         'frm_Siniestro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -649,7 +649,6 @@ Partial Class frm_Siniestro
     Friend WithEvents btn_Volver As Button
     Friend WithEvents btn_Cancelar As Button
     Friend WithEvents btn_Agregar As Button
-    Friend WithEvents btn_Consultar As Button
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents lbl_Fecha As Label
     Friend WithEvents lbl_Usuario As Label
@@ -659,4 +658,5 @@ Partial Class frm_Siniestro
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents btn_Consultar As Button
 End Class

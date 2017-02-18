@@ -97,6 +97,8 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lbl_SumaAsegurada = New System.Windows.Forms.Label()
         Me.grb_Vehiculo.SuspendLayout()
         Me.grb_Poliza.SuspendLayout()
         Me.grb_Pagos.SuspendLayout()
@@ -120,7 +122,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Renobar.Name = "btn_Renobar"
         Me.btn_Renobar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Renobar.TabIndex = 114
-        Me.btn_Renobar.Text = "Renobar"
+        Me.btn_Renobar.Text = "Renovar"
         Me.btn_Renobar.UseVisualStyleBackColor = True
         '
         'btn_Volver
@@ -342,6 +344,8 @@ Partial Class frm_Contrato_Poliza
         '
         'grb_Pagos
         '
+        Me.grb_Pagos.Controls.Add(Me.TextBox1)
+        Me.grb_Pagos.Controls.Add(Me.lbl_SumaAsegurada)
         Me.grb_Pagos.Controls.Add(Me.dtp_FechaCobro)
         Me.grb_Pagos.Controls.Add(Me.lbl_FechaCobro)
         Me.grb_Pagos.Controls.Add(Me.txt_MontoCuota)
@@ -362,15 +366,15 @@ Partial Class frm_Contrato_Poliza
         '
         'dtp_FechaCobro
         '
-        Me.dtp_FechaCobro.Location = New System.Drawing.Point(464, 47)
+        Me.dtp_FechaCobro.Location = New System.Drawing.Point(436, 70)
         Me.dtp_FechaCobro.Name = "dtp_FechaCobro"
-        Me.dtp_FechaCobro.Size = New System.Drawing.Size(215, 21)
+        Me.dtp_FechaCobro.Size = New System.Drawing.Size(226, 21)
         Me.dtp_FechaCobro.TabIndex = 36
         '
         'lbl_FechaCobro
         '
         Me.lbl_FechaCobro.AutoSize = True
-        Me.lbl_FechaCobro.Location = New System.Drawing.Point(461, 28)
+        Me.lbl_FechaCobro.Location = New System.Drawing.Point(435, 53)
         Me.lbl_FechaCobro.Name = "lbl_FechaCobro"
         Me.lbl_FechaCobro.Size = New System.Drawing.Size(98, 16)
         Me.lbl_FechaCobro.TabIndex = 35
@@ -378,7 +382,7 @@ Partial Class frm_Contrato_Poliza
         '
         'txt_MontoCuota
         '
-        Me.txt_MontoCuota.Location = New System.Drawing.Point(330, 48)
+        Me.txt_MontoCuota.Location = New System.Drawing.Point(324, 48)
         Me.txt_MontoCuota.Name = "txt_MontoCuota"
         Me.txt_MontoCuota.Size = New System.Drawing.Size(100, 21)
         Me.txt_MontoCuota.TabIndex = 33
@@ -386,7 +390,7 @@ Partial Class frm_Contrato_Poliza
         'lbl_MontoCuota
         '
         Me.lbl_MontoCuota.AutoSize = True
-        Me.lbl_MontoCuota.Location = New System.Drawing.Point(223, 51)
+        Me.lbl_MontoCuota.Location = New System.Drawing.Point(219, 51)
         Me.lbl_MontoCuota.Name = "lbl_MontoCuota"
         Me.lbl_MontoCuota.Size = New System.Drawing.Size(106, 16)
         Me.lbl_MontoCuota.TabIndex = 32
@@ -394,7 +398,7 @@ Partial Class frm_Contrato_Poliza
         '
         'txt_NCuotas
         '
-        Me.txt_NCuotas.Location = New System.Drawing.Point(114, 48)
+        Me.txt_NCuotas.Location = New System.Drawing.Point(111, 48)
         Me.txt_NCuotas.Name = "txt_NCuotas"
         Me.txt_NCuotas.Size = New System.Drawing.Size(100, 21)
         Me.txt_NCuotas.TabIndex = 31
@@ -402,7 +406,7 @@ Partial Class frm_Contrato_Poliza
         'lbl_NCuotas
         '
         Me.lbl_NCuotas.AutoSize = True
-        Me.lbl_NCuotas.Location = New System.Drawing.Point(4, 51)
+        Me.lbl_NCuotas.Location = New System.Drawing.Point(1, 51)
         Me.lbl_NCuotas.Name = "lbl_NCuotas"
         Me.lbl_NCuotas.Size = New System.Drawing.Size(111, 16)
         Me.lbl_NCuotas.TabIndex = 30
@@ -410,7 +414,7 @@ Partial Class frm_Contrato_Poliza
         '
         'txt_MontoPagar
         '
-        Me.txt_MontoPagar.Location = New System.Drawing.Point(330, 21)
+        Me.txt_MontoPagar.Location = New System.Drawing.Point(324, 21)
         Me.txt_MontoPagar.Name = "txt_MontoPagar"
         Me.txt_MontoPagar.Size = New System.Drawing.Size(100, 21)
         Me.txt_MontoPagar.TabIndex = 29
@@ -418,7 +422,7 @@ Partial Class frm_Contrato_Poliza
         'lbl_MontoPagar
         '
         Me.lbl_MontoPagar.AutoSize = True
-        Me.lbl_MontoPagar.Location = New System.Drawing.Point(232, 22)
+        Me.lbl_MontoPagar.Location = New System.Drawing.Point(229, 22)
         Me.lbl_MontoPagar.Name = "lbl_MontoPagar"
         Me.lbl_MontoPagar.Size = New System.Drawing.Size(94, 16)
         Me.lbl_MontoPagar.TabIndex = 28
@@ -426,7 +430,7 @@ Partial Class frm_Contrato_Poliza
         '
         'txt_MontoBase
         '
-        Me.txt_MontoBase.Location = New System.Drawing.Point(113, 19)
+        Me.txt_MontoBase.Location = New System.Drawing.Point(111, 19)
         Me.txt_MontoBase.Name = "txt_MontoBase"
         Me.txt_MontoBase.Size = New System.Drawing.Size(100, 21)
         Me.txt_MontoBase.TabIndex = 27
@@ -434,7 +438,7 @@ Partial Class frm_Contrato_Poliza
         'lbl_MontoBase
         '
         Me.lbl_MontoBase.AutoSize = True
-        Me.lbl_MontoBase.Location = New System.Drawing.Point(34, 22)
+        Me.lbl_MontoBase.Location = New System.Drawing.Point(32, 22)
         Me.lbl_MontoBase.Name = "lbl_MontoBase"
         Me.lbl_MontoBase.Size = New System.Drawing.Size(77, 16)
         Me.lbl_MontoBase.TabIndex = 26
@@ -837,6 +841,22 @@ Partial Class frm_Contrato_Poliza
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(540, 21)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox1.TabIndex = 38
+        '
+        'lbl_SumaAsegurada
+        '
+        Me.lbl_SumaAsegurada.AutoSize = True
+        Me.lbl_SumaAsegurada.Location = New System.Drawing.Point(433, 26)
+        Me.lbl_SumaAsegurada.Name = "lbl_SumaAsegurada"
+        Me.lbl_SumaAsegurada.Size = New System.Drawing.Size(104, 16)
+        Me.lbl_SumaAsegurada.TabIndex = 37
+        Me.lbl_SumaAsegurada.Text = "Suma Asegurada:"
+        '
         'frm_Contrato_Poliza
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -956,4 +976,6 @@ Partial Class frm_Contrato_Poliza
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lbl_SumaAsegurada As Label
 End Class

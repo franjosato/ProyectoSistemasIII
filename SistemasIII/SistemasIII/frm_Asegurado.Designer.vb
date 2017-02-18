@@ -39,7 +39,6 @@ Partial Class frm_Asegurado
         Me.grb_Personales = New System.Windows.Forms.GroupBox()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.grb_Edocivil = New System.Windows.Forms.GroupBox()
-        Me.rdb_Otro = New System.Windows.Forms.RadioButton()
         Me.rdb_Divorciado = New System.Windows.Forms.RadioButton()
         Me.rdb_Casado = New System.Windows.Forms.RadioButton()
         Me.rdb_soltero = New System.Windows.Forms.RadioButton()
@@ -271,7 +270,6 @@ Partial Class frm_Asegurado
         '
         'grb_Edocivil
         '
-        Me.grb_Edocivil.Controls.Add(Me.rdb_Otro)
         Me.grb_Edocivil.Controls.Add(Me.rdb_Divorciado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_Casado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_soltero)
@@ -281,17 +279,6 @@ Partial Class frm_Asegurado
         Me.grb_Edocivil.TabIndex = 77
         Me.grb_Edocivil.TabStop = False
         Me.grb_Edocivil.Text = "Estado civil"
-        '
-        'rdb_Otro
-        '
-        Me.rdb_Otro.AutoSize = True
-        Me.rdb_Otro.Location = New System.Drawing.Point(44, 33)
-        Me.rdb_Otro.Name = "rdb_Otro"
-        Me.rdb_Otro.Size = New System.Drawing.Size(36, 20)
-        Me.rdb_Otro.TabIndex = 3
-        Me.rdb_Otro.TabStop = True
-        Me.rdb_Otro.Text = "O"
-        Me.rdb_Otro.UseVisualStyleBackColor = True
         '
         'rdb_Divorciado
         '
@@ -733,7 +720,6 @@ Partial Class frm_Asegurado
     Friend WithEvents grb_Personales As GroupBox
     Friend WithEvents btn_Buscar As Button
     Friend WithEvents grb_Edocivil As GroupBox
-    Friend WithEvents rdb_Otro As RadioButton
     Friend WithEvents rdb_Divorciado As RadioButton
     Friend WithEvents rdb_Casado As RadioButton
     Friend WithEvents rdb_soltero As RadioButton

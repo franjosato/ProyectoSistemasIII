@@ -86,4 +86,8 @@
     Private Sub frm_Contrato_Poliza_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.dtp_Año.CustomFormat = "yyyy"
     End Sub
+
+    Private Sub grb_Poliza_Enter(sender As Object, e As EventArgs) Handles grb_Poliza.Enter
+
+    End Sub
 End Class

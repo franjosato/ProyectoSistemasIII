@@ -56,7 +56,6 @@ Partial Class frm_Tomador
         Me.grb_Personales = New System.Windows.Forms.GroupBox()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.grb_Edocivil = New System.Windows.Forms.GroupBox()
-        Me.rdb_Otro = New System.Windows.Forms.RadioButton()
         Me.rdb_Divorciado = New System.Windows.Forms.RadioButton()
         Me.rdb_Casado = New System.Windows.Forms.RadioButton()
         Me.rdb_soltero = New System.Windows.Forms.RadioButton()
@@ -70,8 +69,6 @@ Partial Class frm_Tomador
         Me.grb_Sexo = New System.Windows.Forms.GroupBox()
         Me.rdb_Femenino = New System.Windows.Forms.RadioButton()
         Me.rdb_Masculino = New System.Windows.Forms.RadioButton()
-        Me.EstadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Sistemas3DataSet = New SistemasIII.sistemas3DataSet()
         Me.grb_DrieccYContactoLaboral = New System.Windows.Forms.GroupBox()
         Me.txt_CorreoT = New System.Windows.Forms.TextBox()
         Me.lbl_CorreoT = New System.Windows.Forms.Label()
@@ -93,15 +90,17 @@ Partial Class frm_Tomador
         Me.lbl_Usuario = New System.Windows.Forms.Label()
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
-        Me.EstadosTableAdapter = New SistemasIII.sistemas3DataSetTableAdapters.estadosTableAdapter()
         Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
         Me.grb_DireccYContacto.SuspendLayout()
         Me.grb_Sexo.SuspendLayout()
-        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Sistemas3DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_DrieccYContactoLaboral.SuspendLayout()
         Me.grb_Laboral.SuspendLayout()
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -419,32 +418,20 @@ Partial Class frm_Tomador
         '
         'grb_Edocivil
         '
-        Me.grb_Edocivil.Controls.Add(Me.rdb_Otro)
         Me.grb_Edocivil.Controls.Add(Me.rdb_Divorciado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_Casado)
         Me.grb_Edocivil.Controls.Add(Me.rdb_soltero)
-        Me.grb_Edocivil.Location = New System.Drawing.Point(587, 50)
+        Me.grb_Edocivil.Location = New System.Drawing.Point(531, 78)
         Me.grb_Edocivil.Name = "grb_Edocivil"
-        Me.grb_Edocivil.Size = New System.Drawing.Size(83, 59)
+        Me.grb_Edocivil.Size = New System.Drawing.Size(141, 40)
         Me.grb_Edocivil.TabIndex = 77
         Me.grb_Edocivil.TabStop = False
         Me.grb_Edocivil.Text = "Estado civil"
         '
-        'rdb_Otro
-        '
-        Me.rdb_Otro.AutoSize = True
-        Me.rdb_Otro.Location = New System.Drawing.Point(44, 33)
-        Me.rdb_Otro.Name = "rdb_Otro"
-        Me.rdb_Otro.Size = New System.Drawing.Size(36, 20)
-        Me.rdb_Otro.TabIndex = 3
-        Me.rdb_Otro.TabStop = True
-        Me.rdb_Otro.Text = "O"
-        Me.rdb_Otro.UseVisualStyleBackColor = True
-        '
         'rdb_Divorciado
         '
         Me.rdb_Divorciado.AutoSize = True
-        Me.rdb_Divorciado.Location = New System.Drawing.Point(44, 13)
+        Me.rdb_Divorciado.Location = New System.Drawing.Point(53, 15)
         Me.rdb_Divorciado.Name = "rdb_Divorciado"
         Me.rdb_Divorciado.Size = New System.Drawing.Size(34, 20)
         Me.rdb_Divorciado.TabIndex = 2
@@ -455,7 +442,7 @@ Partial Class frm_Tomador
         'rdb_Casado
         '
         Me.rdb_Casado.AutoSize = True
-        Me.rdb_Casado.Location = New System.Drawing.Point(6, 33)
+        Me.rdb_Casado.Location = New System.Drawing.Point(96, 15)
         Me.rdb_Casado.Name = "rdb_Casado"
         Me.rdb_Casado.Size = New System.Drawing.Size(35, 20)
         Me.rdb_Casado.TabIndex = 1
@@ -466,7 +453,7 @@ Partial Class frm_Tomador
         'rdb_soltero
         '
         Me.rdb_soltero.AutoSize = True
-        Me.rdb_soltero.Location = New System.Drawing.Point(6, 13)
+        Me.rdb_soltero.Location = New System.Drawing.Point(11, 15)
         Me.rdb_soltero.Name = "rdb_soltero"
         Me.rdb_soltero.Size = New System.Drawing.Size(32, 20)
         Me.rdb_soltero.TabIndex = 0
@@ -556,9 +543,9 @@ Partial Class frm_Tomador
         '
         Me.grb_Sexo.Controls.Add(Me.rdb_Femenino)
         Me.grb_Sexo.Controls.Add(Me.rdb_Masculino)
-        Me.grb_Sexo.Location = New System.Drawing.Point(527, 50)
+        Me.grb_Sexo.Location = New System.Drawing.Point(529, 34)
         Me.grb_Sexo.Name = "grb_Sexo"
-        Me.grb_Sexo.Size = New System.Drawing.Size(51, 59)
+        Me.grb_Sexo.Size = New System.Drawing.Size(142, 38)
         Me.grb_Sexo.TabIndex = 76
         Me.grb_Sexo.TabStop = False
         Me.grb_Sexo.Text = "Sexo"
@@ -566,7 +553,7 @@ Partial Class frm_Tomador
         'rdb_Femenino
         '
         Me.rdb_Femenino.AutoSize = True
-        Me.rdb_Femenino.Location = New System.Drawing.Point(5, 33)
+        Me.rdb_Femenino.Location = New System.Drawing.Point(76, 13)
         Me.rdb_Femenino.Name = "rdb_Femenino"
         Me.rdb_Femenino.Size = New System.Drawing.Size(31, 20)
         Me.rdb_Femenino.TabIndex = 1
@@ -577,7 +564,7 @@ Partial Class frm_Tomador
         'rdb_Masculino
         '
         Me.rdb_Masculino.AutoSize = True
-        Me.rdb_Masculino.Location = New System.Drawing.Point(5, 13)
+        Me.rdb_Masculino.Location = New System.Drawing.Point(27, 13)
         Me.rdb_Masculino.Name = "rdb_Masculino"
         Me.rdb_Masculino.Size = New System.Drawing.Size(37, 20)
         Me.rdb_Masculino.TabIndex = 0
@@ -585,18 +572,13 @@ Partial Class frm_Tomador
         Me.rdb_Masculino.Text = "M"
         Me.rdb_Masculino.UseVisualStyleBackColor = True
         '
-        'EstadosBindingSource
-        '
-        Me.EstadosBindingSource.DataMember = "estados"
-        Me.EstadosBindingSource.DataSource = Me.Sistemas3DataSet
-        '
-        'Sistemas3DataSet
-        '
-        Me.Sistemas3DataSet.DataSetName = "sistemas3DataSet"
-        Me.Sistemas3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'grb_DrieccYContactoLaboral
         '
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.ComboBox1)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label2)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.ComboBox2)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label3)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label1)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.txt_CorreoT)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_CorreoT)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.rtb_DireccionT)
@@ -807,13 +789,53 @@ Partial Class frm_Tomador
         'tmr_Fecha
         '
         '
-        'EstadosTableAdapter
-        '
-        Me.EstadosTableAdapter.ClearBeforeFill = True
-        '
         'EventLog1
         '
         Me.EventLog1.SynchronizingObject = Me
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(146, 104)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 16)
+        Me.Label1.TabIndex = 94
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(292, 37)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(139, 24)
+        Me.ComboBox1.TabIndex = 98
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(242, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(48, 16)
+        Me.Label2.TabIndex = 97
+        Me.Label2.Text = "Estado:"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.Color.GhostWhite
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(292, 67)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(139, 24)
+        Me.ComboBox2.TabIndex = 96
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(242, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 16)
+        Me.Label3.TabIndex = 95
+        Me.Label3.Text = "Ciudad:"
         '
         'frm_Tomador
         '
@@ -848,8 +870,6 @@ Partial Class frm_Tomador
         Me.grb_DireccYContacto.PerformLayout()
         Me.grb_Sexo.ResumeLayout(False)
         Me.grb_Sexo.PerformLayout()
-        CType(Me.EstadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Sistemas3DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_DrieccYContactoLaboral.ResumeLayout(False)
         Me.grb_DrieccYContactoLaboral.PerformLayout()
         Me.grb_Laboral.ResumeLayout(False)
@@ -891,7 +911,6 @@ Partial Class frm_Tomador
     Friend WithEvents lbl_PNombre As Label
     Friend WithEvents grb_Personales As GroupBox
     Friend WithEvents grb_Edocivil As GroupBox
-    Friend WithEvents rdb_Otro As RadioButton
     Friend WithEvents rdb_Divorciado As RadioButton
     Friend WithEvents rdb_Casado As RadioButton
     Friend WithEvents rdb_soltero As RadioButton
@@ -925,10 +944,15 @@ Partial Class frm_Tomador
     Friend WithEvents tmr_Fecha As Timer
     Friend WithEvents cmb_Estado As ComboBox
     Friend WithEvents lbl_Estado As Label
-    Friend WithEvents Sistemas3DataSet As sistemas3DataSet
-    Friend WithEvents EstadosBindingSource As BindingSource
-    Friend WithEvents EstadosTableAdapter As sistemas3DataSetTableAdapters.estadosTableAdapter
+    'Friend WithEvents Sistemas3DataSet As sistemas3DataSet
+    'Friend WithEvents EstadosBindingSource As BindingSource
+    'Friend WithEvents EstadosTableAdapter As sistemas3DataSetTableAdapters.estadosTableAdapter
     Friend WithEvents EventLog1 As EventLog
     Friend WithEvents txt_ZonaP As TextBox
     Friend WithEvents lbl_ZonaP As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label1 As Label
 End Class

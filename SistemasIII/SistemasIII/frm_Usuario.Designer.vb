@@ -25,7 +25,6 @@ Partial Class frm_Usuario
         Me.components = New System.ComponentModel.Container()
         Me.tmr_HoraUsuario = New System.Windows.Forms.Timer(Me.components)
         Me.grb_Empleado = New System.Windows.Forms.GroupBox()
-        Me.cmb_Tipoempleado = New System.Windows.Forms.ComboBox()
         Me.lbl_Tipoempleado = New System.Windows.Forms.Label()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.lbl_SApellido = New System.Windows.Forms.Label()
@@ -56,6 +55,7 @@ Partial Class frm_Usuario
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.txt_TipodeEmpleado = New System.Windows.Forms.TextBox()
         Me.grb_Empleado.SuspendLayout()
         Me.grb_Usuario.SuspendLayout()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +66,7 @@ Partial Class frm_Usuario
         '
         'grb_Empleado
         '
-        Me.grb_Empleado.Controls.Add(Me.cmb_Tipoempleado)
+        Me.grb_Empleado.Controls.Add(Me.txt_TipodeEmpleado)
         Me.grb_Empleado.Controls.Add(Me.lbl_Tipoempleado)
         Me.grb_Empleado.Controls.Add(Me.btn_Buscar)
         Me.grb_Empleado.Controls.Add(Me.lbl_SApellido)
@@ -86,26 +86,18 @@ Partial Class frm_Usuario
         Me.grb_Empleado.TabStop = False
         Me.grb_Empleado.Text = "Datos del empleado"
         '
-        'cmb_Tipoempleado
-        '
-        Me.cmb_Tipoempleado.FormattingEnabled = True
-        Me.cmb_Tipoempleado.Location = New System.Drawing.Point(101, 192)
-        Me.cmb_Tipoempleado.Name = "cmb_Tipoempleado"
-        Me.cmb_Tipoempleado.Size = New System.Drawing.Size(139, 21)
-        Me.cmb_Tipoempleado.TabIndex = 118
-        '
         'lbl_Tipoempleado
         '
         Me.lbl_Tipoempleado.AutoSize = True
-        Me.lbl_Tipoempleado.Location = New System.Drawing.Point(3, 195)
+        Me.lbl_Tipoempleado.Location = New System.Drawing.Point(3, 204)
         Me.lbl_Tipoempleado.Name = "lbl_Tipoempleado"
-        Me.lbl_Tipoempleado.Size = New System.Drawing.Size(92, 13)
+        Me.lbl_Tipoempleado.Size = New System.Drawing.Size(95, 13)
         Me.lbl_Tipoempleado.TabIndex = 117
-        Me.lbl_Tipoempleado.Text = "Tipo de empleado"
+        Me.lbl_Tipoempleado.Text = "Tipo de empleado:"
         '
         'btn_Buscar
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(207, 40)
+        Me.btn_Buscar.Location = New System.Drawing.Point(207, 34)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Buscar.TabIndex = 116
@@ -123,7 +115,7 @@ Partial Class frm_Usuario
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(101, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(101, 37)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 1
@@ -131,7 +123,7 @@ Partial Class frm_Usuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(52, 45)
+        Me.Label1.Location = New System.Drawing.Point(55, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(43, 13)
         Me.Label1.TabIndex = 0
@@ -140,16 +132,16 @@ Partial Class frm_Usuario
         'txt_PApellido
         '
         Me.txt_PApellido.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_PApellido.Location = New System.Drawing.Point(101, 101)
+        Me.txt_PApellido.Location = New System.Drawing.Point(100, 131)
         Me.txt_PApellido.MaxLength = 15
         Me.txt_PApellido.Name = "txt_PApellido"
-        Me.txt_PApellido.Size = New System.Drawing.Size(139, 20)
+        Me.txt_PApellido.Size = New System.Drawing.Size(182, 20)
         Me.txt_PApellido.TabIndex = 111
         '
         'lbl_PApellido
         '
         Me.lbl_PApellido.AutoSize = True
-        Me.lbl_PApellido.Location = New System.Drawing.Point(17, 104)
+        Me.lbl_PApellido.Location = New System.Drawing.Point(16, 134)
         Me.lbl_PApellido.Name = "lbl_PApellido"
         Me.lbl_PApellido.Size = New System.Drawing.Size(78, 13)
         Me.lbl_PApellido.TabIndex = 114
@@ -161,13 +153,13 @@ Partial Class frm_Usuario
         Me.txt_SApellido.Location = New System.Drawing.Point(101, 166)
         Me.txt_SApellido.MaxLength = 15
         Me.txt_SApellido.Name = "txt_SApellido"
-        Me.txt_SApellido.Size = New System.Drawing.Size(139, 20)
+        Me.txt_SApellido.Size = New System.Drawing.Size(181, 20)
         Me.txt_SApellido.TabIndex = 113
         '
         'lbl_SNombre
         '
         Me.lbl_SNombre.AutoSize = True
-        Me.lbl_SNombre.Location = New System.Drawing.Point(4, 137)
+        Me.lbl_SNombre.Location = New System.Drawing.Point(3, 101)
         Me.lbl_SNombre.Name = "lbl_SNombre"
         Me.lbl_SNombre.Size = New System.Drawing.Size(91, 13)
         Me.lbl_SNombre.TabIndex = 109
@@ -185,10 +177,10 @@ Partial Class frm_Usuario
         'txt_SNombre
         '
         Me.txt_SNombre.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_SNombre.Location = New System.Drawing.Point(101, 134)
+        Me.txt_SNombre.Location = New System.Drawing.Point(100, 98)
         Me.txt_SNombre.MaxLength = 15
         Me.txt_SNombre.Name = "txt_SNombre"
-        Me.txt_SNombre.Size = New System.Drawing.Size(139, 20)
+        Me.txt_SNombre.Size = New System.Drawing.Size(182, 20)
         Me.txt_SNombre.TabIndex = 112
         '
         'txt_PNombre
@@ -197,7 +189,7 @@ Partial Class frm_Usuario
         Me.txt_PNombre.Location = New System.Drawing.Point(101, 68)
         Me.txt_PNombre.MaxLength = 15
         Me.txt_PNombre.Name = "txt_PNombre"
-        Me.txt_PNombre.Size = New System.Drawing.Size(139, 20)
+        Me.txt_PNombre.Size = New System.Drawing.Size(181, 20)
         Me.txt_PNombre.TabIndex = 110
         '
         'grb_Usuario
@@ -383,6 +375,15 @@ Partial Class frm_Usuario
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'txt_TipodeEmpleado
+        '
+        Me.txt_TipodeEmpleado.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_TipodeEmpleado.Location = New System.Drawing.Point(101, 197)
+        Me.txt_TipodeEmpleado.MaxLength = 15
+        Me.txt_TipodeEmpleado.Name = "txt_TipodeEmpleado"
+        Me.txt_TipodeEmpleado.Size = New System.Drawing.Size(181, 20)
+        Me.txt_TipodeEmpleado.TabIndex = 118
+        '
         'frm_Usuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -431,7 +432,6 @@ Partial Class frm_Usuario
     Friend WithEvents txt_SNombre As TextBox
     Friend WithEvents txt_PNombre As TextBox
     Friend WithEvents btn_Buscar As Button
-    Friend WithEvents cmb_Tipoempleado As ComboBox
     Friend WithEvents lbl_Tipoempleado As Label
     Friend WithEvents txt_Contraseña As TextBox
     Friend WithEvents txt_Usuario As TextBox
@@ -450,4 +450,5 @@ Partial Class frm_Usuario
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents txt_TipodeEmpleado As TextBox
 End Class

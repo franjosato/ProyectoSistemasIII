@@ -23,10 +23,6 @@ Partial Class frm_Vehiculo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lbl_Seguridad = New System.Windows.Forms.Label()
-        Me.ltb_Seguridad = New System.Windows.Forms.ListBox()
-        Me.cmb_Transporte = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_Kilometraje = New System.Windows.Forms.TextBox()
         Me.lbl_Kilometraje = New System.Windows.Forms.Label()
         Me.cmb_Uso = New System.Windows.Forms.ComboBox()
@@ -51,7 +47,6 @@ Partial Class frm_Vehiculo
         Me.txt_Placa = New System.Windows.Forms.TextBox()
         Me.lbl_CodTipoVe = New System.Windows.Forms.Label()
         Me.lbl_Placa = New System.Windows.Forms.Label()
-        Me.reportDocument1 = New CrystalDecisions.CrystalReports.Engine.ReportDocument()
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.btn_Volver = New System.Windows.Forms.Button()
@@ -65,6 +60,8 @@ Partial Class frm_Vehiculo
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmb_Transporte = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptb_Foto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,8 +69,6 @@ Partial Class frm_Vehiculo
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.lbl_Seguridad)
-        Me.GroupBox1.Controls.Add(Me.ltb_Seguridad)
         Me.GroupBox1.Controls.Add(Me.cmb_Transporte)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txt_Kilometraje)
@@ -102,43 +97,9 @@ Partial Class frm_Vehiculo
         Me.GroupBox1.Controls.Add(Me.lbl_Placa)
         Me.GroupBox1.Location = New System.Drawing.Point(10, 151)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(737, 302)
+        Me.GroupBox1.Size = New System.Drawing.Size(737, 239)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        '
-        'lbl_Seguridad
-        '
-        Me.lbl_Seguridad.AutoSize = True
-        Me.lbl_Seguridad.Location = New System.Drawing.Point(174, 198)
-        Me.lbl_Seguridad.Name = "lbl_Seguridad"
-        Me.lbl_Seguridad.Size = New System.Drawing.Size(133, 13)
-        Me.lbl_Seguridad.TabIndex = 27
-        Me.lbl_Seguridad.Text = "Mecanismos de seguridad:"
-        '
-        'ltb_Seguridad
-        '
-        Me.ltb_Seguridad.FormattingEnabled = True
-        Me.ltb_Seguridad.Location = New System.Drawing.Point(173, 214)
-        Me.ltb_Seguridad.Name = "ltb_Seguridad"
-        Me.ltb_Seguridad.Size = New System.Drawing.Size(535, 69)
-        Me.ltb_Seguridad.TabIndex = 26
-        '
-        'cmb_Transporte
-        '
-        Me.cmb_Transporte.FormattingEnabled = True
-        Me.cmb_Transporte.Location = New System.Drawing.Point(405, 161)
-        Me.cmb_Transporte.Name = "cmb_Transporte"
-        Me.cmb_Transporte.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_Transporte.TabIndex = 25
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(338, 164)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Transporte:"
         '
         'txt_Kilometraje
         '
@@ -341,7 +302,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(214, 459)
+        Me.btn_Modificar.Location = New System.Drawing.Point(214, 406)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Modificar.TabIndex = 125
@@ -350,7 +311,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(101, 459)
+        Me.btn_Agregar.Location = New System.Drawing.Point(101, 406)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 124
@@ -359,7 +320,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Volver
         '
-        Me.btn_Volver.Location = New System.Drawing.Point(549, 459)
+        Me.btn_Volver.Location = New System.Drawing.Point(549, 406)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 123
@@ -368,7 +329,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(436, 459)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(436, 406)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Cancelar.TabIndex = 122
@@ -377,7 +338,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Anular
         '
-        Me.btn_Anular.Location = New System.Drawing.Point(324, 459)
+        Me.btn_Anular.Location = New System.Drawing.Point(324, 406)
         Me.btn_Anular.Name = "btn_Anular"
         Me.btn_Anular.Size = New System.Drawing.Size(75, 23)
         Me.btn_Anular.TabIndex = 126
@@ -471,6 +432,23 @@ Partial Class frm_Vehiculo
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(338, 164)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 13)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Lugar de uso:"
+        '
+        'cmb_Transporte
+        '
+        Me.cmb_Transporte.FormattingEnabled = True
+        Me.cmb_Transporte.Location = New System.Drawing.Point(415, 160)
+        Me.cmb_Transporte.Name = "cmb_Transporte"
+        Me.cmb_Transporte.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_Transporte.TabIndex = 25
+        '
         'frm_Vehiculo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -478,7 +456,7 @@ Partial Class frm_Vehiculo
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(759, 487)
+        Me.ClientSize = New System.Drawing.Size(759, 447)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)
@@ -514,10 +492,6 @@ Partial Class frm_Vehiculo
     Friend WithEvents txt_Placa As TextBox
     Friend WithEvents lbl_CodTipoVe As Label
     Friend WithEvents lbl_Placa As Label
-    Friend WithEvents lbl_Seguridad As Label
-    Friend WithEvents ltb_Seguridad As ListBox
-    Friend WithEvents cmb_Transporte As ComboBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents txt_Kilometraje As TextBox
     Friend WithEvents lbl_Kilometraje As Label
     Friend WithEvents cmb_Uso As ComboBox
@@ -547,4 +521,6 @@ Partial Class frm_Vehiculo
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents cmb_Transporte As ComboBox
+    Friend WithEvents Label2 As Label
 End Class

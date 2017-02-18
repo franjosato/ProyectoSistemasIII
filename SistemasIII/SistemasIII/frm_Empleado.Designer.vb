@@ -55,6 +55,7 @@ Partial Class frm_Empleado
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.lbl_CargoEmpleado = New System.Windows.Forms.Label()
         Me.grb_personales.SuspendLayout()
         Me.grb_Laboral.SuspendLayout()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,7 +173,7 @@ Partial Class frm_Empleado
         'txt_Correro
         '
         Me.txt_Correro.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Correro.Location = New System.Drawing.Point(362, 125)
+        Me.txt_Correro.Location = New System.Drawing.Point(388, 128)
         Me.txt_Correro.MaxLength = 20
         Me.txt_Correro.Name = "txt_Correro"
         Me.txt_Correro.Size = New System.Drawing.Size(165, 20)
@@ -233,6 +234,7 @@ Partial Class frm_Empleado
         '
         'grb_Laboral
         '
+        Me.grb_Laboral.Controls.Add(Me.lbl_CargoEmpleado)
         Me.grb_Laboral.Controls.Add(Me.cmb_Tipoempleado)
         Me.grb_Laboral.Controls.Add(Me.lbl_Tipoempleado)
         Me.grb_Laboral.Location = New System.Drawing.Point(18, 155)
@@ -255,9 +257,9 @@ Partial Class frm_Empleado
         Me.lbl_Tipoempleado.AutoSize = True
         Me.lbl_Tipoempleado.Location = New System.Drawing.Point(32, 25)
         Me.lbl_Tipoempleado.Name = "lbl_Tipoempleado"
-        Me.lbl_Tipoempleado.Size = New System.Drawing.Size(92, 13)
+        Me.lbl_Tipoempleado.Size = New System.Drawing.Size(95, 13)
         Me.lbl_Tipoempleado.TabIndex = 0
-        Me.lbl_Tipoempleado.Text = "Tipo de empleado"
+        Me.lbl_Tipoempleado.Text = "Tipo de empleado:"
         '
         'btn_Eliminar
         '
@@ -391,6 +393,16 @@ Partial Class frm_Empleado
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'lbl_CargoEmpleado
+        '
+        Me.lbl_CargoEmpleado.AutoSize = True
+        Me.lbl_CargoEmpleado.ForeColor = System.Drawing.Color.Red
+        Me.lbl_CargoEmpleado.Location = New System.Drawing.Point(271, 22)
+        Me.lbl_CargoEmpleado.Name = "lbl_CargoEmpleado"
+        Me.lbl_CargoEmpleado.Size = New System.Drawing.Size(41, 13)
+        Me.lbl_CargoEmpleado.TabIndex = 2
+        Me.lbl_CargoEmpleado.Text = " Cargo:"
+        '
         'frm_Empleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -458,4 +470,5 @@ Partial Class frm_Empleado
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents lbl_CargoEmpleado As Label
 End Class

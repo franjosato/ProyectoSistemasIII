@@ -118,7 +118,7 @@ Partial Class frm_Cobertura
         'lbl_Costo
         '
         Me.lbl_Costo.AutoSize = True
-        Me.lbl_Costo.Location = New System.Drawing.Point(21, 140)
+        Me.lbl_Costo.Location = New System.Drawing.Point(36, 140)
         Me.lbl_Costo.Name = "lbl_Costo"
         Me.lbl_Costo.Size = New System.Drawing.Size(37, 13)
         Me.lbl_Costo.TabIndex = 7

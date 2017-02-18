@@ -22,14 +22,13 @@ Partial Class frm_Pago
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Pago))
         Me.grb_cuota = New System.Windows.Forms.GroupBox()
         Me.grb_busqueda = New System.Windows.Forms.GroupBox()
         Me.lbl_Asegurado = New System.Windows.Forms.Label()
         Me.cmb_CedulaA = New System.Windows.Forms.ComboBox()
         Me.txt_CedulaA = New System.Windows.Forms.TextBox()
-        Me.txt_Placa = New System.Windows.Forms.TextBox()
         Me.lbl_Placa = New System.Windows.Forms.Label()
         Me.btn_BuscarT = New System.Windows.Forms.Button()
         Me.txt_Codigo = New System.Windows.Forms.TextBox()
@@ -65,6 +64,13 @@ Partial Class frm_Pago
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.grb_cuota.SuspendLayout()
         Me.grb_busqueda.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -74,6 +80,10 @@ Partial Class frm_Pago
         '
         'grb_cuota
         '
+        Me.grb_cuota.Controls.Add(Me.TextBox3)
+        Me.grb_cuota.Controls.Add(Me.Label3)
+        Me.grb_cuota.Controls.Add(Me.TextBox2)
+        Me.grb_cuota.Controls.Add(Me.Label2)
         Me.grb_cuota.Controls.Add(Me.grb_busqueda)
         Me.grb_cuota.Controls.Add(Me.lbl_CedulaA)
         Me.grb_cuota.Controls.Add(Me.TextBox1)
@@ -86,10 +96,10 @@ Partial Class frm_Pago
         '
         'grb_busqueda
         '
+        Me.grb_busqueda.Controls.Add(Me.ComboBox1)
         Me.grb_busqueda.Controls.Add(Me.lbl_Asegurado)
         Me.grb_busqueda.Controls.Add(Me.cmb_CedulaA)
         Me.grb_busqueda.Controls.Add(Me.txt_CedulaA)
-        Me.grb_busqueda.Controls.Add(Me.txt_Placa)
         Me.grb_busqueda.Controls.Add(Me.lbl_Placa)
         Me.grb_busqueda.Controls.Add(Me.btn_BuscarT)
         Me.grb_busqueda.Controls.Add(Me.txt_Codigo)
@@ -132,13 +142,6 @@ Partial Class frm_Pago
         Me.txt_CedulaA.Size = New System.Drawing.Size(85, 20)
         Me.txt_CedulaA.TabIndex = 118
         '
-        'txt_Placa
-        '
-        Me.txt_Placa.Location = New System.Drawing.Point(123, 72)
-        Me.txt_Placa.Name = "txt_Placa"
-        Me.txt_Placa.Size = New System.Drawing.Size(138, 20)
-        Me.txt_Placa.TabIndex = 115
-        '
         'lbl_Placa
         '
         Me.lbl_Placa.AutoSize = True
@@ -171,7 +174,7 @@ Partial Class frm_Pago
         Me.lbl_Codigo.Name = "lbl_Codigo"
         Me.lbl_Codigo.Size = New System.Drawing.Size(99, 13)
         Me.lbl_Codigo.TabIndex = 110
-        Me.lbl_Codigo.Text = "Código de la poliza:"
+        Me.lbl_Codigo.Text = "Código de la póliza:"
         '
         'cmb_NacionalidadT
         '
@@ -212,7 +215,7 @@ Partial Class frm_Pago
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(588, 19)
+        Me.TextBox1.Location = New System.Drawing.Point(599, 56)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(86, 20)
         Me.TextBox1.TabIndex = 113
@@ -220,14 +223,16 @@ Partial Class frm_Pago
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(490, 22)
+        Me.Label1.Location = New System.Drawing.Point(504, 59)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(92, 13)
+        Me.Label1.Size = New System.Drawing.Size(85, 13)
         Me.Label1.TabIndex = 112
-        Me.Label1.Text = "Número de cuota:"
+        Me.Label1.Text = "Monto de cuota:"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txt_Cambio)
         Me.GroupBox1.Controls.Add(Me.lbl_Cambio)
         Me.GroupBox1.Controls.Add(Me.dgv_Pagos)
@@ -270,10 +275,10 @@ Partial Class frm_Pago
         Me.dgv_Pagos.AllowUserToDeleteRows = False
         Me.dgv_Pagos.AllowUserToResizeColumns = False
         Me.dgv_Pagos.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgv_Pagos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgv_Pagos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgv_Pagos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -284,13 +289,13 @@ Partial Class frm_Pago
         Me.dgv_Pagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgv_Pagos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FormadePagoGrid, Me.MontoCanceladoGrid, Me.MontoFaltanteGrid})
         Me.dgv_Pagos.GridColor = System.Drawing.SystemColors.ControlLight
-        Me.dgv_Pagos.Location = New System.Drawing.Point(180, 43)
+        Me.dgv_Pagos.Location = New System.Drawing.Point(211, 43)
         Me.dgv_Pagos.Name = "dgv_Pagos"
         Me.dgv_Pagos.ReadOnly = True
         Me.dgv_Pagos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.dgv_Pagos.RowHeadersVisible = False
         Me.dgv_Pagos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgv_Pagos.Size = New System.Drawing.Size(505, 147)
+        Me.dgv_Pagos.Size = New System.Drawing.Size(474, 147)
         Me.dgv_Pagos.TabIndex = 24
         '
         'FormadePagoGrid
@@ -319,7 +324,7 @@ Partial Class frm_Pago
         Me.btn_Añadir.BackgroundImage = CType(resources.GetObject("btn_Añadir.BackgroundImage"), System.Drawing.Image)
         Me.btn_Añadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btn_Añadir.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_Añadir.Location = New System.Drawing.Point(68, 161)
+        Me.btn_Añadir.Location = New System.Drawing.Point(30, 173)
         Me.btn_Añadir.Name = "btn_Añadir"
         Me.btn_Añadir.Size = New System.Drawing.Size(106, 29)
         Me.btn_Añadir.TabIndex = 23
@@ -330,9 +335,9 @@ Partial Class frm_Pago
         'txt_Montoacancelar
         '
         Me.txt_Montoacancelar.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_Montoacancelar.Location = New System.Drawing.Point(68, 122)
+        Me.txt_Montoacancelar.Location = New System.Drawing.Point(8, 144)
         Me.txt_Montoacancelar.Name = "txt_Montoacancelar"
-        Me.txt_Montoacancelar.Size = New System.Drawing.Size(106, 23)
+        Me.txt_Montoacancelar.Size = New System.Drawing.Size(166, 23)
         Me.txt_Montoacancelar.TabIndex = 22
         '
         'lbl_Montoacancelar
@@ -340,7 +345,7 @@ Partial Class frm_Pago
         Me.lbl_Montoacancelar.AutoSize = True
         Me.lbl_Montoacancelar.BackColor = System.Drawing.Color.Transparent
         Me.lbl_Montoacancelar.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Montoacancelar.Location = New System.Drawing.Point(17, 102)
+        Me.lbl_Montoacancelar.Location = New System.Drawing.Point(6, 124)
         Me.lbl_Montoacancelar.Name = "lbl_Montoacancelar"
         Me.lbl_Montoacancelar.Size = New System.Drawing.Size(157, 17)
         Me.lbl_Montoacancelar.TabIndex = 21
@@ -351,7 +356,7 @@ Partial Class frm_Pago
         Me.lbl_Formapago.AutoSize = True
         Me.lbl_Formapago.BackColor = System.Drawing.Color.Transparent
         Me.lbl_Formapago.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Formapago.Location = New System.Drawing.Point(65, 46)
+        Me.lbl_Formapago.Location = New System.Drawing.Point(6, 60)
         Me.lbl_Formapago.Name = "lbl_Formapago"
         Me.lbl_Formapago.Size = New System.Drawing.Size(109, 17)
         Me.lbl_Formapago.TabIndex = 20
@@ -364,7 +369,7 @@ Partial Class frm_Pago
         Me.cmb_Formapago.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_Formapago.FormattingEnabled = True
         Me.cmb_Formapago.Items.AddRange(New Object() {"Debito", "Credito", "Efectivo"})
-        Me.cmb_Formapago.Location = New System.Drawing.Point(8, 66)
+        Me.cmb_Formapago.Location = New System.Drawing.Point(6, 80)
         Me.cmb_Formapago.Name = "cmb_Formapago"
         Me.cmb_Formapago.Size = New System.Drawing.Size(166, 25)
         Me.cmb_Formapago.TabIndex = 19
@@ -522,6 +527,64 @@ Partial Class frm_Pago
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(123, 72)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
+        Me.ComboBox1.TabIndex = 121
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(599, 89)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(86, 20)
+        Me.TextBox2.TabIndex = 122
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(504, 92)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.TabIndex = 121
+        Me.Label2.Text = "Cuota vencida:"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(599, 26)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(86, 20)
+        Me.TextBox3.TabIndex = 124
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(493, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(97, 13)
+        Me.Label3.TabIndex = 123
+        Me.Label3.Text = "Número de cuotas:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(5, 34)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 17)
+        Me.Label4.TabIndex = 27
+        Me.Label4.Text = "N° Cuotas a pagar"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(149, 33)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(36, 20)
+        Me.TextBox4.TabIndex = 112
+        '
         'frm_Pago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -563,7 +626,6 @@ Partial Class frm_Pago
     Friend WithEvents lbl_Asegurado As Label
     Friend WithEvents cmb_CedulaA As ComboBox
     Friend WithEvents txt_CedulaA As TextBox
-    Friend WithEvents txt_Placa As TextBox
     Friend WithEvents lbl_Placa As Label
     Friend WithEvents btn_BuscarT As Button
     Friend WithEvents txt_Codigo As TextBox
@@ -599,4 +661,11 @@ Partial Class frm_Pago
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label4 As Label
 End Class
