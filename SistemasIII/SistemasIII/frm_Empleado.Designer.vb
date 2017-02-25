@@ -78,7 +78,9 @@ Partial Class frm_Empleado
         '
         Me.cmb_Nacionalidad.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
         Me.cmb_Nacionalidad.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_Nacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_Nacionalidad.FormattingEnabled = True
+        Me.cmb_Nacionalidad.Items.AddRange(New Object() {"V", "E"})
         Me.cmb_Nacionalidad.Location = New System.Drawing.Point(106, 24)
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
         Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 21)
@@ -177,9 +179,9 @@ Partial Class frm_Empleado
         'txt_Correo
         '
         Me.txt_Correo.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Correo.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.txt_Correo.ForeColor = System.Drawing.SystemColors.WindowText
         Me.txt_Correo.Location = New System.Drawing.Point(388, 128)
-        Me.txt_Correo.MaxLength = 20
+        Me.txt_Correo.MaxLength = 40
         Me.txt_Correo.Name = "txt_Correo"
         Me.txt_Correo.Size = New System.Drawing.Size(165, 20)
         Me.txt_Correo.TabIndex = 109
@@ -250,6 +252,7 @@ Partial Class frm_Empleado
         '
         'cmb_tipoE
         '
+        Me.cmb_tipoE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_tipoE.Enabled = False
         Me.cmb_tipoE.Items.AddRange(New Object() {"Cajero", "Corredor", "Gerente", "Perito", "Recepcionista"})
         Me.cmb_tipoE.Location = New System.Drawing.Point(130, 22)
