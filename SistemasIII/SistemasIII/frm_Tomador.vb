@@ -16,8 +16,11 @@
         'TODO: esta línea de código carga datos en la tabla 'Sistemas3DataSet.estados' Puede moverla o quitarla según sea necesario.
         'Me.EstadosTableAdapter.Fill(Me.Sistemas3DataSet.estados)
         Me.tmr_Fecha.Start()
-
-
+        sentencia = "select * from estados"
+        Me.cmb_Estado.DataSource = Datos(sentencia)
+        Me.cmb_Estado.DisplayMember = "estado"
+        Me.cmb_Estado.ValueMember = "id_estado"
+        Me.cmb_Estado.SelectedIndex = -1
 
     End Sub
 
@@ -87,5 +90,17 @@
 
     Private Sub txt_ZonaP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_ZonaP.KeyPress
         ValidarNumero(e)
+    End Sub
+
+
+
+    Private Sub cmb_Estado_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmb_Estado.SelectionChangeCommitted
+        'sentencia = "select ciudades.* from ciudades left join estados on ciudades.id_estado=estados.id_estado where estados.estado = " + Me.cmb_Estado.SelectedValue.ToString
+        sentencia = "select distinct ciudades.* from ciudades,estados where ciudades.id_estado= " + Me.cmb_Estado.SelectedValue.ToString
+        Me.cmb_Ciudad.DataSource = Datos(sentencia)
+        Me.cmb_Ciudad.DisplayMember = "ciudad"
+        Me.cmb_Ciudad.ValueMember = "id_ciudad"
+        Me.cmb_Ciudad.SelectedIndex = -1
+        Me.cmb_Ciudad.Focus()
     End Sub
 End Class

@@ -85,7 +85,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexionmysql.vb" />
     <Compile Include="frm_Cobertura.Designer.vb">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
     </Compile>

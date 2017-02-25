@@ -70,6 +70,11 @@ Partial Class frm_Tomador
         Me.rdb_Femenino = New System.Windows.Forms.RadioButton()
         Me.rdb_Masculino = New System.Windows.Forms.RadioButton()
         Me.grb_DrieccYContactoLaboral = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_CorreoT = New System.Windows.Forms.TextBox()
         Me.lbl_CorreoT = New System.Windows.Forms.Label()
         Me.rtb_DireccionT = New System.Windows.Forms.RichTextBox()
@@ -91,11 +96,6 @@ Partial Class frm_Tomador
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
         Me.EventLog1 = New System.Diagnostics.EventLog()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -592,6 +592,50 @@ Partial Class frm_Tomador
         Me.grb_DrieccYContactoLaboral.TabStop = False
         Me.grb_DrieccYContactoLaboral.Text = "Direccion Laboral y contacto"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(292, 37)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(139, 24)
+        Me.ComboBox1.TabIndex = 98
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(242, 40)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(48, 16)
+        Me.Label2.TabIndex = 97
+        Me.Label2.Text = "Estado:"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.BackColor = System.Drawing.Color.GhostWhite
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(292, 67)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(139, 24)
+        Me.ComboBox2.TabIndex = 96
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(242, 70)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(53, 16)
+        Me.Label3.TabIndex = 95
+        Me.Label3.Text = "Ciudad:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(146, 104)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 16)
+        Me.Label1.TabIndex = 94
+        '
         'txt_CorreoT
         '
         Me.txt_CorreoT.BackColor = System.Drawing.Color.GhostWhite
@@ -792,50 +836,6 @@ Partial Class frm_Tomador
         'EventLog1
         '
         Me.EventLog1.SynchronizingObject = Me
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(146, 104)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 16)
-        Me.Label1.TabIndex = 94
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.Color.GhostWhite
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(292, 37)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(139, 24)
-        Me.ComboBox1.TabIndex = 98
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(242, 40)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 16)
-        Me.Label2.TabIndex = 97
-        Me.Label2.Text = "Estado:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.GhostWhite
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(292, 67)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(139, 24)
-        Me.ComboBox2.TabIndex = 96
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(242, 70)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 16)
-        Me.Label3.TabIndex = 95
-        Me.Label3.Text = "Ciudad:"
         '
         'frm_Tomador
         '

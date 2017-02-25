@@ -3,7 +3,7 @@
 Module Module1
     Public cn As New MySqlConnection
     Public da As MySqlDataAdapter
-    Public dt As DataTable
+    'Public dt As DataTable
     Public sql As String
     Public cmd As MySqlCommand
     Public sdr As MySqlDataReader
@@ -70,4 +70,16 @@ Module Module1
         End Using
 
     End Function
+
+    Public Function Datos(ByRef sen As String) As DataTable
+        Dim dt As New DataTable
+        Conectar()
+        Dim comando As New MySqlCommand(sen, cn)
+        Dim adap As New MySqlDataAdapter(comando)
+
+        adap.Fill(dt)
+        cn.Close()
+        Return dt
+    End Function
+
 End Module
