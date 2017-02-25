@@ -2,8 +2,11 @@
 Public Class frm_Empleado
     Private Sub frm_Empleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HCampos(False)
+        Me.btn_Agregar.Enabled = False
         HBotones(False)
         LimpiarC()
+        Me.ActiveControl() = Me.cmb_Nacionalidad
+        Me.cmb_Nacionalidad.SelectedIndex() = 0
     End Sub
 
     Private Sub HCampos(ByRef sn As Boolean)
@@ -51,7 +54,7 @@ Public Class frm_Empleado
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
 
-        If (Me.cmb_Nacionalidad.Text = "") Or (Me.txt_Cedula.Text = "") Then
+        If (Me.cmb_Nacionalidad.SelectedItem = "") Or (Me.txt_Cedula.Text = "") Then
             MsgBox("Debe llenar ambos campos", vbInformation, "Error")
             Return
         End If
@@ -74,7 +77,8 @@ Public Class frm_Empleado
             Me.txt_SApellido.Text = sdr("em_segundo_apellido")
             Me.txt_Correo.Text = sdr("em_correo")
             Me.txt_TlfFijo.Text = sdr("em_tlef")
-            Me.cmb_Nacionalidad.Text = sdr("em_tipo")
+            'Me.cmb_Nacionalidad.Text = sdr("em_ti")
+            Me.cmb_tipoE.SelectedText = sdr("em_tipo")
             Me.HBotones(True)
         End If
 
@@ -87,6 +91,7 @@ Public Class frm_Empleado
         HBotones(False)
         LimpiarC()
         Me.btn_Modificar.Text = "Modificar"
+        Me.ActiveControl() = Me.txt_Cedula
     End Sub
 
     Private Sub btn_Modificar_Click(sender As Object, e As EventArgs) Handles btn_Modificar.Click
@@ -120,23 +125,23 @@ Public Class frm_Empleado
 
         End If
     End Sub
-    Private Sub txt_PNombre_TextChanged(sender As Object, e As EventArgs) Handles txt_PNombre.TextChanged
+    Private Sub txt_PNombre_KeyPress(sender As Object, e As EventArgs) Handles txt_PNombre.KeyPress
         Validarletras(e)
     End Sub
 
-    Private Sub txt_SNombre_TextChanged(sender As Object, e As EventArgs) Handles txt_SNombre.TextChanged
+    Private Sub txt_SNombre_KeyPress(sender As Object, e As EventArgs) Handles txt_SNombre.KeyPress
         Validarletras(e)
     End Sub
 
-    Private Sub txt_PApellido_TextChanged(sender As Object, e As EventArgs) Handles txt_PApellido.TextChanged
+    Private Sub txt_PApellido_KeyPress(sender As Object, e As EventArgs) Handles txt_PApellido.KeyPress
         Validarletras(e)
     End Sub
 
-    Private Sub txt_SApellido_TextChanged(sender As Object, e As EventArgs) Handles txt_SApellido.TextChanged
+    Private Sub txt_SApellido_KeyPress(sender As Object, e As EventArgs) Handles txt_SApellido.KeyPress
         Validarletras(e)
     End Sub
 
-    Private Sub txt_TlfFijo_TextChanged(sender As Object, e As EventArgs) Handles txt_TlfFijo.TextChanged
+    Private Sub txt_TlfFijo_KeyPress(sender As Object, e As EventArgs) Handles txt_TlfFijo.KeyPress
         ValidarNumero(e)
     End Sub
 
@@ -155,13 +160,20 @@ Public Class frm_Empleado
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
         If (validar()) Then
-            sentencia = "insert into empleado em_cedula=" + Me.txt_Cedula.Text + " em_correo='" + txt_Correo.Text + "',em_primer_apellido='" + Me.txt_PApellido.Text + "',
-                em_segundo_apellido ='" + Me.txt_SApellido.Text + "',em_primer_nombre='" + Me.txt_PNombre.Text + "',em_segundo_nombre='" +
-                Me.txt_SNombre.Text + "', em_tlef=" + Me.txt_TlfFijo.Text + " ,em_tipo='" + Me.cmb_tipoE.SelectedText
+
+            sentencia = "INSERT INTO empleado (`em_cedula`, `em_primer_nombre`, `em_segundo_nombre`,
+            `em_primer_apellido`, `em_segundo_apellido`, `em_tipo`, `em_tlef`, `em_correo`, `em_estatus`) VALUES ('" +
+            Me.txt_Cedula.Text + "', '" + Me.txt_PNombre.Text + "', '" + Me.txt_SNombre.Text + "', '" + Me.txt_PApellido.Text + "', '" + Me.txt_SApellido.Text +
+            "', '" + Me.cmb_tipoE.SelectedItem + "', '" + Me.txt_TlfFijo.Text + "', '" + Me.txt_Correo.Text + "', 'A')"
 
             comando22(sentencia)
-            MsgBox("Los cambios se han realizado con exito", vbInformation, "Cambios")
+            MsgBox("Se ha registrado un empleado", vbInformation, "Registro exitoso")
             Me.btn_Cancelar.PerformClick()
+        Else
+            MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
         End If
+    End Sub
+    Private Sub btn_Volver_Click(sender As Object, e As EventArgs) Handles btn_Volver.Click
+        Me.Close()
     End Sub
 End Class

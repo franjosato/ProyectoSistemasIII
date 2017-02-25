@@ -19,13 +19,12 @@
     End Sub
 
     Public Sub ValidarNumero(ByRef e As KeyPressEventArgs)
-        If (Asc(e.KeyChar) >= 48 And (Asc(e.KeyChar) <= 57)) Or Asc(e.KeyChar).Equals(8) Then
+        If (Asc(e.KeyChar) >= 48 And (Asc(e.KeyChar) <= 57)) Or Asc(e.KeyChar).Equals(8) Or Asc(e.KeyChar).Equals(13) Or Asc(e.KeyChar).Equals(127) Then
             e.Handled = False
         Else
             e.Handled = True
         End If
     End Sub
-
     Public Sub Limpiar_Combobox(ByVal f As Form)
         ' recorrer todos los controles del formulario indicado  
         For Each c As Control In f.Controls
