@@ -25,6 +25,7 @@ Partial Class frm_Usuario
         Me.components = New System.ComponentModel.Container()
         Me.tmr_HoraUsuario = New System.Windows.Forms.Timer(Me.components)
         Me.grb_Empleado = New System.Windows.Forms.GroupBox()
+        Me.txt_TipodeEmpleado = New System.Windows.Forms.TextBox()
         Me.lbl_Tipoempleado = New System.Windows.Forms.Label()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.lbl_SApellido = New System.Windows.Forms.Label()
@@ -55,7 +56,6 @@ Partial Class frm_Usuario
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
-        Me.txt_TipodeEmpleado = New System.Windows.Forms.TextBox()
         Me.grb_Empleado.SuspendLayout()
         Me.grb_Usuario.SuspendLayout()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,6 +85,15 @@ Partial Class frm_Usuario
         Me.grb_Empleado.TabIndex = 1
         Me.grb_Empleado.TabStop = False
         Me.grb_Empleado.Text = "Datos del empleado"
+        '
+        'txt_TipodeEmpleado
+        '
+        Me.txt_TipodeEmpleado.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_TipodeEmpleado.Location = New System.Drawing.Point(101, 197)
+        Me.txt_TipodeEmpleado.MaxLength = 15
+        Me.txt_TipodeEmpleado.Name = "txt_TipodeEmpleado"
+        Me.txt_TipodeEmpleado.Size = New System.Drawing.Size(181, 20)
+        Me.txt_TipodeEmpleado.TabIndex = 118
         '
         'lbl_Tipoempleado
         '
@@ -374,15 +383,6 @@ Partial Class frm_Usuario
         Me.ptb_logo.TabIndex = 125
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
-        '
-        'txt_TipodeEmpleado
-        '
-        Me.txt_TipodeEmpleado.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_TipodeEmpleado.Location = New System.Drawing.Point(101, 197)
-        Me.txt_TipodeEmpleado.MaxLength = 15
-        Me.txt_TipodeEmpleado.Name = "txt_TipodeEmpleado"
-        Me.txt_TipodeEmpleado.Size = New System.Drawing.Size(181, 20)
-        Me.txt_TipodeEmpleado.TabIndex = 118
         '
         'frm_Usuario
         '

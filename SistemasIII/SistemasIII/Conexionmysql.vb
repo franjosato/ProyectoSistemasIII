@@ -23,15 +23,5 @@ Module Conexionmysql
         Return _estado ' en una funcion siempre debe de existir un return. el caso es que en cuanto termine de revisar mandará exactamente el estado en el que se encuentre
 
 
-    End Function ' se termina la función
-
-
-    Public Sub cerrar()
-        _conexion.Close()
-
-
-    End Sub
-    Public Sub Sentencia()
-        MySqlCommand.
-    End Sub
+    End Function ' se termina la 
 End Module

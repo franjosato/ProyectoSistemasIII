@@ -14,7 +14,7 @@
 
     Private Sub frm_Tomador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Sistemas3DataSet.estados' Puede moverla o quitarla según sea necesario.
-        Me.EstadosTableAdapter.Fill(Me.Sistemas3DataSet.estados)
+        'Me.EstadosTableAdapter.Fill(Me.Sistemas3DataSet.estados)
         Me.tmr_Fecha.Start()
 
 

@@ -507,7 +507,7 @@ Partial Class frm_Vehiculo
     Friend WithEvents btn_Cargar As Button
     Friend WithEvents txt_TituloPropiedad As TextBox
     Friend WithEvents lbl_Tituloproiedad As Label
-    Friend WithEvents reportDocument1 As CrystalDecisions.CrystalReports.Engine.ReportDocument
+    'Friend WithEvents reportDocument1 As CrystalDecisions.CrystalReports.Engine.ReportDocument
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Volver As Button

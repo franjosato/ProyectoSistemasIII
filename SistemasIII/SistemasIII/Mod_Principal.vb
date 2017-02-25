@@ -6,7 +6,7 @@
     Public cont As Integer
     Public general As Boolean
     Public X As Integer    'variable que se utilizara en la funsion Timer
-    Public Sub Validarletras(ByRef e)
+    Public Sub Validarletras(ByRef e As KeyPressEventArgs)
         If e.KeyChar.IsLetter(e.KeyChar) Then
             e.Handled = False
         ElseIf e.KeyChar.IsControl(e.KeyChar) Then
@@ -17,10 +17,9 @@
             e.Handled = True
         End If
     End Sub
-    Public Sub ValidarNumero(ByRef e)
-        If e.KeyChar.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+
+    Public Sub ValidarNumero(ByRef e As KeyPressEventArgs)
+        If (Asc(e.KeyChar) >= 48 And (Asc(e.KeyChar) <= 57)) Or Asc(e.KeyChar).Equals(8) Then
             e.Handled = False
         Else
             e.Handled = True

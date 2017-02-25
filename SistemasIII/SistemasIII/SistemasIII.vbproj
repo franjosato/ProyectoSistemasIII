@@ -143,9 +143,7 @@
     <Compile Include="frm_Cuotas.Designer.vb">
       <DependentUpon>frm_Cuotas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Cuotas.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frm_Cuotas.vb" />
     <Compile Include="frm_Pago.Designer.vb">
       <DependentUpon>frm_Pago.vb</DependentUpon>
     </Compile>
