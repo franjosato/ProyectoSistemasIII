@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Module Module1
+Module Mod_Base_de_Datos
     Public cn As New MySqlConnection
     Public da As MySqlDataAdapter
     'Public dt As DataTable
@@ -81,5 +81,8 @@ Module Module1
         cn.Close()
         Return dt
     End Function
+
+
+
 
 End Module

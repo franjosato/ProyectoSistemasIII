@@ -77,6 +77,118 @@
             End If
         Next
     End Sub
+
+    Public Function validar_controles(ByVal con As Control) As Boolean
+        For Each c As Control In con.Controls
+
+            If TypeOf c Is GroupBox Then
+
+                For Each co As Control In c.Controls
+
+                    If TypeOf co Is TextBox Then
+
+                        If co.Text.Length = 0 Then
+
+                            co.Focus()
+                            Return False
+                            ' MsgBox("No puede dejar campos vacios", vbExclamation, "Advertencia")
+                        End If
+                        'Return False
+                    ElseIf TypeOf co Is ComboBox Then
+
+                        Dim aux As ComboBox = co
+
+                        If co.Text.Length = 0 Then
+                            co.Focus()
+                            Return False
+                        End If
+                    ElseIf TypeOf co Is RichTextBox Then
+                        If co.Text.Length = 0 Then
+                            co.Focus()
+
+
+                            Return False
+                        End If
+                    End If
+                Next
+                ' Return False
+            End If
+
+        Next
+        Return True
+    End Function
+
+    Public Sub HCampos(ByVal con As Control, ByRef sn As Boolean, ByVal campoactivo As Control)
+
+        For Each c As Control In con.Controls
+
+            If TypeOf c Is GroupBox Then
+
+                For Each co As Control In c.Controls
+
+                    If TypeOf co Is TextBox Then
+                        co.Enabled = sn
+                    ElseIf TypeOf co Is RichTextBox Then
+                        co.Enabled = sn
+                    ElseIf TypeOf co Is ComboBox Then
+                        co.Enabled = sn
+                    ElseIf TypeOf co Is DateTimePicker Then
+                        co.Enabled = sn
+                    ElseIf TypeOf co Is RadioButton Then
+                        co.Enabled = sn
+                    ElseIf TypeOf co Is GroupBox Then
+                        For Each cont As Control In co.Controls
+                            If TypeOf cont Is TextBox Then
+                                cont.Enabled = sn
+                            ElseIf TypeOf cont Is RichTextBox Then
+                                cont.Enabled = sn
+                            ElseIf TypeOf cont Is ComboBox Then
+                                cont.Enabled = sn
+                            ElseIf TypeOf cont Is DateTimePicker Then
+                                co.Enabled = sn
+                            ElseIf TypeOf cont Is RadioButton Then
+                                cont.Enabled = sn
+                            End If
+                        Next
+                    End If
+                Next
+
+            End If
+        Next
+        campoactivo.Enabled = Not sn
+    End Sub
+    'falta acomodar
+    Private Sub HBotones(ByVal con As Control, ByRef sn As Boolean, ByVal campoactivo As Control)
+
+        For Each c As Control In con.Controls
+
+            If TypeOf c Is GroupBox Then
+
+
+
+                For Each co As Control In c.Controls
+
+                    If TypeOf co Is Button Then
+                        co.Enabled = sn
+
+                    ElseIf TypeOf co Is GroupBox Then
+                        For Each cont As Control In co.Controls
+                            If TypeOf cont Is Button Then
+                                cont.Enabled = sn
+                            End If
+                        Next
+                    End If
+                Next
+
+            Else
+                If TypeOf c Is Button Then
+                    c.Enabled = sn
+                End If
+            End If
+
+        Next
+        campoactivo.Enabled = Not sn
+    End Sub
 End Module
 
 

@@ -30,8 +30,7 @@ Partial Class frm_Tomador
         Me.lbl_ActEconomica = New System.Windows.Forms.Label()
         Me.txt_TlfTrabajo = New System.Windows.Forms.TextBox()
         Me.lbl_TlfTrabajo = New System.Windows.Forms.Label()
-        Me.lbl_DireccionT = New System.Windows.Forms.Label()
-        Me.txt_Correro = New System.Windows.Forms.TextBox()
+        Me.txt_Correo = New System.Windows.Forms.TextBox()
         Me.lbl_Correo = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.dtp_FNacimiento = New System.Windows.Forms.DateTimePicker()
@@ -70,14 +69,7 @@ Partial Class frm_Tomador
         Me.rdb_Femenino = New System.Windows.Forms.RadioButton()
         Me.rdb_Masculino = New System.Windows.Forms.RadioButton()
         Me.grb_DrieccYContactoLaboral = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_CorreoT = New System.Windows.Forms.TextBox()
-        Me.lbl_CorreoT = New System.Windows.Forms.Label()
-        Me.rtb_DireccionT = New System.Windows.Forms.RichTextBox()
         Me.grb_Laboral = New System.Windows.Forms.GroupBox()
         Me.lbl_Cargo = New System.Windows.Forms.Label()
         Me.lbl_Profesion = New System.Windows.Forms.Label()
@@ -96,6 +88,14 @@ Partial Class frm_Tomador
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
         Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.rtb_DireccionT = New System.Windows.Forms.RichTextBox()
+        Me.lbl_DireccionT = New System.Windows.Forms.Label()
+        Me.cmb_EdoTrabajo = New System.Windows.Forms.ComboBox()
+        Me.lbl_EdoTrabajo = New System.Windows.Forms.Label()
+        Me.cmb_CiudadTrabajo = New System.Windows.Forms.ComboBox()
+        Me.lbl_CiudadTrabajo = New System.Windows.Forms.Label()
+        Me.txt_CorreoT = New System.Windows.Forms.TextBox()
+        Me.lbl_CorreoT = New System.Windows.Forms.Label()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -122,7 +122,7 @@ Partial Class frm_Tomador
         'txt_IngresoE
         '
         Me.txt_IngresoE.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_IngresoE.Location = New System.Drawing.Point(416, 57)
+        Me.txt_IngresoE.Location = New System.Drawing.Point(416, 49)
         Me.txt_IngresoE.MaxLength = 15
         Me.txt_IngresoE.Name = "txt_IngresoE"
         Me.txt_IngresoE.Size = New System.Drawing.Size(139, 21)
@@ -131,7 +131,7 @@ Partial Class frm_Tomador
         'lbl_IngresoE
         '
         Me.lbl_IngresoE.AutoSize = True
-        Me.lbl_IngresoE.Location = New System.Drawing.Point(311, 60)
+        Me.lbl_IngresoE.Location = New System.Drawing.Point(311, 52)
         Me.lbl_IngresoE.Name = "lbl_IngresoE"
         Me.lbl_IngresoE.Size = New System.Drawing.Size(102, 16)
         Me.lbl_IngresoE.TabIndex = 88
@@ -140,7 +140,7 @@ Partial Class frm_Tomador
         'txt_ActEconomica
         '
         Me.txt_ActEconomica.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_ActEconomica.Location = New System.Drawing.Point(144, 57)
+        Me.txt_ActEconomica.Location = New System.Drawing.Point(144, 49)
         Me.txt_ActEconomica.MaxLength = 15
         Me.txt_ActEconomica.Name = "txt_ActEconomica"
         Me.txt_ActEconomica.Size = New System.Drawing.Size(165, 21)
@@ -149,7 +149,7 @@ Partial Class frm_Tomador
         'lbl_ActEconomica
         '
         Me.lbl_ActEconomica.AutoSize = True
-        Me.lbl_ActEconomica.Location = New System.Drawing.Point(12, 60)
+        Me.lbl_ActEconomica.Location = New System.Drawing.Point(12, 52)
         Me.lbl_ActEconomica.Name = "lbl_ActEconomica"
         Me.lbl_ActEconomica.Size = New System.Drawing.Size(130, 16)
         Me.lbl_ActEconomica.TabIndex = 86
@@ -158,7 +158,7 @@ Partial Class frm_Tomador
         'txt_TlfTrabajo
         '
         Me.txt_TlfTrabajo.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_TlfTrabajo.Location = New System.Drawing.Point(124, 34)
+        Me.txt_TlfTrabajo.Location = New System.Drawing.Point(411, 87)
         Me.txt_TlfTrabajo.MaxLength = 11
         Me.txt_TlfTrabajo.Name = "txt_TlfTrabajo"
         Me.txt_TlfTrabajo.Size = New System.Drawing.Size(163, 21)
@@ -167,34 +167,25 @@ Partial Class frm_Tomador
         'lbl_TlfTrabajo
         '
         Me.lbl_TlfTrabajo.AutoSize = True
-        Me.lbl_TlfTrabajo.Location = New System.Drawing.Point(1, 37)
+        Me.lbl_TlfTrabajo.Location = New System.Drawing.Point(288, 90)
         Me.lbl_TlfTrabajo.Name = "lbl_TlfTrabajo"
         Me.lbl_TlfTrabajo.Size = New System.Drawing.Size(117, 16)
         Me.lbl_TlfTrabajo.TabIndex = 84
         Me.lbl_TlfTrabajo.Text = "Teléfono de trabajo:"
         '
-        'lbl_DireccionT
+        'txt_Correo
         '
-        Me.lbl_DireccionT.AutoSize = True
-        Me.lbl_DireccionT.Location = New System.Drawing.Point(286, 37)
-        Me.lbl_DireccionT.Name = "lbl_DireccionT"
-        Me.lbl_DireccionT.Size = New System.Drawing.Size(122, 16)
-        Me.lbl_DireccionT.TabIndex = 82
-        Me.lbl_DireccionT.Text = "Dirección de trabajo:"
-        '
-        'txt_Correro
-        '
-        Me.txt_Correro.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Correro.Location = New System.Drawing.Point(101, 111)
-        Me.txt_Correro.MaxLength = 20
-        Me.txt_Correro.Name = "txt_Correro"
-        Me.txt_Correro.Size = New System.Drawing.Size(165, 21)
-        Me.txt_Correro.TabIndex = 81
+        Me.txt_Correo.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_Correo.Location = New System.Drawing.Point(101, 111)
+        Me.txt_Correo.MaxLength = 20
+        Me.txt_Correo.Name = "txt_Correo"
+        Me.txt_Correo.Size = New System.Drawing.Size(165, 21)
+        Me.txt_Correo.TabIndex = 81
         '
         'lbl_Correo
         '
         Me.lbl_Correo.AutoSize = True
-        Me.lbl_Correo.Location = New System.Drawing.Point(53, 114)
+        Me.lbl_Correo.Location = New System.Drawing.Point(48, 114)
         Me.lbl_Correo.Name = "lbl_Correo"
         Me.lbl_Correo.Size = New System.Drawing.Size(47, 16)
         Me.lbl_Correo.TabIndex = 80
@@ -211,9 +202,10 @@ Partial Class frm_Tomador
         'dtp_FNacimiento
         '
         Me.dtp_FNacimiento.CalendarMonthBackground = System.Drawing.Color.GhostWhite
+        Me.dtp_FNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_FNacimiento.Location = New System.Drawing.Point(144, 119)
         Me.dtp_FNacimiento.Name = "dtp_FNacimiento"
-        Me.dtp_FNacimiento.Size = New System.Drawing.Size(233, 21)
+        Me.dtp_FNacimiento.Size = New System.Drawing.Size(83, 21)
         Me.dtp_FNacimiento.TabIndex = 75
         '
         'lbl_FNacimiento
@@ -230,6 +222,7 @@ Partial Class frm_Tomador
         Me.cmb_Nacionalidad.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
         Me.cmb_Nacionalidad.BackColor = System.Drawing.Color.GhostWhite
         Me.cmb_Nacionalidad.FormattingEnabled = True
+        Me.cmb_Nacionalidad.Items.AddRange(New Object() {"V", "E"})
         Me.cmb_Nacionalidad.Location = New System.Drawing.Point(101, 19)
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
         Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 24)
@@ -256,7 +249,7 @@ Partial Class frm_Tomador
         'lbl_Ciudad
         '
         Me.lbl_Ciudad.AutoSize = True
-        Me.lbl_Ciudad.Location = New System.Drawing.Point(51, 51)
+        Me.lbl_Ciudad.Location = New System.Drawing.Point(42, 51)
         Me.lbl_Ciudad.Name = "lbl_Ciudad"
         Me.lbl_Ciudad.Size = New System.Drawing.Size(53, 16)
         Me.lbl_Ciudad.TabIndex = 67
@@ -400,7 +393,7 @@ Partial Class frm_Tomador
         Me.grb_Personales.Controls.Add(Me.lbl_SNombre)
         Me.grb_Personales.Controls.Add(Me.lbl_PNombre)
         Me.grb_Personales.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Personales.Location = New System.Drawing.Point(10, 182)
+        Me.grb_Personales.Location = New System.Drawing.Point(10, 147)
         Me.grb_Personales.Name = "grb_Personales"
         Me.grb_Personales.Size = New System.Drawing.Size(684, 301)
         Me.grb_Personales.TabIndex = 91
@@ -469,7 +462,7 @@ Partial Class frm_Tomador
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Estado)
         Me.grb_DireccYContacto.Controls.Add(Me.rtb_DireccionH)
         Me.grb_DireccYContacto.Controls.Add(Me.cmb_Ciudad)
-        Me.grb_DireccYContacto.Controls.Add(Me.txt_Correro)
+        Me.grb_DireccYContacto.Controls.Add(Me.txt_Correo)
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Correo)
         Me.grb_DireccYContacto.Controls.Add(Me.LinkLabel1)
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Ciudad)
@@ -496,7 +489,7 @@ Partial Class frm_Tomador
         'lbl_ZonaP
         '
         Me.lbl_ZonaP.AutoSize = True
-        Me.lbl_ZonaP.Location = New System.Drawing.Point(21, 86)
+        Me.lbl_ZonaP.Location = New System.Drawing.Point(18, 86)
         Me.lbl_ZonaP.Name = "lbl_ZonaP"
         Me.lbl_ZonaP.Size = New System.Drawing.Size(77, 16)
         Me.lbl_ZonaP.TabIndex = 96
@@ -553,7 +546,7 @@ Partial Class frm_Tomador
         'rdb_Femenino
         '
         Me.rdb_Femenino.AutoSize = True
-        Me.rdb_Femenino.Location = New System.Drawing.Point(76, 13)
+        Me.rdb_Femenino.Location = New System.Drawing.Point(56, 13)
         Me.rdb_Femenino.Name = "rdb_Femenino"
         Me.rdb_Femenino.Size = New System.Drawing.Size(31, 20)
         Me.rdb_Femenino.TabIndex = 1
@@ -564,7 +557,7 @@ Partial Class frm_Tomador
         'rdb_Masculino
         '
         Me.rdb_Masculino.AutoSize = True
-        Me.rdb_Masculino.Location = New System.Drawing.Point(27, 13)
+        Me.rdb_Masculino.Location = New System.Drawing.Point(13, 13)
         Me.rdb_Masculino.Name = "rdb_Masculino"
         Me.rdb_Masculino.Size = New System.Drawing.Size(37, 20)
         Me.rdb_Masculino.TabIndex = 0
@@ -574,59 +567,23 @@ Partial Class frm_Tomador
         '
         'grb_DrieccYContactoLaboral
         '
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.ComboBox1)
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label2)
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.ComboBox2)
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label3)
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label1)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.txt_CorreoT)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_CorreoT)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.cmb_EdoTrabajo)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_EdoTrabajo)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.cmb_CiudadTrabajo)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_CiudadTrabajo)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.rtb_DireccionT)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_DireccionT)
+        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.Label1)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.txt_TlfTrabajo)
         Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_TlfTrabajo)
-        Me.grb_DrieccYContactoLaboral.Controls.Add(Me.lbl_DireccionT)
-        Me.grb_DrieccYContactoLaboral.Location = New System.Drawing.Point(5, 83)
+        Me.grb_DrieccYContactoLaboral.Location = New System.Drawing.Point(5, 75)
         Me.grb_DrieccYContactoLaboral.Name = "grb_DrieccYContactoLaboral"
         Me.grb_DrieccYContactoLaboral.Size = New System.Drawing.Size(673, 114)
         Me.grb_DrieccYContactoLaboral.TabIndex = 93
         Me.grb_DrieccYContactoLaboral.TabStop = False
         Me.grb_DrieccYContactoLaboral.Text = "Direccion Laboral y contacto"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.Color.GhostWhite
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(292, 37)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(139, 24)
-        Me.ComboBox1.TabIndex = 98
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(242, 40)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 16)
-        Me.Label2.TabIndex = 97
-        Me.Label2.Text = "Estado:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.BackColor = System.Drawing.Color.GhostWhite
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(292, 67)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(139, 24)
-        Me.ComboBox2.TabIndex = 96
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(242, 70)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 16)
-        Me.Label3.TabIndex = 95
-        Me.Label3.Text = "Ciudad:"
         '
         'Label1
         '
@@ -635,34 +592,6 @@ Partial Class frm_Tomador
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 16)
         Me.Label1.TabIndex = 94
-        '
-        'txt_CorreoT
-        '
-        Me.txt_CorreoT.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_CorreoT.Location = New System.Drawing.Point(122, 66)
-        Me.txt_CorreoT.MaxLength = 20
-        Me.txt_CorreoT.Name = "txt_CorreoT"
-        Me.txt_CorreoT.Size = New System.Drawing.Size(165, 21)
-        Me.txt_CorreoT.TabIndex = 93
-        '
-        'lbl_CorreoT
-        '
-        Me.lbl_CorreoT.AutoSize = True
-        Me.lbl_CorreoT.Location = New System.Drawing.Point(71, 69)
-        Me.lbl_CorreoT.Name = "lbl_CorreoT"
-        Me.lbl_CorreoT.Size = New System.Drawing.Size(47, 16)
-        Me.lbl_CorreoT.TabIndex = 92
-        Me.lbl_CorreoT.Text = "Correo:"
-        '
-        'rtb_DireccionT
-        '
-        Me.rtb_DireccionT.BackColor = System.Drawing.Color.GhostWhite
-        Me.rtb_DireccionT.Location = New System.Drawing.Point(411, 34)
-        Me.rtb_DireccionT.MaxLength = 40
-        Me.rtb_DireccionT.Name = "rtb_DireccionT"
-        Me.rtb_DireccionT.Size = New System.Drawing.Size(255, 53)
-        Me.rtb_DireccionT.TabIndex = 92
-        Me.rtb_DireccionT.Text = ""
         '
         'grb_Laboral
         '
@@ -677,7 +606,7 @@ Partial Class frm_Tomador
         Me.grb_Laboral.Controls.Add(Me.lbl_ActEconomica)
         Me.grb_Laboral.Controls.Add(Me.txt_ActEconomica)
         Me.grb_Laboral.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Laboral.Location = New System.Drawing.Point(10, 489)
+        Me.grb_Laboral.Location = New System.Drawing.Point(10, 454)
         Me.grb_Laboral.Name = "grb_Laboral"
         Me.grb_Laboral.Size = New System.Drawing.Size(684, 203)
         Me.grb_Laboral.TabIndex = 94
@@ -722,7 +651,7 @@ Partial Class frm_Tomador
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(141, 706)
+        Me.btn_Agregar.Location = New System.Drawing.Point(138, 663)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 95
@@ -731,7 +660,7 @@ Partial Class frm_Tomador
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(257, 706)
+        Me.btn_Modificar.Location = New System.Drawing.Point(254, 663)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Modificar.TabIndex = 96
@@ -740,7 +669,7 @@ Partial Class frm_Tomador
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(374, 706)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(371, 663)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Cancelar.TabIndex = 97
@@ -749,7 +678,7 @@ Partial Class frm_Tomador
         '
         'btn_Volver
         '
-        Me.btn_Volver.Location = New System.Drawing.Point(493, 706)
+        Me.btn_Volver.Location = New System.Drawing.Point(490, 663)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 98
@@ -837,6 +766,79 @@ Partial Class frm_Tomador
         '
         Me.EventLog1.SynchronizingObject = Me
         '
+        'rtb_DireccionT
+        '
+        Me.rtb_DireccionT.BackColor = System.Drawing.Color.GhostWhite
+        Me.rtb_DireccionT.Location = New System.Drawing.Point(412, 20)
+        Me.rtb_DireccionT.MaxLength = 40
+        Me.rtb_DireccionT.Name = "rtb_DireccionT"
+        Me.rtb_DireccionT.Size = New System.Drawing.Size(255, 53)
+        Me.rtb_DireccionT.TabIndex = 104
+        Me.rtb_DireccionT.Text = ""
+        '
+        'lbl_DireccionT
+        '
+        Me.lbl_DireccionT.AutoSize = True
+        Me.lbl_DireccionT.Location = New System.Drawing.Point(287, 23)
+        Me.lbl_DireccionT.Name = "lbl_DireccionT"
+        Me.lbl_DireccionT.Size = New System.Drawing.Size(122, 16)
+        Me.lbl_DireccionT.TabIndex = 103
+        Me.lbl_DireccionT.Text = "Dirección de trabajo:"
+        '
+        'cmb_EdoTrabajo
+        '
+        Me.cmb_EdoTrabajo.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_EdoTrabajo.FormattingEnabled = True
+        Me.cmb_EdoTrabajo.Location = New System.Drawing.Point(101, 23)
+        Me.cmb_EdoTrabajo.Name = "cmb_EdoTrabajo"
+        Me.cmb_EdoTrabajo.Size = New System.Drawing.Size(139, 24)
+        Me.cmb_EdoTrabajo.TabIndex = 112
+        '
+        'lbl_EdoTrabajo
+        '
+        Me.lbl_EdoTrabajo.AutoSize = True
+        Me.lbl_EdoTrabajo.Location = New System.Drawing.Point(47, 26)
+        Me.lbl_EdoTrabajo.Name = "lbl_EdoTrabajo"
+        Me.lbl_EdoTrabajo.Size = New System.Drawing.Size(48, 16)
+        Me.lbl_EdoTrabajo.TabIndex = 111
+        Me.lbl_EdoTrabajo.Text = "Estado:"
+        '
+        'cmb_CiudadTrabajo
+        '
+        Me.cmb_CiudadTrabajo.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_CiudadTrabajo.FormattingEnabled = True
+        Me.cmb_CiudadTrabajo.Location = New System.Drawing.Point(101, 52)
+        Me.cmb_CiudadTrabajo.Name = "cmb_CiudadTrabajo"
+        Me.cmb_CiudadTrabajo.Size = New System.Drawing.Size(139, 24)
+        Me.cmb_CiudadTrabajo.TabIndex = 110
+        '
+        'lbl_CiudadTrabajo
+        '
+        Me.lbl_CiudadTrabajo.AutoSize = True
+        Me.lbl_CiudadTrabajo.Location = New System.Drawing.Point(42, 52)
+        Me.lbl_CiudadTrabajo.Name = "lbl_CiudadTrabajo"
+        Me.lbl_CiudadTrabajo.Size = New System.Drawing.Size(53, 16)
+        Me.lbl_CiudadTrabajo.TabIndex = 109
+        Me.lbl_CiudadTrabajo.Text = "Ciudad:"
+        '
+        'txt_CorreoT
+        '
+        Me.txt_CorreoT.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_CorreoT.Location = New System.Drawing.Point(101, 87)
+        Me.txt_CorreoT.MaxLength = 20
+        Me.txt_CorreoT.Name = "txt_CorreoT"
+        Me.txt_CorreoT.Size = New System.Drawing.Size(165, 21)
+        Me.txt_CorreoT.TabIndex = 114
+        '
+        'lbl_CorreoT
+        '
+        Me.lbl_CorreoT.AutoSize = True
+        Me.lbl_CorreoT.Location = New System.Drawing.Point(48, 90)
+        Me.lbl_CorreoT.Name = "lbl_CorreoT"
+        Me.lbl_CorreoT.Size = New System.Drawing.Size(47, 16)
+        Me.lbl_CorreoT.TabIndex = 113
+        Me.lbl_CorreoT.Text = "Correo:"
+        '
         'frm_Tomador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -844,7 +846,7 @@ Partial Class frm_Tomador
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(706, 741)
+        Me.ClientSize = New System.Drawing.Size(706, 689)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)
@@ -886,8 +888,7 @@ Partial Class frm_Tomador
     Friend WithEvents lbl_ActEconomica As Label
     Friend WithEvents txt_TlfTrabajo As TextBox
     Friend WithEvents lbl_TlfTrabajo As Label
-    Friend WithEvents lbl_DireccionT As Label
-    Friend WithEvents txt_Correro As TextBox
+    Friend WithEvents txt_Correo As TextBox
     Friend WithEvents lbl_Correo As Label
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents dtp_FNacimiento As DateTimePicker
@@ -921,9 +922,6 @@ Partial Class frm_Tomador
     Friend WithEvents grb_DrieccYContactoLaboral As GroupBox
     Friend WithEvents rtb_DireccionH As RichTextBox
     Friend WithEvents cmb_Ciudad As ComboBox
-    Friend WithEvents txt_CorreoT As TextBox
-    Friend WithEvents lbl_CorreoT As Label
-    Friend WithEvents rtb_DireccionT As RichTextBox
     Friend WithEvents grb_Laboral As GroupBox
     Friend WithEvents lbl_Cargo As Label
     Friend WithEvents lbl_Profesion As Label
@@ -950,9 +948,13 @@ Partial Class frm_Tomador
     Friend WithEvents EventLog1 As EventLog
     Friend WithEvents txt_ZonaP As TextBox
     Friend WithEvents lbl_ZonaP As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents txt_CorreoT As TextBox
+    Friend WithEvents lbl_CorreoT As Label
+    Friend WithEvents cmb_EdoTrabajo As ComboBox
+    Friend WithEvents lbl_EdoTrabajo As Label
+    Friend WithEvents cmb_CiudadTrabajo As ComboBox
+    Friend WithEvents lbl_CiudadTrabajo As Label
+    Friend WithEvents rtb_DireccionT As RichTextBox
+    Friend WithEvents lbl_DireccionT As Label
 End Class
