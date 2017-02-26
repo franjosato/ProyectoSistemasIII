@@ -3,10 +3,10 @@
     Private Sub HBotones(ByRef sn As Boolean)
         Me.btn_Agregar.Enabled = sn
         Me.btn_Buscar.Enabled = Not sn
-        Me.btn_Cancelar.Enabled = Not sn
+        'Me.btn_Cancelar.Enabled = Not sn
 
         Me.btn_Modificar.Enabled = sn
-        Me.btn_Volver.Enabled = Not sn
+        ' Me.btn_Volver.Enabled = Not sn
     End Sub
 
     Private Sub frm_Tomador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,6 +26,7 @@
         Me.cmb_EdoTrabajo.SelectedIndex = -1
         'desactivar todos los campos
         btn_Cancelar.PerformClick()
+
     End Sub
 
     Private Sub tmr_Fecha_Tick(sender As Object, e As EventArgs) Handles tmr_Fecha.Tick
@@ -117,13 +118,81 @@
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
         If (validar_controles(Me)) Then
-            MsgBox("no hay errores")
+            Dim sex As Char
+            Dim eciv As Char
+            If (rdb_Masculino.Checked = True) Then
+                sex = "M"
+            ElseIf rdb_Femenino.Checked = True Then
+                sex = "F"
+            End If
+            If rdb_Casado.Checked = True Then
+                eciv = "C"
+            ElseIf rdb_Divorciado.Checked = True Then
+                eciv = "D"
+            ElseIf rdb_soltero.Checked = True Then
+                eciv = "S"
+            End If
+            sentencia = "insert into tomador (`t_cedula`,
+                        `t_nacionalidad`,
+                        `t_primer_nombre`,
+                        `t_segundo_nombre`,
+                        `t_primer_apellido`,
+                        `t_segundo_apellido`,
+                        `t_fecha_nac`,
+                        `t_sexo`,
+                        `t_edo_civil`,
+                        `t_direccion_hab`,
+                        `t_zona_post`,
+                        `t_estado_hab`,
+                        `t_ciudad_hab`,
+                        `t_telf_hab`,
+                        `t_telf_cel`,
+                        `t_correo`,
+                        `t_profesion`,
+                        `t_act_economica`,
+                        `t_cargo`,
+                        `t_estado_trab`,
+                        `t_ciudad_trab`,
+                        `t_direccion_trab`,
+                        `t_telf_trab`,
+                        `t_correo_trab`,
+                        `t_ingreso_promedio`,
+                        `t_status`)
+                        values ('" & txt_Cedula.Text & "',
+                        '" & cmb_Nacionalidad.Text & "',
+                        '" & txt_PNombre.Text & "',
+                        '" & txt_SNombre.Text & "',
+                        '" & txt_PApellido.Text & "',
+                        '" & txt_SApellido.Text & "',
+                        '" & dtp_FNacimiento.Value.ToString("yyyy-MM-dd") & "',
+                        '" & sex & "',
+                        '" & eciv & "',
+                        '" & rtb_DireccionH.Text & "',
+                        '" & txt_ZonaP.Text & "',
+                        '" & cmb_Estado.Text & "',
+                        '" & cmb_Ciudad.Text & "',
+                        '" & txt_TlfFijo.Text & "',
+                        '" & txt_TlfMovil.Text & "',
+                        '" & txt_Correo.Text & "',
+                        '" & txt_Profesion.Text & "',
+                        '" & txt_ActEconomica.Text & "',
+                        '" & txt_Cargo.Text & "',
+                        '" & cmb_EdoTrabajo.Text & "',
+                        '" & cmb_CiudadTrabajo.Text & "',
+                        '" & rtb_DireccionT.Text & "',
+                        '" & txt_TlfTrabajo.Text & "',
+                        '" & txt_CorreoT.Text & "',
+                        '" & txt_IngresoE.Text & "',
+                        'A')"
+            comando22(sentencia)
+            MsgBox("Tomador registrado con exito", vbInformation, "Gestion de tomador")
+            Me.btn_Cancelar.PerformClick()
         Else
-            MsgBox("no puede dejar campos vacios")
+            MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
         End If
     End Sub
 
-    Private Sub cmb_EdoTrabajo_SelectionChangeCommitted(sender As Object, e As EventArgs)
+    Private Sub cmb_EdoTrabajo_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmb_EdoTrabajo.SelectionChangeCommitted
         sentencia = "select distinct ciudades.* from ciudades,estados where ciudades.id_estado= " + Me.cmb_EdoTrabajo.SelectedValue.ToString
         'se llena el combobox de ciudad dependiendo del estado seleccionado
         cmb_CiudadTrabajo.DataSource = Datos(sentencia)
@@ -148,10 +217,16 @@
         CSelect(sentencia)
 
         If (sdr.IsClosed) Or Not (sdr.HasRows) Then
-            If MsgBox("El empleado no existe ¿Desea agregarlo?", vbYesNo, "Registro no existente") = MsgBoxResult.Yes Then
+            If MsgBox("El empleado no existe ¿Desea agregarlo?", vbYesNo, "Gestion de Tomador") = MsgBoxResult.Yes Then
                 HCampos(Me, True, txt_Cedula)
+                Dim cedula As String = txt_Cedula.Text
+                Dim naci As Char = cmb_Nacionalidad.Text
+                Limpiar(Me)
+                txt_Cedula.Text = cedula
+                cmb_Nacionalidad.Text = naci
                 cmb_Nacionalidad.Enabled = False
-                HBotones(False)
+                HBotones(True)
+                btn_Modificar.Enabled = False
                 Me.btn_Buscar.Enabled = False
                 Me.txt_PNombre.Focus()
             End If
@@ -205,7 +280,7 @@
             Me.btn_Modificar.Text = "Guardar"
         Else
             If (validar_controles(Me)) Then
-                sentencia = "Select * from tomador where t_cedula= '" + Me.txt_Cedula.Text + "' and t_nacionalidad= '" + cmb_Nacionalidad.SelectedText + "' and t_status= 'A' "
+                sentencia = "Select * from tomador where t_cedula= '" + Me.txt_Cedula.Text + "' and t_nacionalidad= '" + cmb_Nacionalidad.Text + "' and t_status= 'A' "
                 CSelect(sentencia)
 
                 Dim sex As Char
@@ -222,27 +297,64 @@
                 ElseIf rdb_soltero.Checked = True Then
                     eciv = "S"
                 End If
-                ' If ((txt_PNombre.Text = sdr("t_primer_nombre")) And (txt_SNombre.Text = sdr("t_segundo_nombre")) And (txt_PApellido.Text = sdr("t_primer_apellido")) And
-                '    (txt_SApellido.Text = sdr("t_segundo_apellido")) And (dtp_FNacimiento.Value.ToString("yyyy-MM-dd") = sdr("t_fecha_nac")) And (sex = sdr("t_sexo")) And (eciv = sdr("t_edo_civil")) And
-                '   (rtb_DireccionH.Text = sdr("t_direccion_hab")) And (txt_ZonaP.Text = sdr("t_zona_post")) And (cmb_Estado.Text = sdr("t_estado_hab")) And
-                '  (cmb_Ciudad.Text = sdr("t_ciudad_hab")) And (txt_TlfFijo.Text = sdr("t_telf_hab")) And (txt_TlfMovil.Text = sdr("t_telf_cel")) And
-                ' (txt_Correo.Text = sdr("t_correo")) And (txt_Profesion.Text = sdr("t_profesion")) And (txt_ActEconomica.Text = sdr("t_act_economica")) And
-                '(txt_Cargo.Text = sdr("t_cargo")) And (cmb_EdoTrabajo.Text = sdr("t_estado_trab")) And (cmb_CiudadTrabajo.Text = sdr("t_ciudad_trab")) And
-                '(rtb_DireccionT.Text = sdr("t_direccion_trab")) And (txt_TlfTrabajo.Text = sdr("t_telf_trab")) And (txt_CorreoT.Text = sdr("t_correo_trab")) And
-                '(txt_IngresoE.Text = sdr("t_ingreso_promedio"))) Then
-                'MsgBox("No se han realizado cambios", vbInformation, "Sin cambios")
-                'Me.btn_Cancelar.PerformClick()
-                cn.Close()
-                'Return
-                'Else
-                sentencia = "update tomador set t_nacionalidad='" & cmb_Nacionalidad.SelectedItem & "', t_primer_nombre='" & txt_PNombre.Text & "',t_segundo_nombre='" & txt_SNombre.Text & "' ,t_primer_apellido='" & txt_PApellido.Text & "',t_segundo_apellido='" & txt_SApellido.Text & "', t_fecha_nac='" & dtp_FNacimiento.Value.ToString("yyyy-MM-dd") & "',
-                                t_sexo='" & sex & "', t_edo_civil='" & eciv & "', t_direccion_hab='" & rtb_DireccionH.Text & "',t_zona_post='" & txt_ZonaP.Text & "', t_estado_hab='" & cmb_Estado.Text & "', t_ciudad_hab='" & cmb_Ciudad.Text & "', t_telf_hab='" & txt_TlfFijo.Text & "',
-                                t_telf_cel='" & txt_TlfMovil.Text & "', t_correo='" & txt_Correo.Text & "', t_profesion='" & txt_Profesion.Text & "', t_act_economica='" & txt_ActEconomica.Text & "', t_cargo='" & txt_Cargo.Text & "', t_estado_trab='" & cmb_EdoTrabajo.Text & "', t_ciudad_trab='" & cmb_CiudadTrabajo.Text & "',
-                                t_direccion_trab='" & rtb_DireccionT.Text & "', t_telf_trab='" & txt_TlfTrabajo.Text & "', t_correo_trab='" & txt_CorreoT.Text & "', t_ingreso_promedio='" & txt_IngresoE.Text & "' where t_cedula='" & txt_Cedula.Text & "' "
-                    comando22(sentencia)
-                    MsgBox("Los cambios se han realizado con exito", vbInformation, "Cambios")
+                If ((txt_PNombre.Text = sdr("t_primer_nombre")) And
+                    (txt_SNombre.Text = sdr("t_segundo_nombre")) And
+                    (txt_PApellido.Text = sdr("t_primer_apellido")) And
+                    (txt_SApellido.Text = sdr("t_segundo_apellido")) And
+                    (dtp_FNacimiento.Value = sdr("t_fecha_nac")) And
+                    (sex = sdr("t_sexo")) And
+                    (eciv = sdr("t_edo_civil")) And
+                    (rtb_DireccionH.Text = sdr("t_direccion_hab")) And
+                    (txt_ZonaP.Text = sdr("t_zona_post")) And
+                    (cmb_Estado.Text = sdr("t_estado_hab")) And
+                    (cmb_Ciudad.Text = sdr("t_ciudad_hab")) And
+                    (txt_TlfFijo.Text = sdr("t_telf_hab")) And
+                    (txt_TlfMovil.Text = sdr("t_telf_cel")) And
+                    (txt_Correo.Text = sdr("t_correo")) And
+                    (txt_Profesion.Text = sdr("t_profesion")) And
+                    (txt_ActEconomica.Text = sdr("t_act_economica")) And
+                    (txt_Cargo.Text = sdr("t_cargo")) And
+                    (cmb_EdoTrabajo.Text = sdr("t_estado_trab")) And
+                    (cmb_CiudadTrabajo.Text = sdr("t_ciudad_trab")) And
+                    (rtb_DireccionT.Text = sdr("t_direccion_trab")) And
+                    (txt_TlfTrabajo.Text = sdr("t_telf_trab")) And
+                    (txt_CorreoT.Text = sdr("t_correo_trab")) And
+                    (txt_IngresoE.Text = sdr("t_ingreso_promedio"))) Then
+                    MsgBox("No se han realizado cambios", vbInformation, "Sin cambios")
                     Me.btn_Cancelar.PerformClick()
-                ' End If
+                    cn.Close()
+                    Return
+                Else
+                    sentencia = "update tomador set
+                                t_nacionalidad='" & cmb_Nacionalidad.SelectedItem & "', 
+                                t_primer_nombre='" & txt_PNombre.Text & "',
+                                t_segundo_nombre='" & txt_SNombre.Text & "' ,
+                                t_primer_apellido='" & txt_PApellido.Text & "',
+                                t_segundo_apellido='" & txt_SApellido.Text & "',
+                                t_fecha_nac='" & dtp_FNacimiento.Value.ToString("yyyy-MM-dd") & "',
+                                t_sexo='" & sex & "',
+                                t_edo_civil='" & eciv & "',
+                                t_direccion_hab='" & rtb_DireccionH.Text & "',
+                                t_zona_post='" & txt_ZonaP.Text & "',
+                                t_estado_hab='" & cmb_Estado.Text & "',
+                                t_ciudad_hab='" & cmb_Ciudad.Text & "',
+                                t_telf_hab='" & txt_TlfFijo.Text & "',
+                                t_telf_cel='" & txt_TlfMovil.Text & "',
+                                t_correo='" & txt_Correo.Text & "',
+                                t_profesion='" & txt_Profesion.Text & "',
+                                t_act_economica='" & txt_ActEconomica.Text & "',
+                                t_cargo='" & txt_Cargo.Text & "',
+                                t_estado_trab='" & cmb_EdoTrabajo.Text & "',
+                                t_ciudad_trab='" & cmb_CiudadTrabajo.Text & "',
+                                t_direccion_trab='" & rtb_DireccionT.Text & "',
+                                t_telf_trab='" & txt_TlfTrabajo.Text & "',
+                                t_correo_trab='" & txt_CorreoT.Text & "',
+                                t_ingreso_promedio='" & txt_IngresoE.Text & "'
+                                where t_cedula='" & txt_Cedula.Text & "' "
+                    comando22(sentencia)
+                    MsgBox("Los cambios se han realizado con exito", vbInformation, "Gestion de tomador")
+                    Me.btn_Cancelar.PerformClick()
+                End If
             Else
                 MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
             End If
@@ -250,5 +362,27 @@
         End If
 
 
+    End Sub
+
+
+
+    Private Sub cmb_Estado_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_Estado.KeyPress
+        ValidarNoescritura(e)
+    End Sub
+
+    Private Sub cmb_Nacionalidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_Nacionalidad.KeyPress
+        ValidarNoescritura(e)
+    End Sub
+
+    Private Sub cmb_Ciudad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_Ciudad.KeyPress
+        ValidarNoescritura(e)
+    End Sub
+
+    Private Sub cmb_CiudadTrabajo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_CiudadTrabajo.KeyPress
+        ValidarNoescritura(e)
+    End Sub
+
+    Private Sub cmb_EdoTrabajo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_EdoTrabajo.KeyPress
+        ValidarNoescritura(e)
     End Sub
 End Class

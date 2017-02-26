@@ -22,8 +22,10 @@ Partial Class frm_TipoPoliza
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lbl_Codigo = New System.Windows.Forms.Label()
         Me.grb_Tipo_Poliza = New System.Windows.Forms.GroupBox()
+        Me.cmb_nombre_tp = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_Nombre = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
@@ -38,8 +40,20 @@ Partial Class frm_TipoPoliza
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
+        Me.lbl_Fecha = New System.Windows.Forms.Label()
+        Me.lbl_Usuario = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoSaludo = New System.Windows.Forms.Label()
+        Me.lbl_Hora = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoFormuladio = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
+        Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
+        Me.ptb_logo = New System.Windows.Forms.PictureBox()
+        Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
+        Me.lbl_montoB = New System.Windows.Forms.Label()
+        Me.txt_monto_base = New System.Windows.Forms.TextBox()
         Me.grb_Tipo_Poliza.SuspendLayout()
         Me.grb_Cobertura.SuspendLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lbl_Codigo
@@ -53,6 +67,9 @@ Partial Class frm_TipoPoliza
         '
         'grb_Tipo_Poliza
         '
+        Me.grb_Tipo_Poliza.Controls.Add(Me.txt_monto_base)
+        Me.grb_Tipo_Poliza.Controls.Add(Me.lbl_montoB)
+        Me.grb_Tipo_Poliza.Controls.Add(Me.cmb_nombre_tp)
         Me.grb_Tipo_Poliza.Controls.Add(Me.Label3)
         Me.grb_Tipo_Poliza.Controls.Add(Me.txt_Nombre)
         Me.grb_Tipo_Poliza.Controls.Add(Me.RichTextBox1)
@@ -68,10 +85,18 @@ Partial Class frm_TipoPoliza
         Me.grb_Tipo_Poliza.TabStop = False
         Me.grb_Tipo_Poliza.Text = "Datos del tipo de póliza"
         '
+        'cmb_nombre_tp
+        '
+        Me.cmb_nombre_tp.FormattingEnabled = True
+        Me.cmb_nombre_tp.Location = New System.Drawing.Point(86, 69)
+        Me.cmb_nombre_tp.Name = "cmb_nombre_tp"
+        Me.cmb_nombre_tp.Size = New System.Drawing.Size(181, 21)
+        Me.cmb_nombre_tp.TabIndex = 8
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 114)
+        Me.Label3.Location = New System.Drawing.Point(14, 117)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 13)
         Me.Label3.TabIndex = 7
@@ -86,9 +111,9 @@ Partial Class frm_TipoPoliza
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(86, 105)
+        Me.RichTextBox1.Location = New System.Drawing.Point(86, 108)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(181, 96)
+        Me.RichTextBox1.Size = New System.Drawing.Size(181, 71)
         Me.RichTextBox1.TabIndex = 5
         Me.RichTextBox1.Text = ""
         '
@@ -192,6 +217,112 @@ Partial Class frm_TipoPoliza
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
+        'lbl_Fecha
+        '
+        Me.lbl_Fecha.AutoSize = True
+        Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Fecha.Location = New System.Drawing.Point(515, 9)
+        Me.lbl_Fecha.Name = "lbl_Fecha"
+        Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_Fecha.TabIndex = 113
+        Me.lbl_Fecha.Text = "dd/MM/YY"
+        '
+        'lbl_Usuario
+        '
+        Me.lbl_Usuario.AutoSize = True
+        Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Usuario.Location = New System.Drawing.Point(575, 60)
+        Me.lbl_Usuario.Name = "lbl_Usuario"
+        Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
+        Me.lbl_Usuario.TabIndex = 112
+        Me.lbl_Usuario.Text = "Usuario"
+        '
+        'lbl_EncabezadoSaludo
+        '
+        Me.lbl_EncabezadoSaludo.AutoSize = True
+        Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(534, 60)
+        Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
+        Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
+        Me.lbl_EncabezadoSaludo.TabIndex = 111
+        Me.lbl_EncabezadoSaludo.Text = "Hola, "
+        '
+        'lbl_Hora
+        '
+        Me.lbl_Hora.AutoSize = True
+        Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Hora.Location = New System.Drawing.Point(579, 9)
+        Me.lbl_Hora.Name = "lbl_Hora"
+        Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
+        Me.lbl_Hora.TabIndex = 110
+        Me.lbl_Hora.Text = "00:00:00"
+        '
+        'lbl_EncabezadoFormuladio
+        '
+        Me.lbl_EncabezadoFormuladio.AutoSize = True
+        Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(194, 94)
+        Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(237, 25)
+        Me.lbl_EncabezadoFormuladio.TabIndex = 109
+        Me.lbl_EncabezadoFormuladio.Text = "Datos del tipo de póliza"
+        '
+        'lbl_EncabezadoModulo
+        '
+        Me.lbl_EncabezadoModulo.AutoSize = True
+        Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(219, 54)
+        Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
+        Me.lbl_EncabezadoModulo.TabIndex = 108
+        Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
+        '
+        'lbl_EncabezadoEmpresa
+        '
+        Me.lbl_EncabezadoEmpresa.AutoSize = True
+        Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(177, 9)
+        Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
+        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
+        Me.lbl_EncabezadoEmpresa.TabIndex = 107
+        Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
+        '
+        'ptb_logo
+        '
+        Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
+        Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptb_logo.Image = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_logo.Location = New System.Drawing.Point(1, -17)
+        Me.ptb_logo.Name = "ptb_logo"
+        Me.ptb_logo.Size = New System.Drawing.Size(162, 156)
+        Me.ptb_logo.TabIndex = 106
+        Me.ptb_logo.TabStop = False
+        Me.ptb_logo.UseWaitCursor = True
+        '
+        'tmr_Fecha
+        '
+        '
+        'lbl_montoB
+        '
+        Me.lbl_montoB.AutoSize = True
+        Me.lbl_montoB.Location = New System.Drawing.Point(14, 194)
+        Me.lbl_montoB.Name = "lbl_montoB"
+        Me.lbl_montoB.Size = New System.Drawing.Size(66, 13)
+        Me.lbl_montoB.TabIndex = 9
+        Me.lbl_montoB.Text = "Monto base:"
+        '
+        'txt_monto_base
+        '
+        Me.txt_monto_base.Location = New System.Drawing.Point(86, 191)
+        Me.txt_monto_base.Name = "txt_monto_base"
+        Me.txt_monto_base.Size = New System.Drawing.Size(100, 20)
+        Me.txt_monto_base.TabIndex = 10
+        '
         'frm_TipoPoliza
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,19 +331,29 @@ Partial Class frm_TipoPoliza
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(633, 428)
+        Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.btn_Eliminar)
+        Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.btn_Volver)
+        Me.Controls.Add(Me.lbl_EncabezadoSaludo)
         Me.Controls.Add(Me.grb_Tipo_Poliza)
+        Me.Controls.Add(Me.lbl_Hora)
         Me.Controls.Add(Me.btn_Cancelar)
+        Me.Controls.Add(Me.lbl_EncabezadoFormuladio)
         Me.Controls.Add(Me.btn_Modificar)
+        Me.Controls.Add(Me.lbl_EncabezadoModulo)
         Me.Controls.Add(Me.btn_Agregar)
+        Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
+        Me.Controls.Add(Me.ptb_logo)
         Me.Name = "frm_TipoPoliza"
         Me.Text = "Form2"
         Me.grb_Tipo_Poliza.ResumeLayout(False)
         Me.grb_Tipo_Poliza.PerformLayout()
         Me.grb_Cobertura.ResumeLayout(False)
         Me.grb_Cobertura.PerformLayout()
+        CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -232,4 +373,16 @@ Partial Class frm_TipoPoliza
     Friend WithEvents btn_Cancelar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Modificar As Button
+    Friend WithEvents lbl_Fecha As Label
+    Friend WithEvents lbl_Usuario As Label
+    Friend WithEvents lbl_EncabezadoSaludo As Label
+    Friend WithEvents lbl_Hora As Label
+    Friend WithEvents lbl_EncabezadoFormuladio As Label
+    Friend WithEvents lbl_EncabezadoModulo As Label
+    Friend WithEvents lbl_EncabezadoEmpresa As Label
+    Friend WithEvents ptb_logo As PictureBox
+    Friend WithEvents tmr_Fecha As Timer
+    Friend WithEvents cmb_nombre_tp As ComboBox
+    Friend WithEvents txt_monto_base As TextBox
+    Friend WithEvents lbl_montoB As Label
 End Class

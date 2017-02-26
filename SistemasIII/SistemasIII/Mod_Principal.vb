@@ -11,12 +11,27 @@
             e.Handled = False
         ElseIf e.KeyChar.IsControl(e.KeyChar) Then
             e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
+    Public Sub ValidarletrasConEspacio(ByRef e As KeyPressEventArgs)
+        If e.KeyChar.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf e.KeyChar.IsControl(e.KeyChar) Then
+            e.Handled = False
         ElseIf e.KeyChar.IsSeparator(e.KeyChar) Then
             e.Handled = False
         Else
             e.Handled = True
         End If
     End Sub
+    Public Sub ValidarNoescritura(ByRef e As KeyPressEventArgs)
+
+        e.Handled = True
+
+    End Sub
+
 
     Public Sub ValidarNumero(ByRef e As KeyPressEventArgs)
         If (Asc(e.KeyChar) >= 48 And (Asc(e.KeyChar) <= 57)) Or Asc(e.KeyChar).Equals(8) Or Asc(e.KeyChar).Equals(13) Or Asc(e.KeyChar).Equals(127) Then
@@ -45,36 +60,49 @@
     'End Sub
     Public Sub Limpiar(ByVal c1 As Control)
         For Each c As Control In c1.Controls
+            'colo cada textbox vacios dentro del formulario
             If TypeOf c Is TextBox Then
                 c.Text = “” ' eliminar el texto
             Else
                 Limpiar(c)
             End If
+            'coloca el item seleccionado en vacio
             If TypeOf c Is ComboBox Then
                 c.Text = “” ' eliminar el texto
             Else
                 Limpiar(c)
             End If
+            'anula la seleccion de los checkbox
             If (TypeOf (c) Is CheckBox) Then
                 CType(c, CheckBox).Checked = False
             Else
                 Limpiar(c)
             End If
+            'estable la fecha actual en el datepicker
             If TypeOf c Is DateTimePicker Then
                 c.Text = Date.Today ' eliminar el texto
             Else
                 Limpiar(c)
             End If
+            'anula la seleccion de los radio button
             If (TypeOf (c) Is RadioButton) Then
                 CType(c, RadioButton).Checked = False
             Else
                 Limpiar(c)
             End If
+            ' establece en vacio el texto de los richtextbox
             If TypeOf c Is RichTextBox Then
                 c.Text = “” ' eliminar el texto
             Else
                 Limpiar(c)
             End If
+            'anula las selecciones de un listbox
+            If TypeOf c Is ListBox Then
+                CType(c, ListBox).ClearSelected()
+            Else
+                Limpiar(c)
+            End If
+
         Next
     End Sub
 
