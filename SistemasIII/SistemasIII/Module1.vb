@@ -3,7 +3,7 @@
 Module Module1
     Public cn As New MySqlConnection
     Public da As MySqlDataAdapter
-    Public dt As DataTable
+    Public dt As New DataTable
     Public sql As String
     Public cmd As MySqlCommand
     Public sdr As MySqlDataReader
@@ -11,12 +11,13 @@ Module Module1
     Public stringco As String = "server=localhost;user id=root;password=f2481995;persistsecurityinfo=True;database=sis3"
 
     Public Sub Conectar()
+        cn.Close()
         cn.ConnectionString = "server=localhost;user id=root;password=f2481995;persistsecurityinfo=True;database=sis3"
         cn.Open()
     End Sub
 
     Public Sub Desconectar()
-        sdr.Close()
+        'sdr.Close()
         cn.Close()
     End Sub
 
@@ -70,4 +71,5 @@ Module Module1
         End Using
 
     End Function
+
 End Module
