@@ -210,7 +210,7 @@
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
         If (cmb_Nacionalidad.SelectedItem = "") Or (txt_Cedula.Text = "") Then
-            MsgBox("Debe llenar ambos campos", vbInformation, "Error")
+            MsgBox("Debe llenar ambos campos", vbInformation, "Gestión de Tomador")
             Return
         End If
         sentencia = "select * from tomador 
@@ -220,7 +220,9 @@
         CSelect(sentencia)
 
         If (sdr.IsClosed) Or Not (sdr.HasRows) Then
-            If MsgBox("El empleado no existe ¿Desea agregarlo?", vbYesNo, "Gestion de Tomador") = MsgBoxResult.Yes Then
+
+            If MsgBox("El tomador no existe ¿Desea agregarlo?", vbYesNo, "Gestión de Tomador") = MsgBoxResult.Yes Then
+
                 HCampos(Me, True, txt_Cedula)
                 Dim cedula As String = txt_Cedula.Text
                 Dim naci As Char = cmb_Nacionalidad.Text
@@ -230,8 +232,9 @@
                 cmb_Nacionalidad.Enabled = False
                 HBotones(True)
                 btn_Modificar.Enabled = False
-                Me.btn_Buscar.Enabled = False
-                Me.txt_PNombre.Focus()
+                btn_Buscar.Enabled = False
+                txt_PNombre.Focus()
+
             End If
         Else
             Me.txt_PNombre.Text = sdr("t_primer_nombre")

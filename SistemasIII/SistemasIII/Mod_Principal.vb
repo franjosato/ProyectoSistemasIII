@@ -175,6 +175,8 @@
                         co.Enabled = sn
                     ElseIf TypeOf co Is RadioButton Then
                         co.Enabled = sn
+                    ElseIf TypeOf co Is CheckedListBox Then
+                        co.Enabled = sn
                     ElseIf TypeOf co Is GroupBox Then
                         For Each cont As Control In co.Controls
                             If TypeOf cont Is TextBox Then
@@ -184,9 +186,11 @@
                             ElseIf TypeOf cont Is ComboBox Then
                                 cont.Enabled = sn
                             ElseIf TypeOf cont Is DateTimePicker Then
-                                co.Enabled = sn
+                                cont.Enabled = sn
                             ElseIf TypeOf cont Is RadioButton Then
                                 cont.Enabled = sn
+                            ElseIf TypeOf co Is CheckedListBox Then
+                                co.Enabled = sn
                             End If
                         Next
                     End If
@@ -228,6 +232,21 @@
         Next
         campoactivo.Enabled = Not sn
     End Sub
+
+    Public Sub Buscarcodigo(ByVal campo As Control, ByRef busqueda As String)
+
+        CSelect(busqueda)
+
+        Dim cod As Integer = 1
+
+        While sdr.Read()
+            cod = cod + 1
+        End While
+        cod = cod + 1
+        ' Desconectar()
+        campo.Text = cod
+    End Sub
+
 End Module
 
 

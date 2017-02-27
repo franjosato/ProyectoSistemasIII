@@ -155,6 +155,7 @@ Partial Class frm_TipoPoliza
         '
         'CheckedListBox1
         '
+        Me.CheckedListBox1.Enabled = False
         Me.CheckedListBox1.FormattingEnabled = True
         Me.CheckedListBox1.Location = New System.Drawing.Point(23, 38)
         Me.CheckedListBox1.Name = "CheckedListBox1"

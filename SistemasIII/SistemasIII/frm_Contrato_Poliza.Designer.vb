@@ -47,6 +47,8 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_TipoPoliza = New System.Windows.Forms.Label()
         Me.lbl_FechaF = New System.Windows.Forms.Label()
         Me.grb_Pagos = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lbl_SumaAsegurada = New System.Windows.Forms.Label()
         Me.dtp_FechaCobro = New System.Windows.Forms.DateTimePicker()
         Me.lbl_FechaCobro = New System.Windows.Forms.Label()
         Me.txt_MontoCuota = New System.Windows.Forms.TextBox()
@@ -97,8 +99,6 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lbl_SumaAsegurada = New System.Windows.Forms.Label()
         Me.grb_Vehiculo.SuspendLayout()
         Me.grb_Poliza.SuspendLayout()
         Me.grb_Pagos.SuspendLayout()
@@ -109,7 +109,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Anular
         '
-        Me.btn_Anular.Location = New System.Drawing.Point(394, 713)
+        Me.btn_Anular.Location = New System.Drawing.Point(394, 700)
         Me.btn_Anular.Name = "btn_Anular"
         Me.btn_Anular.Size = New System.Drawing.Size(75, 23)
         Me.btn_Anular.TabIndex = 115
@@ -118,7 +118,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Renobar
         '
-        Me.btn_Renobar.Location = New System.Drawing.Point(281, 713)
+        Me.btn_Renobar.Location = New System.Drawing.Point(281, 700)
         Me.btn_Renobar.Name = "btn_Renobar"
         Me.btn_Renobar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Renobar.TabIndex = 114
@@ -127,7 +127,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Volver
         '
-        Me.btn_Volver.Location = New System.Drawing.Point(633, 713)
+        Me.btn_Volver.Location = New System.Drawing.Point(633, 700)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 113
@@ -136,7 +136,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(514, 713)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(514, 700)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Cancelar.TabIndex = 112
@@ -145,7 +145,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(163, 713)
+        Me.btn_Modificar.Location = New System.Drawing.Point(163, 700)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Modificar.TabIndex = 111
@@ -154,7 +154,7 @@ Partial Class frm_Contrato_Poliza
         '
         'btn_Agregar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(47, 713)
+        Me.btn_Agregar.Location = New System.Drawing.Point(47, 700)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 110
@@ -173,7 +173,7 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Vehiculo.Controls.Add(Me.txt_Placa)
         Me.grb_Vehiculo.Controls.Add(Me.lbl_Placa)
         Me.grb_Vehiculo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Vehiculo.Location = New System.Drawing.Point(8, 352)
+        Me.grb_Vehiculo.Location = New System.Drawing.Point(8, 339)
         Me.grb_Vehiculo.Name = "grb_Vehiculo"
         Me.grb_Vehiculo.Size = New System.Drawing.Size(749, 82)
         Me.grb_Vehiculo.TabIndex = 109
@@ -273,7 +273,7 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Poliza.Controls.Add(Me.txt_Codigo)
         Me.grb_Poliza.Controls.Add(Me.lbl_Codigo)
         Me.grb_Poliza.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Poliza.Location = New System.Drawing.Point(8, 436)
+        Me.grb_Poliza.Location = New System.Drawing.Point(8, 423)
         Me.grb_Poliza.Name = "grb_Poliza"
         Me.grb_Poliza.Size = New System.Drawing.Size(749, 272)
         Me.grb_Poliza.TabIndex = 108
@@ -363,6 +363,22 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Pagos.TabIndex = 37
         Me.grb_Pagos.TabStop = False
         Me.grb_Pagos.Text = "Dato de Pagos"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(540, 21)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 21)
+        Me.TextBox1.TabIndex = 38
+        '
+        'lbl_SumaAsegurada
+        '
+        Me.lbl_SumaAsegurada.AutoSize = True
+        Me.lbl_SumaAsegurada.Location = New System.Drawing.Point(433, 26)
+        Me.lbl_SumaAsegurada.Name = "lbl_SumaAsegurada"
+        Me.lbl_SumaAsegurada.Size = New System.Drawing.Size(104, 16)
+        Me.lbl_SumaAsegurada.TabIndex = 37
+        Me.lbl_SumaAsegurada.Text = "Suma Asegurada:"
         '
         'dtp_FechaCobro
         '
@@ -507,7 +523,7 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Asegurado.Controls.Add(Me.txt_PNombreA)
         Me.grb_Asegurado.Controls.Add(Me.txt_PApellidoA)
         Me.grb_Asegurado.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Asegurado.Location = New System.Drawing.Point(369, 163)
+        Me.grb_Asegurado.Location = New System.Drawing.Point(369, 151)
         Me.grb_Asegurado.Name = "grb_Asegurado"
         Me.grb_Asegurado.Size = New System.Drawing.Size(388, 187)
         Me.grb_Asegurado.TabIndex = 107
@@ -638,7 +654,7 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Tomador.Controls.Add(Me.txt_PNombreT)
         Me.grb_Tomador.Controls.Add(Me.txt_PApellidoT)
         Me.grb_Tomador.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Tomador.Location = New System.Drawing.Point(8, 163)
+        Me.grb_Tomador.Location = New System.Drawing.Point(8, 151)
         Me.grb_Tomador.Name = "grb_Tomador"
         Me.grb_Tomador.Size = New System.Drawing.Size(355, 187)
         Me.grb_Tomador.TabIndex = 106
@@ -840,22 +856,6 @@ Partial Class frm_Contrato_Poliza
         Me.ptb_logo.TabIndex = 124
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(540, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox1.TabIndex = 38
-        '
-        'lbl_SumaAsegurada
-        '
-        Me.lbl_SumaAsegurada.AutoSize = True
-        Me.lbl_SumaAsegurada.Location = New System.Drawing.Point(433, 26)
-        Me.lbl_SumaAsegurada.Name = "lbl_SumaAsegurada"
-        Me.lbl_SumaAsegurada.Size = New System.Drawing.Size(104, 16)
-        Me.lbl_SumaAsegurada.TabIndex = 37
-        Me.lbl_SumaAsegurada.Text = "Suma Asegurada:"
         '
         'frm_Contrato_Poliza
         '
