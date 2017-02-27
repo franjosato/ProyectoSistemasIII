@@ -6,7 +6,7 @@ Public Class frm_Empleado
         HBotones(False)
         LimpiarC()
         Me.ActiveControl() = Me.cmb_Nacionalidad
-        Me.cmb_Nacionalidad.SelectedIndex() = 0
+        Me.cmb_Nacionalidad.SelectedIndex = -1
     End Sub
 
     Private Sub HCampos(ByRef sn As Boolean)
@@ -37,8 +37,9 @@ Public Class frm_Empleado
         Me.txt_SApellido.Text = ""
         Me.txt_SNombre.Text = ""
         Me.txt_TlfFijo.Text = ""
-        Me.cmb_Nacionalidad.ResetText()
-        Me.cmb_tipoE.ResetText()
+        Me.cmb_Nacionalidad.SelectedIndex = -1
+        Me.cmb_tipoE.SelectedIndex = -1
+
     End Sub
 
     Private Sub txt_Cedula_TextChanged(sender As Object, e As EventArgs) Handles txt_Cedula.TextChanged
@@ -53,37 +54,41 @@ Public Class frm_Empleado
     End Sub
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
-
         If (Me.cmb_Nacionalidad.SelectedItem = "") Or (Me.txt_Cedula.Text = "") Then
             MsgBox("Debe llenar ambos campos", vbInformation, "Error")
             Return
         End If
 
         sentencia = "Select * from empleado where em_cedula= '" +
-            Me.txt_Cedula.Text + "' and em_estatus= 'A' "
+            Me.txt_Cedula.Text + "' and em_estatus= 'I' "
         CSelect(sentencia)
-
-        If (sdr.IsClosed) Or Not (sdr.HasRows) Then
-            If MsgBox("El empleado no existe ¿Desea agregarlo?", vbYesNo, "Registro no existente") = MsgBoxResult.Yes Then
-                HCampos(True)
-                HBotones(False)
-                Me.btn_Buscar.Enabled = False
-                Me.txt_PNombre.Focus()
-            End If
+        If Not ((sdr.IsClosed) Or Not (sdr.HasRows)) Then
+            MsgBox("Empleado desactivado, por favor comuniquese con el administrador", vbInformation, "Empleado desactivado")
         Else
-            Me.txt_PNombre.Text = sdr("em_primer_nombre")
-            Me.txt_SNombre.Text = sdr("em_segundo_nombre")
-            Me.txt_PApellido.Text = sdr("em_primer_apellido")
-            Me.txt_SApellido.Text = sdr("em_segundo_apellido")
-            Me.txt_Correo.Text = sdr("em_correo")
-            Me.txt_TlfFijo.Text = sdr("em_tlef")
-            'Me.cmb_Nacionalidad.Text = sdr("em_ti")
-            Me.cmb_tipoE.SelectedText = sdr("em_tipo")
-            Me.HBotones(True)
+            cn.Close()
+            sentencia = "Select * from empleado where em_cedula='" +
+            Me.txt_Cedula.Text + "' and em_estatus= 'A' "
+            CSelect(sentencia)
+            If ((sdr.IsClosed) Or Not (sdr.HasRows)) Then
+                If MsgBox("El empleado no existe ¿Desea agregarlo?", vbYesNo, "Registro no existente") = MsgBoxResult.Yes Then
+                    HCampos(True)
+                    HBotones(False)
+                    Me.btn_Buscar.Enabled = False
+                    Me.txt_PNombre.Focus()
+                End If
+            Else
+                Me.txt_PNombre.Text = sdr("em_primer_nombre")
+                Me.txt_SNombre.Text = sdr("em_segundo_nombre")
+                Me.txt_PApellido.Text = sdr("em_primer_apellido")
+                Me.txt_SApellido.Text = sdr("em_segundo_apellido")
+                Me.txt_Correo.Text = sdr("em_correo")
+                Me.txt_TlfFijo.Text = sdr("em_tlef")
+                'Me.cmb_Nacionalidad.Text = sdr("em_ti")
+                Me.cmb_tipoE.Text = sdr("em_tipo")
+                Me.HBotones(True)
+                Me.btn_Cancelar.Enabled = True
+            End If
         End If
-
-        cn.Close()
-
     End Sub
 
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
@@ -91,7 +96,8 @@ Public Class frm_Empleado
         HBotones(False)
         LimpiarC()
         Me.btn_Modificar.Text = "Modificar"
-        Me.ActiveControl() = Me.txt_Cedula
+        Me.ActiveControl() = Me.cmb_Nacionalidad
+        Me.btn_Agregar.Enabled = False
     End Sub
 
     Private Sub btn_Modificar_Click(sender As Object, e As EventArgs) Handles btn_Modificar.Click
@@ -160,20 +166,39 @@ Public Class frm_Empleado
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
         If (validar()) Then
+            If MsgBox("¿Desea agregar al empleado?", vbYesNo, "Registro") = MsgBoxResult.Yes Then
+                sentencia = "INSERT INTO empleado (`em_cedula`, `em_primer_nombre`, `em_segundo_nombre`,
+                `em_primer_apellido`, `em_segundo_apellido`, `em_tipo`, `em_tlef`, `em_correo`, `em_estatus`) VALUES ('" +
+                Me.txt_Cedula.Text + "', '" + Me.txt_PNombre.Text + "', '" + Me.txt_SNombre.Text + "', '" + Me.txt_PApellido.Text + "', '" + Me.txt_SApellido.Text +
+                "', '" + Me.cmb_tipoE.SelectedItem + "', '" + Me.txt_TlfFijo.Text + "', '" + Me.txt_Correo.Text + "', 'A')"
 
-            sentencia = "INSERT INTO empleado (`em_cedula`, `em_primer_nombre`, `em_segundo_nombre`,
-            `em_primer_apellido`, `em_segundo_apellido`, `em_tipo`, `em_tlef`, `em_correo`, `em_estatus`) VALUES ('" +
-            Me.txt_Cedula.Text + "', '" + Me.txt_PNombre.Text + "', '" + Me.txt_SNombre.Text + "', '" + Me.txt_PApellido.Text + "', '" + Me.txt_SApellido.Text +
-            "', '" + Me.cmb_tipoE.SelectedItem + "', '" + Me.txt_TlfFijo.Text + "', '" + Me.txt_Correo.Text + "', 'A')"
-
-            comando22(sentencia)
-            MsgBox("Se ha registrado un empleado", vbInformation, "Registro exitoso")
-            Me.btn_Cancelar.PerformClick()
+                comando22(sentencia)
+                MsgBox("Se ha registrado un empleado", vbInformation, "Registro exitoso")
+                Me.btn_Cancelar.PerformClick()
+            End If
         Else
-            MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
+                MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
         End If
     End Sub
     Private Sub btn_Volver_Click(sender As Object, e As EventArgs) Handles btn_Volver.Click
         Me.Close()
+    End Sub
+
+    Private Sub btn_Eliminar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
+        If MsgBox("¿Desea eliminar al empleado?", vbYesNo, "Eliminar empleado") = MsgBoxResult.Yes Then
+            sentencia = "update empleado set em_estatus='I' where em_cedula='" + Me.txt_Cedula.Text + "'"
+            If (comando22(sentencia)) Then
+                MsgBox("Empleado eliminado", vbInformation, "Eliminación")
+                Me.btn_Cancelar.PerformClick()
+            Else
+                MsgBox("Error al eliminar empleado", vbInformation, "Error en eliminación")
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub grb_personales_Enter(sender As Object, e As EventArgs) Handles grb_personales.Enter
+
     End Sub
 End Class
