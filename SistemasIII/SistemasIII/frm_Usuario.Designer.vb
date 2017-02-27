@@ -285,7 +285,7 @@ Partial Class frm_Usuario
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 120
-        Me.btn_Agregar.Text = "Agregar"
+        Me.btn_Agregar.Text = "Generar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
         'btn_Modificar
@@ -301,9 +301,10 @@ Partial Class frm_Usuario
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Fecha.Location = New System.Drawing.Point(555, 14)
+        Me.lbl_Fecha.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Fecha.Location = New System.Drawing.Point(517, 24)
         Me.lbl_Fecha.Name = "lbl_Fecha"
-        Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
+        Me.lbl_Fecha.Size = New System.Drawing.Size(70, 16)
         Me.lbl_Fecha.TabIndex = 132
         Me.lbl_Fecha.Text = "dd/MM/YY"
         '
@@ -311,9 +312,10 @@ Partial Class frm_Usuario
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(626, 64)
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(596, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(47, 16)
         Me.Label2.TabIndex = 131
         Me.Label2.Text = "Usuario"
         '
@@ -321,9 +323,10 @@ Partial Class frm_Usuario
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(585, 64)
+        Me.lbl_EncabezadoSaludo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(555, 56)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
-        Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
+        Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(39, 16)
         Me.lbl_EncabezadoSaludo.TabIndex = 130
         Me.lbl_EncabezadoSaludo.Text = "Hola, "
         '
@@ -331,9 +334,10 @@ Partial Class frm_Usuario
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Hora.Location = New System.Drawing.Point(619, 14)
+        Me.lbl_Hora.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Hora.Location = New System.Drawing.Point(593, 25)
         Me.lbl_Hora.Name = "lbl_Hora"
-        Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
+        Me.lbl_Hora.Size = New System.Drawing.Size(50, 16)
         Me.lbl_Hora.TabIndex = 129
         Me.lbl_Hora.Text = "00:00:00"
         '
@@ -341,10 +345,10 @@ Partial Class frm_Usuario
         '
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(240, 100)
+        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(228, 92)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(226, 24)
         Me.lbl_EncabezadoFormuladio.TabIndex = 128
         Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
         '
@@ -352,10 +356,10 @@ Partial Class frm_Usuario
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(248, 56)
+        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(236, 55)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
-        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(206, 24)
         Me.lbl_EncabezadoModulo.TabIndex = 127
         Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
         '
@@ -364,10 +368,10 @@ Partial Class frm_Usuario
         Me.lbl_EncabezadoEmpresa.AutoSize = True
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(206, 11)
+        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(194, 12)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
-        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
+        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(294, 30)
         Me.lbl_EncabezadoEmpresa.TabIndex = 126
         Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
         '
@@ -377,7 +381,7 @@ Partial Class frm_Usuario
         Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
         Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptb_logo.Location = New System.Drawing.Point(1, 1)
+        Me.ptb_logo.Location = New System.Drawing.Point(10, 0)
         Me.ptb_logo.Name = "ptb_logo"
         Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
         Me.ptb_logo.TabIndex = 125
