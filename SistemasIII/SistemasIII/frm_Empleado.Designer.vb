@@ -67,7 +67,7 @@ Partial Class frm_Empleado
         '
         'btn_Buscar
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(280, 24)
+        Me.btn_Buscar.Location = New System.Drawing.Point(286, 24)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Buscar.TabIndex = 103
@@ -107,7 +107,7 @@ Partial Class frm_Empleado
         'txt_SApellido
         '
         Me.txt_SApellido.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_SApellido.Location = New System.Drawing.Point(388, 93)
+        Me.txt_SApellido.Location = New System.Drawing.Point(424, 96)
         Me.txt_SApellido.MaxLength = 15
         Me.txt_SApellido.Name = "txt_SApellido"
         Me.txt_SApellido.Size = New System.Drawing.Size(139, 20)
@@ -116,7 +116,7 @@ Partial Class frm_Empleado
         'txt_SNombre
         '
         Me.txt_SNombre.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_SNombre.Location = New System.Drawing.Point(388, 61)
+        Me.txt_SNombre.Location = New System.Drawing.Point(424, 64)
         Me.txt_SNombre.MaxLength = 15
         Me.txt_SNombre.Name = "txt_SNombre"
         Me.txt_SNombre.Size = New System.Drawing.Size(139, 20)
@@ -143,7 +143,7 @@ Partial Class frm_Empleado
         'lbl_SNombre
         '
         Me.lbl_SNombre.AutoSize = True
-        Me.lbl_SNombre.Location = New System.Drawing.Point(277, 61)
+        Me.lbl_SNombre.Location = New System.Drawing.Point(313, 64)
         Me.lbl_SNombre.Name = "lbl_SNombre"
         Me.lbl_SNombre.Size = New System.Drawing.Size(91, 13)
         Me.lbl_SNombre.TabIndex = 95
@@ -161,7 +161,7 @@ Partial Class frm_Empleado
         'lbl_SApellido
         '
         Me.lbl_SApellido.AutoSize = True
-        Me.lbl_SApellido.Location = New System.Drawing.Point(277, 97)
+        Me.lbl_SApellido.Location = New System.Drawing.Point(313, 100)
         Me.lbl_SApellido.Name = "lbl_SApellido"
         Me.lbl_SApellido.Size = New System.Drawing.Size(92, 13)
         Me.lbl_SApellido.TabIndex = 107
@@ -180,7 +180,7 @@ Partial Class frm_Empleado
         '
         Me.txt_Correo.BackColor = System.Drawing.Color.GhostWhite
         Me.txt_Correo.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txt_Correo.Location = New System.Drawing.Point(388, 128)
+        Me.txt_Correo.Location = New System.Drawing.Point(424, 131)
         Me.txt_Correo.MaxLength = 40
         Me.txt_Correo.Name = "txt_Correo"
         Me.txt_Correo.Size = New System.Drawing.Size(165, 20)
@@ -189,7 +189,7 @@ Partial Class frm_Empleado
         'lbl_Correo
         '
         Me.lbl_Correo.AutoSize = True
-        Me.lbl_Correo.Location = New System.Drawing.Point(314, 128)
+        Me.lbl_Correo.Location = New System.Drawing.Point(350, 131)
         Me.lbl_Correo.Name = "lbl_Correo"
         Me.lbl_Correo.Size = New System.Drawing.Size(41, 13)
         Me.lbl_Correo.TabIndex = 112
@@ -295,7 +295,7 @@ Partial Class frm_Empleado
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 115
-        Me.btn_Volver.Text = " Volver"
+        Me.btn_Volver.Text = " Salir"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
         'btn_Cancelar
