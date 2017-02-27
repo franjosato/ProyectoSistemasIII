@@ -8,6 +8,7 @@ Module Mod_Base_de_Datos
     Public cmd As MySqlCommand
     Public sdr As MySqlDataReader
     Public sentencia As String
+    Public sentencia1 As String
     Public stringco As String = "server=localhost;user id=root;password=f2481995;persistsecurityinfo=True;database=sis3"
 
     Public Sub Conectar()

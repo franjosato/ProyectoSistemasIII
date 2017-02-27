@@ -64,6 +64,16 @@ Namespace My
                 Return CType(Me("sistemas3ConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;database=sis3")>  _
+        Public ReadOnly Property sis3ConnectionString() As String
+            Get
+                Return CType(Me("sis3ConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

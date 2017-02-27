@@ -102,6 +102,17 @@
             Else
                 Limpiar(c)
             End If
+            If TypeOf c Is CheckedListBox Then
+                For i As Integer = 0 To CType(c, CheckedListBox).Items.Count - 1
+                    If CType(c, CheckedListBox).GetItemChecked(i) = True Then
+                        CType(c, CheckedListBox).SetItemChecked(i, False)
+                    End If
+                Next
+
+
+            Else
+                Limpiar(c)
+            End If
 
         Next
     End Sub

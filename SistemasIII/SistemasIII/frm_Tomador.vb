@@ -157,7 +157,7 @@
                         `t_telf_trab`,
                         `t_correo_trab`,
                         `t_ingreso_promedio`,
-                        `t_status`)
+                        `t_estatus`)
                         values ('" & txt_Cedula.Text & "',
                         '" & cmb_Nacionalidad.Text & "',
                         '" & txt_PNombre.Text & "',
@@ -213,7 +213,10 @@
             MsgBox("Debe llenar ambos campos", vbInformation, "Error")
             Return
         End If
-        sentencia = "select * from tomador where t_cedula= '" + txt_Cedula.Text + "'and t_nacionalidad= '" + cmb_Nacionalidad.Text + "' and t_status='A'"
+        sentencia = "select * from tomador 
+                    where t_cedula= '" + txt_Cedula.Text + "'   
+                    and t_nacionalidad= '" + cmb_Nacionalidad.Text + "'
+                    and t_estatus='A'"
         CSelect(sentencia)
 
         If (sdr.IsClosed) Or Not (sdr.HasRows) Then
@@ -280,7 +283,10 @@
             Me.btn_Modificar.Text = "Guardar"
         Else
             If (validar_controles(Me)) Then
-                sentencia = "Select * from tomador where t_cedula= '" + Me.txt_Cedula.Text + "' and t_nacionalidad= '" + cmb_Nacionalidad.Text + "' and t_status= 'A' "
+                sentencia = "Select * from tomador 
+                            where t_cedula= '" + Me.txt_Cedula.Text + "' 
+                            and t_nacionalidad= '" + cmb_Nacionalidad.Text + "' 
+                            and t_estatus= 'A' "
                 CSelect(sentencia)
 
                 Dim sex As Char

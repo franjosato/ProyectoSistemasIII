@@ -220,6 +220,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="sis3DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sis3DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sistemas3DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -318,6 +323,17 @@
     </None>
     <None Include="App.config" />
     <DesignData Include="Reporte_Inspecciones.rdlc" />
+    <None Include="sis3DataSet.xsc">
+      <DependentUpon>sis3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sis3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sis3DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sis3DataSet.xss">
+      <DependentUpon>sis3DataSet.xsd</DependentUpon>
+    </None>
     <None Include="sistemas3DataSet.xsc">
       <DependentUpon>sistemas3DataSet.xsd</DependentUpon>
     </None>
