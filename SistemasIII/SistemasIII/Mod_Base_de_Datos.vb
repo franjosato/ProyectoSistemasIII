@@ -12,6 +12,7 @@ Module Mod_Base_de_Datos
     Public stringco As String = "server=localhost;user id=root;password=f2481995;persistsecurityinfo=True;database=sis3"
 
     Public Sub Conectar()
+        cn.Close()
         cn.ConnectionString = "server=localhost;user id=root;password=f2481995;persistsecurityinfo=True;database=sis3"
         cn.Open()
     End Sub

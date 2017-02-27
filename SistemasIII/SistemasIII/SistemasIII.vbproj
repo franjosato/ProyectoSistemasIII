@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>SistemasIII.My.MyApplication</StartupObject>
     <RootNamespace>SistemasIII</RootNamespace>
-    <AssemblyName>Seguros Maldonado</AssemblyName>
+    <AssemblyName>m</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Seguros Maldonado.xml</DocumentationFile>
+    <DocumentationFile>m.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Seguros Maldonado.xml</DocumentationFile>
+    <DocumentationFile>m.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -85,6 +85,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexionmysql.vb" />
     <Compile Include="frm_Cobertura.Designer.vb">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
     </Compile>
@@ -167,10 +168,10 @@
     <Compile Include="frm_Siniestro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Tipocuota.Designer.vb">
-      <DependentUpon>frm_Tipocuota.vb</DependentUpon>
+    <Compile Include="frm_PlanPago.Designer.vb">
+      <DependentUpon>frm_PlanPago.vb</DependentUpon>
     </Compile>
-    <Compile Include="frm_Tipocuota.vb">
+    <Compile Include="frm_PlanPago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_TipoVehiculo.Designer.vb">
@@ -203,6 +204,7 @@
     <Compile Include="MDIParent1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module2.vb" />
     <Compile Include="Mod_Base_de_Datos.vb" />
     <Compile Include="Mod_Principal.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -283,8 +285,8 @@
     <EmbeddedResource Include="frm_Siniestro.resx">
       <DependentUpon>frm_Siniestro.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Tipocuota.resx">
-      <DependentUpon>frm_Tipocuota.vb</DependentUpon>
+    <EmbeddedResource Include="frm_PlanPago.resx">
+      <DependentUpon>frm_PlanPago.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_TipoVehiculo.resx">
       <DependentUpon>frm_TipoVehiculo.vb</DependentUpon>

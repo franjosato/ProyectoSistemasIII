@@ -391,4 +391,8 @@
     Private Sub cmb_EdoTrabajo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cmb_EdoTrabajo.KeyPress
         ValidarNoescritura(e)
     End Sub
+
+    Private Sub lbl_PApellido_Click(sender As Object, e As EventArgs) Handles lbl_PApellido.Click
+
+    End Sub
 End Class
