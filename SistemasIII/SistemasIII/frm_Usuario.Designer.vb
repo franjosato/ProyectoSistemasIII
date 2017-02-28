@@ -29,7 +29,7 @@ Partial Class frm_Usuario
         Me.lbl_Tipoempleado = New System.Windows.Forms.Label()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.lbl_SApellido = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_Cedula = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_PApellido = New System.Windows.Forms.TextBox()
         Me.lbl_PApellido = New System.Windows.Forms.Label()
@@ -46,7 +46,7 @@ Partial Class frm_Usuario
         Me.btn_Eliminar = New System.Windows.Forms.Button()
         Me.btn_Volver = New System.Windows.Forms.Button()
         Me.btn_Cancelar = New System.Windows.Forms.Button()
-        Me.btn_Agregar = New System.Windows.Forms.Button()
+        Me.btn_Generar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -61,16 +61,13 @@ Partial Class frm_Usuario
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'tmr_HoraUsuario
-        '
-        '
         'grb_Empleado
         '
         Me.grb_Empleado.Controls.Add(Me.txt_TipodeEmpleado)
         Me.grb_Empleado.Controls.Add(Me.lbl_Tipoempleado)
         Me.grb_Empleado.Controls.Add(Me.btn_Buscar)
         Me.grb_Empleado.Controls.Add(Me.lbl_SApellido)
-        Me.grb_Empleado.Controls.Add(Me.TextBox1)
+        Me.grb_Empleado.Controls.Add(Me.txt_Cedula)
         Me.grb_Empleado.Controls.Add(Me.Label1)
         Me.grb_Empleado.Controls.Add(Me.txt_PApellido)
         Me.grb_Empleado.Controls.Add(Me.lbl_PApellido)
@@ -122,12 +119,12 @@ Partial Class frm_Usuario
         Me.lbl_SApellido.TabIndex = 115
         Me.lbl_SApellido.Text = "Segundo apellido:"
         '
-        'TextBox1
+        'txt_Cedula
         '
-        Me.TextBox1.Location = New System.Drawing.Point(101, 37)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txt_Cedula.Location = New System.Drawing.Point(101, 37)
+        Me.txt_Cedula.Name = "txt_Cedula"
+        Me.txt_Cedula.Size = New System.Drawing.Size(100, 20)
+        Me.txt_Cedula.TabIndex = 1
         '
         'Label1
         '
@@ -254,7 +251,7 @@ Partial Class frm_Usuario
         '
         'btn_Eliminar
         '
-        Me.btn_Eliminar.Location = New System.Drawing.Point(297, 447)
+        Me.btn_Eliminar.Location = New System.Drawing.Point(297, 440)
         Me.btn_Eliminar.Name = "btn_Eliminar"
         Me.btn_Eliminar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Eliminar.TabIndex = 124
@@ -263,34 +260,34 @@ Partial Class frm_Usuario
         '
         'btn_Volver
         '
-        Me.btn_Volver.Location = New System.Drawing.Point(486, 447)
+        Me.btn_Volver.Location = New System.Drawing.Point(486, 440)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
         Me.btn_Volver.TabIndex = 123
-        Me.btn_Volver.Text = "Vovler"
+        Me.btn_Volver.Text = "Volver"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
         'btn_Cancelar
         '
-        Me.btn_Cancelar.Location = New System.Drawing.Point(394, 447)
+        Me.btn_Cancelar.Location = New System.Drawing.Point(394, 440)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Cancelar.TabIndex = 122
         Me.btn_Cancelar.Text = "Cancelar"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
-        'btn_Agregar
+        'btn_Generar
         '
-        Me.btn_Agregar.Location = New System.Drawing.Point(106, 447)
-        Me.btn_Agregar.Name = "btn_Agregar"
-        Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Agregar.TabIndex = 120
-        Me.btn_Agregar.Text = "Generar"
-        Me.btn_Agregar.UseVisualStyleBackColor = True
+        Me.btn_Generar.Location = New System.Drawing.Point(106, 440)
+        Me.btn_Generar.Name = "btn_Generar"
+        Me.btn_Generar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Generar.TabIndex = 120
+        Me.btn_Generar.Text = "Generar"
+        Me.btn_Generar.UseVisualStyleBackColor = True
         '
         'btn_Modificar
         '
-        Me.btn_Modificar.Location = New System.Drawing.Point(199, 447)
+        Me.btn_Modificar.Location = New System.Drawing.Point(199, 440)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Modificar.TabIndex = 121
@@ -407,7 +404,7 @@ Partial Class frm_Usuario
         Me.Controls.Add(Me.btn_Eliminar)
         Me.Controls.Add(Me.btn_Volver)
         Me.Controls.Add(Me.btn_Cancelar)
-        Me.Controls.Add(Me.btn_Agregar)
+        Me.Controls.Add(Me.btn_Generar)
         Me.Controls.Add(Me.btn_Modificar)
         Me.Controls.Add(Me.grb_Usuario)
         Me.Controls.Add(Me.grb_Empleado)
@@ -424,7 +421,7 @@ Partial Class frm_Usuario
     End Sub
     Friend WithEvents tmr_HoraUsuario As System.Windows.Forms.Timer
     Friend WithEvents grb_Empleado As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_Cedula As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents grb_Usuario As GroupBox
     Friend WithEvents lbl_SApellido As Label
@@ -444,7 +441,7 @@ Partial Class frm_Usuario
     Friend WithEvents btn_Eliminar As Button
     Friend WithEvents btn_Volver As Button
     Friend WithEvents btn_Cancelar As Button
-    Friend WithEvents btn_Agregar As Button
+    Friend WithEvents btn_Generar As Button
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents lbl_Fecha As Label
     Friend WithEvents Label2 As Label

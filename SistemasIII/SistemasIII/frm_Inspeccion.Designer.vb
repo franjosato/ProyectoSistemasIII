@@ -22,23 +22,23 @@ Partial Class frm_Inspeccion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.grb_Daño = New System.Windows.Forms.GroupBox()
+        Me.btn_Añadir = New System.Windows.Forms.Button()
+        Me.dgv_Daños = New System.Windows.Forms.DataGridView()
         Me.Daño1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Partedevehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txt_DescripcionDaños = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.cmb_ParteVehiculo = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cmb_Daño = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.btn_Guardar = New System.Windows.Forms.Button()
+        Me.btn_Cancelar = New System.Windows.Forms.Button()
+        Me.btn_Salir = New System.Windows.Forms.Button()
         Me.grb_Vehiculo = New System.Windows.Forms.GroupBox()
-        Me.dtp_Año = New System.Windows.Forms.DateTimePicker()
+        Me.txt_Año = New System.Windows.Forms.TextBox()
         Me.lbl_Marca = New System.Windows.Forms.Label()
         Me.txt_Modelo = New System.Windows.Forms.TextBox()
         Me.btn_BuscarP = New System.Windows.Forms.Button()
@@ -55,59 +55,64 @@ Partial Class frm_Inspeccion
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dtp_Fecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cmb_Lugar = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txt_Codigosiniestro = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_Codigopoliza = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cmb_Tipoinspeccion = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.grb_Inspeccion = New System.Windows.Forms.GroupBox()
+        Me.txt_DescripcionInspeccion = New System.Windows.Forms.TextBox()
+        Me.grb_Daño.SuspendLayout()
+        CType(Me.dgv_Daños, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Vehiculo.SuspendLayout()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
+        Me.grb_Inspeccion.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'grb_Daño
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.DataGridView1)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.ComboBox4)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 366)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(611, 290)
-        Me.GroupBox1.TabIndex = 18
-        Me.GroupBox1.TabStop = False
+        Me.grb_Daño.Controls.Add(Me.btn_Añadir)
+        Me.grb_Daño.Controls.Add(Me.dgv_Daños)
+        Me.grb_Daño.Controls.Add(Me.txt_DescripcionDaños)
+        Me.grb_Daño.Controls.Add(Me.Label11)
+        Me.grb_Daño.Controls.Add(Me.cmb_ParteVehiculo)
+        Me.grb_Daño.Controls.Add(Me.Label10)
+        Me.grb_Daño.Controls.Add(Me.cmb_Daño)
+        Me.grb_Daño.Controls.Add(Me.Label6)
+        Me.grb_Daño.Controls.Add(Me.btn_Guardar)
+        Me.grb_Daño.Controls.Add(Me.btn_Cancelar)
+        Me.grb_Daño.Controls.Add(Me.btn_Salir)
+        Me.grb_Daño.Location = New System.Drawing.Point(16, 441)
+        Me.grb_Daño.Name = "grb_Daño"
+        Me.grb_Daño.Size = New System.Drawing.Size(766, 265)
+        Me.grb_Daño.TabIndex = 18
+        Me.grb_Daño.TabStop = False
+        Me.grb_Daño.Text = "Datos de daños"
         '
-        'Button1
+        'btn_Añadir
         '
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(450, 49)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 27)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "Añadir"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_Añadir.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_Añadir.Location = New System.Drawing.Point(645, 49)
+        Me.btn_Añadir.Name = "btn_Añadir"
+        Me.btn_Añadir.Size = New System.Drawing.Size(115, 23)
+        Me.btn_Añadir.TabIndex = 19
+        Me.btn_Añadir.Text = "Añadir"
+        Me.btn_Añadir.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv_Daños
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Daño1, Me.Partedevehiculo, Me.Descripcion})
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 95)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(569, 172)
-        Me.DataGridView1.TabIndex = 22
+        Me.dgv_Daños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_Daños.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Daño1, Me.Partedevehiculo, Me.Descripcion})
+        Me.dgv_Daños.Location = New System.Drawing.Point(20, 82)
+        Me.dgv_Daños.Name = "dgv_Daños"
+        Me.dgv_Daños.Size = New System.Drawing.Size(608, 172)
+        Me.dgv_Daños.TabIndex = 22
         '
         'Daño1
         '
@@ -131,13 +136,13 @@ Partial Class frm_Inspeccion
         Me.Descripcion.ReadOnly = True
         Me.Descripcion.Width = 200
         '
-        'TextBox3
+        'txt_DescripcionDaños
         '
-        Me.TextBox3.Location = New System.Drawing.Point(122, 49)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(310, 20)
-        Me.TextBox3.TabIndex = 19
+        Me.txt_DescripcionDaños.Location = New System.Drawing.Point(122, 49)
+        Me.txt_DescripcionDaños.Name = "txt_DescripcionDaños"
+        Me.txt_DescripcionDaños.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txt_DescripcionDaños.Size = New System.Drawing.Size(506, 20)
+        Me.txt_DescripcionDaños.TabIndex = 19
         '
         'Label11
         '
@@ -145,76 +150,76 @@ Partial Class frm_Inspeccion
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(19, 53)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(70, 16)
+        Me.Label11.Size = New System.Drawing.Size(73, 16)
         Me.Label11.TabIndex = 21
-        Me.Label11.Text = "Descripción"
+        Me.Label11.Text = "Descripción:"
         '
-        'ComboBox4
+        'cmb_ParteVehiculo
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(450, 16)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(139, 21)
-        Me.ComboBox4.TabIndex = 19
+        Me.cmb_ParteVehiculo.FormattingEnabled = True
+        Me.cmb_ParteVehiculo.Location = New System.Drawing.Point(521, 14)
+        Me.cmb_ParteVehiculo.Name = "cmb_ParteVehiculo"
+        Me.cmb_ParteVehiculo.Size = New System.Drawing.Size(239, 21)
+        Me.cmb_ParteVehiculo.TabIndex = 19
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(338, 19)
+        Me.Label10.Location = New System.Drawing.Point(408, 16)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(107, 16)
+        Me.Label10.Size = New System.Drawing.Size(110, 16)
         Me.Label10.TabIndex = 20
-        Me.Label10.Text = "Parte del vehículo"
+        Me.Label10.Text = "Parte del vehículo:"
         '
-        'ComboBox3
+        'cmb_Daño
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(122, 16)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(194, 21)
-        Me.ComboBox3.TabIndex = 19
+        Me.cmb_Daño.FormattingEnabled = True
+        Me.cmb_Daño.Location = New System.Drawing.Point(122, 14)
+        Me.cmb_Daño.Name = "cmb_Daño"
+        Me.cmb_Daño.Size = New System.Drawing.Size(269, 21)
+        Me.cmb_Daño.TabIndex = 19
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(18, 19)
+        Me.Label6.Location = New System.Drawing.Point(51, 16)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(38, 16)
+        Me.Label6.Size = New System.Drawing.Size(41, 16)
         Me.Label6.TabIndex = 19
-        Me.Label6.Text = "Daño"
+        Me.Label6.Text = "Daño:"
         '
-        'Button7
+        'btn_Guardar
         '
-        Me.Button7.Location = New System.Drawing.Point(398, 662)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(115, 27)
-        Me.Button7.TabIndex = 27
-        Me.Button7.Text = "Salir"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btn_Guardar.Location = New System.Drawing.Point(645, 131)
+        Me.btn_Guardar.Name = "btn_Guardar"
+        Me.btn_Guardar.Size = New System.Drawing.Size(115, 27)
+        Me.btn_Guardar.TabIndex = 29
+        Me.btn_Guardar.Text = "Guardar"
+        Me.btn_Guardar.UseVisualStyleBackColor = True
         '
-        'Button8
+        'btn_Cancelar
         '
-        Me.Button8.Location = New System.Drawing.Point(263, 662)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(115, 27)
-        Me.Button8.TabIndex = 28
-        Me.Button8.Text = "Cancelar"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btn_Cancelar.Location = New System.Drawing.Point(645, 164)
+        Me.btn_Cancelar.Name = "btn_Cancelar"
+        Me.btn_Cancelar.Size = New System.Drawing.Size(115, 27)
+        Me.btn_Cancelar.TabIndex = 28
+        Me.btn_Cancelar.Text = "Cancelar"
+        Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
-        'Button9
+        'btn_Salir
         '
-        Me.Button9.Location = New System.Drawing.Point(138, 662)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(115, 27)
-        Me.Button9.TabIndex = 29
-        Me.Button9.Text = "Guardar"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.btn_Salir.Location = New System.Drawing.Point(645, 226)
+        Me.btn_Salir.Name = "btn_Salir"
+        Me.btn_Salir.Size = New System.Drawing.Size(115, 27)
+        Me.btn_Salir.TabIndex = 27
+        Me.btn_Salir.Text = "Salir"
+        Me.btn_Salir.UseVisualStyleBackColor = True
         '
         'grb_Vehiculo
         '
-        Me.grb_Vehiculo.Controls.Add(Me.dtp_Año)
+        Me.grb_Vehiculo.Controls.Add(Me.txt_Año)
         Me.grb_Vehiculo.Controls.Add(Me.lbl_Marca)
         Me.grb_Vehiculo.Controls.Add(Me.txt_Modelo)
         Me.grb_Vehiculo.Controls.Add(Me.btn_BuscarP)
@@ -226,25 +231,22 @@ Partial Class frm_Inspeccion
         Me.grb_Vehiculo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grb_Vehiculo.Location = New System.Drawing.Point(16, 178)
         Me.grb_Vehiculo.Name = "grb_Vehiculo"
-        Me.grb_Vehiculo.Size = New System.Drawing.Size(611, 82)
+        Me.grb_Vehiculo.Size = New System.Drawing.Size(766, 82)
         Me.grb_Vehiculo.TabIndex = 110
         Me.grb_Vehiculo.TabStop = False
         Me.grb_Vehiculo.Text = " Datos del vehículo"
         '
-        'dtp_Año
+        'txt_Año
         '
-        Me.dtp_Año.CustomFormat = """yyyy"""
-        Me.dtp_Año.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.dtp_Año.Location = New System.Drawing.Point(366, 17)
-        Me.dtp_Año.MinDate = New Date(1800, 2, 1, 0, 0, 0, 0)
-        Me.dtp_Año.Name = "dtp_Año"
-        Me.dtp_Año.Size = New System.Drawing.Size(223, 21)
-        Me.dtp_Año.TabIndex = 109
+        Me.txt_Año.Location = New System.Drawing.Point(468, 19)
+        Me.txt_Año.Name = "txt_Año"
+        Me.txt_Año.Size = New System.Drawing.Size(292, 21)
+        Me.txt_Año.TabIndex = 109
         '
         'lbl_Marca
         '
         Me.lbl_Marca.AutoSize = True
-        Me.lbl_Marca.Location = New System.Drawing.Point(38, 52)
+        Me.lbl_Marca.Location = New System.Drawing.Point(34, 52)
         Me.lbl_Marca.Name = "lbl_Marca"
         Me.lbl_Marca.Size = New System.Drawing.Size(48, 16)
         Me.lbl_Marca.TabIndex = 108
@@ -252,14 +254,14 @@ Partial Class frm_Inspeccion
         '
         'txt_Modelo
         '
-        Me.txt_Modelo.Location = New System.Drawing.Point(307, 49)
+        Me.txt_Modelo.Location = New System.Drawing.Point(468, 49)
         Me.txt_Modelo.Name = "txt_Modelo"
-        Me.txt_Modelo.Size = New System.Drawing.Size(138, 21)
+        Me.txt_Modelo.Size = New System.Drawing.Size(292, 21)
         Me.txt_Modelo.TabIndex = 107
         '
         'btn_BuscarP
         '
-        Me.btn_BuscarP.Location = New System.Drawing.Point(236, 19)
+        Me.btn_BuscarP.Location = New System.Drawing.Point(287, 19)
         Me.btn_BuscarP.Name = "btn_BuscarP"
         Me.btn_BuscarP.Size = New System.Drawing.Size(75, 23)
         Me.btn_BuscarP.TabIndex = 106
@@ -269,7 +271,7 @@ Partial Class frm_Inspeccion
         'lbl_Año
         '
         Me.lbl_Año.AutoSize = True
-        Me.lbl_Año.Location = New System.Drawing.Point(331, 20)
+        Me.lbl_Año.Location = New System.Drawing.Point(430, 22)
         Me.lbl_Año.Name = "lbl_Año"
         Me.lbl_Año.Size = New System.Drawing.Size(32, 16)
         Me.lbl_Año.TabIndex = 13
@@ -279,13 +281,13 @@ Partial Class frm_Inspeccion
         '
         Me.txt_Marca.Location = New System.Drawing.Point(92, 49)
         Me.txt_Marca.Name = "txt_Marca"
-        Me.txt_Marca.Size = New System.Drawing.Size(138, 21)
+        Me.txt_Marca.Size = New System.Drawing.Size(270, 21)
         Me.txt_Marca.TabIndex = 12
         '
         'lbl_Modelo
         '
         Me.lbl_Modelo.AutoSize = True
-        Me.lbl_Modelo.Location = New System.Drawing.Point(245, 52)
+        Me.lbl_Modelo.Location = New System.Drawing.Point(406, 49)
         Me.lbl_Modelo.Name = "lbl_Modelo"
         Me.lbl_Modelo.Size = New System.Drawing.Size(56, 16)
         Me.lbl_Modelo.TabIndex = 11
@@ -295,13 +297,13 @@ Partial Class frm_Inspeccion
         '
         Me.txt_Placa.Location = New System.Drawing.Point(92, 19)
         Me.txt_Placa.Name = "txt_Placa"
-        Me.txt_Placa.Size = New System.Drawing.Size(138, 21)
+        Me.txt_Placa.Size = New System.Drawing.Size(189, 21)
         Me.txt_Placa.TabIndex = 9
         '
         'lbl_Placa
         '
         Me.lbl_Placa.AutoSize = True
-        Me.lbl_Placa.Location = New System.Drawing.Point(40, 22)
+        Me.lbl_Placa.Location = New System.Drawing.Point(34, 22)
         Me.lbl_Placa.Name = "lbl_Placa"
         Me.lbl_Placa.Size = New System.Drawing.Size(46, 16)
         Me.lbl_Placa.TabIndex = 8
@@ -311,7 +313,7 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Fecha.Location = New System.Drawing.Point(521, 12)
+        Me.lbl_Fecha.Location = New System.Drawing.Point(672, 20)
         Me.lbl_Fecha.Name = "lbl_Fecha"
         Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
         Me.lbl_Fecha.TabIndex = 131
@@ -321,7 +323,7 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_Usuario.AutoSize = True
         Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Usuario.Location = New System.Drawing.Point(592, 62)
+        Me.lbl_Usuario.Location = New System.Drawing.Point(739, 53)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
         Me.lbl_Usuario.TabIndex = 130
@@ -331,7 +333,7 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(551, 62)
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(698, 53)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
         Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
         Me.lbl_EncabezadoSaludo.TabIndex = 129
@@ -341,7 +343,7 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Hora.Location = New System.Drawing.Point(585, 12)
+        Me.lbl_Hora.Location = New System.Drawing.Point(736, 20)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
         Me.lbl_Hora.TabIndex = 128
@@ -351,10 +353,10 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(206, 97)
+        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(311, 93)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(226, 24)
         Me.lbl_EncabezadoFormuladio.TabIndex = 127
         Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
         '
@@ -362,10 +364,10 @@ Partial Class frm_Inspeccion
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(214, 53)
+        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(318, 53)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
-        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(206, 24)
         Me.lbl_EncabezadoModulo.TabIndex = 126
         Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
         '
@@ -374,10 +376,10 @@ Partial Class frm_Inspeccion
         Me.lbl_EncabezadoEmpresa.AutoSize = True
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(172, 8)
+        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(277, 12)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
-        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
+        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(294, 30)
         Me.lbl_EncabezadoEmpresa.TabIndex = 125
         Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
         '
@@ -387,124 +389,135 @@ Partial Class frm_Inspeccion
         Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
         Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptb_logo.Location = New System.Drawing.Point(1, 2)
+        Me.ptb_logo.Location = New System.Drawing.Point(23, -1)
         Me.ptb_logo.Name = "ptb_logo"
         Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
         Me.ptb_logo.TabIndex = 124
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
         '
-        'Panel1
+        'Label7
         '
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.ComboBox2)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 266)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(611, 99)
-        Me.Panel1.TabIndex = 134
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(442, 65)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(66, 13)
+        Me.Label7.TabIndex = 136
+        Me.Label7.Text = "Descripción:"
         '
-        'Label1
+        'dtp_Fecha
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(98, 13)
-        Me.Label1.TabIndex = 135
-        Me.Label1.Text = "Tipo de Inspección"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(121, 16)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(85, 21)
-        Me.ComboBox1.TabIndex = 136
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(396, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox1.TabIndex = 138
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(298, 19)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 13)
-        Me.Label2.TabIndex = 137
-        Me.Label2.Text = "Código de la Póliza:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(121, 43)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(138, 20)
-        Me.TextBox2.TabIndex = 140
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 48)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(103, 13)
-        Me.Label3.TabIndex = 139
-        Me.Label3.Text = "Código del Siniestro:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 73)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 13)
-        Me.Label4.TabIndex = 141
-        Me.Label4.Text = "Lugar:"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(121, 69)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(112, 21)
-        Me.ComboBox2.TabIndex = 142
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CustomFormat = """yyyy"""
-        Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePicker1.Location = New System.Drawing.Point(301, 62)
-        Me.DateTimePicker1.MinDate = New Date(1800, 2, 1, 0, 0, 0, 0)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(223, 20)
-        Me.DateTimePicker1.TabIndex = 136
+        Me.dtp_Fecha.CustomFormat = """yyyy"""
+        Me.dtp_Fecha.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dtp_Fecha.Location = New System.Drawing.Point(144, 136)
+        Me.dtp_Fecha.MinDate = New Date(1800, 2, 1, 0, 0, 0, 0)
+        Me.dtp_Fecha.Name = "dtp_Fecha"
+        Me.dtp_Fecha.Size = New System.Drawing.Size(218, 20)
+        Me.dtp_Fecha.TabIndex = 136
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(308, 46)
+        Me.Label5.Location = New System.Drawing.Point(95, 138)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 13)
         Me.Label5.TabIndex = 135
         Me.Label5.Text = "Fecha:"
         '
-        'Label7
+        'cmb_Lugar
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(434, 43)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(66, 13)
-        Me.Label7.TabIndex = 136
-        Me.Label7.Text = "Descripción:"
+        Me.cmb_Lugar.FormattingEnabled = True
+        Me.cmb_Lugar.Location = New System.Drawing.Point(144, 98)
+        Me.cmb_Lugar.Name = "cmb_Lugar"
+        Me.cmb_Lugar.Size = New System.Drawing.Size(218, 21)
+        Me.cmb_Lugar.TabIndex = 142
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(98, 101)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.TabIndex = 141
+        Me.Label4.Text = "Lugar:"
+        '
+        'txt_Codigosiniestro
+        '
+        Me.txt_Codigosiniestro.Location = New System.Drawing.Point(144, 65)
+        Me.txt_Codigosiniestro.Name = "txt_Codigosiniestro"
+        Me.txt_Codigosiniestro.Size = New System.Drawing.Size(218, 20)
+        Me.txt_Codigosiniestro.TabIndex = 140
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(32, 65)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(103, 13)
+        Me.Label3.TabIndex = 139
+        Me.Label3.Text = "Código del Siniestro:"
+        '
+        'txt_Codigopoliza
+        '
+        Me.txt_Codigopoliza.Location = New System.Drawing.Point(514, 32)
+        Me.txt_Codigopoliza.Name = "txt_Codigopoliza"
+        Me.txt_Codigopoliza.Size = New System.Drawing.Size(246, 20)
+        Me.txt_Codigopoliza.TabIndex = 138
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(408, 35)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(100, 13)
+        Me.Label2.TabIndex = 137
+        Me.Label2.Text = "Código de la Póliza:"
+        '
+        'cmb_Tipoinspeccion
+        '
+        Me.cmb_Tipoinspeccion.FormattingEnabled = True
+        Me.cmb_Tipoinspeccion.Location = New System.Drawing.Point(144, 31)
+        Me.cmb_Tipoinspeccion.Name = "cmb_Tipoinspeccion"
+        Me.cmb_Tipoinspeccion.Size = New System.Drawing.Size(218, 21)
+        Me.cmb_Tipoinspeccion.TabIndex = 136
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(34, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 13)
+        Me.Label1.TabIndex = 135
+        Me.Label1.Text = "Tipo de Inspección:"
+        '
+        'grb_Inspeccion
+        '
+        Me.grb_Inspeccion.Controls.Add(Me.txt_DescripcionInspeccion)
+        Me.grb_Inspeccion.Controls.Add(Me.Label4)
+        Me.grb_Inspeccion.Controls.Add(Me.Label7)
+        Me.grb_Inspeccion.Controls.Add(Me.Label1)
+        Me.grb_Inspeccion.Controls.Add(Me.dtp_Fecha)
+        Me.grb_Inspeccion.Controls.Add(Me.cmb_Tipoinspeccion)
+        Me.grb_Inspeccion.Controls.Add(Me.Label5)
+        Me.grb_Inspeccion.Controls.Add(Me.Label2)
+        Me.grb_Inspeccion.Controls.Add(Me.cmb_Lugar)
+        Me.grb_Inspeccion.Controls.Add(Me.txt_Codigopoliza)
+        Me.grb_Inspeccion.Controls.Add(Me.Label3)
+        Me.grb_Inspeccion.Controls.Add(Me.txt_Codigosiniestro)
+        Me.grb_Inspeccion.Location = New System.Drawing.Point(16, 268)
+        Me.grb_Inspeccion.Name = "grb_Inspeccion"
+        Me.grb_Inspeccion.Size = New System.Drawing.Size(766, 167)
+        Me.grb_Inspeccion.TabIndex = 135
+        Me.grb_Inspeccion.TabStop = False
+        Me.grb_Inspeccion.Text = "Datos de Inspección"
+        '
+        'txt_DescripcionInspeccion
+        '
+        Me.txt_DescripcionInspeccion.Location = New System.Drawing.Point(514, 65)
+        Me.txt_DescripcionInspeccion.Multiline = True
+        Me.txt_DescripcionInspeccion.Name = "txt_DescripcionInspeccion"
+        Me.txt_DescripcionInspeccion.Size = New System.Drawing.Size(246, 91)
+        Me.txt_DescripcionInspeccion.TabIndex = 143
         '
         'frm_Inspeccion
         '
@@ -513,8 +526,8 @@ Partial Class frm_Inspeccion
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(647, 711)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(800, 711)
+        Me.Controls.Add(Me.grb_Inspeccion)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)
@@ -524,41 +537,37 @@ Partial Class frm_Inspeccion
         Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
         Me.Controls.Add(Me.ptb_logo)
         Me.Controls.Add(Me.grb_Vehiculo)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grb_Daño)
         Me.Name = "frm_Inspeccion"
         Me.Text = "Seguros Maldonado-Inspección"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grb_Daño.ResumeLayout(False)
+        Me.grb_Daño.PerformLayout()
+        CType(Me.dgv_Daños, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Vehiculo.ResumeLayout(False)
         Me.grb_Vehiculo.PerformLayout()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.grb_Inspeccion.ResumeLayout(False)
+        Me.grb_Inspeccion.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents grb_Daño As System.Windows.Forms.GroupBox
+    Friend WithEvents txt_DescripcionDaños As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_ParteVehiculo As System.Windows.Forms.ComboBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_Daño As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents dgv_Daños As System.Windows.Forms.DataGridView
+    Friend WithEvents btn_Añadir As System.Windows.Forms.Button
     Friend WithEvents Daño1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Partedevehiculo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Descripcion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents btn_Salir As System.Windows.Forms.Button
+    Friend WithEvents btn_Cancelar As System.Windows.Forms.Button
+    Friend WithEvents btn_Guardar As System.Windows.Forms.Button
     Friend WithEvents grb_Vehiculo As GroupBox
-    Friend WithEvents dtp_Año As DateTimePicker
     Friend WithEvents lbl_Marca As Label
     Friend WithEvents txt_Modelo As TextBox
     Friend WithEvents btn_BuscarP As Button
@@ -575,16 +584,18 @@ Partial Class frm_Inspeccion
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_Codigosiniestro As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_Codigopoliza As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmb_Tipoinspeccion As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cmb_Lugar As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtp_Fecha As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents grb_Inspeccion As GroupBox
+    Friend WithEvents txt_Año As TextBox
+    Friend WithEvents txt_DescripcionInspeccion As TextBox
 End Class
