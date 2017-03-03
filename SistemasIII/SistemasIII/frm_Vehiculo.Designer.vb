@@ -23,6 +23,8 @@ Partial Class frm_Vehiculo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmb_Transporte = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_Kilometraje = New System.Windows.Forms.TextBox()
         Me.lbl_Kilometraje = New System.Windows.Forms.Label()
         Me.cmb_Uso = New System.Windows.Forms.ComboBox()
@@ -60,8 +62,6 @@ Partial Class frm_Vehiculo
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.ptb_logo = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmb_Transporte = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptb_Foto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,21 +97,38 @@ Partial Class frm_Vehiculo
         Me.GroupBox1.Controls.Add(Me.lbl_Placa)
         Me.GroupBox1.Location = New System.Drawing.Point(10, 151)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(737, 239)
+        Me.GroupBox1.Size = New System.Drawing.Size(756, 239)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'cmb_Transporte
+        '
+        Me.cmb_Transporte.FormattingEnabled = True
+        Me.cmb_Transporte.Location = New System.Drawing.Point(432, 118)
+        Me.cmb_Transporte.Name = "cmb_Transporte"
+        Me.cmb_Transporte.Size = New System.Drawing.Size(150, 21)
+        Me.cmb_Transporte.TabIndex = 25
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(351, 121)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(72, 13)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Lugar de uso:"
+        '
         'txt_Kilometraje
         '
-        Me.txt_Kilometraje.Location = New System.Drawing.Point(609, 161)
+        Me.txt_Kilometraje.Location = New System.Drawing.Point(432, 179)
         Me.txt_Kilometraje.Name = "txt_Kilometraje"
-        Me.txt_Kilometraje.Size = New System.Drawing.Size(100, 20)
+        Me.txt_Kilometraje.Size = New System.Drawing.Size(150, 20)
         Me.txt_Kilometraje.TabIndex = 23
         '
         'lbl_Kilometraje
         '
         Me.lbl_Kilometraje.AutoSize = True
-        Me.lbl_Kilometraje.Location = New System.Drawing.Point(542, 164)
+        Me.lbl_Kilometraje.Location = New System.Drawing.Point(362, 182)
         Me.lbl_Kilometraje.Name = "lbl_Kilometraje"
         Me.lbl_Kilometraje.Size = New System.Drawing.Size(61, 13)
         Me.lbl_Kilometraje.TabIndex = 22
@@ -120,15 +137,15 @@ Partial Class frm_Vehiculo
         'cmb_Uso
         '
         Me.cmb_Uso.FormattingEnabled = True
-        Me.cmb_Uso.Location = New System.Drawing.Point(209, 161)
+        Me.cmb_Uso.Location = New System.Drawing.Point(91, 156)
         Me.cmb_Uso.Name = "cmb_Uso"
-        Me.cmb_Uso.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_Uso.Size = New System.Drawing.Size(181, 21)
         Me.cmb_Uso.TabIndex = 21
         '
         'lbl_Uso
         '
         Me.lbl_Uso.AutoSize = True
-        Me.lbl_Uso.Location = New System.Drawing.Point(174, 164)
+        Me.lbl_Uso.Location = New System.Drawing.Point(56, 161)
         Me.lbl_Uso.Name = "lbl_Uso"
         Me.lbl_Uso.Size = New System.Drawing.Size(29, 13)
         Me.lbl_Uso.TabIndex = 20
@@ -136,7 +153,7 @@ Partial Class frm_Vehiculo
         '
         'txt_SerialCarroceria
         '
-        Me.txt_SerialCarroceria.Location = New System.Drawing.Point(559, 116)
+        Me.txt_SerialCarroceria.Location = New System.Drawing.Point(432, 148)
         Me.txt_SerialCarroceria.Name = "txt_SerialCarroceria"
         Me.txt_SerialCarroceria.Size = New System.Drawing.Size(150, 20)
         Me.txt_SerialCarroceria.TabIndex = 19
@@ -144,7 +161,7 @@ Partial Class frm_Vehiculo
         'lbl_SerialCarroceria
         '
         Me.lbl_SerialCarroceria.AutoSize = True
-        Me.lbl_SerialCarroceria.Location = New System.Drawing.Point(441, 119)
+        Me.lbl_SerialCarroceria.Location = New System.Drawing.Point(311, 151)
         Me.lbl_SerialCarroceria.Name = "lbl_SerialCarroceria"
         Me.lbl_SerialCarroceria.Size = New System.Drawing.Size(112, 13)
         Me.lbl_SerialCarroceria.TabIndex = 18
@@ -152,15 +169,15 @@ Partial Class frm_Vehiculo
         '
         'txt_SerialMotor
         '
-        Me.txt_SerialMotor.Location = New System.Drawing.Point(559, 77)
+        Me.txt_SerialMotor.Location = New System.Drawing.Point(91, 123)
         Me.txt_SerialMotor.Name = "txt_SerialMotor"
-        Me.txt_SerialMotor.Size = New System.Drawing.Size(150, 20)
+        Me.txt_SerialMotor.Size = New System.Drawing.Size(181, 20)
         Me.txt_SerialMotor.TabIndex = 17
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(471, 80)
+        Me.Label1.Location = New System.Drawing.Point(6, 126)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 16
@@ -168,15 +185,15 @@ Partial Class frm_Vehiculo
         '
         'txt_Color
         '
-        Me.txt_Color.Location = New System.Drawing.Point(332, 117)
+        Me.txt_Color.Location = New System.Drawing.Point(91, 193)
         Me.txt_Color.Name = "txt_Color"
-        Me.txt_Color.Size = New System.Drawing.Size(100, 20)
+        Me.txt_Color.Size = New System.Drawing.Size(181, 20)
         Me.txt_Color.TabIndex = 15
         '
         'lbl_Color
         '
         Me.lbl_Color.AutoSize = True
-        Me.lbl_Color.Location = New System.Drawing.Point(296, 123)
+        Me.lbl_Color.Location = New System.Drawing.Point(51, 200)
         Me.lbl_Color.Name = "lbl_Color"
         Me.lbl_Color.Size = New System.Drawing.Size(34, 13)
         Me.lbl_Color.TabIndex = 14
@@ -185,7 +202,7 @@ Partial Class frm_Vehiculo
         'lbl_Año
         '
         Me.lbl_Año.AutoSize = True
-        Me.lbl_Año.Location = New System.Drawing.Point(174, 123)
+        Me.lbl_Año.Location = New System.Drawing.Point(311, 27)
         Me.lbl_Año.Name = "lbl_Año"
         Me.lbl_Año.Size = New System.Drawing.Size(29, 13)
         Me.lbl_Año.TabIndex = 13
@@ -193,23 +210,23 @@ Partial Class frm_Vehiculo
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(209, 117)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(346, 24)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(72, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(236, 20)
         Me.DateTimePicker1.TabIndex = 12
         '
         'btn_Cargar
         '
-        Me.btn_Cargar.Location = New System.Drawing.Point(357, 77)
+        Me.btn_Cargar.Location = New System.Drawing.Point(501, 83)
         Me.btn_Cargar.Name = "btn_Cargar"
-        Me.btn_Cargar.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Cargar.Size = New System.Drawing.Size(81, 23)
         Me.btn_Cargar.TabIndex = 11
         Me.btn_Cargar.Text = "Cargar"
         Me.btn_Cargar.UseVisualStyleBackColor = True
         '
         'txt_TituloPropiedad
         '
-        Me.txt_TituloPropiedad.Location = New System.Drawing.Point(170, 80)
+        Me.txt_TituloPropiedad.Location = New System.Drawing.Point(314, 85)
         Me.txt_TituloPropiedad.Name = "txt_TituloPropiedad"
         Me.txt_TituloPropiedad.Size = New System.Drawing.Size(181, 20)
         Me.txt_TituloPropiedad.TabIndex = 10
@@ -217,7 +234,7 @@ Partial Class frm_Vehiculo
         'lbl_Tituloproiedad
         '
         Me.lbl_Tituloproiedad.AutoSize = True
-        Me.lbl_Tituloproiedad.Location = New System.Drawing.Point(169, 60)
+        Me.lbl_Tituloproiedad.Location = New System.Drawing.Point(311, 65)
         Me.lbl_Tituloproiedad.Name = "lbl_Tituloproiedad"
         Me.lbl_Tituloproiedad.Size = New System.Drawing.Size(101, 13)
         Me.lbl_Tituloproiedad.TabIndex = 9
@@ -225,7 +242,7 @@ Partial Class frm_Vehiculo
         '
         'btn_CargarFoto
         '
-        Me.btn_CargarFoto.Location = New System.Drawing.Point(45, 201)
+        Me.btn_CargarFoto.Location = New System.Drawing.Point(645, 172)
         Me.btn_CargarFoto.Name = "btn_CargarFoto"
         Me.btn_CargarFoto.Size = New System.Drawing.Size(75, 23)
         Me.btn_CargarFoto.TabIndex = 8
@@ -235,7 +252,7 @@ Partial Class frm_Vehiculo
         'ptb_Foto
         '
         Me.ptb_Foto.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.ptb_Foto.Location = New System.Drawing.Point(17, 60)
+        Me.ptb_Foto.Location = New System.Drawing.Point(612, 33)
         Me.ptb_Foto.Name = "ptb_Foto"
         Me.ptb_Foto.Size = New System.Drawing.Size(135, 135)
         Me.ptb_Foto.TabIndex = 7
@@ -244,23 +261,23 @@ Partial Class frm_Vehiculo
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(566, 23)
+        Me.ComboBox1.Location = New System.Drawing.Point(91, 91)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(143, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(181, 21)
         Me.ComboBox1.TabIndex = 6
         '
         'cmb_Marca
         '
         Me.cmb_Marca.FormattingEnabled = True
-        Me.cmb_Marca.Location = New System.Drawing.Point(299, 23)
+        Me.cmb_Marca.Location = New System.Drawing.Point(91, 57)
         Me.cmb_Marca.Name = "cmb_Marca"
-        Me.cmb_Marca.Size = New System.Drawing.Size(179, 21)
+        Me.cmb_Marca.Size = New System.Drawing.Size(181, 21)
         Me.cmb_Marca.TabIndex = 5
         '
         'lbl_Marca
         '
         Me.lbl_Marca.AutoSize = True
-        Me.lbl_Marca.Location = New System.Drawing.Point(253, 27)
+        Me.lbl_Marca.Location = New System.Drawing.Point(45, 60)
         Me.lbl_Marca.Name = "lbl_Marca"
         Me.lbl_Marca.Size = New System.Drawing.Size(40, 13)
         Me.lbl_Marca.TabIndex = 4
@@ -268,7 +285,7 @@ Partial Class frm_Vehiculo
         '
         'btn_Buscar
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(172, 22)
+        Me.btn_Buscar.Location = New System.Drawing.Point(201, 21)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Buscar.TabIndex = 3
@@ -277,7 +294,7 @@ Partial Class frm_Vehiculo
         '
         'txt_Placa
         '
-        Me.txt_Placa.Location = New System.Drawing.Point(66, 24)
+        Me.txt_Placa.Location = New System.Drawing.Point(91, 23)
         Me.txt_Placa.Name = "txt_Placa"
         Me.txt_Placa.Size = New System.Drawing.Size(100, 20)
         Me.txt_Placa.TabIndex = 2
@@ -285,7 +302,7 @@ Partial Class frm_Vehiculo
         'lbl_CodTipoVe
         '
         Me.lbl_CodTipoVe.AutoSize = True
-        Me.lbl_CodTipoVe.Location = New System.Drawing.Point(484, 27)
+        Me.lbl_CodTipoVe.Location = New System.Drawing.Point(9, 94)
         Me.lbl_CodTipoVe.Name = "lbl_CodTipoVe"
         Me.lbl_CodTipoVe.Size = New System.Drawing.Size(76, 13)
         Me.lbl_CodTipoVe.TabIndex = 1
@@ -294,7 +311,7 @@ Partial Class frm_Vehiculo
         'lbl_Placa
         '
         Me.lbl_Placa.AutoSize = True
-        Me.lbl_Placa.Location = New System.Drawing.Point(23, 27)
+        Me.lbl_Placa.Location = New System.Drawing.Point(48, 27)
         Me.lbl_Placa.Name = "lbl_Placa"
         Me.lbl_Placa.Size = New System.Drawing.Size(37, 13)
         Me.lbl_Placa.TabIndex = 0
@@ -349,7 +366,7 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Fecha.Location = New System.Drawing.Point(555, 14)
+        Me.lbl_Fecha.Location = New System.Drawing.Point(652, 23)
         Me.lbl_Fecha.Name = "lbl_Fecha"
         Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
         Me.lbl_Fecha.TabIndex = 134
@@ -359,7 +376,7 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_Usuario.AutoSize = True
         Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Usuario.Location = New System.Drawing.Point(626, 64)
+        Me.lbl_Usuario.Location = New System.Drawing.Point(719, 65)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
         Me.lbl_Usuario.TabIndex = 133
@@ -369,7 +386,7 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(585, 64)
+        Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(678, 65)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
         Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
         Me.lbl_EncabezadoSaludo.TabIndex = 132
@@ -379,7 +396,7 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_Hora.Location = New System.Drawing.Point(619, 14)
+        Me.lbl_Hora.Location = New System.Drawing.Point(716, 23)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
         Me.lbl_Hora.TabIndex = 131
@@ -389,10 +406,10 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(240, 100)
+        Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(272, 94)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
-        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(213, 25)
+        Me.lbl_EncabezadoFormuladio.Size = New System.Drawing.Size(226, 24)
         Me.lbl_EncabezadoFormuladio.TabIndex = 130
         Me.lbl_EncabezadoFormuladio.Text = "Datos del Asegurado"
         '
@@ -400,10 +417,10 @@ Partial Class frm_Vehiculo
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
-        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(248, 56)
+        Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(284, 56)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
-        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(196, 25)
+        Me.lbl_EncabezadoModulo.Size = New System.Drawing.Size(206, 24)
         Me.lbl_EncabezadoModulo.TabIndex = 129
         Me.lbl_EncabezadoModulo.Text = "Módulo de Servicio"
         '
@@ -412,10 +429,10 @@ Partial Class frm_Vehiculo
         Me.lbl_EncabezadoEmpresa.AutoSize = True
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(206, 11)
+        Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(242, 11)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
-        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(291, 29)
+        Me.lbl_EncabezadoEmpresa.Size = New System.Drawing.Size(294, 30)
         Me.lbl_EncabezadoEmpresa.TabIndex = 128
         Me.lbl_EncabezadoEmpresa.Text = "SEGUROS MALDONADO"
         '
@@ -425,29 +442,12 @@ Partial Class frm_Vehiculo
         Me.ptb_logo.BackgroundImage = Global.SistemasIII.My.Resources.Resources.fondot
         Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptb_logo.Location = New System.Drawing.Point(1, 1)
+        Me.ptb_logo.Location = New System.Drawing.Point(23, -1)
         Me.ptb_logo.Name = "ptb_logo"
         Me.ptb_logo.Size = New System.Drawing.Size(132, 132)
         Me.ptb_logo.TabIndex = 127
         Me.ptb_logo.TabStop = False
         Me.ptb_logo.UseWaitCursor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(338, 164)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(72, 13)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Lugar de uso:"
-        '
-        'cmb_Transporte
-        '
-        Me.cmb_Transporte.FormattingEnabled = True
-        Me.cmb_Transporte.Location = New System.Drawing.Point(415, 160)
-        Me.cmb_Transporte.Name = "cmb_Transporte"
-        Me.cmb_Transporte.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_Transporte.TabIndex = 25
         '
         'frm_Vehiculo
         '
@@ -456,7 +456,7 @@ Partial Class frm_Vehiculo
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(759, 447)
+        Me.ClientSize = New System.Drawing.Size(778, 447)
         Me.Controls.Add(Me.lbl_Fecha)
         Me.Controls.Add(Me.lbl_Usuario)
         Me.Controls.Add(Me.lbl_EncabezadoSaludo)

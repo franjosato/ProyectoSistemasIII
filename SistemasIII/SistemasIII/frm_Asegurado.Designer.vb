@@ -30,7 +30,7 @@ Partial Class frm_Asegurado
         Me.lbl_EncabezadoModulo = New System.Windows.Forms.Label()
         Me.lbl_EncabezadoEmpresa = New System.Windows.Forms.Label()
         Me.grb_Licencia = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_FechaL = New System.Windows.Forms.DateTimePicker()
         Me.lbl_GradoL = New System.Windows.Forms.Label()
         Me.lbl_NumeroL = New System.Windows.Forms.Label()
         Me.txt_GradoL = New System.Windows.Forms.TextBox()
@@ -49,7 +49,7 @@ Partial Class frm_Asegurado
         Me.lbl_Estado = New System.Windows.Forms.Label()
         Me.rtb_DireccionH = New System.Windows.Forms.RichTextBox()
         Me.cmb_Ciudad = New System.Windows.Forms.ComboBox()
-        Me.txt_Correro = New System.Windows.Forms.TextBox()
+        Me.txt_Correo = New System.Windows.Forms.TextBox()
         Me.lbl_Correo = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.lbl_Ciudad = New System.Windows.Forms.Label()
@@ -74,11 +74,11 @@ Partial Class frm_Asegurado
         Me.lbl_PApellido = New System.Windows.Forms.Label()
         Me.lbl_SNombre = New System.Windows.Forms.Label()
         Me.lbl_PNombre = New System.Windows.Forms.Label()
-        Me.ptb_logo = New System.Windows.Forms.PictureBox()
         Me.btn_Volver = New System.Windows.Forms.Button()
         Me.btn_Cancelar = New System.Windows.Forms.Button()
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
+        Me.ptb_logo = New System.Windows.Forms.PictureBox()
         Me.grb_Licencia.SuspendLayout()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -164,7 +164,7 @@ Partial Class frm_Asegurado
         'grb_Licencia
         '
         Me.grb_Licencia.BackColor = System.Drawing.Color.Transparent
-        Me.grb_Licencia.Controls.Add(Me.DateTimePicker1)
+        Me.grb_Licencia.Controls.Add(Me.dtp_FechaL)
         Me.grb_Licencia.Controls.Add(Me.lbl_GradoL)
         Me.grb_Licencia.Controls.Add(Me.lbl_NumeroL)
         Me.grb_Licencia.Controls.Add(Me.txt_GradoL)
@@ -178,13 +178,14 @@ Partial Class frm_Asegurado
         Me.grb_Licencia.TabStop = False
         Me.grb_Licencia.Text = "Datos de la Licencia"
         '
-        'DateTimePicker1
+        'dtp_FechaL
         '
-        Me.DateTimePicker1.CalendarMonthBackground = System.Drawing.Color.GhostWhite
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 57)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(233, 21)
-        Me.DateTimePicker1.TabIndex = 94
+        Me.dtp_FechaL.CalendarMonthBackground = System.Drawing.Color.GhostWhite
+        Me.dtp_FechaL.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_FechaL.Location = New System.Drawing.Point(141, 57)
+        Me.dtp_FechaL.Name = "dtp_FechaL"
+        Me.dtp_FechaL.Size = New System.Drawing.Size(168, 21)
+        Me.dtp_FechaL.TabIndex = 94
         '
         'lbl_GradoL
         '
@@ -321,7 +322,7 @@ Partial Class frm_Asegurado
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Estado)
         Me.grb_DireccYContacto.Controls.Add(Me.rtb_DireccionH)
         Me.grb_DireccYContacto.Controls.Add(Me.cmb_Ciudad)
-        Me.grb_DireccYContacto.Controls.Add(Me.txt_Correro)
+        Me.grb_DireccYContacto.Controls.Add(Me.txt_Correo)
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Correo)
         Me.grb_DireccYContacto.Controls.Add(Me.LinkLabel1)
         Me.grb_DireccYContacto.Controls.Add(Me.lbl_Ciudad)
@@ -375,7 +376,7 @@ Partial Class frm_Asegurado
         'rtb_DireccionH
         '
         Me.rtb_DireccionH.BackColor = System.Drawing.Color.GhostWhite
-        Me.rtb_DireccionH.Location = New System.Drawing.Point(438, 278)
+        Me.rtb_DireccionH.Location = New System.Drawing.Point(395, 18)
         Me.rtb_DireccionH.MaxLength = 40
         Me.rtb_DireccionH.Name = "rtb_DireccionH"
         Me.rtb_DireccionH.Size = New System.Drawing.Size(273, 53)
@@ -391,14 +392,14 @@ Partial Class frm_Asegurado
         Me.cmb_Ciudad.Size = New System.Drawing.Size(139, 24)
         Me.cmb_Ciudad.TabIndex = 90
         '
-        'txt_Correro
+        'txt_Correo
         '
-        Me.txt_Correro.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Correro.Location = New System.Drawing.Point(101, 111)
-        Me.txt_Correro.MaxLength = 20
-        Me.txt_Correro.Name = "txt_Correro"
-        Me.txt_Correro.Size = New System.Drawing.Size(165, 21)
-        Me.txt_Correro.TabIndex = 81
+        Me.txt_Correo.BackColor = System.Drawing.Color.GhostWhite
+        Me.txt_Correo.Location = New System.Drawing.Point(101, 111)
+        Me.txt_Correo.MaxLength = 20
+        Me.txt_Correo.Name = "txt_Correo"
+        Me.txt_Correo.Size = New System.Drawing.Size(165, 21)
+        Me.txt_Correo.TabIndex = 81
         '
         'lbl_Correo
         '
@@ -507,9 +508,10 @@ Partial Class frm_Asegurado
         'dtp_FNacimiento
         '
         Me.dtp_FNacimiento.CalendarMonthBackground = System.Drawing.Color.GhostWhite
+        Me.dtp_FNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_FNacimiento.Location = New System.Drawing.Point(144, 119)
         Me.dtp_FNacimiento.Name = "dtp_FNacimiento"
-        Me.dtp_FNacimiento.Size = New System.Drawing.Size(233, 21)
+        Me.dtp_FNacimiento.Size = New System.Drawing.Size(122, 21)
         Me.dtp_FNacimiento.TabIndex = 75
         '
         'lbl_FNacimiento
@@ -523,9 +525,9 @@ Partial Class frm_Asegurado
         '
         'cmb_Nacionalidad
         '
-        Me.cmb_Nacionalidad.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
         Me.cmb_Nacionalidad.BackColor = System.Drawing.Color.GhostWhite
         Me.cmb_Nacionalidad.FormattingEnabled = True
+        Me.cmb_Nacionalidad.Items.AddRange(New Object() {"V", "E"})
         Me.cmb_Nacionalidad.Location = New System.Drawing.Point(101, 19)
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
         Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 24)
@@ -622,21 +624,9 @@ Partial Class frm_Asegurado
         Me.lbl_PNombre.TabIndex = 53
         Me.lbl_PNombre.Text = "Primer nombre:"
         '
-        'ptb_logo
-        '
-        Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
-        Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ptb_logo.Image = Global.SistemasIII.My.Resources.Resources.fondot
-        Me.ptb_logo.Location = New System.Drawing.Point(0, -16)
-        Me.ptb_logo.Name = "ptb_logo"
-        Me.ptb_logo.Size = New System.Drawing.Size(162, 162)
-        Me.ptb_logo.TabIndex = 106
-        Me.ptb_logo.TabStop = False
-        Me.ptb_logo.UseWaitCursor = True
-        '
         'btn_Volver
         '
+        Me.btn_Volver.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_Volver.Location = New System.Drawing.Point(474, 575)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
@@ -646,6 +636,7 @@ Partial Class frm_Asegurado
         '
         'btn_Cancelar
         '
+        Me.btn_Cancelar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_Cancelar.Location = New System.Drawing.Point(355, 575)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
@@ -655,6 +646,7 @@ Partial Class frm_Asegurado
         '
         'btn_Modificar
         '
+        Me.btn_Modificar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_Modificar.Location = New System.Drawing.Point(238, 575)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
@@ -664,12 +656,26 @@ Partial Class frm_Asegurado
         '
         'btn_Agregar
         '
+        Me.btn_Agregar.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_Agregar.Location = New System.Drawing.Point(122, 575)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
         Me.btn_Agregar.TabIndex = 116
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
+        '
+        'ptb_logo
+        '
+        Me.ptb_logo.BackColor = System.Drawing.Color.Transparent
+        Me.ptb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptb_logo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ptb_logo.Image = Global.SistemasIII.My.Resources.Resources.fondot
+        Me.ptb_logo.Location = New System.Drawing.Point(-6, -20)
+        Me.ptb_logo.Name = "ptb_logo"
+        Me.ptb_logo.Size = New System.Drawing.Size(162, 162)
+        Me.ptb_logo.TabIndex = 106
+        Me.ptb_logo.TabStop = False
+        Me.ptb_logo.UseWaitCursor = True
         '
         'frm_Asegurado
         '
@@ -731,7 +737,7 @@ Partial Class frm_Asegurado
     Friend WithEvents lbl_Estado As Label
     Friend WithEvents rtb_DireccionH As RichTextBox
     Friend WithEvents cmb_Ciudad As ComboBox
-    Friend WithEvents txt_Correro As TextBox
+    Friend WithEvents txt_Correo As TextBox
     Friend WithEvents lbl_Correo As Label
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents lbl_Ciudad As Label
@@ -761,7 +767,7 @@ Partial Class frm_Asegurado
     Friend WithEvents btn_Cancelar As Button
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents btn_Agregar As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtp_FechaL As DateTimePicker
     Friend WithEvents lbl_GradoL As Label
     Friend WithEvents lbl_NumeroL As Label
     Friend WithEvents txt_GradoL As TextBox

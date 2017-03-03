@@ -3,9 +3,6 @@
 Public Class frm_Usuario
     Private Sub frm_Usuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
-        lbl_Hora.Text = DateTime.Now.ToShortTimeString()
-
     End Sub
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
@@ -53,4 +50,7 @@ Public Class frm_Usuario
             btn_Buscar.PerformClick()
         End If
     End Sub
+
+
+
 End Class
