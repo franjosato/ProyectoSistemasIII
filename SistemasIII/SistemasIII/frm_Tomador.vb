@@ -1,6 +1,6 @@
 ﻿Public Class frm_Tomador
 
-    Private Sub HBotones(ByRef sn As Boolean)
+    Public Sub HBotones(ByRef sn As Boolean)
         Me.btn_Agregar.Enabled = sn
         Me.btn_Buscar.Enabled = Not sn
         'Me.btn_Cancelar.Enabled = Not sn
@@ -26,6 +26,15 @@
         Me.cmb_EdoTrabajo.SelectedIndex = -1
         'desactivar todos los campos
         btn_Cancelar.PerformClick()
+        'Cargar autocomplete de cedula de tomador
+        sentencia = "Select t_cedula from tomador where t_estatus='A' order by t_cedula"
+        cmb_CedulaT.AutoCompleteCustomSource = Autocompletar(sentencia, "t_cedula")
+        cmb_CedulaT.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        cmb_CedulaT.AutoCompleteSource = AutoCompleteSource.CustomSource
+        cmb_CedulaT.DataSource = Datos(sentencia)
+        cmb_CedulaT.DisplayMember = "t_cedula"
+        cmb_CedulaT.ValueMember = "t_cedula"
+        cmb_CedulaT.SelectedIndex = -1
 
     End Sub
 
@@ -67,7 +76,7 @@
         Validarletras(e)
     End Sub
 
-    Private Sub txt_Cedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_Cedula.KeyPress
+    Private Sub txt_Cedula_KeyPress(sender As Object, e As KeyPressEventArgs)
         ValidarNumero(e)
     End Sub
 
@@ -88,10 +97,10 @@
     End Sub
 
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
-        txt_Cedula.Focus()
-        ActiveControl() = txt_Cedula
+        cmb_CedulaT.Focus()
+        ActiveControl() = cmb_CedulaT
         Limpiar(Me)
-        HCampos(Me, False, txt_Cedula)
+        HCampos(Me, False, cmb_CedulaT)
         HBotones(False)
         cmb_Nacionalidad.Text = "V"
         Me.btn_Modificar.Text = "Modificar"
@@ -158,7 +167,7 @@
                         `t_correo_trab`,
                         `t_ingreso_promedio`,
                         `t_estatus`)
-                        values ('" & txt_Cedula.Text & "',
+                        values ('" & cmb_CedulaT.SelectedValue & "',
                         '" & cmb_Nacionalidad.Text & "',
                         '" & txt_PNombre.Text & "',
                         '" & txt_SNombre.Text & "',
@@ -193,7 +202,10 @@
     End Sub
 
     Private Sub cmb_EdoTrabajo_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmb_EdoTrabajo.SelectionChangeCommitted
-        sentencia = "select distinct ciudades.* from ciudades,estados where ciudades.id_estado= " + Me.cmb_EdoTrabajo.SelectedValue.ToString
+        sentencia = "select distinct ciudades.*
+                    from ciudades,
+                    estados 
+                    where ciudades.id_estado= '" & Me.cmb_EdoTrabajo.SelectedValue.ToString & "' "
         'se llena el combobox de ciudad dependiendo del estado seleccionado
         cmb_CiudadTrabajo.DataSource = Datos(sentencia)
         cmb_CiudadTrabajo.DisplayMember = "ciudad"
@@ -202,19 +214,17 @@
         cmb_CiudadTrabajo.Focus()
     End Sub
 
-    Private Sub txt_Cedula_TextChanged(sender As Object, e As EventArgs) Handles txt_Cedula.TextChanged
-        If txt_Cedula.TextLength <> 0 Then
-            cmb_Nacionalidad.Enabled = True
-        End If
+    Private Sub txt_Cedula_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
-        If (cmb_Nacionalidad.SelectedItem = "") Or (txt_Cedula.Text = "") Then
+        If (cmb_Nacionalidad.SelectedItem = "") Or (cmb_CedulaT.SelectedIndex = -1) Then
             MsgBox("Debe llenar ambos campos", vbInformation, "Gestión de Tomador")
             Return
         End If
         sentencia = "select * from tomador 
-                    where t_cedula= '" + txt_Cedula.Text + "'   
+                    where t_cedula= '" & cmb_CedulaT.SelectedValue.ToString & "'   
                     and t_nacionalidad= '" + cmb_Nacionalidad.Text + "'
                     and t_estatus='A'"
         CSelect(sentencia)
@@ -223,11 +233,11 @@
 
             If MsgBox("El tomador no existe ¿Desea agregarlo?", vbYesNo, "Gestión de Tomador") = MsgBoxResult.Yes Then
 
-                HCampos(Me, True, txt_Cedula)
-                Dim cedula As String = txt_Cedula.Text
+                HCampos(Me, True, cmb_CedulaT)
+                Dim cedula As String = cmb_CedulaT.SelectedIndex.ToString
                 Dim naci As Char = cmb_Nacionalidad.Text
                 Limpiar(Me)
-                txt_Cedula.Text = cedula
+                cmb_CedulaT.SelectedValue = cedula
                 cmb_Nacionalidad.Text = naci
                 cmb_Nacionalidad.Enabled = False
                 HBotones(True)
@@ -256,6 +266,8 @@
             End If
             rtb_DireccionH.Text = sdr("t_direccion_hab")
             txt_ZonaP.Text = sdr("t_zona_post")
+            cmb_Ciudad.Text = ""
+            cmb_Estado.Text = ""
             cmb_Estado.SelectedText = sdr("t_estado_hab")
             cmb_Ciudad.SelectedText = sdr("t_ciudad_hab")
             txt_TlfFijo.Text = sdr("t_telf_hab")
@@ -264,8 +276,10 @@
             txt_Profesion.Text = sdr("t_profesion")
             txt_ActEconomica.Text = sdr("t_act_economica")
             txt_Cargo.Text = sdr("t_cargo")
-            cmb_EdoTrabajo.SelectedText = sdr("t_estado_trab")
-            cmb_CiudadTrabajo.SelectedText = sdr("t_ciudad_trab")
+            cmb_EdoTrabajo.Text = ""
+            cmb_CiudadTrabajo.Text = ""
+            cmb_EdoTrabajo.Text = sdr("t_estado_trab")
+            cmb_CiudadTrabajo.Text = sdr("t_ciudad_trab")
             rtb_DireccionT.Text = sdr("t_direccion_trab")
             txt_TlfTrabajo.Text = sdr("t_telf_trab")
             txt_CorreoT.Text = sdr("t_correo_trab")
@@ -281,13 +295,13 @@
     Private Sub btn_Modificar_Click(sender As Object, e As EventArgs) Handles btn_Modificar.Click
 
         If (Me.btn_Modificar.Text = "Modificar") Then
-            HCampos(Me, True, txt_Cedula)
+            HCampos(Me, True, cmb_CedulaT)
             cmb_Nacionalidad.Enabled = False
             Me.btn_Modificar.Text = "Guardar"
         Else
             If (validar_controles(Me)) Then
                 sentencia = "Select * from tomador 
-                            where t_cedula= '" + Me.txt_Cedula.Text + "' 
+                            where t_cedula= '" & cmb_CedulaT.SelectedValue.ToString & "' 
                             and t_nacionalidad= '" + cmb_Nacionalidad.Text + "' 
                             and t_estatus= 'A' "
                 CSelect(sentencia)
@@ -359,7 +373,7 @@
                                 t_telf_trab='" & txt_TlfTrabajo.Text & "',
                                 t_correo_trab='" & txt_CorreoT.Text & "',
                                 t_ingreso_promedio='" & txt_IngresoE.Text & "'
-                                where t_cedula='" & txt_Cedula.Text & "' "
+                                where t_cedula='" & cmb_CedulaT.SelectedValue.ToString & "' "
                     comando22(sentencia)
                     MsgBox("Los cambios se han realizado con exito", vbInformation, "Gestion de tomador")
                     Me.btn_Cancelar.PerformClick()
@@ -397,5 +411,17 @@
 
     Private Sub lbl_PApellido_Click(sender As Object, e As EventArgs) Handles lbl_PApellido.Click
 
+    End Sub
+
+    Private Sub cmb_CedulaT_KeyDown(sender As Object, e As KeyEventArgs) Handles cmb_CedulaT.KeyDown
+        If e.KeyCode.Equals(Keys.Enter) Then
+            If cmb_CedulaT.SelectedIndex <> -1 Then
+                btn_Buscar.PerformClick()
+            End If
+        End If
+    End Sub
+
+    Private Sub cmb_CedulaT_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cmb_CedulaT.SelectionChangeCommitted
+        btn_Buscar.PerformClick()
     End Sub
 End Class

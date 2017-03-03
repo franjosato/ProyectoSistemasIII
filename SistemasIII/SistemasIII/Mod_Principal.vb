@@ -6,6 +6,7 @@
     Public cont As Integer
     Public general As Boolean
     Public X As Integer    'variable que se utilizara en la funsion Timer
+    Public call_frm_tomador As New frm_Tomador
     Public Sub Validarletras(ByRef e As KeyPressEventArgs)
         If e.KeyChar.IsLetter(e.KeyChar) Then
             e.Handled = False
@@ -31,6 +32,7 @@
         e.Handled = True
 
     End Sub
+
 
 
     Public Sub ValidarNumero(ByRef e As KeyPressEventArgs)

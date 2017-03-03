@@ -36,7 +36,6 @@ Partial Class frm_Tomador
         Me.dtp_FNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.lbl_FNacimiento = New System.Windows.Forms.Label()
         Me.cmb_Nacionalidad = New System.Windows.Forms.ComboBox()
-        Me.txt_Cedula = New System.Windows.Forms.TextBox()
         Me.lbl_Cedula = New System.Windows.Forms.Label()
         Me.lbl_Ciudad = New System.Windows.Forms.Label()
         Me.txt_TlfMovil = New System.Windows.Forms.TextBox()
@@ -96,6 +95,7 @@ Partial Class frm_Tomador
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
         Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.cmb_CedulaT = New System.Windows.Forms.ComboBox()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -227,15 +227,6 @@ Partial Class frm_Tomador
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
         Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 24)
         Me.cmb_Nacionalidad.TabIndex = 70
-        '
-        'txt_Cedula
-        '
-        Me.txt_Cedula.BackColor = System.Drawing.Color.GhostWhite
-        Me.txt_Cedula.Location = New System.Drawing.Point(154, 21)
-        Me.txt_Cedula.MaxLength = 8
-        Me.txt_Cedula.Name = "txt_Cedula"
-        Me.txt_Cedula.Size = New System.Drawing.Size(112, 21)
-        Me.txt_Cedula.TabIndex = 69
         '
         'lbl_Cedula
         '
@@ -375,6 +366,7 @@ Partial Class frm_Tomador
         'grb_Personales
         '
         Me.grb_Personales.BackColor = System.Drawing.Color.Transparent
+        Me.grb_Personales.Controls.Add(Me.cmb_CedulaT)
         Me.grb_Personales.Controls.Add(Me.btn_Buscar)
         Me.grb_Personales.Controls.Add(Me.grb_Edocivil)
         Me.grb_Personales.Controls.Add(Me.grb_DireccYContacto)
@@ -382,7 +374,6 @@ Partial Class frm_Tomador
         Me.grb_Personales.Controls.Add(Me.dtp_FNacimiento)
         Me.grb_Personales.Controls.Add(Me.lbl_FNacimiento)
         Me.grb_Personales.Controls.Add(Me.cmb_Nacionalidad)
-        Me.grb_Personales.Controls.Add(Me.txt_Cedula)
         Me.grb_Personales.Controls.Add(Me.lbl_Cedula)
         Me.grb_Personales.Controls.Add(Me.txt_SApellido)
         Me.grb_Personales.Controls.Add(Me.txt_SNombre)
@@ -840,6 +831,14 @@ Partial Class frm_Tomador
         '
         Me.EventLog1.SynchronizingObject = Me
         '
+        'cmb_CedulaT
+        '
+        Me.cmb_CedulaT.FormattingEnabled = True
+        Me.cmb_CedulaT.Location = New System.Drawing.Point(154, 18)
+        Me.cmb_CedulaT.Name = "cmb_CedulaT"
+        Me.cmb_CedulaT.Size = New System.Drawing.Size(98, 24)
+        Me.cmb_CedulaT.TabIndex = 94
+        '
         'frm_Tomador
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -895,7 +894,6 @@ Partial Class frm_Tomador
     Friend WithEvents dtp_FNacimiento As DateTimePicker
     Friend WithEvents lbl_FNacimiento As Label
     Friend WithEvents cmb_Nacionalidad As ComboBox
-    Friend WithEvents txt_Cedula As TextBox
     Friend WithEvents lbl_Cedula As Label
     Friend WithEvents lbl_Ciudad As Label
     Friend WithEvents txt_TlfMovil As TextBox
@@ -928,7 +926,6 @@ Partial Class frm_Tomador
     Friend WithEvents lbl_Profesion As Label
     Friend WithEvents txt_Cargo As TextBox
     Friend WithEvents txt_Profesion As TextBox
-    Friend WithEvents btn_Buscar As Button
     Friend WithEvents btn_Agregar As Button
     Friend WithEvents btn_Modificar As Button
     Friend WithEvents btn_Cancelar As Button
@@ -958,4 +955,6 @@ Partial Class frm_Tomador
     Friend WithEvents lbl_CiudadTrabajo As Label
     Friend WithEvents rtb_DireccionT As RichTextBox
     Friend WithEvents lbl_DireccionT As Label
+    Public WithEvents btn_Buscar As Button
+    Friend WithEvents cmb_CedulaT As ComboBox
 End Class

@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>SistemasIII.My.MyApplication</StartupObject>
     <RootNamespace>SistemasIII</RootNamespace>
-    <AssemblyName>m</AssemblyName>
+    <AssemblyName>Seguros Maldonado</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>m.xml</DocumentationFile>
+    <DocumentationFile>Seguros Maldonado.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>m.xml</DocumentationFile>
+    <DocumentationFile>Seguros Maldonado.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -86,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexionmysql.vb" />
+    <Compile Include="frm_reporte.Designer.vb">
+      <DependentUpon>frm_reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_reporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_Cobertura.Designer.vb">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
     </Compile>
@@ -238,6 +244,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_reporte.resx">
+      <DependentUpon>frm_reporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_Cobertura.resx">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
     </EmbeddedResource>

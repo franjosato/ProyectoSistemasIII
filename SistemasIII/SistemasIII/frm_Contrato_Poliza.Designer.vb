@@ -29,6 +29,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Modificar = New System.Windows.Forms.Button()
         Me.btn_Agregar = New System.Windows.Forms.Button()
         Me.grb_Vehiculo = New System.Windows.Forms.GroupBox()
+        Me.cmb_Placa = New System.Windows.Forms.ComboBox()
         Me.dtp_Año = New System.Windows.Forms.DateTimePicker()
         Me.lbl_Marca = New System.Windows.Forms.Label()
         Me.txt_Modelo = New System.Windows.Forms.TextBox()
@@ -39,15 +40,16 @@ Partial Class frm_Contrato_Poliza
         Me.txt_Placa = New System.Windows.Forms.TextBox()
         Me.lbl_Placa = New System.Windows.Forms.Label()
         Me.grb_Poliza = New System.Windows.Forms.GroupBox()
+        Me.ltb_cobertura = New System.Windows.Forms.ListBox()
+        Me.cmb_CodigoContrato = New System.Windows.Forms.ComboBox()
         Me.ltb_PlanPago = New System.Windows.Forms.ListBox()
         Me.lbl_PlanPago = New System.Windows.Forms.Label()
-        Me.ltv_Coberturas = New System.Windows.Forms.ListView()
         Me.lbl_Coberturas = New System.Windows.Forms.Label()
         Me.ltb_TipoPoliza = New System.Windows.Forms.ListBox()
         Me.lbl_TipoPoliza = New System.Windows.Forms.Label()
         Me.lbl_FechaF = New System.Windows.Forms.Label()
         Me.grb_Pagos = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_Suma_asegurada = New System.Windows.Forms.TextBox()
         Me.lbl_SumaAsegurada = New System.Windows.Forms.Label()
         Me.dtp_FechaCobro = New System.Windows.Forms.DateTimePicker()
         Me.lbl_FechaCobro = New System.Windows.Forms.Label()
@@ -66,8 +68,9 @@ Partial Class frm_Contrato_Poliza
         Me.txt_Codigo = New System.Windows.Forms.TextBox()
         Me.lbl_Codigo = New System.Windows.Forms.Label()
         Me.grb_Asegurado = New System.Windows.Forms.GroupBox()
-        Me.btn_BuscarA = New System.Windows.Forms.Button()
         Me.cmb_CedulaA = New System.Windows.Forms.ComboBox()
+        Me.btn_BuscarA = New System.Windows.Forms.Button()
+        Me.cmb_NacionalidadA = New System.Windows.Forms.ComboBox()
         Me.lbl_PNombreA = New System.Windows.Forms.Label()
         Me.txt_CedulaA = New System.Windows.Forms.TextBox()
         Me.lbl_SNombreA = New System.Windows.Forms.Label()
@@ -79,6 +82,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_PNombreA = New System.Windows.Forms.TextBox()
         Me.txt_PApellidoA = New System.Windows.Forms.TextBox()
         Me.grb_Tomador = New System.Windows.Forms.GroupBox()
+        Me.cmb_CedulaT = New System.Windows.Forms.ComboBox()
         Me.btn_BuscarT = New System.Windows.Forms.Button()
         Me.cmb_NacionalidadT = New System.Windows.Forms.ComboBox()
         Me.lbl_PNombreT = New System.Windows.Forms.Label()
@@ -112,7 +116,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Anular.Location = New System.Drawing.Point(394, 700)
         Me.btn_Anular.Name = "btn_Anular"
         Me.btn_Anular.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Anular.TabIndex = 115
+        Me.btn_Anular.TabIndex = 37
         Me.btn_Anular.Text = "Anular"
         Me.btn_Anular.UseVisualStyleBackColor = True
         '
@@ -121,7 +125,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Renobar.Location = New System.Drawing.Point(281, 700)
         Me.btn_Renobar.Name = "btn_Renobar"
         Me.btn_Renobar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Renobar.TabIndex = 114
+        Me.btn_Renobar.TabIndex = 36
         Me.btn_Renobar.Text = "Renovar"
         Me.btn_Renobar.UseVisualStyleBackColor = True
         '
@@ -130,7 +134,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Volver.Location = New System.Drawing.Point(633, 700)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Volver.TabIndex = 113
+        Me.btn_Volver.TabIndex = 39
         Me.btn_Volver.Text = "Volver"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
@@ -139,7 +143,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Cancelar.Location = New System.Drawing.Point(514, 700)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Cancelar.TabIndex = 112
+        Me.btn_Cancelar.TabIndex = 38
         Me.btn_Cancelar.Text = "Cancelar"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
@@ -148,7 +152,7 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Modificar.Location = New System.Drawing.Point(163, 700)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Modificar.TabIndex = 111
+        Me.btn_Modificar.TabIndex = 35
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
@@ -157,12 +161,13 @@ Partial Class frm_Contrato_Poliza
         Me.btn_Agregar.Location = New System.Drawing.Point(47, 700)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Agregar.TabIndex = 110
+        Me.btn_Agregar.TabIndex = 34
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
         'grb_Vehiculo
         '
+        Me.grb_Vehiculo.Controls.Add(Me.cmb_Placa)
         Me.grb_Vehiculo.Controls.Add(Me.dtp_Año)
         Me.grb_Vehiculo.Controls.Add(Me.lbl_Marca)
         Me.grb_Vehiculo.Controls.Add(Me.txt_Modelo)
@@ -176,19 +181,28 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Vehiculo.Location = New System.Drawing.Point(8, 339)
         Me.grb_Vehiculo.Name = "grb_Vehiculo"
         Me.grb_Vehiculo.Size = New System.Drawing.Size(749, 82)
-        Me.grb_Vehiculo.TabIndex = 109
+        Me.grb_Vehiculo.TabIndex = 17
         Me.grb_Vehiculo.TabStop = False
         Me.grb_Vehiculo.Text = " Datos del vehiculo"
+        '
+        'cmb_Placa
+        '
+        Me.cmb_Placa.FormattingEnabled = True
+        Me.cmb_Placa.Location = New System.Drawing.Point(91, 19)
+        Me.cmb_Placa.Name = "cmb_Placa"
+        Me.cmb_Placa.Size = New System.Drawing.Size(97, 24)
+        Me.cmb_Placa.TabIndex = 18
         '
         'dtp_Año
         '
         Me.dtp_Año.CustomFormat = """yyyy"""
+        Me.dtp_Año.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtp_Año.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.dtp_Año.Location = New System.Drawing.Point(502, 49)
         Me.dtp_Año.MinDate = New Date(1800, 2, 1, 0, 0, 0, 0)
         Me.dtp_Año.Name = "dtp_Año"
-        Me.dtp_Año.Size = New System.Drawing.Size(200, 21)
-        Me.dtp_Año.TabIndex = 109
+        Me.dtp_Año.Size = New System.Drawing.Size(59, 21)
+        Me.dtp_Año.TabIndex = 21
         '
         'lbl_Marca
         '
@@ -204,14 +218,14 @@ Partial Class frm_Contrato_Poliza
         Me.txt_Modelo.Location = New System.Drawing.Point(307, 49)
         Me.txt_Modelo.Name = "txt_Modelo"
         Me.txt_Modelo.Size = New System.Drawing.Size(138, 21)
-        Me.txt_Modelo.TabIndex = 107
+        Me.txt_Modelo.TabIndex = 20
         '
         'btn_BuscarP
         '
-        Me.btn_BuscarP.Location = New System.Drawing.Point(236, 19)
+        Me.btn_BuscarP.Location = New System.Drawing.Point(194, 19)
         Me.btn_BuscarP.Name = "btn_BuscarP"
         Me.btn_BuscarP.Size = New System.Drawing.Size(75, 23)
-        Me.btn_BuscarP.TabIndex = 106
+        Me.btn_BuscarP.TabIndex = 22
         Me.btn_BuscarP.Text = "Buscar"
         Me.btn_BuscarP.UseVisualStyleBackColor = True
         '
@@ -229,7 +243,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_Marca.Location = New System.Drawing.Point(92, 49)
         Me.txt_Marca.Name = "txt_Marca"
         Me.txt_Marca.Size = New System.Drawing.Size(138, 21)
-        Me.txt_Marca.TabIndex = 12
+        Me.txt_Marca.TabIndex = 19
         '
         'lbl_Modelo
         '
@@ -244,7 +258,7 @@ Partial Class frm_Contrato_Poliza
         '
         Me.txt_Placa.Location = New System.Drawing.Point(92, 19)
         Me.txt_Placa.Name = "txt_Placa"
-        Me.txt_Placa.Size = New System.Drawing.Size(138, 21)
+        Me.txt_Placa.Size = New System.Drawing.Size(96, 21)
         Me.txt_Placa.TabIndex = 9
         '
         'lbl_Placa
@@ -258,9 +272,10 @@ Partial Class frm_Contrato_Poliza
         '
         'grb_Poliza
         '
+        Me.grb_Poliza.Controls.Add(Me.ltb_cobertura)
+        Me.grb_Poliza.Controls.Add(Me.cmb_CodigoContrato)
         Me.grb_Poliza.Controls.Add(Me.ltb_PlanPago)
         Me.grb_Poliza.Controls.Add(Me.lbl_PlanPago)
-        Me.grb_Poliza.Controls.Add(Me.ltv_Coberturas)
         Me.grb_Poliza.Controls.Add(Me.lbl_Coberturas)
         Me.grb_Poliza.Controls.Add(Me.ltb_TipoPoliza)
         Me.grb_Poliza.Controls.Add(Me.lbl_TipoPoliza)
@@ -280,6 +295,25 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Poliza.TabStop = False
         Me.grb_Poliza.Text = " Datos de la póliza"
         '
+        'ltb_cobertura
+        '
+        Me.ltb_cobertura.Enabled = False
+        Me.ltb_cobertura.FormattingEnabled = True
+        Me.ltb_cobertura.ItemHeight = 16
+        Me.ltb_cobertura.Location = New System.Drawing.Point(297, 92)
+        Me.ltb_cobertura.Name = "ltb_cobertura"
+        Me.ltb_cobertura.SelectionMode = System.Windows.Forms.SelectionMode.None
+        Me.ltb_cobertura.Size = New System.Drawing.Size(174, 84)
+        Me.ltb_cobertura.TabIndex = 51
+        '
+        'cmb_CodigoContrato
+        '
+        Me.cmb_CodigoContrato.FormattingEnabled = True
+        Me.cmb_CodigoContrato.Location = New System.Drawing.Point(92, 19)
+        Me.cmb_CodigoContrato.Name = "cmb_CodigoContrato"
+        Me.cmb_CodigoContrato.Size = New System.Drawing.Size(87, 24)
+        Me.cmb_CodigoContrato.TabIndex = 23
+        '
         'ltb_PlanPago
         '
         Me.ltb_PlanPago.FormattingEnabled = True
@@ -287,7 +321,7 @@ Partial Class frm_Contrato_Poliza
         Me.ltb_PlanPago.Location = New System.Drawing.Point(494, 92)
         Me.ltb_PlanPago.Name = "ltb_PlanPago"
         Me.ltb_PlanPago.Size = New System.Drawing.Size(174, 84)
-        Me.ltb_PlanPago.TabIndex = 51
+        Me.ltb_PlanPago.TabIndex = 28
         '
         'lbl_PlanPago
         '
@@ -297,14 +331,6 @@ Partial Class frm_Contrato_Poliza
         Me.lbl_PlanPago.Size = New System.Drawing.Size(86, 16)
         Me.lbl_PlanPago.TabIndex = 50
         Me.lbl_PlanPago.Text = "Plan de pago:"
-        '
-        'ltv_Coberturas
-        '
-        Me.ltv_Coberturas.Location = New System.Drawing.Point(299, 92)
-        Me.ltv_Coberturas.Name = "ltv_Coberturas"
-        Me.ltv_Coberturas.Size = New System.Drawing.Size(172, 84)
-        Me.ltv_Coberturas.TabIndex = 49
-        Me.ltv_Coberturas.UseCompatibleStateImageBehavior = False
         '
         'lbl_Coberturas
         '
@@ -322,7 +348,7 @@ Partial Class frm_Contrato_Poliza
         Me.ltb_TipoPoliza.Location = New System.Drawing.Point(102, 92)
         Me.ltb_TipoPoliza.Name = "ltb_TipoPoliza"
         Me.ltb_TipoPoliza.Size = New System.Drawing.Size(172, 84)
-        Me.ltb_TipoPoliza.TabIndex = 47
+        Me.ltb_TipoPoliza.TabIndex = 26
         '
         'lbl_TipoPoliza
         '
@@ -344,7 +370,7 @@ Partial Class frm_Contrato_Poliza
         '
         'grb_Pagos
         '
-        Me.grb_Pagos.Controls.Add(Me.TextBox1)
+        Me.grb_Pagos.Controls.Add(Me.txt_Suma_asegurada)
         Me.grb_Pagos.Controls.Add(Me.lbl_SumaAsegurada)
         Me.grb_Pagos.Controls.Add(Me.dtp_FechaCobro)
         Me.grb_Pagos.Controls.Add(Me.lbl_FechaCobro)
@@ -364,17 +390,17 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Pagos.TabStop = False
         Me.grb_Pagos.Text = "Dato de Pagos"
         '
-        'TextBox1
+        'txt_Suma_asegurada
         '
-        Me.TextBox1.Location = New System.Drawing.Point(540, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 21)
-        Me.TextBox1.TabIndex = 38
+        Me.txt_Suma_asegurada.Location = New System.Drawing.Point(536, 23)
+        Me.txt_Suma_asegurada.Name = "txt_Suma_asegurada"
+        Me.txt_Suma_asegurada.Size = New System.Drawing.Size(100, 21)
+        Me.txt_Suma_asegurada.TabIndex = 33
         '
         'lbl_SumaAsegurada
         '
         Me.lbl_SumaAsegurada.AutoSize = True
-        Me.lbl_SumaAsegurada.Location = New System.Drawing.Point(433, 26)
+        Me.lbl_SumaAsegurada.Location = New System.Drawing.Point(426, 26)
         Me.lbl_SumaAsegurada.Name = "lbl_SumaAsegurada"
         Me.lbl_SumaAsegurada.Size = New System.Drawing.Size(104, 16)
         Me.lbl_SumaAsegurada.TabIndex = 37
@@ -382,15 +408,17 @@ Partial Class frm_Contrato_Poliza
         '
         'dtp_FechaCobro
         '
-        Me.dtp_FechaCobro.Location = New System.Drawing.Point(436, 70)
+        Me.dtp_FechaCobro.CustomFormat = """dd"""
+        Me.dtp_FechaCobro.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp_FechaCobro.Location = New System.Drawing.Point(536, 48)
         Me.dtp_FechaCobro.Name = "dtp_FechaCobro"
-        Me.dtp_FechaCobro.Size = New System.Drawing.Size(226, 21)
-        Me.dtp_FechaCobro.TabIndex = 36
+        Me.dtp_FechaCobro.Size = New System.Drawing.Size(43, 21)
+        Me.dtp_FechaCobro.TabIndex = 34
         '
         'lbl_FechaCobro
         '
         Me.lbl_FechaCobro.AutoSize = True
-        Me.lbl_FechaCobro.Location = New System.Drawing.Point(435, 53)
+        Me.lbl_FechaCobro.Location = New System.Drawing.Point(432, 52)
         Me.lbl_FechaCobro.Name = "lbl_FechaCobro"
         Me.lbl_FechaCobro.Size = New System.Drawing.Size(98, 16)
         Me.lbl_FechaCobro.TabIndex = 35
@@ -401,7 +429,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_MontoCuota.Location = New System.Drawing.Point(324, 48)
         Me.txt_MontoCuota.Name = "txt_MontoCuota"
         Me.txt_MontoCuota.Size = New System.Drawing.Size(100, 21)
-        Me.txt_MontoCuota.TabIndex = 33
+        Me.txt_MontoCuota.TabIndex = 32
         '
         'lbl_MontoCuota
         '
@@ -417,7 +445,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_NCuotas.Location = New System.Drawing.Point(111, 48)
         Me.txt_NCuotas.Name = "txt_NCuotas"
         Me.txt_NCuotas.Size = New System.Drawing.Size(100, 21)
-        Me.txt_NCuotas.TabIndex = 31
+        Me.txt_NCuotas.TabIndex = 30
         '
         'lbl_NCuotas
         '
@@ -433,7 +461,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_MontoPagar.Location = New System.Drawing.Point(324, 21)
         Me.txt_MontoPagar.Name = "txt_MontoPagar"
         Me.txt_MontoPagar.Size = New System.Drawing.Size(100, 21)
-        Me.txt_MontoPagar.TabIndex = 29
+        Me.txt_MontoPagar.TabIndex = 31
         '
         'lbl_MontoPagar
         '
@@ -449,7 +477,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_MontoBase.Location = New System.Drawing.Point(111, 19)
         Me.txt_MontoBase.Name = "txt_MontoBase"
         Me.txt_MontoBase.Size = New System.Drawing.Size(100, 21)
-        Me.txt_MontoBase.TabIndex = 27
+        Me.txt_MontoBase.TabIndex = 29
         '
         'lbl_MontoBase
         '
@@ -465,14 +493,14 @@ Partial Class frm_Contrato_Poliza
         Me.dtp_FechaF.Location = New System.Drawing.Point(442, 44)
         Me.dtp_FechaF.Name = "dtp_FechaF"
         Me.dtp_FechaF.Size = New System.Drawing.Size(212, 21)
-        Me.dtp_FechaF.TabIndex = 38
+        Me.dtp_FechaF.TabIndex = 25
         '
         'dtp_FechaI
         '
         Me.dtp_FechaI.Location = New System.Drawing.Point(442, 14)
         Me.dtp_FechaI.Name = "dtp_FechaI"
         Me.dtp_FechaI.Size = New System.Drawing.Size(212, 21)
-        Me.dtp_FechaI.TabIndex = 37
+        Me.dtp_FechaI.TabIndex = 24
         '
         'lbl_Fechai
         '
@@ -510,8 +538,9 @@ Partial Class frm_Contrato_Poliza
         '
         'grb_Asegurado
         '
-        Me.grb_Asegurado.Controls.Add(Me.btn_BuscarA)
         Me.grb_Asegurado.Controls.Add(Me.cmb_CedulaA)
+        Me.grb_Asegurado.Controls.Add(Me.btn_BuscarA)
+        Me.grb_Asegurado.Controls.Add(Me.cmb_NacionalidadA)
         Me.grb_Asegurado.Controls.Add(Me.lbl_PNombreA)
         Me.grb_Asegurado.Controls.Add(Me.txt_CedulaA)
         Me.grb_Asegurado.Controls.Add(Me.lbl_SNombreA)
@@ -526,28 +555,36 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Asegurado.Location = New System.Drawing.Point(369, 151)
         Me.grb_Asegurado.Name = "grb_Asegurado"
         Me.grb_Asegurado.Size = New System.Drawing.Size(388, 187)
-        Me.grb_Asegurado.TabIndex = 107
+        Me.grb_Asegurado.TabIndex = 9
         Me.grb_Asegurado.TabStop = False
         Me.grb_Asegurado.Text = " Datos del asegurado"
+        '
+        'cmb_CedulaA
+        '
+        Me.cmb_CedulaA.FormattingEnabled = True
+        Me.cmb_CedulaA.Location = New System.Drawing.Point(193, 38)
+        Me.cmb_CedulaA.Name = "cmb_CedulaA"
+        Me.cmb_CedulaA.Size = New System.Drawing.Size(87, 24)
+        Me.cmb_CedulaA.TabIndex = 11
         '
         'btn_BuscarA
         '
         Me.btn_BuscarA.Location = New System.Drawing.Point(291, 40)
         Me.btn_BuscarA.Name = "btn_BuscarA"
         Me.btn_BuscarA.Size = New System.Drawing.Size(75, 23)
-        Me.btn_BuscarA.TabIndex = 117
+        Me.btn_BuscarA.TabIndex = 16
         Me.btn_BuscarA.Text = "Buscar"
         Me.btn_BuscarA.UseVisualStyleBackColor = True
         '
-        'cmb_CedulaA
+        'cmb_NacionalidadA
         '
-        Me.cmb_CedulaA.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
-        Me.cmb_CedulaA.BackColor = System.Drawing.Color.GhostWhite
-        Me.cmb_CedulaA.FormattingEnabled = True
-        Me.cmb_CedulaA.Location = New System.Drawing.Point(142, 39)
-        Me.cmb_CedulaA.Name = "cmb_CedulaA"
-        Me.cmb_CedulaA.Size = New System.Drawing.Size(47, 24)
-        Me.cmb_CedulaA.TabIndex = 116
+        Me.cmb_NacionalidadA.AutoCompleteCustomSource.AddRange(New String() {"V", "E"})
+        Me.cmb_NacionalidadA.BackColor = System.Drawing.Color.GhostWhite
+        Me.cmb_NacionalidadA.FormattingEnabled = True
+        Me.cmb_NacionalidadA.Location = New System.Drawing.Point(142, 38)
+        Me.cmb_NacionalidadA.Name = "cmb_NacionalidadA"
+        Me.cmb_NacionalidadA.Size = New System.Drawing.Size(47, 24)
+        Me.cmb_NacionalidadA.TabIndex = 10
         '
         'lbl_PNombreA
         '
@@ -601,7 +638,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_SApellidoA.MaxLength = 15
         Me.txt_SApellidoA.Name = "txt_SApellidoA"
         Me.txt_SApellidoA.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SApellidoA.TabIndex = 113
+        Me.txt_SApellidoA.TabIndex = 15
         '
         'lbl_SApellidoA
         '
@@ -619,7 +656,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_SNombreA.MaxLength = 15
         Me.txt_SNombreA.Name = "txt_SNombreA"
         Me.txt_SNombreA.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SNombreA.TabIndex = 112
+        Me.txt_SNombreA.TabIndex = 13
         '
         'txt_PNombreA
         '
@@ -628,7 +665,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_PNombreA.MaxLength = 15
         Me.txt_PNombreA.Name = "txt_PNombreA"
         Me.txt_PNombreA.Size = New System.Drawing.Size(139, 21)
-        Me.txt_PNombreA.TabIndex = 110
+        Me.txt_PNombreA.TabIndex = 12
         '
         'txt_PApellidoA
         '
@@ -637,10 +674,11 @@ Partial Class frm_Contrato_Poliza
         Me.txt_PApellidoA.MaxLength = 15
         Me.txt_PApellidoA.Name = "txt_PApellidoA"
         Me.txt_PApellidoA.Size = New System.Drawing.Size(139, 21)
-        Me.txt_PApellidoA.TabIndex = 111
+        Me.txt_PApellidoA.TabIndex = 14
         '
         'grb_Tomador
         '
+        Me.grb_Tomador.Controls.Add(Me.cmb_CedulaT)
         Me.grb_Tomador.Controls.Add(Me.btn_BuscarT)
         Me.grb_Tomador.Controls.Add(Me.cmb_NacionalidadT)
         Me.grb_Tomador.Controls.Add(Me.lbl_PNombreT)
@@ -657,16 +695,24 @@ Partial Class frm_Contrato_Poliza
         Me.grb_Tomador.Location = New System.Drawing.Point(8, 151)
         Me.grb_Tomador.Name = "grb_Tomador"
         Me.grb_Tomador.Size = New System.Drawing.Size(355, 187)
-        Me.grb_Tomador.TabIndex = 106
+        Me.grb_Tomador.TabIndex = 1
         Me.grb_Tomador.TabStop = False
         Me.grb_Tomador.Text = "Datos del tomador"
+        '
+        'cmb_CedulaT
+        '
+        Me.cmb_CedulaT.FormattingEnabled = True
+        Me.cmb_CedulaT.Location = New System.Drawing.Point(173, 38)
+        Me.cmb_CedulaT.Name = "cmb_CedulaT"
+        Me.cmb_CedulaT.Size = New System.Drawing.Size(87, 24)
+        Me.cmb_CedulaT.TabIndex = 3
         '
         'btn_BuscarT
         '
         Me.btn_BuscarT.Location = New System.Drawing.Point(265, 38)
         Me.btn_BuscarT.Name = "btn_BuscarT"
         Me.btn_BuscarT.Size = New System.Drawing.Size(75, 23)
-        Me.btn_BuscarT.TabIndex = 105
+        Me.btn_BuscarT.TabIndex = 8
         Me.btn_BuscarT.Text = "Buscar"
         Me.btn_BuscarT.UseVisualStyleBackColor = True
         '
@@ -678,7 +724,7 @@ Partial Class frm_Contrato_Poliza
         Me.cmb_NacionalidadT.Location = New System.Drawing.Point(120, 38)
         Me.cmb_NacionalidadT.Name = "cmb_NacionalidadT"
         Me.cmb_NacionalidadT.Size = New System.Drawing.Size(47, 24)
-        Me.cmb_NacionalidadT.TabIndex = 104
+        Me.cmb_NacionalidadT.TabIndex = 2
         '
         'lbl_PNombreT
         '
@@ -732,7 +778,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_SApellidoT.MaxLength = 15
         Me.txt_SApellidoT.Name = "txt_SApellidoT"
         Me.txt_SApellidoT.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SApellidoT.TabIndex = 101
+        Me.txt_SApellidoT.TabIndex = 7
         '
         'lbl_SApellidoT
         '
@@ -750,7 +796,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_SNombreT.MaxLength = 15
         Me.txt_SNombreT.Name = "txt_SNombreT"
         Me.txt_SNombreT.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SNombreT.TabIndex = 100
+        Me.txt_SNombreT.TabIndex = 5
         '
         'txt_PNombreT
         '
@@ -759,7 +805,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_PNombreT.MaxLength = 15
         Me.txt_PNombreT.Name = "txt_PNombreT"
         Me.txt_PNombreT.Size = New System.Drawing.Size(139, 21)
-        Me.txt_PNombreT.TabIndex = 98
+        Me.txt_PNombreT.TabIndex = 4
         '
         'txt_PApellidoT
         '
@@ -768,7 +814,7 @@ Partial Class frm_Contrato_Poliza
         Me.txt_PApellidoT.MaxLength = 15
         Me.txt_PApellidoT.Name = "txt_PApellidoT"
         Me.txt_PApellidoT.Size = New System.Drawing.Size(139, 21)
-        Me.txt_PApellidoT.TabIndex = 99
+        Me.txt_PApellidoT.TabIndex = 6
         '
         'lbl_Fecha
         '
@@ -920,7 +966,6 @@ Partial Class frm_Contrato_Poliza
     Friend WithEvents grb_Poliza As GroupBox
     Friend WithEvents ltb_PlanPago As ListBox
     Friend WithEvents lbl_PlanPago As Label
-    Friend WithEvents ltv_Coberturas As ListView
     Friend WithEvents lbl_Coberturas As Label
     Friend WithEvents ltb_TipoPoliza As ListBox
     Friend WithEvents lbl_TipoPoliza As Label
@@ -944,7 +989,7 @@ Partial Class frm_Contrato_Poliza
     Friend WithEvents lbl_Codigo As Label
     Friend WithEvents grb_Asegurado As GroupBox
     Friend WithEvents btn_BuscarA As Button
-    Friend WithEvents cmb_CedulaA As ComboBox
+    Friend WithEvents cmb_NacionalidadA As ComboBox
     Friend WithEvents lbl_PNombreA As Label
     Friend WithEvents txt_CedulaA As TextBox
     Friend WithEvents lbl_SNombreA As Label
@@ -976,6 +1021,11 @@ Partial Class frm_Contrato_Poliza
     Friend WithEvents lbl_EncabezadoModulo As Label
     Friend WithEvents lbl_EncabezadoEmpresa As Label
     Friend WithEvents ptb_logo As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_Suma_asegurada As TextBox
     Friend WithEvents lbl_SumaAsegurada As Label
+    Friend WithEvents cmb_Placa As ComboBox
+    Friend WithEvents cmb_CodigoContrato As ComboBox
+    Friend WithEvents cmb_CedulaA As ComboBox
+    Friend WithEvents cmb_CedulaT As ComboBox
+    Friend WithEvents ltb_cobertura As ListBox
 End Class
