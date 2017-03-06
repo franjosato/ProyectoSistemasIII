@@ -180,14 +180,14 @@ Partial Class Form1
         Me.grb_Datos_Vehículo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grb_Datos_Vehículo.Location = New System.Drawing.Point(12, 159)
         Me.grb_Datos_Vehículo.Name = "grb_Datos_Vehículo"
-        Me.grb_Datos_Vehículo.Size = New System.Drawing.Size(773, 96)
+        Me.grb_Datos_Vehículo.Size = New System.Drawing.Size(773, 82)
         Me.grb_Datos_Vehículo.TabIndex = 149
         Me.grb_Datos_Vehículo.TabStop = False
         Me.grb_Datos_Vehículo.Text = "Datos del vehículo"
         '
         'btn_Buscar
         '
-        Me.btn_Buscar.Location = New System.Drawing.Point(276, 29)
+        Me.btn_Buscar.Location = New System.Drawing.Point(276, 21)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(99, 23)
         Me.btn_Buscar.TabIndex = 8
@@ -196,28 +196,28 @@ Partial Class Form1
         '
         'txt_Modelo
         '
-        Me.txt_Modelo.Location = New System.Drawing.Point(450, 60)
+        Me.txt_Modelo.Location = New System.Drawing.Point(450, 52)
         Me.txt_Modelo.Name = "txt_Modelo"
         Me.txt_Modelo.Size = New System.Drawing.Size(317, 21)
         Me.txt_Modelo.TabIndex = 7
         '
         'txt_Año
         '
-        Me.txt_Año.Location = New System.Drawing.Point(450, 24)
+        Me.txt_Año.Location = New System.Drawing.Point(450, 16)
         Me.txt_Año.Name = "txt_Año"
         Me.txt_Año.Size = New System.Drawing.Size(317, 21)
         Me.txt_Año.TabIndex = 6
         '
         'txt_Marca
         '
-        Me.txt_Marca.Location = New System.Drawing.Point(86, 60)
+        Me.txt_Marca.Location = New System.Drawing.Point(86, 52)
         Me.txt_Marca.Name = "txt_Marca"
         Me.txt_Marca.Size = New System.Drawing.Size(289, 21)
         Me.txt_Marca.TabIndex = 5
         '
         'txt_Placa
         '
-        Me.txt_Placa.Location = New System.Drawing.Point(86, 29)
+        Me.txt_Placa.Location = New System.Drawing.Point(86, 21)
         Me.txt_Placa.Name = "txt_Placa"
         Me.txt_Placa.Size = New System.Drawing.Size(184, 21)
         Me.txt_Placa.TabIndex = 4
@@ -225,7 +225,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 63)
+        Me.Label4.Location = New System.Drawing.Point(32, 55)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(48, 16)
         Me.Label4.TabIndex = 3
@@ -234,7 +234,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(412, 29)
+        Me.Label3.Location = New System.Drawing.Point(412, 21)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(32, 16)
         Me.Label3.TabIndex = 2
@@ -243,7 +243,7 @@ Partial Class Form1
         'lbl_Modelo
         '
         Me.lbl_Modelo.AutoSize = True
-        Me.lbl_Modelo.Location = New System.Drawing.Point(391, 63)
+        Me.lbl_Modelo.Location = New System.Drawing.Point(391, 55)
         Me.lbl_Modelo.Name = "lbl_Modelo"
         Me.lbl_Modelo.Size = New System.Drawing.Size(53, 16)
         Me.lbl_Modelo.TabIndex = 1
@@ -252,7 +252,7 @@ Partial Class Form1
         'lbl_Placa
         '
         Me.lbl_Placa.AutoSize = True
-        Me.lbl_Placa.Location = New System.Drawing.Point(37, 29)
+        Me.lbl_Placa.Location = New System.Drawing.Point(37, 21)
         Me.lbl_Placa.Name = "lbl_Placa"
         Me.lbl_Placa.Size = New System.Drawing.Size(43, 16)
         Me.lbl_Placa.TabIndex = 0
@@ -273,7 +273,7 @@ Partial Class Form1
         Me.grb_Datos_Inspección.Controls.Add(Me.lbl_Codigo_Poliza)
         Me.grb_Datos_Inspección.Controls.Add(Me.lbl_Tipo_inspeccion)
         Me.grb_Datos_Inspección.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Datos_Inspección.Location = New System.Drawing.Point(12, 261)
+        Me.grb_Datos_Inspección.Location = New System.Drawing.Point(12, 243)
         Me.grb_Datos_Inspección.Name = "grb_Datos_Inspección"
         Me.grb_Datos_Inspección.Size = New System.Drawing.Size(773, 139)
         Me.grb_Datos_Inspección.TabIndex = 150
@@ -393,9 +393,9 @@ Partial Class Form1
         Me.grb_Datos_Daño.Controls.Add(Me.lbl_daño_daños)
         Me.grb_Datos_Daño.Controls.Add(Me.cmb_daño_daños)
         Me.grb_Datos_Daño.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Datos_Daño.Location = New System.Drawing.Point(12, 402)
+        Me.grb_Datos_Daño.Location = New System.Drawing.Point(12, 380)
         Me.grb_Datos_Daño.Name = "grb_Datos_Daño"
-        Me.grb_Datos_Daño.Size = New System.Drawing.Size(773, 328)
+        Me.grb_Datos_Daño.Size = New System.Drawing.Size(773, 315)
         Me.grb_Datos_Daño.TabIndex = 151
         Me.grb_Datos_Daño.TabStop = False
         Me.grb_Datos_Daño.Text = "Datos de daños"
@@ -408,7 +408,7 @@ Partial Class Form1
         Me.dgv_tabla_daño_daños.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
         Me.dgv_tabla_daño_daños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_tabla_daño_daños.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cl_Daño, Me.cl_Parte_Vehiculo, Me.cl_Descripción})
-        Me.dgv_tabla_daño_daños.Location = New System.Drawing.Point(6, 101)
+        Me.dgv_tabla_daño_daños.Location = New System.Drawing.Point(6, 88)
         Me.dgv_tabla_daño_daños.Name = "dgv_tabla_daño_daños"
         Me.dgv_tabla_daño_daños.RowHeadersVisible = False
         Me.dgv_tabla_daño_daños.Size = New System.Drawing.Size(604, 217)
@@ -434,7 +434,7 @@ Partial Class Form1
         '
         'btn_volver_daño_daños
         '
-        Me.btn_volver_daño_daños.Location = New System.Drawing.Point(616, 295)
+        Me.btn_volver_daño_daños.Location = New System.Drawing.Point(616, 281)
         Me.btn_volver_daño_daños.Name = "btn_volver_daño_daños"
         Me.btn_volver_daño_daños.Size = New System.Drawing.Size(151, 23)
         Me.btn_volver_daño_daños.TabIndex = 26
@@ -443,7 +443,7 @@ Partial Class Form1
         '
         'btn_guardar_daño_daños
         '
-        Me.btn_guardar_daño_daños.Location = New System.Drawing.Point(616, 164)
+        Me.btn_guardar_daño_daños.Location = New System.Drawing.Point(616, 150)
         Me.btn_guardar_daño_daños.Name = "btn_guardar_daño_daños"
         Me.btn_guardar_daño_daños.Size = New System.Drawing.Size(151, 23)
         Me.btn_guardar_daño_daños.TabIndex = 25
@@ -452,7 +452,7 @@ Partial Class Form1
         '
         'btn_cancelar_daño_daños
         '
-        Me.btn_cancelar_daño_daños.Location = New System.Drawing.Point(616, 193)
+        Me.btn_cancelar_daño_daños.Location = New System.Drawing.Point(616, 179)
         Me.btn_cancelar_daño_daños.Name = "btn_cancelar_daño_daños"
         Me.btn_cancelar_daño_daños.Size = New System.Drawing.Size(151, 23)
         Me.btn_cancelar_daño_daños.TabIndex = 24
@@ -461,7 +461,7 @@ Partial Class Form1
         '
         'btn_añadir_daño_daños
         '
-        Me.btn_añadir_daño_daños.Location = New System.Drawing.Point(616, 63)
+        Me.btn_añadir_daño_daños.Location = New System.Drawing.Point(616, 56)
         Me.btn_añadir_daño_daños.Name = "btn_añadir_daño_daños"
         Me.btn_añadir_daño_daños.Size = New System.Drawing.Size(151, 23)
         Me.btn_añadir_daño_daños.TabIndex = 9
@@ -471,7 +471,7 @@ Partial Class Form1
         'lbl_Parte_vehiculo_daños
         '
         Me.lbl_Parte_vehiculo_daños.AutoSize = True
-        Me.lbl_Parte_vehiculo_daños.Location = New System.Drawing.Point(325, 31)
+        Me.lbl_Parte_vehiculo_daños.Location = New System.Drawing.Point(325, 24)
         Me.lbl_Parte_vehiculo_daños.Name = "lbl_Parte_vehiculo_daños"
         Me.lbl_Parte_vehiculo_daños.Size = New System.Drawing.Size(108, 16)
         Me.lbl_Parte_vehiculo_daños.TabIndex = 22
@@ -480,14 +480,14 @@ Partial Class Form1
         'cmb_Parte_vehiculo_daños
         '
         Me.cmb_Parte_vehiculo_daños.FormattingEnabled = True
-        Me.cmb_Parte_vehiculo_daños.Location = New System.Drawing.Point(439, 28)
+        Me.cmb_Parte_vehiculo_daños.Location = New System.Drawing.Point(439, 21)
         Me.cmb_Parte_vehiculo_daños.Name = "cmb_Parte_vehiculo_daños"
         Me.cmb_Parte_vehiculo_daños.Size = New System.Drawing.Size(328, 24)
         Me.cmb_Parte_vehiculo_daños.TabIndex = 23
         '
         'txt_descripcion_daño_daños
         '
-        Me.txt_descripcion_daño_daños.Location = New System.Drawing.Point(89, 63)
+        Me.txt_descripcion_daño_daños.Location = New System.Drawing.Point(89, 56)
         Me.txt_descripcion_daño_daños.Name = "txt_descripcion_daño_daños"
         Me.txt_descripcion_daño_daños.Size = New System.Drawing.Size(521, 21)
         Me.txt_descripcion_daño_daños.TabIndex = 20
@@ -495,7 +495,7 @@ Partial Class Form1
         'lbl_Descripcion_daños
         '
         Me.lbl_Descripcion_daños.AutoSize = True
-        Me.lbl_Descripcion_daños.Location = New System.Drawing.Point(6, 66)
+        Me.lbl_Descripcion_daños.Location = New System.Drawing.Point(6, 59)
         Me.lbl_Descripcion_daños.Name = "lbl_Descripcion_daños"
         Me.lbl_Descripcion_daños.Size = New System.Drawing.Size(73, 16)
         Me.lbl_Descripcion_daños.TabIndex = 21
@@ -504,7 +504,7 @@ Partial Class Form1
         'lbl_daño_daños
         '
         Me.lbl_daño_daños.AutoSize = True
-        Me.lbl_daño_daños.Location = New System.Drawing.Point(39, 31)
+        Me.lbl_daño_daños.Location = New System.Drawing.Point(39, 24)
         Me.lbl_daño_daños.Name = "lbl_daño_daños"
         Me.lbl_daño_daños.Size = New System.Drawing.Size(41, 16)
         Me.lbl_daño_daños.TabIndex = 20
@@ -513,7 +513,7 @@ Partial Class Form1
         'cmb_daño_daños
         '
         Me.cmb_daño_daños.FormattingEnabled = True
-        Me.cmb_daño_daños.Location = New System.Drawing.Point(90, 28)
+        Me.cmb_daño_daños.Location = New System.Drawing.Point(90, 21)
         Me.cmb_daño_daños.Name = "cmb_daño_daños"
         Me.cmb_daño_daños.Size = New System.Drawing.Size(225, 24)
         Me.cmb_daño_daños.TabIndex = 20
@@ -525,7 +525,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(797, 732)
+        Me.ClientSize = New System.Drawing.Size(797, 697)
         Me.Controls.Add(Me.grb_Datos_Daño)
         Me.Controls.Add(Me.grb_Datos_Inspección)
         Me.Controls.Add(Me.grb_Datos_Vehículo)

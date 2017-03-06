@@ -61,7 +61,7 @@
             txt_Placa.Text + "' and v_estatus= 'I' "
         CSelect(sentencia)
         If Not ((sdr.IsClosed) Or Not (sdr.HasRows)) Then
-            MsgBox("Vehiculo desactivado, por favor comuniquese con el administrador", vbInformation, "Empleado desactivado")
+            MsgBox("Vehiculo desactivado, por favor comuniquese con el administrador", vbInformation, "Vehiculo desactivado")
         Else
             cn.Close()
             sentencia = "Select * from vehiculo where v_placa='" +
@@ -105,34 +105,45 @@
     End Sub
 
     Private Sub btn_Modificar_Click(sender As Object, e As EventArgs) Handles btn_Modificar.Click
-        If (Me.btn_Modificar.Text = "Modificar") Then
-            txt_Color.Enabled = True
-            txt_Kilometraje.Enabled = True
-            btn_CargarFoto.Enabled = True
-            Me.btn_Eliminar.Enabled = False
-            Me.btn_Modificar.Text = "Guardar"
+        'sentencia = 'seleccionar el estatus de contrato donde aparezca 
+        'select po_estatus from contrato inner join vehiculo where txt_placa=placa_vehiculo on v_estatus=po_estatus
+        sentencia = "SELECT po_estatus, v_placa FROM contrato inner join vehiculo WHERE (v_placa = '" + txt_Placa.Text + "' AND po_v_placa= v_placa AND po_estatus=v_estatus)"
+        CSelect(sentencia)
+
+        If ((sdr.IsClosed) Or (sdr.HasRows)) Then
+            MsgBox("El vehiculo no tiene ningun contrato asociado, debe registrar un contrato y asociar el vehiculo", vbInformation, "vehiculo sin asociacion")
+            btn_Cancelar.PerformClick()
         Else
-            If (validar()) Then
-                sentencia = "Select * from vehiculo where v_placa= '" + txt_Placa.Text + "' and v_estatus= 'A' "
-                CSelect(sentencia)
-                If ((txt_Color.Text = sdr("v_color")) And
-                txt_Kilometraje.Text = sdr("v_kilometraje")) Then
 
-                    MsgBox("No se han realizado cambios", vbInformation, "Sin cambios")
-                    Me.btn_Cancelar.PerformClick()
-                    cn.Close()
-                    Return
-                Else
-                    sentencia = "update vehiculo set v_color='" + txt_Color.Text + "', v_kilometraje='" + txt_Kilometraje.Text + "'"
-
-                    comando22(sentencia)
-                    MsgBox("Cambios realizados con exito", vbInformation, "Cambios")
-                    Me.btn_Cancelar.PerformClick()
-                End If
+            If (btn_Modificar.Text = "Modificar") Then
+                txt_Color.Enabled = True
+                txt_Kilometraje.Enabled = True
+                btn_CargarFoto.Enabled = True
+                btn_Eliminar.Enabled = False
+                btn_Modificar.Text = "Guardar"
             Else
-                MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
-            End If
+                If (Validar()) Then
+                    sentencia = "Select * from vehiculo where v_placa= '" + txt_Placa.Text + "' and v_estatus= 'A' "
+                    CSelect(sentencia)
+                    If ((txt_Color.Text = sdr("v_color")) And
+                    txt_Kilometraje.Text = sdr("v_kilometraje")) Then
 
+                        MsgBox("No se han realizado cambios", vbInformation, "Sin cambios")
+                        Me.btn_Cancelar.PerformClick()
+                        cn.Close()
+                        Return
+                    Else
+                        sentencia = "update vehiculo set v_color='" + txt_Color.Text + "', v_kilometraje='" + txt_Kilometraje.Text + "'"
+
+                        comando22(sentencia)
+                        MsgBox("Cambios realizados con exito", vbInformation, "Cambios")
+                        Me.btn_Cancelar.PerformClick()
+                    End If
+                Else
+                    MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
+                End If
+
+            End If
         End If
     End Sub
 
