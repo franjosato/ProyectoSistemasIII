@@ -92,17 +92,13 @@ Public Class MDIParent1
         frm_Asegurado.Show()
     End Sub
 
-    Private Sub ContratoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContratoToolStripMenuItem.Click
-        frm_Contrato_Poliza.Show()
-    End Sub
+
 
     Private Sub TipoDePolizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoDePolizaToolStripMenuItem.Click
         frm_TipoPoliza.Show()
     End Sub
 
-    Private Sub CoberturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CoberturaToolStripMenuItem.Click
-        frm_Cobertura.Show()
-    End Sub
+
 
     Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
         frm_Empleado.Show()
@@ -135,5 +131,28 @@ Public Class MDIParent1
 
     Private Sub ListasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListasToolStripMenuItem.Click
         frm_Listas.Show()
+    End Sub
+
+    Private Sub AgregarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarToolStripMenuItem.Click
+        ModoMenu = "Agregar"
+        CedulaEmpleado = "12345678"
+        TipoUsuario = "Corredor"
+        frm_Contrato_Poliza.Show()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarToolStripMenuItem.Click
+        ModoMenu = "Consultar"
+        CedulaEmpleado = "12345678"
+        TipoUsuario = "Gerente"
+        frm_Contrato_Poliza.Show()
+    End Sub
+
+    Private Sub MDIParent1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        System.Threading.Thread.CurrentThread.CurrentCulture = New System.Globalization.CultureInfo("es-VE")
+        System.Threading.Thread.CurrentThread.CurrentCulture.DateTimeFormat.ShortDatePattern = "yyyy/MM/dd"
+        System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = "."
+        System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyGroupSeparator = ","
+        System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = "."
+        System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberGroupSeparator = ","
     End Sub
 End Class

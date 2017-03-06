@@ -30,6 +30,7 @@ Partial Class MDIParent1
         Me.AseguradoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServicioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContratoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AgregarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TipoDePolizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CoberturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AdministrativoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,6 +49,7 @@ Partial Class MDIParent1
         Me.ListasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,9 +91,16 @@ Partial Class MDIParent1
         '
         'ContratoToolStripMenuItem
         '
+        Me.ContratoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarToolStripMenuItem, Me.ConsultarToolStripMenuItem})
         Me.ContratoToolStripMenuItem.Name = "ContratoToolStripMenuItem"
         Me.ContratoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ContratoToolStripMenuItem.Text = "Contrato"
+        '
+        'AgregarToolStripMenuItem
+        '
+        Me.AgregarToolStripMenuItem.Name = "AgregarToolStripMenuItem"
+        Me.AgregarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AgregarToolStripMenuItem.Text = "Agregar"
         '
         'TipoDePolizaToolStripMenuItem
         '
@@ -200,6 +209,12 @@ Partial Class MDIParent1
         Me.ReporteToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
         Me.ReporteToolStripMenuItem.Text = "Reporte"
         '
+        'ConsultarToolStripMenuItem
+        '
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
         'MDIParent1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -240,4 +255,6 @@ Partial Class MDIParent1
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AgregarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarToolStripMenuItem As ToolStripMenuItem
 End Class

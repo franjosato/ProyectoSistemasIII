@@ -33,6 +33,7 @@ Partial Class frm_TipoPoliza
         Me.rtb_descripcion = New System.Windows.Forms.RichTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.grb_Cobertura = New System.Windows.Forms.GroupBox()
+        Me.ltb_Cobertura = New System.Windows.Forms.ListBox()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_Buscar = New System.Windows.Forms.Button()
@@ -144,6 +145,7 @@ Partial Class frm_TipoPoliza
         '
         'grb_Cobertura
         '
+        Me.grb_Cobertura.Controls.Add(Me.ltb_Cobertura)
         Me.grb_Cobertura.Controls.Add(Me.CheckedListBox1)
         Me.grb_Cobertura.Controls.Add(Me.Label1)
         Me.grb_Cobertura.Location = New System.Drawing.Point(304, 17)
@@ -152,6 +154,15 @@ Partial Class frm_TipoPoliza
         Me.grb_Cobertura.TabIndex = 3
         Me.grb_Cobertura.TabStop = False
         Me.grb_Cobertura.Text = "Datos Cobertura"
+        '
+        'ltb_Cobertura
+        '
+        Me.ltb_Cobertura.FormattingEnabled = True
+        Me.ltb_Cobertura.Location = New System.Drawing.Point(23, 41)
+        Me.ltb_Cobertura.Name = "ltb_Cobertura"
+        Me.ltb_Cobertura.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
+        Me.ltb_Cobertura.Size = New System.Drawing.Size(244, 134)
+        Me.ltb_Cobertura.TabIndex = 6
         '
         'CheckedListBox1
         '
@@ -385,4 +396,5 @@ Partial Class frm_TipoPoliza
     Friend WithEvents txt_monto_base As TextBox
     Friend WithEvents lbl_montoB As Label
     Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents ltb_Cobertura As ListBox
 End Class

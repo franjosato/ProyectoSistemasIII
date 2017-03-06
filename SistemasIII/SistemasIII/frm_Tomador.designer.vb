@@ -52,6 +52,7 @@ Partial Class frm_Tomador
         Me.lbl_SNombre = New System.Windows.Forms.Label()
         Me.lbl_PNombre = New System.Windows.Forms.Label()
         Me.grb_Personales = New System.Windows.Forms.GroupBox()
+        Me.txt_CedulaT = New System.Windows.Forms.TextBox()
         Me.btn_Buscar = New System.Windows.Forms.Button()
         Me.grb_Edocivil = New System.Windows.Forms.GroupBox()
         Me.rdb_Divorciado = New System.Windows.Forms.RadioButton()
@@ -95,7 +96,6 @@ Partial Class frm_Tomador
         Me.lbl_Fecha = New System.Windows.Forms.Label()
         Me.tmr_Fecha = New System.Windows.Forms.Timer(Me.components)
         Me.EventLog1 = New System.Diagnostics.EventLog()
-        Me.cmb_CedulaT = New System.Windows.Forms.ComboBox()
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grb_Personales.SuspendLayout()
         Me.grb_Edocivil.SuspendLayout()
@@ -126,7 +126,7 @@ Partial Class frm_Tomador
         Me.txt_IngresoE.MaxLength = 12
         Me.txt_IngresoE.Name = "txt_IngresoE"
         Me.txt_IngresoE.Size = New System.Drawing.Size(139, 21)
-        Me.txt_IngresoE.TabIndex = 90
+        Me.txt_IngresoE.TabIndex = 23
         '
         'lbl_IngresoE
         '
@@ -144,7 +144,7 @@ Partial Class frm_Tomador
         Me.txt_ActEconomica.MaxLength = 30
         Me.txt_ActEconomica.Name = "txt_ActEconomica"
         Me.txt_ActEconomica.Size = New System.Drawing.Size(165, 21)
-        Me.txt_ActEconomica.TabIndex = 87
+        Me.txt_ActEconomica.TabIndex = 22
         '
         'lbl_ActEconomica
         '
@@ -162,7 +162,7 @@ Partial Class frm_Tomador
         Me.txt_TlfTrabajo.MaxLength = 11
         Me.txt_TlfTrabajo.Name = "txt_TlfTrabajo"
         Me.txt_TlfTrabajo.Size = New System.Drawing.Size(163, 21)
-        Me.txt_TlfTrabajo.TabIndex = 85
+        Me.txt_TlfTrabajo.TabIndex = 28
         '
         'lbl_TlfTrabajo
         '
@@ -180,7 +180,7 @@ Partial Class frm_Tomador
         Me.txt_Correo.MaxLength = 50
         Me.txt_Correo.Name = "txt_Correo"
         Me.txt_Correo.Size = New System.Drawing.Size(165, 21)
-        Me.txt_Correo.TabIndex = 81
+        Me.txt_Correo.TabIndex = 17
         '
         'lbl_Correo
         '
@@ -206,7 +206,7 @@ Partial Class frm_Tomador
         Me.dtp_FNacimiento.Location = New System.Drawing.Point(144, 119)
         Me.dtp_FNacimiento.Name = "dtp_FNacimiento"
         Me.dtp_FNacimiento.Size = New System.Drawing.Size(83, 21)
-        Me.dtp_FNacimiento.TabIndex = 75
+        Me.dtp_FNacimiento.TabIndex = 12
         '
         'lbl_FNacimiento
         '
@@ -226,7 +226,7 @@ Partial Class frm_Tomador
         Me.cmb_Nacionalidad.Location = New System.Drawing.Point(101, 19)
         Me.cmb_Nacionalidad.Name = "cmb_Nacionalidad"
         Me.cmb_Nacionalidad.Size = New System.Drawing.Size(47, 24)
-        Me.cmb_Nacionalidad.TabIndex = 70
+        Me.cmb_Nacionalidad.TabIndex = 1
         '
         'lbl_Cedula
         '
@@ -253,7 +253,7 @@ Partial Class frm_Tomador
         Me.txt_TlfMovil.MaxLength = 11
         Me.txt_TlfMovil.Name = "txt_TlfMovil"
         Me.txt_TlfMovil.Size = New System.Drawing.Size(165, 21)
-        Me.txt_TlfMovil.TabIndex = 65
+        Me.txt_TlfMovil.TabIndex = 19
         '
         'lbl_DireccionH
         '
@@ -271,7 +271,7 @@ Partial Class frm_Tomador
         Me.txt_TlfFijo.MaxLength = 11
         Me.txt_TlfFijo.Name = "txt_TlfFijo"
         Me.txt_TlfFijo.Size = New System.Drawing.Size(164, 21)
-        Me.txt_TlfFijo.TabIndex = 63
+        Me.txt_TlfFijo.TabIndex = 18
         '
         'lbl_TlfFijo
         '
@@ -298,7 +298,7 @@ Partial Class frm_Tomador
         Me.txt_SApellido.MaxLength = 15
         Me.txt_SApellido.Name = "txt_SApellido"
         Me.txt_SApellido.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SApellido.TabIndex = 60
+        Me.txt_SApellido.TabIndex = 7
         '
         'txt_SNombre
         '
@@ -307,7 +307,7 @@ Partial Class frm_Tomador
         Me.txt_SNombre.MaxLength = 15
         Me.txt_SNombre.Name = "txt_SNombre"
         Me.txt_SNombre.Size = New System.Drawing.Size(139, 21)
-        Me.txt_SNombre.TabIndex = 59
+        Me.txt_SNombre.TabIndex = 5
         '
         'txt_PApellido
         '
@@ -316,7 +316,7 @@ Partial Class frm_Tomador
         Me.txt_PApellido.MaxLength = 15
         Me.txt_PApellido.Name = "txt_PApellido"
         Me.txt_PApellido.Size = New System.Drawing.Size(140, 21)
-        Me.txt_PApellido.TabIndex = 58
+        Me.txt_PApellido.TabIndex = 6
         '
         'txt_PNombre
         '
@@ -325,7 +325,7 @@ Partial Class frm_Tomador
         Me.txt_PNombre.MaxLength = 15
         Me.txt_PNombre.Name = "txt_PNombre"
         Me.txt_PNombre.Size = New System.Drawing.Size(139, 21)
-        Me.txt_PNombre.TabIndex = 57
+        Me.txt_PNombre.TabIndex = 4
         '
         'lbl_SApellido
         '
@@ -366,7 +366,7 @@ Partial Class frm_Tomador
         'grb_Personales
         '
         Me.grb_Personales.BackColor = System.Drawing.Color.Transparent
-        Me.grb_Personales.Controls.Add(Me.cmb_CedulaT)
+        Me.grb_Personales.Controls.Add(Me.txt_CedulaT)
         Me.grb_Personales.Controls.Add(Me.btn_Buscar)
         Me.grb_Personales.Controls.Add(Me.grb_Edocivil)
         Me.grb_Personales.Controls.Add(Me.grb_DireccYContacto)
@@ -391,12 +391,19 @@ Partial Class frm_Tomador
         Me.grb_Personales.TabStop = False
         Me.grb_Personales.Text = "Datos personales"
         '
+        'txt_CedulaT
+        '
+        Me.txt_CedulaT.Location = New System.Drawing.Point(154, 21)
+        Me.txt_CedulaT.Name = "txt_CedulaT"
+        Me.txt_CedulaT.Size = New System.Drawing.Size(91, 21)
+        Me.txt_CedulaT.TabIndex = 2
+        '
         'btn_Buscar
         '
         Me.btn_Buscar.Location = New System.Drawing.Point(275, 19)
         Me.btn_Buscar.Name = "btn_Buscar"
         Me.btn_Buscar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Buscar.TabIndex = 93
+        Me.btn_Buscar.TabIndex = 3
         Me.btn_Buscar.Text = "Buscar"
         Me.btn_Buscar.UseVisualStyleBackColor = True
         '
@@ -418,7 +425,7 @@ Partial Class frm_Tomador
         Me.rdb_Divorciado.Location = New System.Drawing.Point(53, 15)
         Me.rdb_Divorciado.Name = "rdb_Divorciado"
         Me.rdb_Divorciado.Size = New System.Drawing.Size(34, 20)
-        Me.rdb_Divorciado.TabIndex = 2
+        Me.rdb_Divorciado.TabIndex = 10
         Me.rdb_Divorciado.TabStop = True
         Me.rdb_Divorciado.Text = "D"
         Me.rdb_Divorciado.UseVisualStyleBackColor = True
@@ -429,7 +436,7 @@ Partial Class frm_Tomador
         Me.rdb_Casado.Location = New System.Drawing.Point(96, 15)
         Me.rdb_Casado.Name = "rdb_Casado"
         Me.rdb_Casado.Size = New System.Drawing.Size(35, 20)
-        Me.rdb_Casado.TabIndex = 1
+        Me.rdb_Casado.TabIndex = 11
         Me.rdb_Casado.TabStop = True
         Me.rdb_Casado.Text = "C"
         Me.rdb_Casado.UseVisualStyleBackColor = True
@@ -440,7 +447,7 @@ Partial Class frm_Tomador
         Me.rdb_soltero.Location = New System.Drawing.Point(11, 15)
         Me.rdb_soltero.Name = "rdb_soltero"
         Me.rdb_soltero.Size = New System.Drawing.Size(32, 20)
-        Me.rdb_soltero.TabIndex = 0
+        Me.rdb_soltero.TabIndex = 9
         Me.rdb_soltero.TabStop = True
         Me.rdb_soltero.Text = "S"
         Me.rdb_soltero.UseVisualStyleBackColor = True
@@ -476,7 +483,7 @@ Partial Class frm_Tomador
         Me.txt_ZonaP.MaxLength = 5
         Me.txt_ZonaP.Name = "txt_ZonaP"
         Me.txt_ZonaP.Size = New System.Drawing.Size(85, 21)
-        Me.txt_ZonaP.TabIndex = 97
+        Me.txt_ZonaP.TabIndex = 16
         '
         'lbl_ZonaP
         '
@@ -494,7 +501,7 @@ Partial Class frm_Tomador
         Me.cmb_Estado.Location = New System.Drawing.Point(101, 18)
         Me.cmb_Estado.Name = "cmb_Estado"
         Me.cmb_Estado.Size = New System.Drawing.Size(139, 24)
-        Me.cmb_Estado.TabIndex = 93
+        Me.cmb_Estado.TabIndex = 13
         '
         'lbl_Estado
         '
@@ -512,7 +519,7 @@ Partial Class frm_Tomador
         Me.rtb_DireccionH.MaxLength = 255
         Me.rtb_DireccionH.Name = "rtb_DireccionH"
         Me.rtb_DireccionH.Size = New System.Drawing.Size(273, 53)
-        Me.rtb_DireccionH.TabIndex = 91
+        Me.rtb_DireccionH.TabIndex = 15
         Me.rtb_DireccionH.Text = ""
         '
         'cmb_Ciudad
@@ -522,7 +529,7 @@ Partial Class frm_Tomador
         Me.cmb_Ciudad.Location = New System.Drawing.Point(101, 48)
         Me.cmb_Ciudad.Name = "cmb_Ciudad"
         Me.cmb_Ciudad.Size = New System.Drawing.Size(139, 24)
-        Me.cmb_Ciudad.TabIndex = 90
+        Me.cmb_Ciudad.TabIndex = 14
         '
         'grb_Sexo
         '
@@ -541,7 +548,7 @@ Partial Class frm_Tomador
         Me.rdb_Femenino.Location = New System.Drawing.Point(56, 13)
         Me.rdb_Femenino.Name = "rdb_Femenino"
         Me.rdb_Femenino.Size = New System.Drawing.Size(31, 20)
-        Me.rdb_Femenino.TabIndex = 1
+        Me.rdb_Femenino.TabIndex = 8
         Me.rdb_Femenino.TabStop = True
         Me.rdb_Femenino.Text = "F"
         Me.rdb_Femenino.UseVisualStyleBackColor = True
@@ -552,7 +559,7 @@ Partial Class frm_Tomador
         Me.rdb_Masculino.Location = New System.Drawing.Point(13, 13)
         Me.rdb_Masculino.Name = "rdb_Masculino"
         Me.rdb_Masculino.Size = New System.Drawing.Size(37, 20)
-        Me.rdb_Masculino.TabIndex = 0
+        Me.rdb_Masculino.TabIndex = 7
         Me.rdb_Masculino.TabStop = True
         Me.rdb_Masculino.Text = "M"
         Me.rdb_Masculino.UseVisualStyleBackColor = True
@@ -584,7 +591,7 @@ Partial Class frm_Tomador
         Me.txt_CorreoT.MaxLength = 50
         Me.txt_CorreoT.Name = "txt_CorreoT"
         Me.txt_CorreoT.Size = New System.Drawing.Size(165, 21)
-        Me.txt_CorreoT.TabIndex = 114
+        Me.txt_CorreoT.TabIndex = 27
         '
         'lbl_CorreoT
         '
@@ -602,7 +609,7 @@ Partial Class frm_Tomador
         Me.cmb_EdoTrabajo.Location = New System.Drawing.Point(101, 23)
         Me.cmb_EdoTrabajo.Name = "cmb_EdoTrabajo"
         Me.cmb_EdoTrabajo.Size = New System.Drawing.Size(139, 24)
-        Me.cmb_EdoTrabajo.TabIndex = 112
+        Me.cmb_EdoTrabajo.TabIndex = 24
         '
         'lbl_EdoTrabajo
         '
@@ -620,7 +627,7 @@ Partial Class frm_Tomador
         Me.cmb_CiudadTrabajo.Location = New System.Drawing.Point(101, 52)
         Me.cmb_CiudadTrabajo.Name = "cmb_CiudadTrabajo"
         Me.cmb_CiudadTrabajo.Size = New System.Drawing.Size(139, 24)
-        Me.cmb_CiudadTrabajo.TabIndex = 110
+        Me.cmb_CiudadTrabajo.TabIndex = 25
         '
         'lbl_CiudadTrabajo
         '
@@ -638,7 +645,7 @@ Partial Class frm_Tomador
         Me.rtb_DireccionT.MaxLength = 255
         Me.rtb_DireccionT.Name = "rtb_DireccionT"
         Me.rtb_DireccionT.Size = New System.Drawing.Size(255, 53)
-        Me.rtb_DireccionT.TabIndex = 104
+        Me.rtb_DireccionT.TabIndex = 26
         Me.rtb_DireccionT.Text = ""
         '
         'lbl_DireccionT
@@ -703,7 +710,7 @@ Partial Class frm_Tomador
         Me.txt_Cargo.MaxLength = 30
         Me.txt_Cargo.Name = "txt_Cargo"
         Me.txt_Cargo.Size = New System.Drawing.Size(165, 21)
-        Me.txt_Cargo.TabIndex = 95
+        Me.txt_Cargo.TabIndex = 21
         '
         'txt_Profesion
         '
@@ -712,14 +719,14 @@ Partial Class frm_Tomador
         Me.txt_Profesion.MaxLength = 30
         Me.txt_Profesion.Name = "txt_Profesion"
         Me.txt_Profesion.Size = New System.Drawing.Size(165, 21)
-        Me.txt_Profesion.TabIndex = 94
+        Me.txt_Profesion.TabIndex = 20
         '
         'btn_Agregar
         '
         Me.btn_Agregar.Location = New System.Drawing.Point(138, 663)
         Me.btn_Agregar.Name = "btn_Agregar"
         Me.btn_Agregar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Agregar.TabIndex = 95
+        Me.btn_Agregar.TabIndex = 29
         Me.btn_Agregar.Text = "Agregar"
         Me.btn_Agregar.UseVisualStyleBackColor = True
         '
@@ -728,7 +735,7 @@ Partial Class frm_Tomador
         Me.btn_Modificar.Location = New System.Drawing.Point(254, 663)
         Me.btn_Modificar.Name = "btn_Modificar"
         Me.btn_Modificar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Modificar.TabIndex = 96
+        Me.btn_Modificar.TabIndex = 30
         Me.btn_Modificar.Text = "Modificar"
         Me.btn_Modificar.UseVisualStyleBackColor = True
         '
@@ -737,7 +744,7 @@ Partial Class frm_Tomador
         Me.btn_Cancelar.Location = New System.Drawing.Point(371, 663)
         Me.btn_Cancelar.Name = "btn_Cancelar"
         Me.btn_Cancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Cancelar.TabIndex = 97
+        Me.btn_Cancelar.TabIndex = 31
         Me.btn_Cancelar.Text = "Cancelar"
         Me.btn_Cancelar.UseVisualStyleBackColor = True
         '
@@ -746,7 +753,7 @@ Partial Class frm_Tomador
         Me.btn_Volver.Location = New System.Drawing.Point(490, 663)
         Me.btn_Volver.Name = "btn_Volver"
         Me.btn_Volver.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Volver.TabIndex = 98
+        Me.btn_Volver.TabIndex = 32
         Me.btn_Volver.Text = "Volver"
         Me.btn_Volver.UseVisualStyleBackColor = True
         '
@@ -754,6 +761,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_EncabezadoSaludo.AutoSize = True
         Me.lbl_EncabezadoSaludo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoSaludo.Enabled = False
         Me.lbl_EncabezadoSaludo.Location = New System.Drawing.Point(586, 72)
         Me.lbl_EncabezadoSaludo.Name = "lbl_EncabezadoSaludo"
         Me.lbl_EncabezadoSaludo.Size = New System.Drawing.Size(35, 13)
@@ -764,6 +772,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Hora.Enabled = False
         Me.lbl_Hora.Location = New System.Drawing.Point(631, 21)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(49, 13)
@@ -774,6 +783,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_EncabezadoFormuladio.AutoSize = True
         Me.lbl_EncabezadoFormuladio.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoFormuladio.Enabled = False
         Me.lbl_EncabezadoFormuladio.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_EncabezadoFormuladio.Location = New System.Drawing.Point(256, 103)
         Me.lbl_EncabezadoFormuladio.Name = "lbl_EncabezadoFormuladio"
@@ -785,6 +795,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_EncabezadoModulo.AutoSize = True
         Me.lbl_EncabezadoModulo.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_EncabezadoModulo.Enabled = False
         Me.lbl_EncabezadoModulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_EncabezadoModulo.Location = New System.Drawing.Point(260, 58)
         Me.lbl_EncabezadoModulo.Name = "lbl_EncabezadoModulo"
@@ -797,6 +808,7 @@ Partial Class frm_Tomador
         Me.lbl_EncabezadoEmpresa.AutoSize = True
         Me.lbl_EncabezadoEmpresa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_EncabezadoEmpresa.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.lbl_EncabezadoEmpresa.Enabled = False
         Me.lbl_EncabezadoEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_EncabezadoEmpresa.Location = New System.Drawing.Point(218, 13)
         Me.lbl_EncabezadoEmpresa.Name = "lbl_EncabezadoEmpresa"
@@ -808,6 +820,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_Usuario.AutoSize = True
         Me.lbl_Usuario.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Usuario.Enabled = False
         Me.lbl_Usuario.Location = New System.Drawing.Point(627, 72)
         Me.lbl_Usuario.Name = "lbl_Usuario"
         Me.lbl_Usuario.Size = New System.Drawing.Size(43, 13)
@@ -818,6 +831,7 @@ Partial Class frm_Tomador
         '
         Me.lbl_Fecha.AutoSize = True
         Me.lbl_Fecha.BackColor = System.Drawing.Color.Transparent
+        Me.lbl_Fecha.Enabled = False
         Me.lbl_Fecha.Location = New System.Drawing.Point(567, 21)
         Me.lbl_Fecha.Name = "lbl_Fecha"
         Me.lbl_Fecha.Size = New System.Drawing.Size(61, 13)
@@ -830,14 +844,6 @@ Partial Class frm_Tomador
         'EventLog1
         '
         Me.EventLog1.SynchronizingObject = Me
-        '
-        'cmb_CedulaT
-        '
-        Me.cmb_CedulaT.FormattingEnabled = True
-        Me.cmb_CedulaT.Location = New System.Drawing.Point(154, 18)
-        Me.cmb_CedulaT.Name = "cmb_CedulaT"
-        Me.cmb_CedulaT.Size = New System.Drawing.Size(98, 24)
-        Me.cmb_CedulaT.TabIndex = 94
         '
         'frm_Tomador
         '
@@ -956,5 +962,6 @@ Partial Class frm_Tomador
     Friend WithEvents rtb_DireccionT As RichTextBox
     Friend WithEvents lbl_DireccionT As Label
     Public WithEvents btn_Buscar As Button
-    Friend WithEvents cmb_CedulaT As ComboBox
+    Friend WithEvents txt_Cedula As TextBox
+    Friend WithEvents txt_CedulaT As TextBox
 End Class

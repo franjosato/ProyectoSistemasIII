@@ -1,4 +1,9 @@
-﻿Public Class frm_TipoPoliza
+﻿
+
+Public Class frm_TipoPoliza
+    Dim montobase As Double = 0
+    Dim auxmonto As Double = 0
+
     Private Sub HBotones(ByRef sn As Boolean)
         Me.btn_Agregar.Enabled = sn
         Me.btn_Buscar.Enabled = Not sn
@@ -22,6 +27,15 @@
         CheckedListBox1.DisplayMember = "c_nombre"
         CheckedListBox1.ValueMember = "c_codigo"
         CheckedListBox1.SelectedIndex = -1
+        'se llena el checkedlistbox de cobertura
+        sentencia = "select concat( cobertura.c_nombre,' costo: ',cobertura.c_costo) as nombre,
+                    c_codigo
+                    from cobertura"
+        ltb_Cobertura.DataSource = Datos(sentencia)
+        ltb_Cobertura.DisplayMember = "nombre"
+        ltb_Cobertura.ValueMember = "c_codigo"
+        ltb_Cobertura.SelectedIndex = -1
+
     End Sub
 
     Private Sub frm_TipoPoliza_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -45,7 +59,7 @@
         HCampos(Me, False, txt_Codigo)
         HBotones(False)
         btn_Modificar.Text = "Modificar"
-        cmb_nombre_tp.Enabled=True
+        cmb_nombre_tp.Enabled = True
         cmb_nombre_tp.Visible = True
         txt_Nombre.Visible = False
         llenarcoberturas()
@@ -60,9 +74,9 @@
 
         For Each item As DataRowView In CheckedListBox1.CheckedItems
 
-            For int As Integer = 0 To CheckedListBox1.Items.Count - 1
+            For int As Integer = 1 To CheckedListBox1.Items.Count
                 If CheckedListBox1.GetItemChecked(int) = True Then
-                    sentencia = "select * from cobertura where c_codigo='" & int + 1 & "'"
+                    sentencia = "select * from cobertura where c_codigo='" & int & "'"
                     CSelect(sentencia)
                     ' MsgBox("hola")
                     auxmonto = sdr("c_costo")
@@ -116,10 +130,10 @@
 
             For int As Integer = 0 To CheckedListBox1.Items.Count - 1
 
-                    CheckedListBox1.SetItemChecked(index - 1, True)
-                    'MsgBox("hola")
+                CheckedListBox1.SetItemChecked(index - 1, True)
+                'MsgBox("hola")
 
-                Next
+            Next
 
             'Next
 
@@ -291,4 +305,62 @@
         End If
 
     End Sub
+
+    Private Sub ltb_Cobertura_Click(sender As Object, e As EventArgs) Handles ltb_Cobertura.Click
+        Dim Val As Integer
+
+
+        For i = 0 To ltb_Cobertura.Items.Count - 1
+            If ltb_Cobertura.Items(i).Selected = True Then
+                Val = ltb_Cobertura.Items(i).Value
+                sentencia = "select c_costo 
+                    from cobertura 
+                    where c_codigo='" & Val & "'"
+                CSelect(sentencia)
+                If Not (sdr.IsClosed) Or Not (sdr.HasRows) Then
+                    auxmonto = Convert.ToDouble(sdr("c_costo"))
+
+                    montobase += auxmonto
+                    txt_monto_base.Text = montobase
+                End If
+            End If
+        Next
+
+
+
+
+    End Sub
+
+    Private Sub ltb_Cobertura_LostFocus(sender As Object, e As EventArgs) Handles ltb_Cobertura.LostFocus
+
+    End Sub
+
+    Private Sub loquesea()
+        If ltb_Cobertura.SelectedItem = True Then
+            sentencia = "select c_costo 
+                    from cobertura 
+                    where c_codigo='" & ltb_Cobertura.SelectedValue & "'"
+            CSelect(sentencia)
+            If Not (sdr.IsClosed) Or Not (sdr.HasRows) Then
+                auxmonto = Convert.ToDouble(sdr("c_costo"))
+
+                montobase -= auxmonto
+                txt_monto_base.Text = montobase
+            End If
+        ElseIf ltb_Cobertura.SelectedItem = False Then
+            sentencia = "select c_costo 
+                    from cobertura 
+                    where c_codigo='" & ltb_Cobertura.SelectedValue & "'"
+            CSelect(sentencia)
+            If Not (sdr.IsClosed) Or Not (sdr.HasRows) Then
+                auxmonto = Convert.ToDouble(sdr("c_costo"))
+
+                montobase += auxmonto
+                txt_monto_base.Text = montobase
+            End If
+        End If
+    End Sub
 End Class
+
+
+
