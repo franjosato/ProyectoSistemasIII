@@ -335,7 +335,7 @@ Partial Class frm_Usuario
         Me.lbl_Hora.AutoSize = True
         Me.lbl_Hora.BackColor = System.Drawing.Color.Transparent
         Me.lbl_Hora.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Hora.Location = New System.Drawing.Point(593, 25)
+        Me.lbl_Hora.Location = New System.Drawing.Point(593, 24)
         Me.lbl_Hora.Name = "lbl_Hora"
         Me.lbl_Hora.Size = New System.Drawing.Size(50, 16)
         Me.lbl_Hora.TabIndex = 129
