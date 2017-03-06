@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class frm_Inspeccion
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -178,7 +178,7 @@ Partial Class Form1
         Me.grb_Datos_Vehículo.Controls.Add(Me.lbl_Modelo)
         Me.grb_Datos_Vehículo.Controls.Add(Me.lbl_Placa)
         Me.grb_Datos_Vehículo.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Datos_Vehículo.Location = New System.Drawing.Point(12, 159)
+        Me.grb_Datos_Vehículo.Location = New System.Drawing.Point(12, 146)
         Me.grb_Datos_Vehículo.Name = "grb_Datos_Vehículo"
         Me.grb_Datos_Vehículo.Size = New System.Drawing.Size(773, 82)
         Me.grb_Datos_Vehículo.TabIndex = 149
@@ -273,7 +273,7 @@ Partial Class Form1
         Me.grb_Datos_Inspección.Controls.Add(Me.lbl_Codigo_Poliza)
         Me.grb_Datos_Inspección.Controls.Add(Me.lbl_Tipo_inspeccion)
         Me.grb_Datos_Inspección.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Datos_Inspección.Location = New System.Drawing.Point(12, 243)
+        Me.grb_Datos_Inspección.Location = New System.Drawing.Point(12, 230)
         Me.grb_Datos_Inspección.Name = "grb_Datos_Inspección"
         Me.grb_Datos_Inspección.Size = New System.Drawing.Size(773, 139)
         Me.grb_Datos_Inspección.TabIndex = 150
@@ -393,7 +393,7 @@ Partial Class Form1
         Me.grb_Datos_Daño.Controls.Add(Me.lbl_daño_daños)
         Me.grb_Datos_Daño.Controls.Add(Me.cmb_daño_daños)
         Me.grb_Datos_Daño.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grb_Datos_Daño.Location = New System.Drawing.Point(12, 380)
+        Me.grb_Datos_Daño.Location = New System.Drawing.Point(12, 371)
         Me.grb_Datos_Daño.Name = "grb_Datos_Daño"
         Me.grb_Datos_Daño.Size = New System.Drawing.Size(773, 315)
         Me.grb_Datos_Daño.TabIndex = 151
@@ -518,14 +518,14 @@ Partial Class Form1
         Me.cmb_daño_daños.Size = New System.Drawing.Size(225, 24)
         Me.cmb_daño_daños.TabIndex = 20
         '
-        'Form1
+        'frm_Inspeccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.SistemasIII.My.Resources.Resources.frm23
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(797, 697)
+        Me.ClientSize = New System.Drawing.Size(797, 694)
         Me.Controls.Add(Me.grb_Datos_Daño)
         Me.Controls.Add(Me.grb_Datos_Inspección)
         Me.Controls.Add(Me.grb_Datos_Vehículo)
@@ -537,7 +537,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lbl_EncabezadoModulo)
         Me.Controls.Add(Me.lbl_EncabezadoEmpresa)
         Me.Controls.Add(Me.ptb_logo)
-        Me.Name = "Form1"
+        Me.Name = "frm_Inspeccion"
         Me.Text = "Form1"
         CType(Me.ptb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grb_Datos_Vehículo.ResumeLayout(False)

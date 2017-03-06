@@ -86,10 +86,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexionmysql.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frm_Inspeccion.Designer.vb">
+      <DependentUpon>frm_Inspeccion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="frm_Inspeccion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_Cobertura.Designer.vb">
@@ -238,8 +238,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frm_Inspeccion.resx">
+      <DependentUpon>frm_Inspeccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Cobertura.resx">
       <DependentUpon>frm_Cobertura.vb</DependentUpon>
