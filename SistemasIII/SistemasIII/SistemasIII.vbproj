@@ -192,12 +192,6 @@
     <Compile Include="frm_Vehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Inspeccion.Designer.vb">
-      <DependentUpon>frm_Inspeccion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Inspeccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MDIParent1.Designer.vb">
       <DependentUpon>MDIParent1.vb</DependentUpon>
     </Compile>
@@ -291,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Vehiculo.resx">
       <DependentUpon>frm_Vehiculo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Inspeccion.resx">
-      <DependentUpon>frm_Inspeccion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.vb</DependentUpon>

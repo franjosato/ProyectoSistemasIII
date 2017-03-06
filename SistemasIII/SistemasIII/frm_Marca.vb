@@ -6,6 +6,7 @@ Public Class frm_Marca
         btn_Agregar.Enabled = False
         HBotones(False)
         LimpiarC()
+        btn_Agregar.Enabled = False
     End Sub
 
     Private Function Validar(ByRef tt As Boolean)
@@ -23,7 +24,7 @@ Public Class frm_Marca
     End Sub
 
     Private Sub HBotones(ByRef sn As Boolean)
-        btn_Agregar.Enabled = Not sn
+        'btn_Agregar.Enabled = sn
         btn_Buscar.Enabled = Not sn
         btn_Cancelar.Enabled = Not sn
         btn_Eliminar.Enabled = sn
@@ -68,26 +69,74 @@ Public Class frm_Marca
 
     Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
 
+
         If (txt_Codigo.Text = "") Then
-            MsgBox("Debe escribir un codigo", vbInformation, "Error")
+            MsgBox("Debe llenar el campo de codigo de marca", vbInformation, "Error")
             Return
         End If
 
-        sql = "Select * from marca_vehiculo where mv_codigo= '" & txt_Codigo.Text & "' and mv_estatus = 'A' "
-        CSelect(sql)
-
-        If (sdr.IsClosed) Or Not (sdr.HasRows) Then
-            MsgBox("El codigo no existe, agregar primero", vbInformation, "Error")
+        sentencia = "Select * from marca_vehiculo where mv_codigo= 
+                    '" + txt_Codigo.Text + "' and mv_estatus= 'I' "
+        CSelect(sentencia)
+        If Not ((sdr.IsClosed) Or Not (sdr.HasRows)) Then
+            MsgBox("Marca de vehiculo desactivado, por favor comuniquese con el administrador", vbInformation, "Marca de vehiculo desactivado")
             btn_Cancelar.PerformClick()
-
         Else
-            txt_Marca.Text = sdr("mv_marca")
-            txt_Modelo.Text = sdr("mv_modelo")
-            HBotones(True)
-            btn_Cancelar.Enabled = True
+            cn.Close()
+            sentencia = "Select * from marca_vehiculo where mv_codigo=
+                        '" + txt_Codigo.Text + "' and mv_estatus= 'A' "
+            CSelect(sentencia)
+            If ((sdr.IsClosed) Or Not (sdr.HasRows)) Then
+                If MsgBox("La marca no existe ¿Desea agregar una nueva marca de vehiculo?", vbYesNo, "Registro no existente") = MsgBoxResult.Yes Then
+                    HCampos(True)
+                    HBotones(False)
+                    btn_Buscar.Enabled = False
+                    txt_Codigo.Text = ""
+                    btn_Agregar.Enabled = True
+
+                    'acomodar que agarre el ultimo y le sume uno porque crea registros vacios si le doy cancelar
+                    sql = "INSERT INTO marca_vehiculo (`mv_marca`, `mv_modelo`, `mv_estatus`) VALUES (' ', ' ', 'A')"
+                    comando22(sql)
+
+                    sentencia = "SELECT * FROM marca_vehiculo WHERE mv_marca = ' ' AND mv_modelo = ' ' and mv_estatus= 'A' "
+                    CSelect(sentencia)
+
+                    txt_Codigo.Text = sdr("mv_codigo")
+
+                    txt_Codigo.Enabled = False
+                    'asignar el ultimo codigo y bloquear txt
+                End If
+            Else
+                txt_Marca.Text = sdr("mv_marca")
+                txt_Modelo.Text = sdr("mv_modelo")
+                Me.HBotones(True)
+                Me.btn_Cancelar.Enabled = True
+            End If
         End If
 
-        cn.Close()
+
+        ' If (txt_Codigo.Text = "") Then
+        '        MsgBox("Debe escribir un codigo", vbInformation, "Error")
+        'Return
+        'End If
+        '
+        '   sql = "Select * from marca_vehiculo where mv_codigo= '" & txt_Codigo.Text & "' and mv_estatus = 'A' "
+        '  CSelect(sql)
+        '
+        'If (sdr.IsClosed) Or Not (sdr.HasRows) Then
+        'If MsgBox("El codigo no existe, ¿Desea agregarlo?", vbInformation, "Error") = vbNo Then
+        '           btn_Cancelar.PerformClick()
+        'Else
+
+
+        'Else
+        '           txt_Marca.Text = sdr("mv_marca")
+        '      txt_Modelo.Text = sdr("mv_modelo")
+        '     HBotones(True)
+        '     btn_Cancelar.Enabled = True
+        'End If
+
+        '   cn.Close()
 
     End Sub
 
@@ -108,7 +157,9 @@ Public Class frm_Marca
                     cn.Close()
                     Return
                 Else
-                    sql = "UPDATE marca_vehiculo SET mv_marca = '" + txt_Marca.Text + "', mv_modelo = '" + txt_Modelo.Text + "' "
+                    sql = "UPDATE marca_vehiculo SET mv_marca = '" + txt_Marca.Text + "', 
+                                                     mv_modelo = '" + txt_Modelo.Text + "' 
+                           where mv_codigo = '" + txt_Codigo.Text + "' "
                     comando22(sql)
                     MsgBox("Cambios realizados con exito", vbInformation, "Cambios")
                     btn_Cancelar.PerformClick()
@@ -124,7 +175,7 @@ Public Class frm_Marca
     Private Sub btn_Eliminar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
 
         If MsgBox("¿Esta seguro que desea eliminar?", vbYesNo, "Pregunta de seguridad") = MsgBoxResult.Yes Then
-            sql = "UPDATE marca_vehiculo SET mv_estatus = 'I'"
+            sql = "UPDATE marca_vehiculo SET mv_estatus = 'I' WHERE mv_codigo = '" + txt_Codigo.Text + "' "
             comando22(sql)
             MsgBox("Eliminado correctamente", vbOK, "Eliminacion")
             btn_Cancelar.PerformClick()
@@ -137,38 +188,25 @@ Public Class frm_Marca
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
 
+        If (Validar(True)) Then
+            If MsgBox("¿Desea agregar la marca?", vbYesNo, "Registro") = MsgBoxResult.Yes Then
 
-        If (btn_Agregar.Text = "Agregar") Then
-
-            HCampos(True)
-            btn_Eliminar.Enabled = False
-            btn_Agregar.Text = "Guardar"
-
-            sql = "INSERT INTO marca_vehiculo (`mv_marca`, `mv_modelo`, `mv_estatus`) VALUES (' ', ' ', 'A')"
-            comando22(sql)
-
-            sentencia = "SELECT * FROM marca_vehiculo WHERE mv_marca = ' ' AND mv_modelo = ' ' and mv_estatus= 'A' "
-            CSelect(sentencia)
-
-            txt_Codigo.Text = sdr("mv_codigo")
-
-        Else
-            If (Validar(True)) Then
                 sql = "UPDATE marca_vehiculo SET mv_marca = '" + txt_Marca.Text + "', mv_modelo = '" + txt_Modelo.Text + "' 
                       WHERE mv_codigo = '" & txt_Codigo.Text & "' "
                 comando22(sql)
                 MsgBox("Agregado exitosamente", vbInformation, "Incluir marca")
                 btn_Cancelar.PerformClick()
-                btn_Agregar.Text = "Agregar"
-
+                btn_Agregar.Enabled = False
             Else
-                MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
-
+                btn_Cancelar.PerformClick()
             End If
+        Else
+            MsgBox("Debe llenar todos los campos", vbInformation, vbOK)
+            btn_Cancelar.PerformClick()
 
         End If
-
     End Sub
+
 
 End Class
 
