@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class Reporte_Contrato
+Public Class CrystalReport1
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class Reporte_Contrato
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "Reporte_Contrato.rpt"
+            Return "CrystalReport1.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class Reporte_Contrato
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "SistemasIII.Reporte_Contrato.rpt"
+            Return "SistemasIII.CrystalReport1.rpt"
         End Get
         Set
             'Do nothing
@@ -91,18 +91,10 @@ Public Class Reporte_Contrato
             Return Me.ReportDefinition.Sections(4)
         End Get
     End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_FechaHasta() As CrystalDecisions.[Shared].IParameterField
-        Get
-            Return Me.DataDefinition.ParameterFields(0)
-        End Get
-    End Property
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedReporte_Contrato
+Public Class CachedCrystalReport1
     Inherits Component
     Implements ICachedReport
     
@@ -144,7 +136,7 @@ Public Class CachedReporte_Contrato
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As Reporte_Contrato = New Reporte_Contrato()
+        Dim rpt As CrystalReport1 = New CrystalReport1()
         rpt.Site = Me.Site
         Return rpt
     End Function

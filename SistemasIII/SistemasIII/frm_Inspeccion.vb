@@ -1,14 +1,15 @@
 ﻿Public Class frm_Inspeccion
+    Private Sub btn_Buscar_Click(sender As Object, e As EventArgs) Handles btn_Buscar.Click
 
-    Private Sub TextBox3_TextChanged(sender As System.Object, e As System.EventArgs) Handles TextBox3.TextChanged
+        sentencia = "SELECT po_estatus, v_placa FROM contrato inner join vehiculo WHERE (v_placa = '" + txt_Placa.Text + "' AND po_v_placa= v_placa AND po_estatus=v_estatus)"
+        CSelect(sentencia)
 
-    End Sub
+        If ((sdr.IsClosed) Or (sdr.HasRows)) Then
+            MsgBox("El vehiculo no tiene ningun contrato asociado, debe registrar un contrato y asociar el vehiculo", vbInformation, "vehiculo sin asociacion")
+            btn_cancelar_daño_daños.PerformClick()
+        Else
 
-    Private Sub DataGridView1_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+        End If
 
     End Sub
 End Class
